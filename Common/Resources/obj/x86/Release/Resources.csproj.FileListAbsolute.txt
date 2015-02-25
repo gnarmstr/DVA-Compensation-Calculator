@@ -1,0 +1,16 @@
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Release\Common\Resources.dll
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Release\Common\Resources.pdb
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.csprojResolveAssemblyReference.cache
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Common.Resources.Properties.Resources.resources
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.csproj.GenerateResource.Cache
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.dll
+C:\Users\Study\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.pdb
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Release\Common\Resources.dll
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Release\Common\Resources.pdb
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Common.Resources.Properties.Resources.resources
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.csproj.GenerateResource.Cache
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.dll
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.pdb
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Release\Common\Resources.dll
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Release\Common\Resources.pdb
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.csprojResolveAssemblyReference.cache
