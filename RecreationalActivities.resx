@@ -117,19 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="checkBoxOption4.Text" xml:space="preserve">
+    <value>Unable to continue some accustomed recreational pursuits and community activities, for example:
+· competition sporting activities (golf, tennis, bowls, etc) but is still able to enjoy most other activities (camping out, hobbies, going visiting,                 watching sport, etc);
+· unable to perform some community or voluntary activities involving physical activity (eg working bees) but is still able to participate in most other    activities including welfare work, fund raising work etc.</value>
+  </data>
+  <data name="checkBoxOption5.Text" xml:space="preserve">
+    <value>Unable to take part in formerly favoured recreational pursuits, leisure and community activities, but less physical activities are possible, for example:
+ restricted to generally non-active interests (eg music, art, stamp or coin collecting, attending clubs, etc); and
+ unable to participate in accustomed activities (eg camping, going for long walks, fishing, voluntary activities such as meals on wheels).</value>
+  </data>
+  <data name="checkBoxOption6.Text" xml:space="preserve">
+    <value>Greater reduction in the number and kind of recreational activities which can be undertaken; some assistance is needed to undertake those which are still possible, for example:
+ can only visit or go out if taken to and from destination;
+ finds doing a hobby or relaxing (for example, stamp collecting, art &amp; crafts, playing or listening to music, playing cards, etc.) difficult to enjoy due to pain, suffering, or loss of dexterity.</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>A recreational rating is based on the veteran‘s normal recreational and community activities and measures the limitation placed by the accepted conditions on the ability to continue those activities. The table takes into account the veteran‘s need to modify recreational pursuits or to seek alternatives. Community activities include welfare work in a voluntary capacity. Select the one that best meets your situation.</value>
+  </data>
 </root>

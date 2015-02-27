@@ -117,19 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="checkBoxOption7.Text" xml:space="preserve">
+    <value>Able to carry out only very limited domestic activities, usually a restricted range of indoor activities. May require supervision in carrying out such activities, for example:
+ able to do very light tidying, dusting but unable to cook or prepare meals;
+ has difficulty standing to set table or wash dishes.</value>
+  </data>
+  <data name="checkBoxOption4.Text" xml:space="preserve">
+    <value>Unable to perform heavy activities, but able to carry out lighter household tasks, taking breaks during sustained activity, for example:
+ mowing the lawn;
+ washing the car;
+ performing light maintenance or gardening activities if working at own pace, taking breaks as necessary.</value>
+  </data>
+  <data name="checkBoxOption5.Text" xml:space="preserve">
+    <value>Unable to carry out a full range of normal household activities, particularly some moderate tasks which require exertion. Needs assistance with some activities, for example:
+ vacuuming carpets, cleaning floors, or mowing lawns;
+ home repairs and maintenance, etc.</value>
+  </data>
+  <data name="checkBoxOption6.Text" xml:space="preserve">
+    <value>Limitation of household activity to a small range of light tasks, for example:
+ watering the garden but has difficulty in weeding or pruning;
+ able to do some light household activities but has difficulty bending to make beds, or in putting out the rubbish bin;
+ requires assistance with grocery shopping.</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>"Domestic activity" refers to the veteran‘s ability to sustain effective routines in a domestic environment. Only the impact of accepted conditions on the ability to engage in domestic activity is to be taken into account: the veteran‘s inability to do domestic work for some other reason (for example, choice, habit, inexperience, lack of skill) is not to be taken into account.. Select the one that best meets your situation.</value>
+  </data>
 </root>

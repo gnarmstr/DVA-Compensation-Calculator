@@ -117,19 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="checkBoxMobility2.Text" xml:space="preserve">
+    <value>Intermittent or periodic effects on mobility:
+     · mobility affected only when impairment eg migraine, angina, sciatica, or panic attack, is present. Between attacks there are no restrictions;
+     · if there is permanent impairment, eg night blindness, the effect is only sporadically limiting.</value>
+  </data>
+  <data name="checkBoxMobility7.Text" xml:space="preserve">
+    <value>Severe impediments to mobility:
+ restricted to home and immediate vicinity, unless door to door transport and assistance from others are provided;
+ unable to drive a car in any circumstances whatever.</value>
+  </data>
+  <data name="checkBoxMobility4.Text" xml:space="preserve">
+    <value>Moderately reduced mobility:
+· mobility curtained or diminished because of frailty, lack of confidence; or moderate agoraphobia;
+· travel as a passenger, in private and public transport, possible in most circumstances without undue difficulty (undue difficulty‘ not being the           need for a break in travel or for special seating arrangements);
+· dependent on a walking stick or similar device. Independent in leaving home and reaching destination, but has some difficulty.</value>
+  </data>
+  <data name="checkBoxMobility5.Text" xml:space="preserve">
+    <value>Markedly reduced mobility:
+ assistance is needed to cope with public or private transport;
+ there is considerable difficulty in travelling from home to destination;
+ restricted in the use of at least two forms of public transport.</value>
+  </data>
+  <data name="checkBoxMobility6.Text" xml:space="preserve">
+    <value>Major impediments to mobility:
+ dependent upon others, or mechanical devices such as wheelchairs;
+ unable to use most forms of public transport;
+ able to drive a car only in a situation of emergency and then only for a short distance.</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>"Mobility" refers to the veteran‘s ability to move about effectively in carrying out the ordinary activities of life. It allows for the veteran‘s ability to use available forms of transport. Lack of public transport is not to be taken into account. Both physical and psychological impediments to mobility are to be taken into account. Restrictions on mobility due to mental health factors (e.g. agoraphobia, claustrophobia, dementia, anxiety, confusion, etc), or sensory deficit (e.g. hearing loss, or reduced vision) should be rated in the same way as the more obvious restrictions due to physical impairment. Select the one that best meets your situation.</value>
+  </data>
 </root>

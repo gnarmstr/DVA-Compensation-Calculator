@@ -11,9 +11,6 @@ using Common.Resources;
 using Common.Resources.Properties;
 using GemBox.Spreadsheet;
 using GemBox.Spreadsheet.WinFormsUtilities;
-using System.Data;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace DVA_Compensation_Calculator
 {
@@ -23,15 +20,22 @@ namespace DVA_Compensation_Calculator
 		{
 			InitializeComponent();
 			Settings();
-			AgeAdjust();
+			getLifeStyleWar();
+			getLifeStylePeace();
+			getActuaryTable();
+			getCombinedValue();
+			getLimbsAgeAdjust();
 			LoadData();
-			importExcel();
+			FinalPayout();
+			combinedPoints();
+			UpdateAll();
 		}
 
 		#region Settings
 		private void Settings()
 		{
 			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
+			GlobalVar.ExcelData = new[] { GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue, GlobalVar.LimbsAgeAdjust };
 			//Add Days for Date of Birth
 			
 			var i = 100;
@@ -43,85 +47,6 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
-		#region Setup Age adjustment array
-
-		private void AgeAdjust()
-		{
-			GlobalVar.ageAdjust = new MultiDimDictList<int, int>();
-			var i = 0;
-			do
-			{
-				if (i != 3 & i != 9 & i != 15 & i != 21 & i != 27 & i != 33 & i != 39 & i != 45 & i != 51 & i != 57 & i != 63 & i != 69 & i != 75 & i != 81)
-				{
-					GlobalVar.ageAdjust.Add(0, i);
-				}
-				i++;
-			} while (GlobalVar.ageAdjust[0].Count < 71);
-
-			i = 0;
-			do
-			{
-				if (i != 5 & i != 16 & i != 27 & i != 38 & i != 60 & i != 49 & i != 71)
-				{
-					GlobalVar.ageAdjust.Add(1, i);
-				}
-				i++;
-			} while (GlobalVar.ageAdjust[1].Count < 71);
-
-			i = 0;
-			do
-			{
-				GlobalVar.ageAdjust.Add(2, i);
-				i++;
-			} while (GlobalVar.ageAdjust[2].Count < 71);
-
-			i = 0;
-			do
-			{
-				if (i == 5 || i == 14 || i == 23 || i == 32 || i == 41 || i == 50 || i == 59)
-				{
-					GlobalVar.ageAdjust.Add(3, i);
-				}
-				GlobalVar.ageAdjust.Add(3, i);
-				i++;
-			} while (GlobalVar.ageAdjust[3].Count < 71);
-
-			i = 0;
-			do
-			{
-				if (i == 2 || i == 6 || i == 10 || i == 14 || i == 18 || i == 22 || i == 26 || i == 30 || i == 34 || i == 38 || i == 42 || i == 46 || i == 50 || i == 54)
-				{
-					GlobalVar.ageAdjust.Add(4, i);
-				}
-				GlobalVar.ageAdjust.Add(4, i);
-				i++;
-			} while (GlobalVar.ageAdjust[4].Count < 71);
-
-			i = 0;
-			do
-			{
-				if (i == 1 || i == 4 || i == 6 || i == 8 || i == 11 || i == 13 || i == 15 || i == 18 || i == 20 || i == 22 || i == 25 || i == 27 || i == 29 || i == 32 || i == 34 || i == 36 || i == 39 || i == 41 || i == 43 || i == 46 || i == 48)
-				{
-					GlobalVar.ageAdjust.Add(5, i);
-				}
-				GlobalVar.ageAdjust.Add(5, i);
-				i++;
-			} while (GlobalVar.ageAdjust[5].Count < 71);
-
-			i = 0;
-			do
-			{
-				if (i == 1 || i == 2 || i == 4 || i == 5 || i == 7 || i == 8 || i == 10 || i == 11 || i == 13 || i == 14 || i == 16 || i == 17 || i == 19 || i == 20 || i == 22 || i == 23 || i == 25 || i == 26 || i == 28 || i == 29 || i == 31 || i == 32 || i == 34 || i == 35 || i == 37 || i == 38 || i == 40 || i == 41)
-				{
-					GlobalVar.ageAdjust.Add(6, i);
-				}
-				GlobalVar.ageAdjust.Add(6, i);
-				i++;
-			} while (GlobalVar.ageAdjust[6].Count < 71);
-
-		}
-		#endregion
-
 		#region Load Data
 
 		private void LoadData()
@@ -130,121 +55,116 @@ namespace DVA_Compensation_Calculator
 			comboBoxAge.Text = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "comboBoxAge", "50");
 			textBoxWeeklyPayment.Text = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "textBoxWeeklyPayment", "364.60");
 
-			comboBoxElbow.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxElbow", "- No abnormality. X-ray changes only with normal range of movement.");
-			comboBoxWrist.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxWrist", "- No abnormality. X-ray changes only with normal range of movement.");
-			comboBoxShoulder.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxShoulder", "- No abnormality. X-ray changes only with normal range of movement.");
-			comboBoxFingers.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxFingers", "- No abnormality. X-ray changes only with normal range of movement.");
+			textBoxElbow.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxElbow", "0");
+			textBoxWrist.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWrist", "0");
+			textBoxShoulder.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxShoulder", "0");
+			textBoxFingers.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxFingers", "0");
+			checkBoxElbowWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", false);
+			checkBoxShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShoulderWar", false);
+			checkBoxWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", false);
+			checkBoxFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingersWar", false);
+
+			textBoxPersonalRelationships.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
+			textBoxMobility.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
+			textBoxRecreationalActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", "0");
+			textBoxDomesticActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", "0");
+			textBoxEmploymentActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", "0");
 			
+		}
+		#endregion
+
+		#region Get Excel Data Tables
+		private void getLifeStyleWar()
+		{
+			var columns = 8;
+			var sheet = 0;
+			var excelData = 0;
+			importExcel(columns, sheet, excelData);
+		}
+
+		private void getLifeStylePeace()
+		{
+			var columns = 8;
+			var sheet = 1;
+			var excelData = 1;
+			importExcel(columns, sheet, excelData);
+		}
+
+		private void getActuaryTable()
+		{
+			var columns = 2;
+			var sheet = 2;
+			var excelData = 2;
+			importExcel(columns, sheet, excelData);
+		}
+
+		private void getCombinedValue()
+		{
+			var columns = 100;
+			var sheet = 3;
+			var excelData = 3;
+			importExcel(columns, sheet, excelData);
+		}
+
+		private void getLimbsAgeAdjust()
+		{
+			var columns = 7;
+			var sheet = 4;
+			var excelData = 4;
+			importExcel(columns, sheet, excelData);
+		}
+
+		private void importExcel(int columns, int sheet, int excelData)
+		{
+			SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+			ExcelFile ef = ExcelFile.Load("DVA_Tables.xls");
+			DataTable dataTable = new DataTable();
+			// Depending on the format of the input file, you need to change this:
+			var i = 0;
+			do
+			{
+				dataTable.Columns.Add("Column" + i, typeof(string));
+				i++;
+			} while (i < columns);
+			// Select the first worksheet from the file.
+
+			ExcelWorksheet ws = ef.Worksheets[sheet];
+			ExtractToDataTableOptions options = new ExtractToDataTableOptions(0, 0, 100);
+			options.ExtractDataOptions = ExtractDataOptions.StopAtFirstEmptyRow;
+			options.ExcelCellToDataTableCellConverting += (sender, e) =>
+			{
+				if (!e.IsDataTableValueValid)
+				{
+					// GemBox.Spreadsheet doesn't automatically convert numbers to strings in ExtractToDataTable() method because of culture issues; 
+
+					// someone would expect the number 12.4 as "12.4" and someone else as "12,4".
+					e.DataTableValue = e.ExcelCell.Value == null ? null : e.ExcelCell.Value.ToString();
+					e.Action = ExtractDataEventAction.Continue;
+				}
+			};
+			// Extract the data from the worksheet to the DataTable.
+			// Data is extracted starting at first row and first column.
+
+			ws.ExtractToDataTable(dataTable, options);
+			// Write DataTable content
+			GlobalVar.ExcelData[excelData] = new MultiDimDictList<int, object>();
+			i = 0;
+			int ii;
+			foreach (DataRow row in dataTable.Rows)
+			{
+				ii = 0;
+				do
+				{
+					GlobalVar.ExcelData[excelData].Add(i, row[ii]);
+					ii++;
+				} while (ii < columns);
+				i++;
+			}
 		}
 		#endregion
 
 		#region Upperbody
 
-		private void comboBoxElbow_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			int elbowRawPoints = 0;
-			switch (comboBoxElbow.SelectedIndex)
-			{
-				case (0):
-					elbowRawPoints = 0;
-				break;
-				case (1):
-					elbowRawPoints = 10;
-				break;
-				case (2):
-					elbowRawPoints = 20;
-				break;
-				case (3):
-					elbowRawPoints = 30;
-				break;
-				case (4):
-					elbowRawPoints = 40;
-				break;
-				case (5):
-					elbowRawPoints = 50;
-				break;
-			}
-			var ageAdustResult = GlobalVar.ageAdjust[GlobalVar.ageAdjustRange][elbowRawPoints];
-			textBoxElbow.Text = ageAdustResult.ToString();
-		}
-
-		private void comboBoxShoulder_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			int shoulderRawPoints = 0;
-			switch (comboBoxShoulder.SelectedIndex)
-			{
-				case (0):
-					shoulderRawPoints = 0;
-					break;
-				case (1):
-					shoulderRawPoints = 10;
-					break;
-				case (2):
-					shoulderRawPoints = 20;
-					break;
-				case (3):
-					shoulderRawPoints = 30;
-					break;
-				case (4):
-					shoulderRawPoints = 40;
-					break;
-				case (5):
-					shoulderRawPoints = 50;
-					break;
-			}
-			var ageAdustResult = GlobalVar.ageAdjust[GlobalVar.ageAdjustRange][shoulderRawPoints];
-			textBoxShoulder.Text = ageAdustResult.ToString();
-		}
-
-		private void comboBoxWrist_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			int wristRawPoints = 0;
-			switch (comboBoxWrist.SelectedIndex)
-			{
-				case (0):
-					wristRawPoints = 0;
-					break;
-				case (1):
-					wristRawPoints = 5;
-					break;
-				case (2):
-					wristRawPoints = 10;
-					break;
-				case (3):
-					wristRawPoints = 15;
-					break;
-				case (4):
-					wristRawPoints = 20;
-					break;
-				case (5):
-					wristRawPoints = 30;
-					break;
-			}
-			var ageAdustResult = GlobalVar.ageAdjust[GlobalVar.ageAdjustRange][wristRawPoints];
-			textBoxWrist.Text = ageAdustResult.ToString();
-		}
-
-		private void comboBoxFingers_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			int fingersRawPoints = 0;
-			switch (comboBoxFingers.SelectedIndex)
-			{
-				case (0):
-					fingersRawPoints = 0;
-					break;
-				case (1):
-					fingersRawPoints = 5;
-					break;
-				case (2):
-					fingersRawPoints = 10;
-					break;
-				case (3):
-					fingersRawPoints = 15;
-					break;
-			}
-			var ageAdustResult = GlobalVar.ageAdjust[GlobalVar.ageAdjustRange][fingersRawPoints];
-			textBoxFingers.Text = ageAdustResult.ToString();
-		}
 
 		public class MultiDimDictList<K, T> : Dictionary<K, List<T>>
 		{
@@ -257,39 +177,89 @@ namespace DVA_Compensation_Calculator
 
 		private void comboBoxAge_SelectedIndexChanged(object sender, EventArgs e)
 		{
-
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) <= 36)
 			{
-				GlobalVar.ageAdjustRange = 0;
+				GlobalVar.AgeAdjustRange = 0;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 36 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 45)
 			{
-				GlobalVar.ageAdjustRange = 1;
+				GlobalVar.AgeAdjustRange = 1;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 46 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 55)
 			{
-				GlobalVar.ageAdjustRange = 2;
+				GlobalVar.AgeAdjustRange = 2;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 56 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 65)
 			{
-				GlobalVar.ageAdjustRange = 3;
+				GlobalVar.AgeAdjustRange = 3;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 66 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 75)
 			{
-				GlobalVar.ageAdjustRange = 4;
+				GlobalVar.AgeAdjustRange = 4;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 76 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 85)
 			{
-				GlobalVar.ageAdjustRange = 5;
+				GlobalVar.AgeAdjustRange = 5;
 			}
 			if (Convert.ToInt16(comboBoxAge.SelectedItem) > 85)
 			{
-				GlobalVar.ageAdjustRange = 6;
+				GlobalVar.AgeAdjustRange = 6;
 			}
-			comboBoxShoulder_SelectedIndexChanged(null, null);
-			comboBoxElbow_SelectedIndexChanged(null, null);
-			comboBoxWrist_SelectedIndexChanged(null, null);
-			comboBoxFingers_SelectedIndexChanged(null, null);
+			textBoxElbow.Text = GlobalVar.ExcelData[4][Ebow.ebow][GlobalVar.AgeAdjustRange].ToString();
+			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.shoulder][GlobalVar.AgeAdjustRange].ToString();
+			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.wrist][GlobalVar.AgeAdjustRange].ToString();
+			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.fingers][GlobalVar.AgeAdjustRange].ToString();
+		}
+		#endregion
+
+		#region Final Payout
+
+		private void FinalPayout()
+		{
+			if (checkBoxElbowWar.Checked || checkBoxShoulderWar.Checked || checkBoxWristWar.Checked || checkBoxFingersWar.Checked)
+			{
+				if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
+				{
+					textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+				}
+				else
+				{
+					textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+				}
+			}
+			else
+			{
+				if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
+				{
+					textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+				}
+				else
+				{
+					textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+				}
+
+			}
+		}
+		#endregion
+
+		#region Total Combined Point
+
+		private void combinedPoints()
+		{
+			decimal combinedPoints;
+			combinedPoints = Math.Round(Convert.ToDecimal(textBoxElbow.Text) + Convert.ToDecimal(textBoxShoulder.Text) * (1 - Convert.ToDecimal(textBoxElbow.Text) / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxWrist.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxFingers.Text) * (1 - combinedPoints / 100));
+			textBoxComibinedPoints.Text = combinedPoints.ToString();
+		}
+		#endregion
+
+		#region Final Compensation Factor
+		private void finalCompensationFactor()
+		{
+			decimal combinedCompensation;
+			combinedCompensation = ((Convert.ToDecimal(textBoxTotalWarPoints.Text) * Convert.ToDecimal(textBoxCompensationFactorWar.Text)) + (Convert.ToDecimal(textBoxTotalPeacePoints.Text) * Convert.ToDecimal(textBoxCompensationFactorPeace.Text))) / (Convert.ToDecimal(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxTotalPeacePoints.Text));
+			textBoxFinalCompensationFactor.Text = Math.Round(combinedCompensation, 3).ToString();
 		}
 		#endregion
 
@@ -319,10 +289,20 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "comboBoxAge", comboBoxAge.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "valueWeeklyPayment", textBoxWeeklyPayment.Text);
 
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxElbow", comboBoxElbow.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxWrist", comboBoxWrist.Text); 
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxShoulder", comboBoxShoulder.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxFingers", comboBoxFingers.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxElbow", textBoxElbow.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWrist", textBoxWrist.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxShoulder", textBoxShoulder.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxFingers", textBoxFingers.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", checkBoxElbowWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShouldeWar", checkBoxElbowWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", checkBoxWristWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingerWar", checkBoxFingersWar.Checked.ToString());
+
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", textBoxRecreationalActivities.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", textBoxDomesticActivities.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", textBoxEmploymentActivities.Text);
 			
 		}
 
@@ -332,46 +312,205 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
-		private void importExcel()
+		private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
-			ExcelFile ef = ExcelFile.Load("CombinedValueChart.xls");
-			DataTable dataTable = new DataTable();
-			// Depending on the format of the input file, you need to change this:
+			FinalPayout();
+		}
 
-			dataTable.Columns.Add("FirstColumn", typeof(string));
-			dataTable.Columns.Add("SecondColumn", typeof(string));
-			dataTable.Columns.Add("ThirdColumn", typeof(string));
-			// Select the first worksheet from the file.
+		private void comboBoxAge_MouseLeave(object sender, EventArgs e)
+		{
+			FinalPayout();
+		}
 
-			ExcelWorksheet ws = ef.Worksheets[0];
-			ExtractToDataTableOptions options = new ExtractToDataTableOptions(0, 0, 50);
-			options.ExtractDataOptions = ExtractDataOptions.StopAtFirstEmptyRow;
-			options.ExcelCellToDataTableCellConverting += (sender, e) =>
+		private void buttonPersonalRelationships_Click(object sender, EventArgs e)
+		{
+			var personalRelationships = new PersonalRelationships();
+			personalRelationships.ShowDialog();
+			textBoxPersonalRelationships.Text = PersonalRelationships.personalRelationship.ToString();
+		}
+
+		private void buttonMobility_Click(object sender, EventArgs e)
+		{
+			var mobility = new Mobility();
+			mobility.ShowDialog();
+			textBoxMobility.Text = Mobility.mobility.ToString();
+		}
+
+		private void buttonRecreationalActivities_Click(object sender, EventArgs e)
+		{
+			var recreationalActivities = new RecreationalActivities();
+			recreationalActivities.ShowDialog();
+			textBoxRecreationalActivities.Text = RecreationalActivities.recreationalActivities.ToString();
+		}
+
+		private void buttonDomesticActivities_Click(object sender, EventArgs e)
+		{
+			var domesticActivities = new DomesticActivities();
+			domesticActivities.ShowDialog();
+			textBoxDomesticActivities.Text = DomesticActivities.domesticActivities.ToString();
+		}
+
+		private void buttonEmploymentActivities_Click(object sender, EventArgs e)
+		{
+
+			var employmentActivities = new EmploymentActivities();
+			employmentActivities.ShowDialog();
+			textBoxEmploymentActivities.Text = EmploymentActivities.employmentActivities.ToString();
+		}
+
+		private void textBoxPersonalRelationships_TextChanged(object sender, EventArgs e)
+		{
+			finalLifeStylePoint();
+		}
+
+		private void finalLifeStylePoint()
+		{
+			textBoxFinalLifeStylePoint.Text = (Math.Round(((Convert.ToDecimal(textBoxPersonalRelationships.Text) + Convert.ToDecimal(textBoxMobility.Text) + Convert.ToDecimal(textBoxRecreationalActivities.Text) + (Math.Max(Convert.ToDecimal(textBoxDomesticActivities.Text), Convert.ToDecimal(textBoxEmploymentActivities.Text)))) / 4),0)).ToString();
+		}
+
+		private void textBoxMobility_TextChanged(object sender, EventArgs e)
+		{
+			finalLifeStylePoint();
+		}
+
+		private void textBoxRecreationalActivities_TextChanged(object sender, EventArgs e)
+		{
+			finalLifeStylePoint();
+		}
+
+		private void textBoxDomesticActivities_TextChanged(object sender, EventArgs e)
+		{
+			finalLifeStylePoint();
+		}
+
+		private void textBoxEmploymentActivities_TextChanged(object sender, EventArgs e)
+		{
+			finalLifeStylePoint();
+		}
+
+		private void textBoxFinalLifeStylePoint_TextChanged(object sender, EventArgs e)
+		{
+			FinalPayout();
+		}
+
+		private void buttonElbow_Click(object sender, EventArgs e)
+		{
+			var ebow = new Ebow();
+			ebow.ShowDialog();
+			textBoxElbow.Text = GlobalVar.ExcelData[4][Ebow.ebow][GlobalVar.AgeAdjustRange].ToString();
+		}
+
+		private void buttonShoulder_Click(object sender, EventArgs e)
+		{
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.shoulder][GlobalVar.AgeAdjustRange].ToString();
+		}
+
+		private void buttonWrist_Click(object sender, EventArgs e)
+		{
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.wrist][GlobalVar.AgeAdjustRange].ToString();
+		}
+
+		private void buttonFingers_Click(object sender, EventArgs e)
+		{
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.fingers][GlobalVar.AgeAdjustRange].ToString();
+		}
+
+		private void textBoxElbow_TextChanged(object sender, EventArgs e)
+		{
+			combinedPoints();
+			UpdateAll();
+		}
+
+		private void textBoxShoulder_TextChanged(object sender, EventArgs e)
+		{
+			combinedPoints();
+			UpdateAll();
+		}
+
+		private void textBoxWrist_TextChanged(object sender, EventArgs e)
+		{
+			combinedPoints();
+			UpdateAll();
+		}
+
+		private void textBoxFingers_TextChanged(object sender, EventArgs e)
+		{
+			combinedPoints();
+			UpdateAll();
+		}
+
+		private void checkBoxElbowWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void totalPoint()
+		{
+			GlobalVar.WarlikePoints = 0;
+			GlobalVar.PeacelikePoints = 0;
+			if (checkBoxElbowWar.Checked)
 			{
-				if (!e.IsDataTableValueValid)
-				{
-					// GemBox.Spreadsheet doesn't automatically convert numbers to strings in ExtractToDataTable() method because of culture issues; 
-
-					// someone would expect the number 12.4 as "12.4" and someone else as "12,4".
-					e.DataTableValue = e.ExcelCell.Value == null ? null : e.ExcelCell.Value.ToString();
-					e.Action = ExtractDataEventAction.Continue;
-				}
-			};
-			// Extract the data from the worksheet to the DataTable.
-			// Data is extracted starting at first row and first column for 10 rows or until the first empty row appears.
-
-			ws.ExtractToDataTable(dataTable, options);
-			// Write DataTable content
-			GlobalVar.combineValue = new MultiDimDictList<object, int>();
-			var i = 0;
-			foreach (DataRow row in dataTable.Rows)
-			{			
-				GlobalVar.combineValue.Add(row[0], i);
-				GlobalVar.combineValue.Add(row[1], i);
-				GlobalVar.combineValue.Add(row[2], i);
-				i++;
+				GlobalVar.WarlikePoints += Convert.ToInt16(textBoxElbow.Text);
 			}
+			else
+			{
+				GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxElbow.Text);
+			}
+			if (checkBoxShoulderWar.Checked)
+			{
+				GlobalVar.WarlikePoints += Convert.ToInt16(textBoxShoulder.Text);
+			}
+			else
+			{
+				GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxShoulder.Text);
+			}
+			if (checkBoxWristWar.Checked)
+			{
+				GlobalVar.WarlikePoints += Convert.ToInt16(textBoxWrist.Text);
+			}
+			else
+			{
+				GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxWrist.Text);
+			}
+			if (checkBoxFingersWar.Checked)
+			{
+				GlobalVar.WarlikePoints += Convert.ToInt16(textBoxFingers.Text);
+			}
+			else
+			{
+				GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxFingers.Text);
+			}
+			textBoxTotalWarPoints.Text = GlobalVar.WarlikePoints.ToString();
+			textBoxTotalPeacePoints.Text = GlobalVar.PeacelikePoints.ToString();
+		}
+
+		private void checkBoxShoulderWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxWristWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxFingersWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void UpdateAll()
+		{
+			totalPoint();
+			finalCompensationFactor();
+			textBoxWeeklyPayout.Text = (Convert.ToDecimal(textBoxFinalCompensationFactor.Text)*Convert.ToDecimal(textBoxWeeklyPayment.Text)).ToString();
+	//		textBoxLumpSumPayout.Text = ((GlobalVar.ExcelData[2][Convert.ToInt16(comboBoxAge.Text) - 35][0]) * (Convert.ToDecimal(textBoxWeeklyPayment.Text))).ToString();
 		}
 
 	}

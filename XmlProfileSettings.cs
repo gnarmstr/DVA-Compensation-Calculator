@@ -123,9 +123,9 @@ namespace DVA_Compensation_Calculator
 		{
 			Profiles,
 			AppSettings,
-			Preferences,
 			UpperLimb,
-			LowerLimb
+			LowerLimb,
+			LifeStyle
 		};
 
 	}

@@ -8,10 +8,26 @@ namespace DVA_Compensation_Calculator
 {
 	class GlobalVar
 	{
-		public static MainForm.MultiDimDictList<int, int> ageAdjust = new MainForm.MultiDimDictList<int, int>();
+		public static MainForm.MultiDimDictList<int, int> AgeAdjust = new MainForm.MultiDimDictList<int, int>();
 
-		public static MainForm.MultiDimDictList<object, int> combineValue = new MainForm.MultiDimDictList<object, int>();
+		public static MainForm.MultiDimDictList<int, object> CombineValue = new MainForm.MultiDimDictList<int, object>();
 
-		public static int ageAdjustRange;
+		public static MainForm.MultiDimDictList<int, object> LifeStylePeace = new MainForm.MultiDimDictList<int, object>();
+
+		public static MainForm.MultiDimDictList<int, object> LifeStyleWar = new MainForm.MultiDimDictList<int, object>();
+
+		public static MainForm.MultiDimDictList<int, object> ActuaryTable = new MainForm.MultiDimDictList<int, object>();
+
+		public static MainForm.MultiDimDictList<int, object> LimbsAgeAdjust = new MainForm.MultiDimDictList<int, object>();
+		
+		public static int AgeAdjustRange;
+
+		public static MainForm.MultiDimDictList<int, object>[] ExcelData;
+
+		public static int WarlikeService;
+
+		public static int WarlikePoints;
+
+		public static int PeacelikePoints;
 	}
 }
