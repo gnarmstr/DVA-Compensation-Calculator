@@ -29,5 +29,9 @@ namespace DVA_Compensation_Calculator
 		public static int WarlikePoints;
 
 		public static int PeacelikePoints;
+
+		public static bool startup;
+
+		public static string Selection;
 	}
 }

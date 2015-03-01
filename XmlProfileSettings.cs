@@ -125,7 +125,8 @@ namespace DVA_Compensation_Calculator
 			AppSettings,
 			UpperLimb,
 			LowerLimb,
-			LifeStyle
+			LifeStyle,
+			Other
 		};
 
 	}

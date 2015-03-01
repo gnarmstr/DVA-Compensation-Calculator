@@ -25,10 +25,14 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			shoulder = 0;
+			Points = 0;
 		}
 
-		public static int shoulder;
+		public static int LeftShoulder;
+
+		public static int RightShoulder;
+
+		public static int Points;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
@@ -37,7 +41,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			shoulder = 10;
+			Points = 10;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -47,7 +51,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			shoulder = 20;
+			LeftShoulder = 20;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			shoulder = 30;
+			Points = 30;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption6.Checked = false;
-			shoulder = 40;
+			Points = 40;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -77,17 +81,32 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			shoulder = 50;
+			Points = 50;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			shoulder = 0;
+			if (GlobalVar.Selection == "LeftShoulder")
+			{
+				LeftShoulder = 0;
+			}
+			else
+			{
+				RightShoulder = 0;
+			}
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			if (GlobalVar.Selection == "LeftShoulder")
+			{
+				LeftShoulder = Points;
+			}
+			else
+			{
+				RightShoulder = Points;
+			}
 			Close();
 		}
 

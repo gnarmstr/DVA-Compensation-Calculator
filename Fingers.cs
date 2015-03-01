@@ -23,17 +23,21 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
-			fingers = 0;
+			Points = 0;
 		}
 
-		public static int fingers;
+		public static int LeftFingers;
+
+		public static int RightFingers;
+
+		public static int Points;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
 			checkBoxOption1.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
-			fingers = 5;
+			Points = 5;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption1.Checked = false;
 			checkBoxOption2.Checked = false;
 			checkBoxOption4.Checked = false;
-			fingers = 10;
+			Points = 10;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -49,17 +53,32 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption1.Checked = false;
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
-			fingers = 15;
+			Points = 15;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			fingers = 0;
+			if (GlobalVar.Selection == "LeftFingers")
+			{
+				LeftFingers = 0;
+			}
+			else
+			{
+				RightFingers = 0;
+			}
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			if (GlobalVar.Selection == "LeftFingers")
+			{
+				LeftFingers = Points;
+			}
+			else
+			{
+				RightFingers = Points;
+			}
 			Close();
 		}
 

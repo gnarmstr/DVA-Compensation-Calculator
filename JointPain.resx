@@ -117,21 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="checkBoxOption5.Text" xml:space="preserve">
+    <value>Severe pain in any joint, or combination of joints, that is always present at rest but which does not respond adequately to medication or to therapeutic measures and which regularly interferes with sleep.</value>
+  </data>
+  <data name="checkBoxOption3.Text" xml:space="preserve">
+    <value>· Pain in any joint, or combination of joints, that is often present at rest but which improves after several hours rest or responds to medication or       to therapeutic measures.
+· Pain in the back that limits comfortable sitting to less than 10 minutes at a time.</value>
+  </data>
   <data name="label37.Text" xml:space="preserve">
     <value>An additional rating is to be given for certain joint pain. This table is to be applied only for frequent joint pain that continues to affect a joint when the joint is no longer in use: for example, pain in the knees continuing for a significant period after ceasing walking and standing, or pain in the shoulders persisting for a significant period after ceasing some task such as hanging out the washing.
 

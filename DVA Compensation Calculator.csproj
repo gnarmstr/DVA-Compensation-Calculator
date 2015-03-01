@@ -82,6 +82,12 @@
     <Compile Include="Fingers.Designer.cs">
       <DependentUpon>Fingers.cs</DependentUpon>
     </Compile>
+    <Compile Include="JointPain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JointPain.Designer.cs">
+      <DependentUpon>JointPain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wrist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Fingers.resx">
       <DependentUpon>Fingers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JointPain.resx">
+      <DependentUpon>JointPain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wrist.resx">
       <DependentUpon>Wrist.cs</DependentUpon>

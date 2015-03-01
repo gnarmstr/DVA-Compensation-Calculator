@@ -25,10 +25,14 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			wrist = 0;
+			Points = 0;
 		}
 
-		public static int wrist;
+		public static int LeftWrist;
+
+		public static int RightWrist;
+
+		public static int Points;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
@@ -37,7 +41,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			wrist = 5;
+			Points = 5;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -47,7 +51,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			wrist = 10;
+			Points = 10;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			wrist = 15;
+			Points = 15;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption6.Checked = false;
-			wrist = 20;
+			Points = 20;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -77,17 +81,32 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			wrist = 30;
+			Points = 30;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			wrist = 0;
+			if (GlobalVar.Selection == "LeftWrist")
+			{
+				LeftWrist = 0;
+			}
+			else
+			{
+				RightWrist = 0;
+			}
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			if (GlobalVar.Selection == "LeftWrist")
+			{
+				LeftWrist = Points;
+			}
+			else
+			{
+				RightWrist = Points;
+			}
 			Close();
 		}
 
