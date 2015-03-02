@@ -94,6 +94,12 @@
     <Compile Include="ROMInfo.Designer.cs">
       <DependentUpon>ROMInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThoracoLumbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThoracoLumbar.Designer.cs">
+      <DependentUpon>ThoracoLumbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wrist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ROMInfo.resx">
       <DependentUpon>ROMInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThoracoLumbar.resx">
+      <DependentUpon>ThoracoLumbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wrist.resx">
       <DependentUpon>Wrist.cs</DependentUpon>

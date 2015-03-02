@@ -18,6 +18,7 @@ namespace DVA_Compensation_Calculator
 {
 	public partial class MainForm : Form
 	{
+		#region Initialization
 		public MainForm()
 		{
 			InitializeComponent();
@@ -34,6 +35,7 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.startup = false;
 			UpdateAll();
 		}
+		#endregion
 
 		#region Settings
 		private void Settings()
@@ -86,6 +88,10 @@ namespace DVA_Compensation_Calculator
 			checkBoxRightShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", false);
 			checkBoxRightWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", false);
 			checkBoxRightFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingersWar", false);
+
+			textBoxThoraco.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", "0");
+			ThoracoLumbar.thoracoLumbar = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", "0"));
+			checkBoxThoracoWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", false);
 
 			textBoxPersonalRelationships.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
 			textBoxMobility.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
@@ -249,315 +255,7 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
-		#region Final Payout
-
-		private void FinalPayout()
-		{
-			if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
-			{
-				textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
-			}
-			else
-			{
-				textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
-			}
-			if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
-			{
-				textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
-			}
-			else
-			{
-				textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
-			}
-		}
-		#endregion
-
-		#region Total Combined Point
-
-		private void combinedPoints()
-		{
-			//Add a line per claim.
-			decimal combinedPoints;
-			combinedPoints = Math.Round(GlobalVar.LeftArmPoints + Convert.ToDecimal(textBoxJointPain.Text) * (1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar) / 100));
-			combinedPoints = Math.Round(combinedPoints + GlobalVar.RightArmPoints * (1 - combinedPoints / 100));
-			textBoxComibinedPoints.Text = combinedPoints.ToString();
-		}
-		#endregion
-
-		#region Final Compensation Factor
-		private void finalCompensationFactor()
-		{
-			try
-			{
-			decimal combinedCompensation;
-			combinedCompensation = ((Convert.ToDecimal(textBoxTotalWarPoints.Text) * Convert.ToDecimal(textBoxCompensationFactorWar.Text)) + (Convert.ToDecimal(textBoxTotalPeacePoints.Text) * Convert.ToDecimal(textBoxCompensationFactorPeace.Text))) / (Convert.ToDecimal(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxTotalPeacePoints.Text));
-			textBoxFinalCompensationFactor.Text = Math.Round(combinedCompensation, 3).ToString();
-
-			}
-			catch (Exception)
-			{
-			}
-		}
-		#endregion
-
-		#region Close Application
-		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-		{
-			e.Cancel = false;
-			var save = MessageBox.Show(@"Would you like to save all Settings on exit?", @"Save", MessageBoxButtons.YesNoCancel);
-			switch (save)
-			{
-				case DialogResult.Yes:
-					Save();
-					break;
-				case DialogResult.No:
-					break;
-				case DialogResult.Cancel:
-					e.Cancel = true;
-					break;
-			}
-		}
-		#endregion
-
-		#region Save Data
-		private void Save()
-		{
-			var profile = new XmlProfileSettings();
-			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "comboBoxAge", comboBoxAge.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "textBoxWeeklyPayment", textBoxWeeklyPayment.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "checkBoxMale", checkBoxMale.Checked.ToString());
-			
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxElbow", textBoxElbow.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightElbow", textBoxRightElbow.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftElbow", Elbow.LeftElbow);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightElbow", Elbow.RightElbow);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWrist", textBoxWrist.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightWrist", textBoxRightWrist.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftWrist", Wrist.LeftWrist);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightWrist", Wrist.RightWrist);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxShoulder", textBoxShoulder.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightShoulder", textBoxRightShoulder.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftShoulder", Shoulder.LeftShoulder);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightShoulder", Shoulder.RightShoulder);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxFingers", textBoxFingers.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightFingers", textBoxRightFingers.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftFingers", Fingers.LeftFingers);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightFingers", Fingers.RightFingers);
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", checkBoxElbowWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShoulderWar", checkBoxShoulderWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", checkBoxWristWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingerWar", checkBoxFingersWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightElbowWar", checkBoxRightElbowWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", checkBoxRightShoulderWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", checkBoxRightWristWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingerWar", checkBoxRightFingersWar.Checked.ToString());
-
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", textBoxRecreationalActivities.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", textBoxDomesticActivities.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", textBoxEmploymentActivities.Text);
-
-			profile.PutSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", textBoxJointPain.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Other, "JointPain", JointPain.jointPain);
-			
-
-			MessageBox.Show(@"Settings and Data have been saved");
-		}
-
-		private void SaveAll_Click(object sender, EventArgs e)
-		{
-			Save();
-		}
-		#endregion
-
-		private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void comboBoxAge_MouseLeave(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void buttonPersonalRelationships_Click(object sender, EventArgs e)
-		{
-			var personalRelationships = new PersonalRelationships();
-			personalRelationships.ShowDialog();
-			textBoxPersonalRelationships.Text = PersonalRelationships.personalRelationship.ToString();
-		}
-
-		private void buttonMobility_Click(object sender, EventArgs e)
-		{
-			var mobility = new Mobility();
-			mobility.ShowDialog();
-			textBoxMobility.Text = Mobility.mobility.ToString();
-		}
-
-		private void buttonRecreationalActivities_Click(object sender, EventArgs e)
-		{
-			var recreationalActivities = new RecreationalActivities();
-			recreationalActivities.ShowDialog();
-			textBoxRecreationalActivities.Text = RecreationalActivities.recreationalActivities.ToString();
-		}
-
-		private void buttonDomesticActivities_Click(object sender, EventArgs e)
-		{
-			var domesticActivities = new DomesticActivities();
-			domesticActivities.ShowDialog();
-			textBoxDomesticActivities.Text = DomesticActivities.domesticActivities.ToString();
-		}
-
-		private void buttonEmploymentActivities_Click(object sender, EventArgs e)
-		{
-
-			var employmentActivities = new EmploymentActivities();
-			employmentActivities.ShowDialog();
-			textBoxEmploymentActivities.Text = EmploymentActivities.employmentActivities.ToString();
-		}
-
-		private void textBoxPersonalRelationships_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void finalLifeStylePoint()
-		{
-			textBoxFinalLifeStylePoint.Text = (Math.Round(((Convert.ToDecimal(textBoxPersonalRelationships.Text) + Convert.ToDecimal(textBoxMobility.Text) + Convert.ToDecimal(textBoxRecreationalActivities.Text) + (Math.Max(Convert.ToDecimal(textBoxDomesticActivities.Text), Convert.ToDecimal(textBoxEmploymentActivities.Text)))) / 4),0)).ToString();
-		}
-
-		private void textBoxMobility_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxRecreationalActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxDomesticActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxEmploymentActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxFinalLifeStylePoint_TextChanged(object sender, EventArgs e)
-		{
-			FinalPayout();
-		}
-
-		#region Arm
-		private void buttonElbow_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftElbow";
-			var ebow = new Elbow();
-			ebow.ShowDialog();
-			textBoxElbow.Text = GlobalVar.ExcelData[4][Elbow.LeftElbow][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonShoulder_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightElbow_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightElbow";
-			var elbow = new Elbow();
-			elbow.ShowDialog();
-			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightShoulder_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-		#endregion
-
-		private void textBoxElbow_TextChanged(object sender, EventArgs e)
-		{ 
-			UpdateAll();
-		}
-
-		private void textBoxShoulder_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxWrist_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxFingers_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxElbowWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
+		#region Total Points
 
 		private void totalPoint()
 		{
@@ -655,20 +353,28 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.RightArmPoints = Math.Max(GlobalVar.RightArmHighestPointsWar, GlobalVar.RightArmHighestPointsPeace);
 			
 			//Joint Pain
-			decimal  jointPain = 0;
 			var jointPainWar = 0;
 			if (checkBoxJointPainWar.Checked)
 			{
 				jointPainWar = 1;
+			}
+
+			//Thoraco Lumber Spine
+			var thoracoLumbarWar = 0;
+			if (checkBoxThoracoWar.Checked)
+			{
+				thoracoLumbarWar = 1;
 			}
 			
 			// Just for Display Only
 			GlobalVar.WarlikePoints += Convert.ToInt16(leftArmHighestPointsWarArray.Max());
 			GlobalVar.WarlikePoints += Convert.ToInt16(rightArmHighestPointsWarArray.Max());
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxJointPain.Text);
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxThoraco.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(rightArmHighestPointsPeaceArray.Max());
 			GlobalVar.PeacelikePoints += Convert.ToInt16(leftArmHighestPointsPeaceArray.Max());
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxJointPain.Text);
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThoraco.Text);
 			//
 
 			textBoxTotalWarPoints.Text = "0";
@@ -697,23 +403,72 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxJointPain.Text)).ToString();
 			}
+			if (thoracoLumbarWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxThoraco.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxThoraco.Text)).ToString();
+			}
 			
 		}
 
-		private void checkBoxShoulderWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
+		#endregion
 
-		private void checkBoxWristWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
+		#region Total Combined Point
 
-		private void checkBoxFingersWar_CheckedChanged(object sender, EventArgs e)
+		private void combinedPoints()
 		{
-			UpdateAll();
+			//Add a line per claim.
+			decimal combinedPoints;
+			combinedPoints = Math.Round(GlobalVar.LeftArmPoints + Convert.ToDecimal(textBoxJointPain.Text) * (1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar) / 100));
+			combinedPoints = Math.Round(combinedPoints + GlobalVar.RightArmPoints * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThoraco.Text) * (1 - combinedPoints / 100));
+			textBoxComibinedPoints.Text = combinedPoints.ToString();
 		}
+		#endregion
+
+		#region Final Compensation Factor
+		private void finalCompensationFactor()
+		{
+			try
+			{
+			decimal combinedCompensation;
+			combinedCompensation = ((Convert.ToDecimal(textBoxTotalWarPoints.Text) * Convert.ToDecimal(textBoxCompensationFactorWar.Text)) + (Convert.ToDecimal(textBoxTotalPeacePoints.Text) * Convert.ToDecimal(textBoxCompensationFactorPeace.Text))) / (Convert.ToDecimal(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxTotalPeacePoints.Text));
+			textBoxFinalCompensationFactor.Text = Math.Round(combinedCompensation, 3).ToString();
+
+			}
+			catch (Exception)
+			{
+			}
+		}
+		#endregion
+
+		#region Final Payout
+
+		private void FinalPayout()
+		{
+			if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
+			{
+				textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+			}
+			else
+			{
+				textBoxCompensationFactorWar.Text = GlobalVar.ExcelData[0][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+			}
+			if (Convert.ToInt16(textBoxComibinedPoints.Text) > 0)
+			{
+				textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text) - 4][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+			}
+			else
+			{
+				textBoxCompensationFactorPeace.Text = GlobalVar.ExcelData[1][Convert.ToInt16(textBoxComibinedPoints.Text)][Convert.ToInt16(textBoxFinalLifeStylePoint.Text)].ToString();
+			}
+		}
+		#endregion
+
+		#region Update All
 
 		private void UpdateAll()
 		{
@@ -745,34 +500,192 @@ namespace DVA_Compensation_Calculator
 					textBoxLumpSumPayout.Text = (Math.Round(Convert.ToDecimal(GlobalVar.ExcelData[2][Convert.ToInt16(comboBoxAge.Text) - 31][sex]) * Convert.ToDecimal(textBoxWeeklyPayout.Text), 2)).ToString();
 				}
 			}
+		}
+		#endregion
+
+		#region Close Application
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			e.Cancel = false;
+			var save = MessageBox.Show(@"Would you like to save all Settings on exit?", @"Save", MessageBoxButtons.YesNoCancel);
+			switch (save)
+			{
+				case DialogResult.Yes:
+					Save();
+					break;
+				case DialogResult.No:
+					break;
+				case DialogResult.Cancel:
+					e.Cancel = true;
+					break;
+			}
+		}
+		#endregion
+
+		#region Save Data
+		private void Save()
+		{
+			var profile = new XmlProfileSettings();
+			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "comboBoxAge", comboBoxAge.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "textBoxWeeklyPayment", textBoxWeeklyPayment.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Profiles, "checkBoxMale", checkBoxMale.Checked.ToString());
 			
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxElbow", textBoxElbow.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightElbow", textBoxRightElbow.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftElbow", Elbow.LeftElbow);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightElbow", Elbow.RightElbow);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWrist", textBoxWrist.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightWrist", textBoxRightWrist.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftWrist", Wrist.LeftWrist);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightWrist", Wrist.RightWrist);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxShoulder", textBoxShoulder.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightShoulder", textBoxRightShoulder.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftShoulder", Shoulder.LeftShoulder);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightShoulder", Shoulder.RightShoulder);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxFingers", textBoxFingers.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightFingers", textBoxRightFingers.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftFingers", Fingers.LeftFingers);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "RightFingers", Fingers.RightFingers);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", checkBoxElbowWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShoulderWar", checkBoxShoulderWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", checkBoxWristWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingerWar", checkBoxFingersWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightElbowWar", checkBoxRightElbowWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", checkBoxRightShoulderWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", checkBoxRightWristWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingerWar", checkBoxRightFingersWar.Checked.ToString());
+
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", textBoxThoraco.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", ThoracoLumbar.thoracoLumbar);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", checkBoxThoracoWar.Checked.ToString());
+
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", textBoxRecreationalActivities.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", textBoxDomesticActivities.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", textBoxEmploymentActivities.Text);
+
+			profile.PutSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", textBoxJointPain.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Other, "JointPain", JointPain.jointPain);
+			
+
+			MessageBox.Show(@"Settings and Data have been saved");
 		}
 
-		private void checkBoxMale_CheckedChanged(object sender, EventArgs e)
+		private void SaveAll_Click(object sender, EventArgs e)
 		{
-			checkBoxFemale.Checked = !checkBoxMale.Checked;
-			if (!GlobalVar.startup)
-			{
-				UpdateAll();
-			}
+			Save();
+		}
+		#endregion
+
+
+
+		#region Back
+
+		private void buttonThoraco_Click(object sender, EventArgs e)
+		{
+			var thoraco = new ThoracoLumbar();
+			thoraco.ShowDialog();
+			//Will age adjust the points
+			textBoxThoraco.Text = GlobalVar.ExcelData[4][ThoracoLumbar.thoracoLumbar][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
 		}
 
-		private void checkBoxFemale_CheckedChanged(object sender, EventArgs e)
+		private void checkBoxThoracoWar_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxMale.Checked = !checkBoxFemale.Checked;
-			if (!GlobalVar.startup)
-			{
-				UpdateAll();
-			}
+			UpdateAll();
 		}
 
-		private void textBoxWeeklyPayment_TextChanged(object sender, EventArgs e)
+		private void textBoxThoracoLumbar_TextChanged(object sender, EventArgs e)
 		{
-			if (!GlobalVar.startup)
-			{
-				UpdateAll();
-			}
+			UpdateAll();
 		}
+
+		#endregion
+
+		#region LifeStyle
+
+		private void buttonPersonalRelationships_Click(object sender, EventArgs e)
+		{
+			var personalRelationships = new PersonalRelationships();
+			personalRelationships.ShowDialog();
+			textBoxPersonalRelationships.Text = PersonalRelationships.personalRelationship.ToString();
+		}
+
+		private void buttonMobility_Click(object sender, EventArgs e)
+		{
+			var mobility = new Mobility();
+			mobility.ShowDialog();
+			textBoxMobility.Text = Mobility.mobility.ToString();
+		}
+
+		private void buttonRecreationalActivities_Click(object sender, EventArgs e)
+		{
+			var recreationalActivities = new RecreationalActivities();
+			recreationalActivities.ShowDialog();
+			textBoxRecreationalActivities.Text = RecreationalActivities.recreationalActivities.ToString();
+		}
+
+		private void buttonDomesticActivities_Click(object sender, EventArgs e)
+		{
+			var domesticActivities = new DomesticActivities();
+			domesticActivities.ShowDialog();
+			textBoxDomesticActivities.Text = DomesticActivities.domesticActivities.ToString();
+		}
+
+		private void buttonEmploymentActivities_Click(object sender, EventArgs e)
+		{
+
+			var employmentActivities = new EmploymentActivities();
+			employmentActivities.ShowDialog();
+			textBoxEmploymentActivities.Text = EmploymentActivities.employmentActivities.ToString();
+		}
+
+		private void textBoxPersonalRelationships_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxMobility_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxRecreationalActivities_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxDomesticActivities_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxEmploymentActivities_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void finalLifeStylePoint()
+		{
+			textBoxFinalLifeStylePoint.Text = (Math.Round(((Convert.ToDecimal(textBoxPersonalRelationships.Text) + Convert.ToDecimal(textBoxMobility.Text) + Convert.ToDecimal(textBoxRecreationalActivities.Text) + (Math.Max(Convert.ToDecimal(textBoxDomesticActivities.Text), Convert.ToDecimal(textBoxEmploymentActivities.Text)))) / 4), 0)).ToString();
+		}
+
+		private void textBoxFinalLifeStylePoint_TextChanged(object sender, EventArgs e)
+		{
+			FinalPayout();
+		}
+
+		#endregion
+
+		#region Lower Body
+
+
+
+		#endregion
+
+		#region Joint Pain
 
 		private void buttonJointPain_Click(object sender, EventArgs e)
 		{
@@ -789,6 +702,129 @@ namespace DVA_Compensation_Calculator
 		}
 
 		private void checkBoxJointPainWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
+
+		#region Upper Body
+
+		private void buttonElbow_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftElbow";
+			var ebow = new Elbow();
+			ebow.ShowDialog();
+			textBoxElbow.Text = GlobalVar.ExcelData[4][Elbow.LeftElbow][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonShoulder_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightElbow_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightElbow";
+			var elbow = new Elbow();
+			elbow.ShowDialog();
+			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightShoulder_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxElbow_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxShoulder_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxWrist_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxFingers_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxElbowWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+		private void checkBoxShoulderWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxWristWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxFingersWar_CheckedChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
 		}
@@ -833,12 +869,53 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
+		#endregion
+
+		#region Misc
+
+		private void checkBoxMale_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxFemale.Checked = !checkBoxMale.Checked;
+			if (!GlobalVar.startup)
+			{
+				UpdateAll();
+			}
+		}
+
+		private void checkBoxFemale_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxMale.Checked = !checkBoxFemale.Checked;
+			if (!GlobalVar.startup)
+			{
+				UpdateAll();
+			}
+		}
+
+		private void textBoxWeeklyPayment_TextChanged(object sender, EventArgs e)
+		{
+			if (!GlobalVar.startup)
+			{
+				UpdateAll();
+			}
+		}
+
 		private void buttonROMInfo_Click(object sender, EventArgs e)
 		{
 			var rOMInfo = new ROMInfo();
 			rOMInfo.ShowDialog();
 		}
 
+		private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void comboBoxAge_MouseLeave(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
 
 	}
 }

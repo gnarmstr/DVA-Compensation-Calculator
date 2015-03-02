@@ -126,6 +126,7 @@ namespace DVA_Compensation_Calculator
 			UpperLimb,
 			LowerLimb,
 			LifeStyle,
+			Back,
 			Other
 		};
 
