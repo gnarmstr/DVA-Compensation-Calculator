@@ -2,17 +2,20 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class JointPain : Form
+	public partial class Hip : Form
 	{
-		public JointPain()
+		public Hip()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
-		private void JointPain_Load(object sender, EventArgs e)
+		private void DomesticActivities_Load(object sender, EventArgs e)
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
@@ -24,10 +27,13 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			jointPain = 0;
+			checkBoxOption6.Checked = false;
+			Points = 0;
 		}
 
-		public static int jointPain;
+		public static int hip;
+
+		public static int Points;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
@@ -35,7 +41,8 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			jointPain = 2;
+			checkBoxOption6.Checked = false;
+			Points = 10;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -44,7 +51,8 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption2.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			jointPain = 5;
+			checkBoxOption6.Checked = false;
+			Points = 20;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -53,26 +61,39 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
-			jointPain = 10;
+			checkBoxOption6.Checked = false;
+			Points = 30;
 		}
-
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
 		{
 			checkBoxOption1.Checked = false;
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
-			jointPain = 15;
+			checkBoxOption6.Checked = false;
+			Points = 40;
 		}
+
+		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxOption1.Checked = false;
+			checkBoxOption2.Checked = false;
+			checkBoxOption3.Checked = false;
+			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			Points = 50;
+		}
+
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			jointPain = 0;
+			hip = 0;
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			hip = Points;
 			Close();
 		}
 

@@ -1,6 +1,6 @@
 ﻿namespace DVA_Compensation_Calculator
 {
-	partial class EmploymentActivities
+	partial class DomesticActivities
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmploymentActivities));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DomesticActivities));
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption7 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
@@ -155,7 +155,7 @@
 			this.label1.TabIndex = 21;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 
-			// EmploymentActivities
+			// DomesticActivities
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,8 +172,11 @@
 			this.Controls.Add(this.checkBoxOption5);
 			this.Controls.Add(this.checkBoxOption3);
 			this.Controls.Add(this.checkBoxOption1);
-			this.Name = "EmploymentActivities";
-			this.Text = "Employment Activities";
+			this.MaximumSize = new System.Drawing.Size(1116, 1000);
+			this.MinimumSize = new System.Drawing.Size(1116, 1000);
+			this.Name = "DomesticActivities";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+			this.Text = "Domestic Activities";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();

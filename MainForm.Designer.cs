@@ -82,28 +82,36 @@
 			this.checkBoxWristWar = new System.Windows.Forms.CheckBox();
 			this.checkBoxFingersWar = new System.Windows.Forms.CheckBox();
 			this.label27 = new System.Windows.Forms.Label();
-			this.label48 = new System.Windows.Forms.Label();
-			this.label47 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPageLowerLimbs = new System.Windows.Forms.TabPage();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.checkBoxWholeLimbWar = new System.Windows.Forms.CheckBox();
+			this.label55 = new System.Windows.Forms.Label();
+			this.buttonWholeLimb = new System.Windows.Forms.Button();
+			this.label56 = new System.Windows.Forms.Label();
+			this.textBoxWholeLimb = new System.Windows.Forms.TextBox();
+			this.label57 = new System.Windows.Forms.Label();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.checkBoxKneeWar = new System.Windows.Forms.CheckBox();
+			this.checkBoxHipWar = new System.Windows.Forms.CheckBox();
+			this.checkBoxAnkleWar = new System.Windows.Forms.CheckBox();
+			this.checkBoxToesWar = new System.Windows.Forms.CheckBox();
+			this.label53 = new System.Windows.Forms.Label();
+			this.buttonHip = new System.Windows.Forms.Button();
+			this.buttonAnkle = new System.Windows.Forms.Button();
+			this.buttonToes = new System.Windows.Forms.Button();
 			this.buttonKnee = new System.Windows.Forms.Button();
-			this.label6 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
-			this.comboBoxKnee = new System.Windows.Forms.ComboBox();
-			this.comboBox4 = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.textBoxKnee = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.textBoxToes = new System.Windows.Forms.TextBox();
+			this.textBoxAnkle = new System.Windows.Forms.TextBox();
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.textBoxHip = new System.Windows.Forms.TextBox();
+			this.label54 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
 			this.tabPageBack = new System.Windows.Forms.TabPage();
 			this.label50 = new System.Windows.Forms.Label();
 			this.textBoxThoraco = new System.Windows.Forms.TextBox();
@@ -159,23 +167,42 @@
 			this.buttonROMInfo = new System.Windows.Forms.Button();
 			this.label18 = new System.Windows.Forms.Label();
 			this.textBoxFinalLifeStylePoint = new System.Windows.Forms.TextBox();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.label58 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.label59 = new System.Windows.Forms.Label();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label60 = new System.Windows.Forms.Label();
+			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.checkBox2 = new System.Windows.Forms.CheckBox();
+			this.label61 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.label62 = new System.Windows.Forms.Label();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.label63 = new System.Windows.Forms.Label();
+			this.label47 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPagePersonalDetails.SuspendLayout();
 			this.tabPageUpperLimb.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.tabPageLowerLimbs.SuspendLayout();
+			this.groupBox4.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.tabPageBack.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPageLifeStyle.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
+			this.groupBox5.SuspendLayout();
+			this.groupBox6.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// textBoxWeeklyPayout
 			// 
 			this.textBoxWeeklyPayout.Enabled = false;
 			this.textBoxWeeklyPayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxWeeklyPayout.Location = new System.Drawing.Point(354, 700);
+			this.textBoxWeeklyPayout.Location = new System.Drawing.Point(352, 815);
 			this.textBoxWeeklyPayout.Name = "textBoxWeeklyPayout";
 			this.textBoxWeeklyPayout.Size = new System.Drawing.Size(88, 30);
 			this.textBoxWeeklyPayout.TabIndex = 0;
@@ -185,7 +212,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(11, 703);
+			this.label1.Location = new System.Drawing.Point(9, 818);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(295, 25);
 			this.label1.TabIndex = 1;
@@ -195,7 +222,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(484, 703);
+			this.label2.Location = new System.Drawing.Point(482, 818);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(179, 25);
 			this.label2.TabIndex = 3;
@@ -205,7 +232,7 @@
 			// 
 			this.textBoxLumpSumPayout.Enabled = false;
 			this.textBoxLumpSumPayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxLumpSumPayout.Location = new System.Drawing.Point(775, 700);
+			this.textBoxLumpSumPayout.Location = new System.Drawing.Point(773, 815);
 			this.textBoxLumpSumPayout.Name = "textBoxLumpSumPayout";
 			this.textBoxLumpSumPayout.Size = new System.Drawing.Size(109, 30);
 			this.textBoxLumpSumPayout.TabIndex = 2;
@@ -222,7 +249,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(12, 12);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(889, 508);
+			this.tabControl1.Size = new System.Drawing.Size(889, 621);
 			this.tabControl1.TabIndex = 4;
 			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
 			// 
@@ -239,7 +266,7 @@
 			this.tabPagePersonalDetails.Location = new System.Drawing.Point(4, 29);
 			this.tabPagePersonalDetails.Name = "tabPagePersonalDetails";
 			this.tabPagePersonalDetails.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPagePersonalDetails.Size = new System.Drawing.Size(881, 475);
+			this.tabPagePersonalDetails.Size = new System.Drawing.Size(881, 588);
 			this.tabPagePersonalDetails.TabIndex = 0;
 			this.tabPagePersonalDetails.Text = "Personal Details";
 			// 
@@ -319,15 +346,16 @@
 			// tabPageUpperLimb
 			// 
 			this.tabPageUpperLimb.BackColor = System.Drawing.SystemColors.Info;
+			this.tabPageUpperLimb.Controls.Add(this.label47);
+			this.tabPageUpperLimb.Controls.Add(this.groupBox6);
+			this.tabPageUpperLimb.Controls.Add(this.groupBox5);
 			this.tabPageUpperLimb.Controls.Add(this.groupBox2);
 			this.tabPageUpperLimb.Controls.Add(this.groupBox1);
-			this.tabPageUpperLimb.Controls.Add(this.label48);
-			this.tabPageUpperLimb.Controls.Add(this.label47);
 			this.tabPageUpperLimb.Controls.Add(this.label3);
 			this.tabPageUpperLimb.Location = new System.Drawing.Point(4, 29);
 			this.tabPageUpperLimb.Name = "tabPageUpperLimb";
 			this.tabPageUpperLimb.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageUpperLimb.Size = new System.Drawing.Size(881, 475);
+			this.tabPageUpperLimb.Size = new System.Drawing.Size(881, 588);
 			this.tabPageUpperLimb.TabIndex = 2;
 			this.tabPageUpperLimb.Text = "Upper Limbs";
 			// 
@@ -351,15 +379,16 @@
 			this.groupBox2.Controls.Add(this.label45);
 			this.groupBox2.Controls.Add(this.label46);
 			this.groupBox2.Controls.Add(this.textBoxRightShoulder);
-			this.groupBox2.Location = new System.Drawing.Point(445, 130);
+			this.groupBox2.Location = new System.Drawing.Point(446, 57);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(435, 293);
+			this.groupBox2.Size = new System.Drawing.Size(435, 271);
 			this.groupBox2.TabIndex = 71;
 			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Right Arm";
 			// 
 			// label41
 			// 
-			this.label41.Location = new System.Drawing.Point(348, 35);
+			this.label41.Location = new System.Drawing.Point(346, 18);
 			this.label41.Name = "label41";
 			this.label41.Size = new System.Drawing.Size(76, 45);
 			this.label41.TabIndex = 67;
@@ -370,7 +399,7 @@
 			// 
 			this.checkBoxRightFingersWar.AutoSize = true;
 			this.checkBoxRightFingersWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightFingersWar.Location = new System.Drawing.Point(376, 257);
+			this.checkBoxRightFingersWar.Location = new System.Drawing.Point(374, 227);
 			this.checkBoxRightFingersWar.Name = "checkBoxRightFingersWar";
 			this.checkBoxRightFingersWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightFingersWar.TabIndex = 66;
@@ -382,7 +411,7 @@
 			// 
 			this.checkBoxRightWristWar.AutoSize = true;
 			this.checkBoxRightWristWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightWristWar.Location = new System.Drawing.Point(376, 205);
+			this.checkBoxRightWristWar.Location = new System.Drawing.Point(374, 175);
 			this.checkBoxRightWristWar.Name = "checkBoxRightWristWar";
 			this.checkBoxRightWristWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightWristWar.TabIndex = 65;
@@ -394,7 +423,7 @@
 			// 
 			this.checkBoxRightShoulderWar.AutoSize = true;
 			this.checkBoxRightShoulderWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightShoulderWar.Location = new System.Drawing.Point(376, 149);
+			this.checkBoxRightShoulderWar.Location = new System.Drawing.Point(374, 124);
 			this.checkBoxRightShoulderWar.Name = "checkBoxRightShoulderWar";
 			this.checkBoxRightShoulderWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightShoulderWar.TabIndex = 64;
@@ -404,7 +433,7 @@
 			// 
 			// buttonRightShoulder
 			// 
-			this.buttonRightShoulder.Location = new System.Drawing.Point(166, 140);
+			this.buttonRightShoulder.Location = new System.Drawing.Point(164, 115);
 			this.buttonRightShoulder.Name = "buttonRightShoulder";
 			this.buttonRightShoulder.Size = new System.Drawing.Size(71, 37);
 			this.buttonRightShoulder.TabIndex = 63;
@@ -414,7 +443,7 @@
 			// 
 			// buttonRightWrist
 			// 
-			this.buttonRightWrist.Location = new System.Drawing.Point(166, 196);
+			this.buttonRightWrist.Location = new System.Drawing.Point(164, 166);
 			this.buttonRightWrist.Name = "buttonRightWrist";
 			this.buttonRightWrist.Size = new System.Drawing.Size(71, 37);
 			this.buttonRightWrist.TabIndex = 62;
@@ -424,7 +453,7 @@
 			// 
 			// buttonRightFingers
 			// 
-			this.buttonRightFingers.Location = new System.Drawing.Point(166, 248);
+			this.buttonRightFingers.Location = new System.Drawing.Point(164, 218);
 			this.buttonRightFingers.Name = "buttonRightFingers";
 			this.buttonRightFingers.Size = new System.Drawing.Size(71, 37);
 			this.buttonRightFingers.TabIndex = 61;
@@ -434,7 +463,7 @@
 			// 
 			// buttonRightElbow
 			// 
-			this.buttonRightElbow.Location = new System.Drawing.Point(166, 82);
+			this.buttonRightElbow.Location = new System.Drawing.Point(164, 65);
 			this.buttonRightElbow.Name = "buttonRightElbow";
 			this.buttonRightElbow.Size = new System.Drawing.Size(71, 37);
 			this.buttonRightElbow.TabIndex = 60;
@@ -446,7 +475,7 @@
 			// 
 			this.checkBoxRightElbowWar.AutoSize = true;
 			this.checkBoxRightElbowWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightElbowWar.Location = new System.Drawing.Point(376, 91);
+			this.checkBoxRightElbowWar.Location = new System.Drawing.Point(374, 74);
 			this.checkBoxRightElbowWar.Name = "checkBoxRightElbowWar";
 			this.checkBoxRightElbowWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightElbowWar.TabIndex = 59;
@@ -457,7 +486,7 @@
 			// label42
 			// 
 			this.label42.AutoSize = true;
-			this.label42.Location = new System.Drawing.Point(8, 90);
+			this.label42.Location = new System.Drawing.Point(6, 73);
 			this.label42.Name = "label42";
 			this.label42.Size = new System.Drawing.Size(56, 20);
 			this.label42.TabIndex = 50;
@@ -466,7 +495,7 @@
 			// textBoxRightElbow
 			// 
 			this.textBoxRightElbow.Enabled = false;
-			this.textBoxRightElbow.Location = new System.Drawing.Point(258, 87);
+			this.textBoxRightElbow.Location = new System.Drawing.Point(256, 70);
 			this.textBoxRightElbow.Name = "textBoxRightElbow";
 			this.textBoxRightElbow.Size = new System.Drawing.Size(70, 26);
 			this.textBoxRightElbow.TabIndex = 51;
@@ -476,7 +505,7 @@
 			// 
 			// label43
 			// 
-			this.label43.Location = new System.Drawing.Point(236, 35);
+			this.label43.Location = new System.Drawing.Point(234, 18);
 			this.label43.Name = "label43";
 			this.label43.Size = new System.Drawing.Size(114, 49);
 			this.label43.TabIndex = 58;
@@ -486,7 +515,7 @@
 			// label44
 			// 
 			this.label44.AutoSize = true;
-			this.label44.Location = new System.Drawing.Point(8, 204);
+			this.label44.Location = new System.Drawing.Point(6, 174);
 			this.label44.Name = "label44";
 			this.label44.Size = new System.Drawing.Size(49, 20);
 			this.label44.TabIndex = 52;
@@ -495,7 +524,7 @@
 			// textBoxRightFingers
 			// 
 			this.textBoxRightFingers.Enabled = false;
-			this.textBoxRightFingers.Location = new System.Drawing.Point(257, 253);
+			this.textBoxRightFingers.Location = new System.Drawing.Point(255, 223);
 			this.textBoxRightFingers.Name = "textBoxRightFingers";
 			this.textBoxRightFingers.Size = new System.Drawing.Size(71, 26);
 			this.textBoxRightFingers.TabIndex = 57;
@@ -506,7 +535,7 @@
 			// textBoxRightWrist
 			// 
 			this.textBoxRightWrist.Enabled = false;
-			this.textBoxRightWrist.Location = new System.Drawing.Point(257, 201);
+			this.textBoxRightWrist.Location = new System.Drawing.Point(255, 171);
 			this.textBoxRightWrist.Name = "textBoxRightWrist";
 			this.textBoxRightWrist.Size = new System.Drawing.Size(71, 26);
 			this.textBoxRightWrist.TabIndex = 53;
@@ -517,7 +546,7 @@
 			// label45
 			// 
 			this.label45.AutoSize = true;
-			this.label45.Location = new System.Drawing.Point(8, 256);
+			this.label45.Location = new System.Drawing.Point(6, 226);
 			this.label45.Name = "label45";
 			this.label45.Size = new System.Drawing.Size(150, 20);
 			this.label45.TabIndex = 56;
@@ -526,7 +555,7 @@
 			// label46
 			// 
 			this.label46.AutoSize = true;
-			this.label46.Location = new System.Drawing.Point(8, 148);
+			this.label46.Location = new System.Drawing.Point(6, 123);
 			this.label46.Name = "label46";
 			this.label46.Size = new System.Drawing.Size(77, 20);
 			this.label46.TabIndex = 54;
@@ -535,7 +564,7 @@
 			// textBoxRightShoulder
 			// 
 			this.textBoxRightShoulder.Enabled = false;
-			this.textBoxRightShoulder.Location = new System.Drawing.Point(257, 145);
+			this.textBoxRightShoulder.Location = new System.Drawing.Point(255, 120);
 			this.textBoxRightShoulder.Name = "textBoxRightShoulder";
 			this.textBoxRightShoulder.Size = new System.Drawing.Size(71, 26);
 			this.textBoxRightShoulder.TabIndex = 55;
@@ -563,15 +592,16 @@
 			this.groupBox1.Controls.Add(this.checkBoxWristWar);
 			this.groupBox1.Controls.Add(this.checkBoxFingersWar);
 			this.groupBox1.Controls.Add(this.label27);
-			this.groupBox1.Location = new System.Drawing.Point(3, 130);
+			this.groupBox1.Location = new System.Drawing.Point(3, 56);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(442, 294);
+			this.groupBox1.Size = new System.Drawing.Size(442, 272);
 			this.groupBox1.TabIndex = 70;
 			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Left Arm";
 			// 
 			// label13
 			// 
-			this.label13.Location = new System.Drawing.Point(247, 35);
+			this.label13.Location = new System.Drawing.Point(247, 19);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(114, 49);
 			this.label13.TabIndex = 17;
@@ -581,7 +611,7 @@
 			// textBoxShoulder
 			// 
 			this.textBoxShoulder.Enabled = false;
-			this.textBoxShoulder.Location = new System.Drawing.Point(268, 145);
+			this.textBoxShoulder.Location = new System.Drawing.Point(268, 121);
 			this.textBoxShoulder.Name = "textBoxShoulder";
 			this.textBoxShoulder.Size = new System.Drawing.Size(71, 26);
 			this.textBoxShoulder.TabIndex = 13;
@@ -592,7 +622,7 @@
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(17, 148);
+			this.label11.Location = new System.Drawing.Point(17, 124);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(77, 20);
 			this.label11.TabIndex = 12;
@@ -601,7 +631,7 @@
 			// label12
 			// 
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(17, 256);
+			this.label12.Location = new System.Drawing.Point(17, 227);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(150, 20);
 			this.label12.TabIndex = 15;
@@ -610,7 +640,7 @@
 			// textBoxWrist
 			// 
 			this.textBoxWrist.Enabled = false;
-			this.textBoxWrist.Location = new System.Drawing.Point(268, 201);
+			this.textBoxWrist.Location = new System.Drawing.Point(268, 172);
 			this.textBoxWrist.Name = "textBoxWrist";
 			this.textBoxWrist.Size = new System.Drawing.Size(71, 26);
 			this.textBoxWrist.TabIndex = 10;
@@ -621,7 +651,7 @@
 			// textBoxFingers
 			// 
 			this.textBoxFingers.Enabled = false;
-			this.textBoxFingers.Location = new System.Drawing.Point(268, 253);
+			this.textBoxFingers.Location = new System.Drawing.Point(268, 224);
 			this.textBoxFingers.Name = "textBoxFingers";
 			this.textBoxFingers.Size = new System.Drawing.Size(71, 26);
 			this.textBoxFingers.TabIndex = 16;
@@ -632,7 +662,7 @@
 			// label10
 			// 
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(17, 204);
+			this.label10.Location = new System.Drawing.Point(17, 175);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(49, 20);
 			this.label10.TabIndex = 9;
@@ -641,7 +671,7 @@
 			// textBoxElbow
 			// 
 			this.textBoxElbow.Enabled = false;
-			this.textBoxElbow.Location = new System.Drawing.Point(269, 87);
+			this.textBoxElbow.Location = new System.Drawing.Point(269, 71);
 			this.textBoxElbow.Name = "textBoxElbow";
 			this.textBoxElbow.Size = new System.Drawing.Size(70, 26);
 			this.textBoxElbow.TabIndex = 7;
@@ -652,7 +682,7 @@
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(17, 90);
+			this.label9.Location = new System.Drawing.Point(17, 74);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(56, 20);
 			this.label9.TabIndex = 6;
@@ -662,7 +692,7 @@
 			// 
 			this.checkBoxElbowWar.AutoSize = true;
 			this.checkBoxElbowWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxElbowWar.Location = new System.Drawing.Point(385, 91);
+			this.checkBoxElbowWar.Location = new System.Drawing.Point(385, 75);
 			this.checkBoxElbowWar.Name = "checkBoxElbowWar";
 			this.checkBoxElbowWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxElbowWar.TabIndex = 22;
@@ -672,7 +702,7 @@
 			// 
 			// buttonElbow
 			// 
-			this.buttonElbow.Location = new System.Drawing.Point(175, 82);
+			this.buttonElbow.Location = new System.Drawing.Point(175, 66);
 			this.buttonElbow.Name = "buttonElbow";
 			this.buttonElbow.Size = new System.Drawing.Size(74, 37);
 			this.buttonElbow.TabIndex = 42;
@@ -682,7 +712,7 @@
 			// 
 			// buttonFingers
 			// 
-			this.buttonFingers.Location = new System.Drawing.Point(175, 248);
+			this.buttonFingers.Location = new System.Drawing.Point(175, 219);
 			this.buttonFingers.Name = "buttonFingers";
 			this.buttonFingers.Size = new System.Drawing.Size(74, 37);
 			this.buttonFingers.TabIndex = 43;
@@ -692,7 +722,7 @@
 			// 
 			// buttonWrist
 			// 
-			this.buttonWrist.Location = new System.Drawing.Point(175, 196);
+			this.buttonWrist.Location = new System.Drawing.Point(175, 167);
 			this.buttonWrist.Name = "buttonWrist";
 			this.buttonWrist.Size = new System.Drawing.Size(74, 37);
 			this.buttonWrist.TabIndex = 44;
@@ -702,7 +732,7 @@
 			// 
 			// buttonShoulder
 			// 
-			this.buttonShoulder.Location = new System.Drawing.Point(175, 140);
+			this.buttonShoulder.Location = new System.Drawing.Point(175, 116);
 			this.buttonShoulder.Name = "buttonShoulder";
 			this.buttonShoulder.Size = new System.Drawing.Size(74, 37);
 			this.buttonShoulder.TabIndex = 45;
@@ -714,7 +744,7 @@
 			// 
 			this.checkBoxShoulderWar.AutoSize = true;
 			this.checkBoxShoulderWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxShoulderWar.Location = new System.Drawing.Point(385, 149);
+			this.checkBoxShoulderWar.Location = new System.Drawing.Point(385, 125);
 			this.checkBoxShoulderWar.Name = "checkBoxShoulderWar";
 			this.checkBoxShoulderWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxShoulderWar.TabIndex = 46;
@@ -726,7 +756,7 @@
 			// 
 			this.checkBoxWristWar.AutoSize = true;
 			this.checkBoxWristWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxWristWar.Location = new System.Drawing.Point(385, 205);
+			this.checkBoxWristWar.Location = new System.Drawing.Point(385, 176);
 			this.checkBoxWristWar.Name = "checkBoxWristWar";
 			this.checkBoxWristWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWristWar.TabIndex = 47;
@@ -738,7 +768,7 @@
 			// 
 			this.checkBoxFingersWar.AutoSize = true;
 			this.checkBoxFingersWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxFingersWar.Location = new System.Drawing.Point(385, 257);
+			this.checkBoxFingersWar.Location = new System.Drawing.Point(385, 228);
 			this.checkBoxFingersWar.Name = "checkBoxFingersWar";
 			this.checkBoxFingersWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxFingersWar.TabIndex = 48;
@@ -748,38 +778,18 @@
 			// 
 			// label27
 			// 
-			this.label27.Location = new System.Drawing.Point(357, 35);
+			this.label27.Location = new System.Drawing.Point(357, 19);
 			this.label27.Name = "label27";
 			this.label27.Size = new System.Drawing.Size(79, 45);
 			this.label27.TabIndex = 49;
 			this.label27.Text = "War Service";
 			this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
-			// label48
-			// 
-			this.label48.AutoSize = true;
-			this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label48.Location = new System.Drawing.Point(582, 98);
-			this.label48.Name = "label48";
-			this.label48.Size = new System.Drawing.Size(154, 29);
-			this.label48.TabIndex = 69;
-			this.label48.Text = "RIGHT ARM";
-			// 
-			// label47
-			// 
-			this.label47.AutoSize = true;
-			this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label47.Location = new System.Drawing.Point(151, 98);
-			this.label47.Name = "label47";
-			this.label47.Size = new System.Drawing.Size(139, 29);
-			this.label47.TabIndex = 68;
-			this.label47.Text = "LEFT ARM";
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(43, 33);
+			this.label3.Location = new System.Drawing.Point(49, 16);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(794, 29);
 			this.label3.TabIndex = 21;
@@ -788,150 +798,220 @@
 			// tabPageLowerLimbs
 			// 
 			this.tabPageLowerLimbs.BackColor = System.Drawing.SystemColors.Info;
-			this.tabPageLowerLimbs.Controls.Add(this.button1);
-			this.tabPageLowerLimbs.Controls.Add(this.button2);
-			this.tabPageLowerLimbs.Controls.Add(this.button3);
-			this.tabPageLowerLimbs.Controls.Add(this.buttonKnee);
+			this.tabPageLowerLimbs.Controls.Add(this.groupBox4);
+			this.tabPageLowerLimbs.Controls.Add(this.groupBox3);
+			this.tabPageLowerLimbs.Controls.Add(this.label54);
 			this.tabPageLowerLimbs.Controls.Add(this.label6);
-			this.tabPageLowerLimbs.Controls.Add(this.comboBox1);
-			this.tabPageLowerLimbs.Controls.Add(this.comboBox2);
-			this.tabPageLowerLimbs.Controls.Add(this.comboBoxKnee);
-			this.tabPageLowerLimbs.Controls.Add(this.comboBox4);
-			this.tabPageLowerLimbs.Controls.Add(this.label7);
-			this.tabPageLowerLimbs.Controls.Add(this.textBoxKnee);
-			this.tabPageLowerLimbs.Controls.Add(this.label14);
-			this.tabPageLowerLimbs.Controls.Add(this.label15);
-			this.tabPageLowerLimbs.Controls.Add(this.textBox2);
-			this.tabPageLowerLimbs.Controls.Add(this.textBox3);
-			this.tabPageLowerLimbs.Controls.Add(this.label16);
-			this.tabPageLowerLimbs.Controls.Add(this.label17);
-			this.tabPageLowerLimbs.Controls.Add(this.textBox4);
 			this.tabPageLowerLimbs.Location = new System.Drawing.Point(4, 29);
 			this.tabPageLowerLimbs.Name = "tabPageLowerLimbs";
 			this.tabPageLowerLimbs.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLowerLimbs.Size = new System.Drawing.Size(881, 475);
+			this.tabPageLowerLimbs.Size = new System.Drawing.Size(881, 588);
 			this.tabPageLowerLimbs.TabIndex = 1;
 			this.tabPageLowerLimbs.Text = "Lower Limbs";
 			// 
-			// button1
+			// groupBox4
 			// 
-			this.button1.Location = new System.Drawing.Point(353, 195);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(99, 37);
-			this.button1.TabIndex = 49;
-			this.button1.Text = "CLICK";
-			this.button1.UseVisualStyleBackColor = true;
+			this.groupBox4.Controls.Add(this.checkBoxWholeLimbWar);
+			this.groupBox4.Controls.Add(this.label55);
+			this.groupBox4.Controls.Add(this.buttonWholeLimb);
+			this.groupBox4.Controls.Add(this.label56);
+			this.groupBox4.Controls.Add(this.textBoxWholeLimb);
+			this.groupBox4.Controls.Add(this.label57);
+			this.groupBox4.Location = new System.Drawing.Point(10, 351);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(423, 115);
+			this.groupBox4.TabIndex = 57;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Lower limbs as a Whole";
 			// 
-			// button2
+			// checkBoxWholeLimbWar
 			// 
-			this.button2.Location = new System.Drawing.Point(353, 251);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(99, 37);
-			this.button2.TabIndex = 48;
-			this.button2.Text = "CLICK";
-			this.button2.UseVisualStyleBackColor = true;
+			this.checkBoxWholeLimbWar.AutoSize = true;
+			this.checkBoxWholeLimbWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxWholeLimbWar.Location = new System.Drawing.Point(367, 69);
+			this.checkBoxWholeLimbWar.Name = "checkBoxWholeLimbWar";
+			this.checkBoxWholeLimbWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxWholeLimbWar.TabIndex = 59;
+			this.toolTip1.SetToolTip(this.checkBoxWholeLimbWar, "Check when injury happened during War Service.");
+			this.checkBoxWholeLimbWar.UseVisualStyleBackColor = true;
+			this.checkBoxWholeLimbWar.CheckedChanged += new System.EventHandler(this.checkBoxWholeLimbWar_CheckedChanged);
 			// 
-			// button3
+			// label55
 			// 
-			this.button3.Location = new System.Drawing.Point(353, 303);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(99, 37);
-			this.button3.TabIndex = 47;
-			this.button3.Text = "CLICK";
-			this.button3.UseVisualStyleBackColor = true;
+			this.label55.Location = new System.Drawing.Point(339, 13);
+			this.label55.Name = "label55";
+			this.label55.Size = new System.Drawing.Size(79, 45);
+			this.label55.TabIndex = 60;
+			this.label55.Text = "War Service";
+			this.label55.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// buttonWholeLimb
+			// 
+			this.buttonWholeLimb.Location = new System.Drawing.Point(101, 60);
+			this.buttonWholeLimb.Name = "buttonWholeLimb";
+			this.buttonWholeLimb.Size = new System.Drawing.Size(99, 37);
+			this.buttonWholeLimb.TabIndex = 58;
+			this.buttonWholeLimb.Text = "CLICK";
+			this.buttonWholeLimb.UseVisualStyleBackColor = true;
+			this.buttonWholeLimb.Click += new System.EventHandler(this.buttonWholeLimb_Click);
+			// 
+			// label56
+			// 
+			this.label56.Location = new System.Drawing.Point(10, 54);
+			this.label56.Name = "label56";
+			this.label56.Size = new System.Drawing.Size(83, 46);
+			this.label56.TabIndex = 55;
+			this.label56.Text = "Whole of Limb:";
+			this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// textBoxWholeLimb
+			// 
+			this.textBoxWholeLimb.Enabled = false;
+			this.textBoxWholeLimb.Location = new System.Drawing.Point(231, 65);
+			this.textBoxWholeLimb.Name = "textBoxWholeLimb";
+			this.textBoxWholeLimb.Size = new System.Drawing.Size(70, 26);
+			this.textBoxWholeLimb.TabIndex = 56;
+			this.textBoxWholeLimb.Text = "0";
+			this.textBoxWholeLimb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxWholeLimb.TextChanged += new System.EventHandler(this.textBoxWholeLimb_TextChanged);
+			// 
+			// label57
+			// 
+			this.label57.Location = new System.Drawing.Point(231, 13);
+			this.label57.Name = "label57";
+			this.label57.Size = new System.Drawing.Size(70, 49);
+			this.label57.TabIndex = 57;
+			this.label57.Text = "Points:";
+			this.label57.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.checkBoxKneeWar);
+			this.groupBox3.Controls.Add(this.checkBoxHipWar);
+			this.groupBox3.Controls.Add(this.checkBoxAnkleWar);
+			this.groupBox3.Controls.Add(this.checkBoxToesWar);
+			this.groupBox3.Controls.Add(this.label53);
+			this.groupBox3.Controls.Add(this.buttonHip);
+			this.groupBox3.Controls.Add(this.buttonAnkle);
+			this.groupBox3.Controls.Add(this.buttonToes);
+			this.groupBox3.Controls.Add(this.buttonKnee);
+			this.groupBox3.Controls.Add(this.label7);
+			this.groupBox3.Controls.Add(this.textBoxKnee);
+			this.groupBox3.Controls.Add(this.label14);
+			this.groupBox3.Controls.Add(this.label15);
+			this.groupBox3.Controls.Add(this.textBoxToes);
+			this.groupBox3.Controls.Add(this.textBoxAnkle);
+			this.groupBox3.Controls.Add(this.label16);
+			this.groupBox3.Controls.Add(this.label17);
+			this.groupBox3.Controls.Add(this.textBoxHip);
+			this.groupBox3.Location = new System.Drawing.Point(10, 55);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(423, 281);
+			this.groupBox3.TabIndex = 56;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Range of motion";
+			// 
+			// checkBoxKneeWar
+			// 
+			this.checkBoxKneeWar.AutoSize = true;
+			this.checkBoxKneeWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxKneeWar.Location = new System.Drawing.Point(369, 69);
+			this.checkBoxKneeWar.Name = "checkBoxKneeWar";
+			this.checkBoxKneeWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxKneeWar.TabIndex = 50;
+			this.toolTip1.SetToolTip(this.checkBoxKneeWar, "Check when injury happened during War Service.");
+			this.checkBoxKneeWar.UseVisualStyleBackColor = true;
+			this.checkBoxKneeWar.CheckedChanged += new System.EventHandler(this.checkBoxKneeWar_CheckedChanged);
+			// 
+			// checkBoxHipWar
+			// 
+			this.checkBoxHipWar.AutoSize = true;
+			this.checkBoxHipWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxHipWar.Location = new System.Drawing.Point(369, 127);
+			this.checkBoxHipWar.Name = "checkBoxHipWar";
+			this.checkBoxHipWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxHipWar.TabIndex = 51;
+			this.toolTip1.SetToolTip(this.checkBoxHipWar, "Check when injury happened during War Service.");
+			this.checkBoxHipWar.UseVisualStyleBackColor = true;
+			this.checkBoxHipWar.CheckedChanged += new System.EventHandler(this.checkBoxHipWar_CheckedChanged);
+			// 
+			// checkBoxAnkleWar
+			// 
+			this.checkBoxAnkleWar.AutoSize = true;
+			this.checkBoxAnkleWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxAnkleWar.Location = new System.Drawing.Point(369, 183);
+			this.checkBoxAnkleWar.Name = "checkBoxAnkleWar";
+			this.checkBoxAnkleWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxAnkleWar.TabIndex = 52;
+			this.toolTip1.SetToolTip(this.checkBoxAnkleWar, "Check when injury happened during War Service.");
+			this.checkBoxAnkleWar.UseVisualStyleBackColor = true;
+			this.checkBoxAnkleWar.CheckedChanged += new System.EventHandler(this.checkBoxAnkleWar_CheckedChanged);
+			// 
+			// checkBoxToesWar
+			// 
+			this.checkBoxToesWar.AutoSize = true;
+			this.checkBoxToesWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxToesWar.Location = new System.Drawing.Point(369, 235);
+			this.checkBoxToesWar.Name = "checkBoxToesWar";
+			this.checkBoxToesWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxToesWar.TabIndex = 53;
+			this.toolTip1.SetToolTip(this.checkBoxToesWar, "Check when injury happened during War Service.");
+			this.checkBoxToesWar.UseVisualStyleBackColor = true;
+			this.checkBoxToesWar.CheckedChanged += new System.EventHandler(this.checkBoxToesWar_CheckedChanged);
+			// 
+			// label53
+			// 
+			this.label53.Location = new System.Drawing.Point(341, 13);
+			this.label53.Name = "label53";
+			this.label53.Size = new System.Drawing.Size(79, 45);
+			this.label53.TabIndex = 54;
+			this.label53.Text = "War Service";
+			this.label53.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// buttonHip
+			// 
+			this.buttonHip.Location = new System.Drawing.Point(101, 119);
+			this.buttonHip.Name = "buttonHip";
+			this.buttonHip.Size = new System.Drawing.Size(99, 37);
+			this.buttonHip.TabIndex = 49;
+			this.buttonHip.Text = "CLICK";
+			this.buttonHip.UseVisualStyleBackColor = true;
+			this.buttonHip.Click += new System.EventHandler(this.buttonHip_Click);
+			// 
+			// buttonAnkle
+			// 
+			this.buttonAnkle.Location = new System.Drawing.Point(101, 175);
+			this.buttonAnkle.Name = "buttonAnkle";
+			this.buttonAnkle.Size = new System.Drawing.Size(99, 37);
+			this.buttonAnkle.TabIndex = 48;
+			this.buttonAnkle.Text = "CLICK";
+			this.buttonAnkle.UseVisualStyleBackColor = true;
+			this.buttonAnkle.Click += new System.EventHandler(this.buttonAnkle_Click);
+			// 
+			// buttonToes
+			// 
+			this.buttonToes.Location = new System.Drawing.Point(101, 227);
+			this.buttonToes.Name = "buttonToes";
+			this.buttonToes.Size = new System.Drawing.Size(99, 37);
+			this.buttonToes.TabIndex = 47;
+			this.buttonToes.Text = "CLICK";
+			this.buttonToes.UseVisualStyleBackColor = true;
+			this.buttonToes.Click += new System.EventHandler(this.buttonToes_Click);
 			// 
 			// buttonKnee
 			// 
-			this.buttonKnee.Location = new System.Drawing.Point(353, 137);
+			this.buttonKnee.Location = new System.Drawing.Point(101, 61);
 			this.buttonKnee.Name = "buttonKnee";
 			this.buttonKnee.Size = new System.Drawing.Size(99, 37);
 			this.buttonKnee.TabIndex = 46;
 			this.buttonKnee.Text = "CLICK";
 			this.buttonKnee.UseVisualStyleBackColor = true;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(44, 28);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(799, 29);
-			this.label6.TabIndex = 35;
-			this.label6.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: LOWER LIMB JOINTS";
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox1.DropDownWidth = 300;
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
-            "- No abnormality. X-ray changes only with normal range of movement.",
-            "- Loss of about one-quarter normal range of movement.",
-            "- Loss of about one-half normal range of movement.",
-            "- Loss of about three-quarters normal range of movement.",
-            "- Loss of almost all movement, or complete ankylosis in position of function.",
-            "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBox1.Location = new System.Drawing.Point(192, 200);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(101, 28);
-			this.comboBox1.TabIndex = 32;
-			// 
-			// comboBox2
-			// 
-			this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox2.DropDownWidth = 300;
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Items.AddRange(new object[] {
-            "- No abnormality. X-ray changes only with normal range of movement.",
-            "- Loss of about one-quarter normal range of movement.",
-            "- Loss of about one-half normal range of movement.",
-            "- Loss of about three-quarters normal range of movement.",
-            "- Loss of almost all movement, or complete ankylosis in position of function.",
-            "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBox2.Location = new System.Drawing.Point(192, 256);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(101, 28);
-			this.comboBox2.TabIndex = 34;
-			// 
-			// comboBoxKnee
-			// 
-			this.comboBoxKnee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxKnee.DropDownWidth = 300;
-			this.comboBoxKnee.FormattingEnabled = true;
-			this.comboBoxKnee.Items.AddRange(new object[] {
-            "- No abnormality. X-ray changes only with normal range of movement.",
-            "- Loss of about one-quarter normal range of movement.",
-            "- Loss of about one-half normal range of movement.",
-            "- Loss of about three-quarters normal range of movement.",
-            "- Loss of almost all movement, or complete ankylosis in position of function.",
-            "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBoxKnee.Location = new System.Drawing.Point(192, 142);
-			this.comboBoxKnee.Name = "comboBoxKnee";
-			this.comboBoxKnee.Size = new System.Drawing.Size(101, 28);
-			this.comboBoxKnee.TabIndex = 31;
-			// 
-			// comboBox4
-			// 
-			this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox4.DropDownWidth = 900;
-			this.comboBox4.FormattingEnabled = true;
-			this.comboBox4.Items.AddRange(new object[] {
-            "- No abnormality. X-ray changes only with normal range of movement.",
-            "- Ankylosis in any position of joints of 4th or 5th finger. Ankylosis in any posi" +
-                "tion of function of any joints of 2nd or 3rd finger.",
-            "- Ankylosis in an unfavourable position of any or all joints of 2nd and 3rd finge" +
-                "r. Thumb: loss of almost all movement or complete ankylosis of any or all joints" +
-                " (in position of function).",
-            "- Thumb: ankylosis of any or all joints in an unfavourable position."});
-			this.comboBox4.Location = new System.Drawing.Point(192, 313);
-			this.comboBox4.Name = "comboBox4";
-			this.comboBox4.Size = new System.Drawing.Size(101, 28);
-			this.comboBox4.TabIndex = 33;
+			this.buttonKnee.Click += new System.EventHandler(this.buttonKnee_Click);
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(19, 145);
+			this.label7.Location = new System.Drawing.Point(10, 69);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(50, 20);
 			this.label7.TabIndex = 22;
@@ -940,14 +1020,17 @@
 			// textBoxKnee
 			// 
 			this.textBoxKnee.Enabled = false;
-			this.textBoxKnee.Location = new System.Drawing.Point(505, 141);
+			this.textBoxKnee.Location = new System.Drawing.Point(230, 65);
 			this.textBoxKnee.Name = "textBoxKnee";
 			this.textBoxKnee.Size = new System.Drawing.Size(70, 26);
 			this.textBoxKnee.TabIndex = 23;
+			this.textBoxKnee.Text = "0";
+			this.textBoxKnee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxKnee.TextChanged += new System.EventHandler(this.textBoxKnee_TextChanged);
 			// 
 			// label14
 			// 
-			this.label14.Location = new System.Drawing.Point(483, 89);
+			this.label14.Location = new System.Drawing.Point(208, 13);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(114, 49);
 			this.label14.TabIndex = 30;
@@ -957,32 +1040,38 @@
 			// label15
 			// 
 			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(19, 266);
+			this.label15.Location = new System.Drawing.Point(10, 190);
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(53, 20);
 			this.label15.TabIndex = 24;
 			this.label15.Text = "Ankle:";
 			// 
-			// textBox2
+			// textBoxToes
 			// 
-			this.textBox2.Enabled = false;
-			this.textBox2.Location = new System.Drawing.Point(504, 312);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(71, 26);
-			this.textBox2.TabIndex = 29;
+			this.textBoxToes.Enabled = false;
+			this.textBoxToes.Location = new System.Drawing.Point(229, 236);
+			this.textBoxToes.Name = "textBoxToes";
+			this.textBoxToes.Size = new System.Drawing.Size(71, 26);
+			this.textBoxToes.TabIndex = 29;
+			this.textBoxToes.Text = "0";
+			this.textBoxToes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxToes.TextChanged += new System.EventHandler(this.textBoxToes_TextChanged);
 			// 
-			// textBox3
+			// textBoxAnkle
 			// 
-			this.textBox3.Enabled = false;
-			this.textBox3.Location = new System.Drawing.Point(505, 255);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(71, 26);
-			this.textBox3.TabIndex = 25;
+			this.textBoxAnkle.Enabled = false;
+			this.textBoxAnkle.Location = new System.Drawing.Point(230, 179);
+			this.textBoxAnkle.Name = "textBoxAnkle";
+			this.textBoxAnkle.Size = new System.Drawing.Size(71, 26);
+			this.textBoxAnkle.TabIndex = 25;
+			this.textBoxAnkle.Text = "0";
+			this.textBoxAnkle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxAnkle.TextChanged += new System.EventHandler(this.textBoxAnkle_TextChanged);
 			// 
 			// label16
 			// 
 			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(19, 316);
+			this.label16.Location = new System.Drawing.Point(10, 240);
 			this.label16.Name = "label16";
 			this.label16.Size = new System.Drawing.Size(48, 20);
 			this.label16.TabIndex = 28;
@@ -991,19 +1080,40 @@
 			// label17
 			// 
 			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(19, 203);
+			this.label17.Location = new System.Drawing.Point(10, 127);
 			this.label17.Name = "label17";
 			this.label17.Size = new System.Drawing.Size(37, 20);
 			this.label17.TabIndex = 26;
 			this.label17.Text = "Hip:";
 			// 
-			// textBox4
+			// textBoxHip
 			// 
-			this.textBox4.Enabled = false;
-			this.textBox4.Location = new System.Drawing.Point(504, 199);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(71, 26);
-			this.textBox4.TabIndex = 27;
+			this.textBoxHip.Enabled = false;
+			this.textBoxHip.Location = new System.Drawing.Point(229, 123);
+			this.textBoxHip.Name = "textBoxHip";
+			this.textBoxHip.Size = new System.Drawing.Size(71, 26);
+			this.textBoxHip.TabIndex = 27;
+			this.textBoxHip.Text = "0";
+			this.textBoxHip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxHip.TextChanged += new System.EventHandler(this.textBoxHip_TextChanged);
+			// 
+			// label54
+			// 
+			this.label54.Location = new System.Drawing.Point(451, 68);
+			this.label54.Name = "label54";
+			this.label54.Size = new System.Drawing.Size(424, 415);
+			this.label54.TabIndex = 55;
+			this.label54.Text = resources.GetString("label54.Text");
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(44, 15);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(799, 29);
+			this.label6.TabIndex = 35;
+			this.label6.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: LOWER LIMB JOINTS";
 			// 
 			// tabPageBack
 			// 
@@ -1018,13 +1128,13 @@
 			this.tabPageBack.Location = new System.Drawing.Point(4, 29);
 			this.tabPageBack.Name = "tabPageBack";
 			this.tabPageBack.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageBack.Size = new System.Drawing.Size(881, 475);
+			this.tabPageBack.Size = new System.Drawing.Size(881, 588);
 			this.tabPageBack.TabIndex = 3;
 			this.tabPageBack.Text = "Back";
 			// 
 			// label50
 			// 
-			this.label50.Location = new System.Drawing.Point(496, 130);
+			this.label50.Location = new System.Drawing.Point(533, 130);
 			this.label50.Name = "label50";
 			this.label50.Size = new System.Drawing.Size(114, 49);
 			this.label50.TabIndex = 52;
@@ -1034,7 +1144,7 @@
 			// textBoxThoraco
 			// 
 			this.textBoxThoraco.Enabled = false;
-			this.textBoxThoraco.Location = new System.Drawing.Point(518, 182);
+			this.textBoxThoraco.Location = new System.Drawing.Point(555, 182);
 			this.textBoxThoraco.Name = "textBoxThoraco";
 			this.textBoxThoraco.Size = new System.Drawing.Size(70, 26);
 			this.textBoxThoraco.TabIndex = 51;
@@ -1055,7 +1165,7 @@
 			// 
 			this.checkBoxThoracoWar.AutoSize = true;
 			this.checkBoxThoracoWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxThoracoWar.Location = new System.Drawing.Point(634, 186);
+			this.checkBoxThoracoWar.Location = new System.Drawing.Point(696, 186);
 			this.checkBoxThoracoWar.Name = "checkBoxThoracoWar";
 			this.checkBoxThoracoWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxThoracoWar.TabIndex = 53;
@@ -1075,7 +1185,7 @@
 			// 
 			// label52
 			// 
-			this.label52.Location = new System.Drawing.Point(606, 130);
+			this.label52.Location = new System.Drawing.Point(668, 130);
 			this.label52.Name = "label52";
 			this.label52.Size = new System.Drawing.Size(79, 45);
 			this.label52.TabIndex = 55;
@@ -1085,7 +1195,7 @@
 			// label49
 			// 
 			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label49.Location = new System.Drawing.Point(47, 18);
+			this.label49.Location = new System.Drawing.Point(47, 12);
 			this.label49.Name = "label49";
 			this.label49.Size = new System.Drawing.Size(762, 75);
 			this.label49.TabIndex = 0;
@@ -1106,7 +1216,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(881, 475);
+			this.tabPage1.Size = new System.Drawing.Size(881, 588);
 			this.tabPage1.TabIndex = 5;
 			this.tabPage1.Text = "Joint Pain";
 			// 
@@ -1182,7 +1292,7 @@
 			// 
 			this.label36.AutoSize = true;
 			this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label36.Location = new System.Drawing.Point(287, 30);
+			this.label36.Location = new System.Drawing.Point(287, 18);
 			this.label36.Name = "label36";
 			this.label36.Size = new System.Drawing.Size(276, 29);
 			this.label36.TabIndex = 0;
@@ -1215,14 +1325,14 @@
 			this.tabPageLifeStyle.Location = new System.Drawing.Point(4, 29);
 			this.tabPageLifeStyle.Name = "tabPageLifeStyle";
 			this.tabPageLifeStyle.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLifeStyle.Size = new System.Drawing.Size(881, 475);
+			this.tabPageLifeStyle.Size = new System.Drawing.Size(881, 588);
 			this.tabPageLifeStyle.TabIndex = 4;
 			this.tabPageLifeStyle.Text = "LifeStyle";
 			// 
 			// label28
 			// 
 			this.label28.AutoSize = true;
-			this.label28.Location = new System.Drawing.Point(488, 394);
+			this.label28.Location = new System.Drawing.Point(487, 496);
 			this.label28.Name = "label28";
 			this.label28.Size = new System.Drawing.Size(215, 20);
 			this.label28.TabIndex = 46;
@@ -1231,7 +1341,7 @@
 			// textBoxCompensationFactorPeace
 			// 
 			this.textBoxCompensationFactorPeace.Enabled = false;
-			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(758, 391);
+			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(757, 493);
 			this.textBoxCompensationFactorPeace.Name = "textBoxCompensationFactorPeace";
 			this.textBoxCompensationFactorPeace.Size = new System.Drawing.Size(70, 26);
 			this.textBoxCompensationFactorPeace.TabIndex = 45;
@@ -1240,7 +1350,7 @@
 			// 
 			// buttonEmploymentActivities
 			// 
-			this.buttonEmploymentActivities.Location = new System.Drawing.Point(369, 315);
+			this.buttonEmploymentActivities.Location = new System.Drawing.Point(369, 401);
 			this.buttonEmploymentActivities.Name = "buttonEmploymentActivities";
 			this.buttonEmploymentActivities.Size = new System.Drawing.Size(99, 37);
 			this.buttonEmploymentActivities.TabIndex = 44;
@@ -1251,7 +1361,7 @@
 			// textBoxEmploymentActivities
 			// 
 			this.textBoxEmploymentActivities.Enabled = false;
-			this.textBoxEmploymentActivities.Location = new System.Drawing.Point(530, 320);
+			this.textBoxEmploymentActivities.Location = new System.Drawing.Point(530, 406);
 			this.textBoxEmploymentActivities.Name = "textBoxEmploymentActivities";
 			this.textBoxEmploymentActivities.Size = new System.Drawing.Size(71, 26);
 			this.textBoxEmploymentActivities.TabIndex = 43;
@@ -1262,7 +1372,7 @@
 			// label26
 			// 
 			this.label26.AutoSize = true;
-			this.label26.Location = new System.Drawing.Point(20, 323);
+			this.label26.Location = new System.Drawing.Point(20, 409);
 			this.label26.Name = "label26";
 			this.label26.Size = new System.Drawing.Size(167, 20);
 			this.label26.TabIndex = 42;
@@ -1270,7 +1380,7 @@
 			// 
 			// buttonMobility
 			// 
-			this.buttonMobility.Location = new System.Drawing.Point(369, 158);
+			this.buttonMobility.Location = new System.Drawing.Point(369, 180);
 			this.buttonMobility.Name = "buttonMobility";
 			this.buttonMobility.Size = new System.Drawing.Size(99, 37);
 			this.buttonMobility.TabIndex = 41;
@@ -1280,7 +1390,7 @@
 			// 
 			// buttonRecreationalActivities
 			// 
-			this.buttonRecreationalActivities.Location = new System.Drawing.Point(369, 210);
+			this.buttonRecreationalActivities.Location = new System.Drawing.Point(369, 250);
 			this.buttonRecreationalActivities.Name = "buttonRecreationalActivities";
 			this.buttonRecreationalActivities.Size = new System.Drawing.Size(99, 37);
 			this.buttonRecreationalActivities.TabIndex = 40;
@@ -1290,7 +1400,7 @@
 			// 
 			// buttonDomesticActivities
 			// 
-			this.buttonDomesticActivities.Location = new System.Drawing.Point(369, 263);
+			this.buttonDomesticActivities.Location = new System.Drawing.Point(369, 325);
 			this.buttonDomesticActivities.Name = "buttonDomesticActivities";
 			this.buttonDomesticActivities.Size = new System.Drawing.Size(99, 37);
 			this.buttonDomesticActivities.TabIndex = 39;
@@ -1312,7 +1422,7 @@
 			// 
 			this.label20.AutoSize = true;
 			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label20.Location = new System.Drawing.Point(176, 35);
+			this.label20.Location = new System.Drawing.Point(175, 20);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(527, 29);
 			this.label20.TabIndex = 37;
@@ -1350,7 +1460,7 @@
 			// label23
 			// 
 			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(20, 218);
+			this.label23.Location = new System.Drawing.Point(20, 258);
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(283, 20);
 			this.label23.TabIndex = 26;
@@ -1359,7 +1469,7 @@
 			// textBoxDomesticActivities
 			// 
 			this.textBoxDomesticActivities.Enabled = false;
-			this.textBoxDomesticActivities.Location = new System.Drawing.Point(530, 268);
+			this.textBoxDomesticActivities.Location = new System.Drawing.Point(530, 330);
 			this.textBoxDomesticActivities.Name = "textBoxDomesticActivities";
 			this.textBoxDomesticActivities.Size = new System.Drawing.Size(71, 26);
 			this.textBoxDomesticActivities.TabIndex = 31;
@@ -1370,7 +1480,7 @@
 			// textBoxRecreationalActivities
 			// 
 			this.textBoxRecreationalActivities.Enabled = false;
-			this.textBoxRecreationalActivities.Location = new System.Drawing.Point(531, 208);
+			this.textBoxRecreationalActivities.Location = new System.Drawing.Point(531, 255);
 			this.textBoxRecreationalActivities.Name = "textBoxRecreationalActivities";
 			this.textBoxRecreationalActivities.Size = new System.Drawing.Size(71, 26);
 			this.textBoxRecreationalActivities.TabIndex = 27;
@@ -1381,7 +1491,7 @@
 			// label24
 			// 
 			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(20, 271);
+			this.label24.Location = new System.Drawing.Point(20, 333);
 			this.label24.Name = "label24";
 			this.label24.Size = new System.Drawing.Size(146, 20);
 			this.label24.TabIndex = 30;
@@ -1390,7 +1500,7 @@
 			// label25
 			// 
 			this.label25.AutoSize = true;
-			this.label25.Location = new System.Drawing.Point(20, 166);
+			this.label25.Location = new System.Drawing.Point(20, 188);
 			this.label25.Name = "label25";
 			this.label25.Size = new System.Drawing.Size(65, 20);
 			this.label25.TabIndex = 28;
@@ -1399,7 +1509,7 @@
 			// textBoxMobility
 			// 
 			this.textBoxMobility.Enabled = false;
-			this.textBoxMobility.Location = new System.Drawing.Point(530, 163);
+			this.textBoxMobility.Location = new System.Drawing.Point(530, 185);
 			this.textBoxMobility.Name = "textBoxMobility";
 			this.textBoxMobility.Size = new System.Drawing.Size(71, 26);
 			this.textBoxMobility.TabIndex = 29;
@@ -1410,7 +1520,7 @@
 			// label19
 			// 
 			this.label19.AutoSize = true;
-			this.label19.Location = new System.Drawing.Point(48, 394);
+			this.label19.Location = new System.Drawing.Point(47, 496);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(255, 20);
 			this.label19.TabIndex = 23;
@@ -1419,7 +1529,7 @@
 			// textBoxCompensationFactorWar
 			// 
 			this.textBoxCompensationFactorWar.Enabled = false;
-			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(320, 391);
+			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(319, 493);
 			this.textBoxCompensationFactorWar.Name = "textBoxCompensationFactorWar";
 			this.textBoxCompensationFactorWar.Size = new System.Drawing.Size(70, 26);
 			this.textBoxCompensationFactorWar.TabIndex = 22;
@@ -1428,7 +1538,7 @@
 			// 
 			// SaveAll
 			// 
-			this.SaveAll.Location = new System.Drawing.Point(684, 766);
+			this.SaveAll.Location = new System.Drawing.Point(682, 881);
 			this.SaveAll.Name = "SaveAll";
 			this.SaveAll.Size = new System.Drawing.Size(200, 40);
 			this.SaveAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1440,7 +1550,7 @@
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(47, 755);
+			this.label8.Location = new System.Drawing.Point(45, 870);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(551, 65);
 			this.label8.TabIndex = 5;
@@ -1451,7 +1561,7 @@
 			// 
 			this.label29.AutoSize = true;
 			this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label29.Location = new System.Drawing.Point(12, 654);
+			this.label29.Location = new System.Drawing.Point(10, 769);
 			this.label29.Name = "label29";
 			this.label29.Size = new System.Drawing.Size(216, 25);
 			this.label29.TabIndex = 72;
@@ -1461,7 +1571,7 @@
 			// 
 			this.textBoxComibinedPoints.Enabled = false;
 			this.textBoxComibinedPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxComibinedPoints.Location = new System.Drawing.Point(356, 651);
+			this.textBoxComibinedPoints.Location = new System.Drawing.Point(354, 766);
 			this.textBoxComibinedPoints.Name = "textBoxComibinedPoints";
 			this.textBoxComibinedPoints.Size = new System.Drawing.Size(86, 30);
 			this.textBoxComibinedPoints.TabIndex = 71;
@@ -1472,7 +1582,7 @@
 			// 
 			this.label30.AutoSize = true;
 			this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label30.Location = new System.Drawing.Point(484, 654);
+			this.label30.Location = new System.Drawing.Point(482, 769);
 			this.label30.Name = "label30";
 			this.label30.Size = new System.Drawing.Size(252, 25);
 			this.label30.TabIndex = 74;
@@ -1482,7 +1592,7 @@
 			// 
 			this.textBoxFinalCompensationFactor.Enabled = false;
 			this.textBoxFinalCompensationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(775, 651);
+			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(773, 766);
 			this.textBoxFinalCompensationFactor.Name = "textBoxFinalCompensationFactor";
 			this.textBoxFinalCompensationFactor.Size = new System.Drawing.Size(109, 30);
 			this.textBoxFinalCompensationFactor.TabIndex = 73;
@@ -1492,7 +1602,7 @@
 			// 
 			this.label31.AutoSize = true;
 			this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label31.Location = new System.Drawing.Point(12, 601);
+			this.label31.Location = new System.Drawing.Point(10, 716);
 			this.label31.Name = "label31";
 			this.label31.Size = new System.Drawing.Size(234, 25);
 			this.label31.TabIndex = 76;
@@ -1502,7 +1612,7 @@
 			// 
 			this.textBoxTotalWarPoints.Enabled = false;
 			this.textBoxTotalWarPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTotalWarPoints.Location = new System.Drawing.Point(356, 598);
+			this.textBoxTotalWarPoints.Location = new System.Drawing.Point(354, 713);
 			this.textBoxTotalWarPoints.Name = "textBoxTotalWarPoints";
 			this.textBoxTotalWarPoints.Size = new System.Drawing.Size(86, 30);
 			this.textBoxTotalWarPoints.TabIndex = 75;
@@ -1513,7 +1623,7 @@
 			// 
 			this.label32.AutoSize = true;
 			this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label32.Location = new System.Drawing.Point(484, 601);
+			this.label32.Location = new System.Drawing.Point(482, 716);
 			this.label32.Name = "label32";
 			this.label32.Size = new System.Drawing.Size(253, 25);
 			this.label32.TabIndex = 78;
@@ -1523,7 +1633,7 @@
 			// 
 			this.textBoxTotalPeacePoints.Enabled = false;
 			this.textBoxTotalPeacePoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(774, 598);
+			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(772, 713);
 			this.textBoxTotalPeacePoints.Name = "textBoxTotalPeacePoints";
 			this.textBoxTotalPeacePoints.Size = new System.Drawing.Size(110, 30);
 			this.textBoxTotalPeacePoints.TabIndex = 77;
@@ -1534,7 +1644,7 @@
 			// 
 			this.label33.AutoSize = true;
 			this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label33.Location = new System.Drawing.Point(328, 703);
+			this.label33.Location = new System.Drawing.Point(326, 818);
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(23, 25);
 			this.label33.TabIndex = 79;
@@ -1544,7 +1654,7 @@
 			// 
 			this.label34.AutoSize = true;
 			this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label34.Location = new System.Drawing.Point(749, 703);
+			this.label34.Location = new System.Drawing.Point(747, 818);
 			this.label34.Name = "label34";
 			this.label34.Size = new System.Drawing.Size(23, 25);
 			this.label34.TabIndex = 80;
@@ -1552,7 +1662,7 @@
 			// 
 			// buttonROMInfo
 			// 
-			this.buttonROMInfo.Location = new System.Drawing.Point(19, 537);
+			this.buttonROMInfo.Location = new System.Drawing.Point(17, 652);
 			this.buttonROMInfo.Name = "buttonROMInfo";
 			this.buttonROMInfo.Size = new System.Drawing.Size(287, 48);
 			this.buttonROMInfo.TabIndex = 72;
@@ -1564,7 +1674,7 @@
 			// 
 			this.label18.AutoSize = true;
 			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label18.Location = new System.Drawing.Point(484, 551);
+			this.label18.Location = new System.Drawing.Point(482, 666);
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(204, 25);
 			this.label18.TabIndex = 82;
@@ -1574,7 +1684,7 @@
 			// 
 			this.textBoxFinalLifeStylePoint.Enabled = false;
 			this.textBoxFinalLifeStylePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(774, 548);
+			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(772, 663);
 			this.textBoxFinalLifeStylePoint.Name = "textBoxFinalLifeStylePoint";
 			this.textBoxFinalLifeStylePoint.Size = new System.Drawing.Size(71, 30);
 			this.textBoxFinalLifeStylePoint.TabIndex = 81;
@@ -1582,12 +1692,164 @@
 			this.textBoxFinalLifeStylePoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBoxFinalLifeStylePoint.TextChanged += new System.EventHandler(this.textBoxFinalLifeStylePoint_TextChanged);
 			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.checkBox1);
+			this.groupBox5.Controls.Add(this.label58);
+			this.groupBox5.Controls.Add(this.button1);
+			this.groupBox5.Controls.Add(this.label59);
+			this.groupBox5.Controls.Add(this.textBox1);
+			this.groupBox5.Controls.Add(this.label60);
+			this.groupBox5.Location = new System.Drawing.Point(3, 357);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(442, 115);
+			this.groupBox5.TabIndex = 72;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Left Arm as a Whole";
+			// 
+			// checkBox1
+			// 
+			this.checkBox1.AutoSize = true;
+			this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBox1.Location = new System.Drawing.Point(367, 69);
+			this.checkBox1.Name = "checkBox1";
+			this.checkBox1.Size = new System.Drawing.Size(22, 21);
+			this.checkBox1.TabIndex = 59;
+			this.toolTip1.SetToolTip(this.checkBox1, "Check when injury happened during War Service.");
+			this.checkBox1.UseVisualStyleBackColor = true;
+			// 
+			// label58
+			// 
+			this.label58.Location = new System.Drawing.Point(339, 13);
+			this.label58.Name = "label58";
+			this.label58.Size = new System.Drawing.Size(79, 45);
+			this.label58.TabIndex = 60;
+			this.label58.Text = "War Service";
+			this.label58.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(101, 60);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(99, 37);
+			this.button1.TabIndex = 58;
+			this.button1.Text = "CLICK";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// label59
+			// 
+			this.label59.Location = new System.Drawing.Point(10, 54);
+			this.label59.Name = "label59";
+			this.label59.Size = new System.Drawing.Size(83, 46);
+			this.label59.TabIndex = 55;
+			this.label59.Text = "Whole of Limb:";
+			this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Enabled = false;
+			this.textBox1.Location = new System.Drawing.Point(231, 65);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(70, 26);
+			this.textBox1.TabIndex = 56;
+			this.textBox1.Text = "0";
+			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label60
+			// 
+			this.label60.Location = new System.Drawing.Point(231, 13);
+			this.label60.Name = "label60";
+			this.label60.Size = new System.Drawing.Size(70, 49);
+			this.label60.TabIndex = 57;
+			this.label60.Text = "Points:";
+			this.label60.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// groupBox6
+			// 
+			this.groupBox6.Controls.Add(this.checkBox2);
+			this.groupBox6.Controls.Add(this.label61);
+			this.groupBox6.Controls.Add(this.button2);
+			this.groupBox6.Controls.Add(this.label62);
+			this.groupBox6.Controls.Add(this.textBox2);
+			this.groupBox6.Controls.Add(this.label63);
+			this.groupBox6.Location = new System.Drawing.Point(446, 357);
+			this.groupBox6.Name = "groupBox6";
+			this.groupBox6.Size = new System.Drawing.Size(435, 115);
+			this.groupBox6.TabIndex = 73;
+			this.groupBox6.TabStop = false;
+			this.groupBox6.Text = "Right Arm as a Whole";
+			// 
+			// checkBox2
+			// 
+			this.checkBox2.AutoSize = true;
+			this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBox2.Location = new System.Drawing.Point(367, 69);
+			this.checkBox2.Name = "checkBox2";
+			this.checkBox2.Size = new System.Drawing.Size(22, 21);
+			this.checkBox2.TabIndex = 59;
+			this.toolTip1.SetToolTip(this.checkBox2, "Check when injury happened during War Service.");
+			this.checkBox2.UseVisualStyleBackColor = true;
+			// 
+			// label61
+			// 
+			this.label61.Location = new System.Drawing.Point(339, 13);
+			this.label61.Name = "label61";
+			this.label61.Size = new System.Drawing.Size(79, 45);
+			this.label61.TabIndex = 60;
+			this.label61.Text = "War Service";
+			this.label61.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(101, 60);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(99, 37);
+			this.button2.TabIndex = 58;
+			this.button2.Text = "CLICK";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
+			// label62
+			// 
+			this.label62.Location = new System.Drawing.Point(10, 54);
+			this.label62.Name = "label62";
+			this.label62.Size = new System.Drawing.Size(83, 46);
+			this.label62.TabIndex = 55;
+			this.label62.Text = "Whole of Limb:";
+			this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Enabled = false;
+			this.textBox2.Location = new System.Drawing.Point(231, 65);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(70, 26);
+			this.textBox2.TabIndex = 56;
+			this.textBox2.Text = "0";
+			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label63
+			// 
+			this.label63.Location = new System.Drawing.Point(231, 13);
+			this.label63.Name = "label63";
+			this.label63.Size = new System.Drawing.Size(70, 49);
+			this.label63.TabIndex = 57;
+			this.label63.Text = "Points:";
+			this.label63.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// label47
+			// 
+			this.label47.Location = new System.Drawing.Point(6, 496);
+			this.label47.Name = "label47";
+			this.label47.Size = new System.Drawing.Size(862, 89);
+			this.label47.TabIndex = 74;
+			this.label47.Text = resources.GetString("label47.Text");
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-			this.ClientSize = new System.Drawing.Size(905, 829);
+			this.ClientSize = new System.Drawing.Size(905, 944);
 			this.Controls.Add(this.label18);
 			this.Controls.Add(this.textBoxFinalLifeStylePoint);
 			this.Controls.Add(this.buttonROMInfo);
@@ -1608,9 +1870,11 @@
 			this.Controls.Add(this.textBoxLumpSumPayout);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBoxWeeklyPayout);
-			this.MaximumSize = new System.Drawing.Size(927, 885);
-			this.MinimumSize = new System.Drawing.Size(927, 885);
+			this.Location = new System.Drawing.Point(100, 100);
+			this.MaximumSize = new System.Drawing.Size(927, 1000);
+			this.MinimumSize = new System.Drawing.Size(927, 1000);
 			this.Name = "MainForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "DVA Compensation Calulator";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.tabControl1.ResumeLayout(false);
@@ -1624,6 +1888,10 @@
 			this.groupBox1.PerformLayout();
 			this.tabPageLowerLimbs.ResumeLayout(false);
 			this.tabPageLowerLimbs.PerformLayout();
+			this.groupBox4.ResumeLayout(false);
+			this.groupBox4.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.tabPageBack.ResumeLayout(false);
 			this.tabPageBack.PerformLayout();
 			this.tabPage1.ResumeLayout(false);
@@ -1631,6 +1899,10 @@
 			this.tabPageLifeStyle.ResumeLayout(false);
 			this.tabPageLifeStyle.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).EndInit();
+			this.groupBox5.ResumeLayout(false);
+			this.groupBox5.PerformLayout();
+			this.groupBox6.ResumeLayout(false);
+			this.groupBox6.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1665,19 +1937,15 @@
 		private System.Windows.Forms.PictureBox SaveAll;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBoxKnee;
-		private System.Windows.Forms.ComboBox comboBox4;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBoxKnee;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox textBoxToes;
+		private System.Windows.Forms.TextBox textBoxAnkle;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox textBoxHip;
 		private System.Windows.Forms.CheckBox checkBoxElbowWar;
 		private System.Windows.Forms.TabPage tabPageLifeStyle;
 		private System.Windows.Forms.Label label20;
@@ -1731,9 +1999,9 @@
 		private System.Windows.Forms.Label label39;
 		private System.Windows.Forms.TextBox textBoxJointPain;
 		private System.Windows.Forms.Label label40;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button buttonHip;
+		private System.Windows.Forms.Button buttonAnkle;
+		private System.Windows.Forms.Button buttonToes;
 		private System.Windows.Forms.Button buttonKnee;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Label label41;
@@ -1755,8 +2023,6 @@
 		private System.Windows.Forms.Label label46;
 		private System.Windows.Forms.TextBox textBoxRightShoulder;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label48;
-		private System.Windows.Forms.Label label47;
 		private System.Windows.Forms.Button buttonROMInfo;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.TextBox textBoxFinalLifeStylePoint;
@@ -1767,6 +2033,35 @@
 		private System.Windows.Forms.CheckBox checkBoxThoracoWar;
 		private System.Windows.Forms.Button buttonThoraco;
 		private System.Windows.Forms.Label label52;
+		private System.Windows.Forms.CheckBox checkBoxKneeWar;
+		private System.Windows.Forms.CheckBox checkBoxHipWar;
+		private System.Windows.Forms.CheckBox checkBoxAnkleWar;
+		private System.Windows.Forms.CheckBox checkBoxToesWar;
+		private System.Windows.Forms.Label label53;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.CheckBox checkBoxWholeLimbWar;
+		private System.Windows.Forms.Label label55;
+		private System.Windows.Forms.Button buttonWholeLimb;
+		private System.Windows.Forms.Label label56;
+		private System.Windows.Forms.TextBox textBoxWholeLimb;
+		private System.Windows.Forms.Label label57;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label label54;
+		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.CheckBox checkBox2;
+		private System.Windows.Forms.Label label61;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label label62;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.Label label63;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.Label label58;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label59;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label label60;
+		private System.Windows.Forms.Label label47;
 	}
 }
 

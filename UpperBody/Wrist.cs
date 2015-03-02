@@ -2,13 +2,16 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class Fingers : Form
+	public partial class Wrist : Form
 	{
-		public Fingers()
+		public Wrist()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
@@ -23,12 +26,14 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
 			Points = 0;
 		}
 
-		public static int LeftFingers;
+		public static int LeftWrist;
 
-		public static int RightFingers;
+		public static int RightWrist;
 
 		public static int Points;
 
@@ -37,6 +42,8 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption1.Checked = false;
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
 			Points = 5;
 		}
 
@@ -45,6 +52,8 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption1.Checked = false;
 			checkBoxOption2.Checked = false;
 			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
 			Points = 10;
 		}
 
@@ -53,31 +62,53 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption1.Checked = false;
 			checkBoxOption2.Checked = false;
 			checkBoxOption3.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
 			Points = 15;
+		}
+
+		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxOption1.Checked = false;
+			checkBoxOption2.Checked = false;
+			checkBoxOption3.Checked = false;
+			checkBoxOption4.Checked = false;
+			checkBoxOption6.Checked = false;
+			Points = 20;
+		}
+
+		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxOption1.Checked = false;
+			checkBoxOption2.Checked = false;
+			checkBoxOption3.Checked = false;
+			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			Points = 30;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftFingers")
+			if (GlobalVar.Selection == "LeftWrist")
 			{
-				LeftFingers = 0;
+				LeftWrist = 0;
 			}
 			else
 			{
-				RightFingers = 0;
+				RightWrist = 0;
 			}
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftFingers")
+			if (GlobalVar.Selection == "LeftWrist")
 			{
-				LeftFingers = Points;
+				LeftWrist = Points;
 			}
 			else
 			{
-				RightFingers = Points;
+				RightWrist = Points;
 			}
 			Close();
 		}

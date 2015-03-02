@@ -45,5 +45,13 @@ namespace DVA_Compensation_Calculator
 		public static decimal RightArmHighestPointsPeace;
 
 		public static decimal RightArmPoints;
+
+		public static decimal legHighestPointsWarArray;
+
+		public static decimal legHighestPointsPeaceArray;
+
+		public static decimal LegPoints;
+
+		public static decimal HighestLegPoints;
 	}
 }

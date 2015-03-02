@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {

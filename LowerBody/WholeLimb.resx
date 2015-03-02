@@ -117,25 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label47.Text" xml:space="preserve">
-    <value>The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement. The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
+  <data name="checkBoxOption2.Text" xml:space="preserve">
+    <value>· Walks with intermittent difficulty, such as locking or giving way, without falling. Caution needed on steps and uneven ground, or when running.
+· Has intermittent pain from weight-bearing, ie, not all the time, or only after weight-bearing for some time.
+· Sciatic pain occurring frequently: present some of the time when walking.</value>
   </data>
-  <data name="label54.Text" xml:space="preserve">
-    <value>Note: Because the two lower limbs constitute a functional unit, a single functional impairment rating is calculated for both lower limbs together.
-
-Establish which joints in the lower limbs, if any, have some restriction of movement as a result of accepted conditions affecting the lower limbs.
-
-The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement. The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
+  <data name="checkBoxOption4.Text" xml:space="preserve">
+    <value>· Walks at moderately reduced pace in comparison with peers on flat ground; and is unable to
+-- manage stairs or ramps without rails; or
+-- rise from the sitting position without the assistance of one hand.
+· Pain restricts walking (4 km/h) to 250 m or less at a time. Can walk further after resting.</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label37.Text" xml:space="preserve">
-    <value>An additional rating is to be given for certain joint pain. This table is to be applied only for frequent joint pain that continues to affect a joint when the joint is no longer in use: for example, pain in the knees continuing for a significant period after ceasing walking and standing, or pain in the shoulders persisting for a significant period after ceasing some task such as hanging out the washing.
-
-Pain that limits range of movement or distance that can be walked is already assessed elsewhere. may be applied for pain in both the upper limbs and lower limbs and intervertebral joints. Only one selection may be made for pain in any joint or combination of joints. However, this is not to be applied to rate sciatic pain.</value>
+  <data name="checkBoxOption5.Text" xml:space="preserve">
+    <value>· Walks at significantly reduced pace in comparison with peers and:
+-- legs give way frequently, resulting in falls. Can walk more efficiently with a brace or an artificial limb; or
+-- is unable to negotiate stairs without personal assistance; or
+-- is unable to rise to standing position without the assistance of both hands.
+· Pain restricts walking (4 km/h) to 100 m or less at a time. Can walk further after resting.</value>
+  </data>
+  <data name="checkBoxOption3.Text" xml:space="preserve">
+    <value>· Walks at normal pace on level ground, but has constant difficulty up and down steps and over uneven ground. Need for a walking stick may be manifested:
+-- Pain and/or slowness; or
+-- constant pain from weight-bearing.
+· Pain restricts walking to 500 m or less, at a slow to moderate pace (4 km/h). Can walk further after resting.
+· Sciatic pain daily — present most of the time during walking.</value>
+  </data>
+  <data name="checkBoxOption6.Text" xml:space="preserve">
+    <value>· Walks at greatly reduced pace in comparison with peers, is unable to negotiate kerbs, gutters or uneven ground, and
+-- is restricted to walking in home and around block. Probably needs a walking aid; or
+-- finds transfer difficult without personal assistance.
+· Pain restricts walking (4 km/h) to 50 m or less at a time. Can walk further after resting.</value>
   </data>
 </root>

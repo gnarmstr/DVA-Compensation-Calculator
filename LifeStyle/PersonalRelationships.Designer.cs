@@ -185,6 +185,7 @@
 			this.MaximumSize = new System.Drawing.Size(900, 900);
 			this.MinimumSize = new System.Drawing.Size(900, 900);
 			this.Name = "PersonalRelationships";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "PersonalRelationships";
 			this.Load += new System.EventHandler(this.PersonalRelationships_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();

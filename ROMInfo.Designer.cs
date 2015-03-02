@@ -35,8 +35,11 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1202, 833);
+			this.ClientSize = new System.Drawing.Size(978, 694);
+			this.MaximumSize = new System.Drawing.Size(1000, 750);
+			this.MinimumSize = new System.Drawing.Size(1000, 750);
 			this.Name = "ROMInfo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Range Of Motion Information";
 			this.Load += new System.EventHandler(this.ROMInfo_Load);
 			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ROMInfo_MouseClick);

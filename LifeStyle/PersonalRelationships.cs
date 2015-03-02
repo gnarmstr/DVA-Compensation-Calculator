@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
@@ -9,6 +10,8 @@ namespace DVA_Compensation_Calculator
 	{
 		public PersonalRelationships()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 

@@ -2,13 +2,16 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class Elbow : Form
+	public partial class Ankle : Form
 	{
-		public Elbow()
+		public Ankle()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
@@ -28,9 +31,7 @@ namespace DVA_Compensation_Calculator
 			Points = 0;
 		}
 
-		public static int LeftElbow;
-
-		public static int RightElbow;
+		public static int ankle;
 
 		public static int Points;
 
@@ -41,7 +42,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 10;
+			Points = 5;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 20;
+			Points = 10;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 30;
+			Points = 15;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 40;
+			Points = 20;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -81,32 +82,18 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			Points = 50;
+			Points = 30;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftElbow")
-			{
-				LeftElbow = 0;
-			}
-			else
-			{
-				RightElbow = 0;
-			}
+			ankle = 0;
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftElbow")
-			{
-				LeftElbow = Points;
-			}
-			else
-			{
-				RightElbow = Points;
-			}
+			ankle = Points;
 			Close();
 		}
 

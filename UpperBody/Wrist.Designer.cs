@@ -1,6 +1,6 @@
 ﻿namespace DVA_Compensation_Calculator
 {
-	partial class Shoulder
+	partial class Wrist
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -130,7 +130,7 @@
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
-			// Shoulder
+			// Wrist
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,8 +147,9 @@
 			this.Controls.Add(this.checkBoxOption1);
 			this.MaximumSize = new System.Drawing.Size(727, 683);
 			this.MinimumSize = new System.Drawing.Size(727, 683);
-			this.Name = "Shoulder";
-			this.Text = "Shoulder";
+			this.Name = "Wrist";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+			this.Text = "Wrist";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();

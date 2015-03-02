@@ -1,4 +1,6 @@
-﻿using System;
+﻿		#region Using
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,8 @@ using GemBox.Spreadsheet;
 using GemBox.Spreadsheet.WinFormsUtilities;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
+
+#endregion
 
 namespace DVA_Compensation_Calculator
 {
@@ -88,6 +92,22 @@ namespace DVA_Compensation_Calculator
 			checkBoxRightShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", false);
 			checkBoxRightWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", false);
 			checkBoxRightFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingersWar", false);
+
+			textBoxKnee.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxKnee", "0");
+			Knee.knee = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Knee", "0"));
+			textBoxHip.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxHip", "0");
+			Hip.hip = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Hip", "0"));
+			textBoxToes.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxToes", "0");
+			Toes.toes = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Toes", "0"));
+			textBoxAnkle.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxAnkle", "0");
+			Ankle.ankle = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Ankle", "0"));
+			checkBoxKneeWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxKneeWar", false);
+			checkBoxHipWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxHipWar", false);
+			checkBoxToesWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxToesWar", false);
+			checkBoxAnkleWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxAnkleWar", false);
+			textBoxWholeLimb.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxWholeLimb", "0");
+			WholeLimb.wholeLimb = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "WholeLimb", "0"));
+			checkBoxWholeLimbWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxWholeLimbWar", false);
 
 			textBoxThoraco.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", "0");
 			ThoracoLumbar.thoracoLumbar = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", "0"));
@@ -265,11 +285,11 @@ namespace DVA_Compensation_Calculator
 			//LEFT ARM
 			var leftArmHighestPointsWarArray = new decimal[4];
 			var leftArmHighestPointsPeaceArray = new decimal[4];
-			var war = 0;
+			var leftwar = 0;
 			if (checkBoxElbowWar.Checked)
 			{
 				leftArmHighestPointsWarArray[0] = Convert.ToDecimal(textBoxElbow.Text);
-				war = 1;
+				leftwar = 1;
 			}
 			else
 			{
@@ -278,7 +298,7 @@ namespace DVA_Compensation_Calculator
 			if (checkBoxShoulderWar.Checked)
 			{
 				leftArmHighestPointsWarArray[1] = Convert.ToDecimal(textBoxShoulder.Text);
-				war = 1;
+				leftwar = 1;
 			}
 			else
 			{
@@ -288,7 +308,7 @@ namespace DVA_Compensation_Calculator
 			if (checkBoxWristWar.Checked)
 			{
 				leftArmHighestPointsWarArray[2] = Convert.ToDecimal(textBoxWrist.Text);
-				war = 1;
+				leftwar = 1;
 			}
 			else
 			{
@@ -297,7 +317,7 @@ namespace DVA_Compensation_Calculator
 			if (checkBoxFingersWar.Checked)
 			{
 				leftArmHighestPointsWarArray[3] = Convert.ToDecimal(textBoxFingers.Text);
-				war = 1;
+				leftwar = 1;
 			}
 			else
 			{
@@ -351,13 +371,56 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.RightArmHighestPointsWar = rightArmHighestPointsWarArray.Max();
 			GlobalVar.RightArmHighestPointsPeace = rightArmHighestPointsPeaceArray.Max();
 			GlobalVar.RightArmPoints = Math.Max(GlobalVar.RightArmHighestPointsWar, GlobalVar.RightArmHighestPointsPeace);
-			
-			//Joint Pain
-			var jointPainWar = 0;
-			if (checkBoxJointPainWar.Checked)
+
+			//LEG
+			var legHighestPointsWarArray = new decimal[4];
+			var legHighestPointsPeaceArray = new decimal[4];
+			var legWar = 0;
+			if (checkBoxAnkleWar.Checked)
 			{
-				jointPainWar = 1;
+				legHighestPointsWarArray[0] = Convert.ToDecimal(textBoxAnkle.Text);
+				legWar = 1;
 			}
+			else
+			{
+				legHighestPointsPeaceArray[0] = Convert.ToDecimal(textBoxAnkle.Text);
+			}
+			if (checkBoxKneeWar.Checked)
+			{
+				legHighestPointsWarArray[1] = Convert.ToDecimal(textBoxKnee.Text);
+				legWar = 1;
+			}
+			else
+			{
+				legHighestPointsPeaceArray[1] = Convert.ToDecimal(textBoxKnee.Text);
+			}
+
+			if (checkBoxHipWar.Checked)
+			{
+				legHighestPointsWarArray[2] = Convert.ToDecimal(textBoxHip.Text);
+				legWar = 1;
+			}
+			else
+			{
+				legHighestPointsPeaceArray[2] = Convert.ToDecimal(textBoxHip.Text);
+			}
+			if (checkBoxToesWar.Checked)
+			{
+				legHighestPointsWarArray[3] = Convert.ToDecimal(textBoxToes.Text);
+				legWar = 1;
+			}
+			else
+			{
+				legHighestPointsPeaceArray[3] = Convert.ToDecimal(textBoxToes.Text);
+			}
+			if (checkBoxWholeLimbWar.Checked)
+			{
+				legWar = 1;
+			}
+			GlobalVar.legHighestPointsWarArray = legHighestPointsWarArray.Max();
+			GlobalVar.legHighestPointsPeaceArray = legHighestPointsPeaceArray.Max();
+			GlobalVar.LegPoints = Math.Max(GlobalVar.legHighestPointsWarArray, GlobalVar.legHighestPointsPeaceArray);
+			GlobalVar.HighestLegPoints = Math.Max(GlobalVar.LegPoints, Convert.ToInt16(textBoxWholeLimb.Text));
 
 			//Thoraco Lumber Spine
 			var thoracoLumbarWar = 0;
@@ -365,7 +428,14 @@ namespace DVA_Compensation_Calculator
 			{
 				thoracoLumbarWar = 1;
 			}
-			
+
+			//Joint Pain
+			var jointPainWar = 0;
+			if (checkBoxJointPainWar.Checked)
+			{
+				jointPainWar = 1;
+			}
+
 			// Just for Display Only
 			GlobalVar.WarlikePoints += Convert.ToInt16(leftArmHighestPointsWarArray.Max());
 			GlobalVar.WarlikePoints += Convert.ToInt16(rightArmHighestPointsWarArray.Max());
@@ -379,7 +449,7 @@ namespace DVA_Compensation_Calculator
 
 			textBoxTotalWarPoints.Text = "0";
 			textBoxTotalPeacePoints.Text = "0";
-			if (war == 1)
+			if (leftwar == 1)
 			{
 				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + GlobalVar.LeftArmPoints).ToString();
 			}
@@ -411,6 +481,14 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxThoraco.Text)).ToString();
 			}
+			if (legWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + GlobalVar.HighestLegPoints).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + GlobalVar.HighestLegPoints).ToString();
+			}
 			
 		}
 
@@ -425,6 +503,7 @@ namespace DVA_Compensation_Calculator
 			combinedPoints = Math.Round(GlobalVar.LeftArmPoints + Convert.ToDecimal(textBoxJointPain.Text) * (1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar) / 100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.RightArmPoints * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThoraco.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestLegPoints * (1 - combinedPoints / 100));
 			textBoxComibinedPoints.Text = combinedPoints.ToString();
 		}
 		#endregion
@@ -555,6 +634,22 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", checkBoxRightWristWar.Checked.ToString());
 			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingerWar", checkBoxRightFingersWar.Checked.ToString());
 
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxKnee", textBoxKnee.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "Knee", Knee.knee);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxHip", textBoxHip.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "Hip", Hip.hip);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxToes", textBoxToes.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "Toes", Toes.toes);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxAnkle", textBoxAnkle.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "Ankle", Ankle.ankle);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxKneeWar", checkBoxKneeWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxHipWar", checkBoxHipWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxToesWar", checkBoxToesWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxAnkleWar", checkBoxAnkleWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxWholeLimb", textBoxWholeLimb.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "WholeLimb", WholeLimb.wholeLimb);
+			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxWholeLimbWar", checkBoxWholeLimbWar.Checked.ToString());
+
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", textBoxThoraco.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", ThoracoLumbar.thoracoLumbar);
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", checkBoxThoracoWar.Checked.ToString());
@@ -681,7 +776,100 @@ namespace DVA_Compensation_Calculator
 
 		#region Lower Body
 
+		private void buttonKnee_Click(object sender, EventArgs e)
+		{
+			var knee = new Knee();
+			knee.ShowDialog();
+			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
 
+		private void buttonHip_Click(object sender, EventArgs e)
+		{
+			var hip = new Hip();
+			hip.ShowDialog();
+			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonAnkle_Click(object sender, EventArgs e)
+		{
+			var ankle = new Ankle();
+			ankle.ShowDialog();
+			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonToes_Click(object sender, EventArgs e)
+		{
+			var toes = new Toes();
+			toes.ShowDialog();
+			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxKnee_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxHip_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxAnkle_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void textBoxToes_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxKneeWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxHipWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxAnkleWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxToesWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void buttonWholeLimb_Click(object sender, EventArgs e)
+		{
+			var wholeLimb = new WholeLimb();
+			wholeLimb.ShowDialog();
+			textBoxWholeLimb.Text = WholeLimb.wholeLimb.ToString();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxWholeLimb_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxWholeLimbWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
 
 		#endregion
 
@@ -869,6 +1057,8 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
+
+
 		#endregion
 
 		#region Misc
@@ -916,6 +1106,5 @@ namespace DVA_Compensation_Calculator
 		}
 
 		#endregion
-
 	}
 }

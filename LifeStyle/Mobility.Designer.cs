@@ -173,7 +173,10 @@
 			this.Controls.Add(this.checkBoxMobility5);
 			this.Controls.Add(this.checkBoxMobility3);
 			this.Controls.Add(this.checkBoxMobility1);
+			this.MaximumSize = new System.Drawing.Size(1116, 1000);
+			this.MinimumSize = new System.Drawing.Size(1116, 1000);
 			this.Name = "Mobility";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Mobility";
 			this.Load += new System.EventHandler(this.Mobility_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();

@@ -2,13 +2,16 @@
 using System.Windows.Forms;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class Wrist : Form
+	public partial class Knee : Form
 	{
-		public Wrist()
+		public Knee()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
@@ -28,9 +31,7 @@ namespace DVA_Compensation_Calculator
 			Points = 0;
 		}
 
-		public static int LeftWrist;
-
-		public static int RightWrist;
+		public static int knee;
 
 		public static int Points;
 
@@ -41,7 +42,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 5;
+			Points = 10;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 10;
+			Points = 20;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 15;
+			Points = 30;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption6.Checked = false;
-			Points = 20;
+			Points = 40;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -81,32 +82,18 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			Points = 30;
+			Points = 50;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftWrist")
-			{
-				LeftWrist = 0;
-			}
-			else
-			{
-				RightWrist = 0;
-			}
+			knee = 0;
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftWrist")
-			{
-				LeftWrist = Points;
-			}
-			else
-			{
-				RightWrist = Points;
-			}
+			knee = Points;
 			Close();
 		}
 

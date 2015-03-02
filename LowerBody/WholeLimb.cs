@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using Common.Resources;
 using Common.Resources.Properties;
+using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class EmploymentActivities : Form
+	public partial class WholeLimb : Form
 	{
-		public EmploymentActivities()
+		public WholeLimb()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
@@ -33,12 +28,12 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 0;
+			Points = 0;
 		}
 
-		public static int employmentActivities;
+		public static int wholeLimb;
+
+		public static int Points;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
@@ -47,9 +42,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 1;
+			Points = 5;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -59,9 +52,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 2;
+			Points = 10;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -71,9 +62,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 3;
+			Points = 20;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -83,9 +72,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 4;
+			Points = 30;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -95,9 +82,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption3.Checked = false;
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			employmentActivities = 5;
+			Points = 40;
 		}
 
 		private void checkBoxOption7_CheckedChanged(object sender, EventArgs e)
@@ -109,7 +94,8 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
 			checkBoxOption8.Checked = false;
-			employmentActivities = 6;
+			checkBoxOption9.Checked = false;
+			Points = 50;
 		}
 
 		private void checkBoxOption8_CheckedChanged(object sender, EventArgs e)
@@ -121,17 +107,32 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
 			checkBoxOption7.Checked = false;
-			employmentActivities = 7;
+			checkBoxOption9.Checked = false;
+			Points = 60;
+		}
+
+		private void checkBoxOption9_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxOption1.Checked = false;
+			checkBoxOption2.Checked = false;
+			checkBoxOption3.Checked = false;
+			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
+			checkBoxOption7.Checked = false;
+			checkBoxOption8.Checked = false;
+			Points = 70;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			employmentActivities = 0;
+			wholeLimb = 0;
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			wholeLimb = Points;
 			Close();
 		}
 

@@ -76,16 +76,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fingers.cs">
+    <Compile Include="LowerBody\WholeLimb.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fingers.Designer.cs">
+    <Compile Include="LowerBody\WholeLimb.Designer.cs">
+      <DependentUpon>WholeLimb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowerBody\Knee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowerBody\Knee.Designer.cs">
+      <DependentUpon>Knee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowerBody\Hip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowerBody\Hip.Designer.cs">
+      <DependentUpon>Hip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowerBody\Ankle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowerBody\Ankle.Designer.cs">
+      <DependentUpon>Ankle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowerBody\Toes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowerBody\Toes.Designer.cs">
+      <DependentUpon>Toes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpperBody\Fingers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpperBody\Fingers.Designer.cs">
       <DependentUpon>Fingers.cs</DependentUpon>
     </Compile>
-    <Compile Include="JointPain.cs">
+    <Compile Include="JointPain\JointPain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JointPain.Designer.cs">
+    <Compile Include="JointPain\JointPain.Designer.cs">
       <DependentUpon>JointPain.cs</DependentUpon>
     </Compile>
     <Compile Include="ROMInfo.cs">
@@ -94,58 +124,58 @@
     <Compile Include="ROMInfo.Designer.cs">
       <DependentUpon>ROMInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThoracoLumbar.cs">
+    <Compile Include="Back\ThoracoLumbar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThoracoLumbar.Designer.cs">
+    <Compile Include="Back\ThoracoLumbar.Designer.cs">
       <DependentUpon>ThoracoLumbar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wrist.cs">
+    <Compile Include="UpperBody\Wrist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Wrist.Designer.cs">
+    <Compile Include="UpperBody\Wrist.Designer.cs">
       <DependentUpon>Wrist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shoulder.cs">
+    <Compile Include="UpperBody\Shoulder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Shoulder.Designer.cs">
+    <Compile Include="UpperBody\Shoulder.Designer.cs">
       <DependentUpon>Shoulder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Elbow.cs">
+    <Compile Include="UpperBody\Elbow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elbow.Designer.cs">
+    <Compile Include="UpperBody\Elbow.Designer.cs">
       <DependentUpon>Elbow.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmploymentActivities.cs">
+    <Compile Include="LifeStyle\EmploymentActivities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmploymentActivities.Designer.cs">
+    <Compile Include="LifeStyle\EmploymentActivities.Designer.cs">
       <DependentUpon>EmploymentActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="DomesticActivities.cs">
+    <Compile Include="LifeStyle\DomesticActivities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DomesticActivities.Designer.cs">
+    <Compile Include="LifeStyle\DomesticActivities.Designer.cs">
       <DependentUpon>DomesticActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecreationalActivities.cs">
+    <Compile Include="LifeStyle\RecreationalActivities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecreationalActivities.Designer.cs">
+    <Compile Include="LifeStyle\RecreationalActivities.Designer.cs">
       <DependentUpon>RecreationalActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mobility.cs">
+    <Compile Include="LifeStyle\Mobility.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mobility.Designer.cs">
+    <Compile Include="LifeStyle\Mobility.Designer.cs">
       <DependentUpon>Mobility.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonalRelationships.cs">
+    <Compile Include="LifeStyle\PersonalRelationships.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonalRelationships.Designer.cs">
+    <Compile Include="LifeStyle\PersonalRelationships.Designer.cs">
       <DependentUpon>PersonalRelationships.cs</DependentUpon>
     </Compile>
     <Compile Include="XmlProfileSettings.cs" />
@@ -158,43 +188,58 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Fingers.resx">
+    <EmbeddedResource Include="LowerBody\WholeLimb.resx">
+      <DependentUpon>WholeLimb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowerBody\Knee.resx">
+      <DependentUpon>Knee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowerBody\Hip.resx">
+      <DependentUpon>Hip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowerBody\Ankle.resx">
+      <DependentUpon>Ankle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowerBody\Toes.resx">
+      <DependentUpon>Toes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpperBody\Fingers.resx">
       <DependentUpon>Fingers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JointPain.resx">
+    <EmbeddedResource Include="JointPain\JointPain.resx">
       <DependentUpon>JointPain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ROMInfo.resx">
       <DependentUpon>ROMInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThoracoLumbar.resx">
+    <EmbeddedResource Include="Back\ThoracoLumbar.resx">
       <DependentUpon>ThoracoLumbar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wrist.resx">
+    <EmbeddedResource Include="UpperBody\Wrist.resx">
       <DependentUpon>Wrist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Shoulder.resx">
+    <EmbeddedResource Include="UpperBody\Shoulder.resx">
       <DependentUpon>Shoulder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elbow.resx">
+    <EmbeddedResource Include="UpperBody\Elbow.resx">
       <DependentUpon>Elbow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmploymentActivities.resx">
+    <EmbeddedResource Include="LifeStyle\EmploymentActivities.resx">
       <DependentUpon>EmploymentActivities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DomesticActivities.resx">
+    <EmbeddedResource Include="LifeStyle\DomesticActivities.resx">
       <DependentUpon>DomesticActivities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecreationalActivities.resx">
+    <EmbeddedResource Include="LifeStyle\RecreationalActivities.resx">
       <DependentUpon>RecreationalActivities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mobility.resx">
+    <EmbeddedResource Include="LifeStyle\Mobility.resx">
       <DependentUpon>Mobility.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonalRelationships.resx">
+    <EmbeddedResource Include="LifeStyle\PersonalRelationships.resx">
       <DependentUpon>PersonalRelationships.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -225,6 +270,7 @@
       <Name>Resources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
