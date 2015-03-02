@@ -33,5 +33,17 @@ namespace DVA_Compensation_Calculator
 		public static bool startup;
 
 		public static string Selection;
+
+		public static decimal leftArmHighestPointsWar;
+
+		public static decimal leftArmHighestPointsPeace;
+
+		public static decimal LeftArmPoints;
+
+		public static decimal RightArmHighestPointsWar;
+
+		public static decimal RightArmHighestPointsPeace;
+
+		public static decimal RightArmPoints;
 	}
 }

@@ -173,7 +173,7 @@
 			this.Controls.Add(this.checkBoxOption3);
 			this.Controls.Add(this.checkBoxOption1);
 			this.Name = "DomesticActivities";
-			this.Text = "Recreational and Community Activities";
+			this.Text = "Domestic Activities";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();

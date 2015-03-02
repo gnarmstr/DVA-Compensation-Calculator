@@ -88,6 +88,12 @@
     <Compile Include="JointPain.Designer.cs">
       <DependentUpon>JointPain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ROMInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROMInfo.Designer.cs">
+      <DependentUpon>ROMInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wrist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JointPain.resx">
       <DependentUpon>JointPain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROMInfo.resx">
+      <DependentUpon>ROMInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wrist.resx">
       <DependentUpon>Wrist.cs</DependentUpon>

@@ -51,7 +51,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption4.Checked = false;
 			checkBoxOption5.Checked = false;
 			checkBoxOption6.Checked = false;
-			LeftShoulder = 20;
+			Points = 20;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)

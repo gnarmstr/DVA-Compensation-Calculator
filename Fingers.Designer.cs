@@ -127,7 +127,7 @@
 			this.MaximumSize = new System.Drawing.Size(727, 530);
 			this.MinimumSize = new System.Drawing.Size(727, 530);
 			this.Name = "Fingers";
-			this.Text = "Recreational and Community Activities";
+			this.Text = "Fingers";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();

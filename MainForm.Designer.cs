@@ -151,6 +151,7 @@
 			this.label48 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.buttonROMInfo = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPagePersonalDetails.SuspendLayout();
 			this.tabPageUpperLimb.SuspendLayout();
@@ -213,7 +214,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(12, 12);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(889, 546);
+			this.tabControl1.Size = new System.Drawing.Size(889, 508);
 			this.tabControl1.TabIndex = 4;
 			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
 			// 
@@ -542,18 +543,19 @@
 			this.tabPageLowerLimbs.Location = new System.Drawing.Point(4, 29);
 			this.tabPageLowerLimbs.Name = "tabPageLowerLimbs";
 			this.tabPageLowerLimbs.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLowerLimbs.Size = new System.Drawing.Size(881, 513);
+			this.tabPageLowerLimbs.Size = new System.Drawing.Size(881, 475);
 			this.tabPageLowerLimbs.TabIndex = 1;
 			this.tabPageLowerLimbs.Text = "Lower Limbs";
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(223, 33);
+			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(44, 28);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(493, 20);
+			this.label6.Size = new System.Drawing.Size(799, 29);
 			this.label6.TabIndex = 35;
-			this.label6.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: UPPER LIMB JOINTS";
+			this.label6.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: LOWER LIMB JOINTS";
 			// 
 			// comboBox1
 			// 
@@ -567,7 +569,7 @@
             "- Loss of about three-quarters normal range of movement.",
             "- Loss of almost all movement, or complete ankylosis in position of function.",
             "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBox1.Location = new System.Drawing.Point(189, 126);
+			this.comboBox1.Location = new System.Drawing.Point(192, 200);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(101, 28);
 			this.comboBox1.TabIndex = 32;
@@ -584,7 +586,7 @@
             "- Loss of about three-quarters normal range of movement.",
             "- Loss of almost all movement, or complete ankylosis in position of function.",
             "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBox2.Location = new System.Drawing.Point(189, 182);
+			this.comboBox2.Location = new System.Drawing.Point(192, 256);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(101, 28);
 			this.comboBox2.TabIndex = 34;
@@ -601,7 +603,7 @@
             "- Loss of about three-quarters normal range of movement.",
             "- Loss of almost all movement, or complete ankylosis in position of function.",
             "- Ankylosis in an unfavourable position, or a flail joint."});
-			this.comboBoxKnee.Location = new System.Drawing.Point(189, 68);
+			this.comboBoxKnee.Location = new System.Drawing.Point(192, 142);
 			this.comboBoxKnee.Name = "comboBoxKnee";
 			this.comboBoxKnee.Size = new System.Drawing.Size(101, 28);
 			this.comboBoxKnee.TabIndex = 31;
@@ -619,7 +621,7 @@
                 "r. Thumb: loss of almost all movement or complete ankylosis of any or all joints" +
                 " (in position of function).",
             "- Thumb: ankylosis of any or all joints in an unfavourable position."});
-			this.comboBox4.Location = new System.Drawing.Point(189, 239);
+			this.comboBox4.Location = new System.Drawing.Point(192, 313);
 			this.comboBox4.Name = "comboBox4";
 			this.comboBox4.Size = new System.Drawing.Size(101, 28);
 			this.comboBox4.TabIndex = 33;
@@ -627,7 +629,7 @@
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(16, 71);
+			this.label7.Location = new System.Drawing.Point(19, 145);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(50, 20);
 			this.label7.TabIndex = 22;
@@ -636,14 +638,14 @@
 			// textBoxKnee
 			// 
 			this.textBoxKnee.Enabled = false;
-			this.textBoxKnee.Location = new System.Drawing.Point(783, 68);
+			this.textBoxKnee.Location = new System.Drawing.Point(505, 141);
 			this.textBoxKnee.Name = "textBoxKnee";
 			this.textBoxKnee.Size = new System.Drawing.Size(70, 26);
 			this.textBoxKnee.TabIndex = 23;
 			// 
 			// label14
 			// 
-			this.label14.Location = new System.Drawing.Point(761, 16);
+			this.label14.Location = new System.Drawing.Point(483, 89);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(114, 49);
 			this.label14.TabIndex = 30;
@@ -653,16 +655,16 @@
 			// label15
 			// 
 			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(16, 192);
+			this.label15.Location = new System.Drawing.Point(19, 266);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(49, 20);
+			this.label15.Size = new System.Drawing.Size(53, 20);
 			this.label15.TabIndex = 24;
-			this.label15.Text = "Wrist:";
+			this.label15.Text = "Ankle:";
 			// 
 			// textBox2
 			// 
 			this.textBox2.Enabled = false;
-			this.textBox2.Location = new System.Drawing.Point(782, 239);
+			this.textBox2.Location = new System.Drawing.Point(504, 312);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(71, 26);
 			this.textBox2.TabIndex = 29;
@@ -670,7 +672,7 @@
 			// textBox3
 			// 
 			this.textBox3.Enabled = false;
-			this.textBox3.Location = new System.Drawing.Point(783, 182);
+			this.textBox3.Location = new System.Drawing.Point(505, 255);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(71, 26);
 			this.textBox3.TabIndex = 25;
@@ -678,25 +680,25 @@
 			// label16
 			// 
 			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(16, 242);
+			this.label16.Location = new System.Drawing.Point(19, 316);
 			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(150, 20);
+			this.label16.Size = new System.Drawing.Size(48, 20);
 			this.label16.TabIndex = 28;
-			this.label16.Text = "Thumb and Fingers:";
+			this.label16.Text = "Toes:";
 			// 
 			// label17
 			// 
 			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(16, 129);
+			this.label17.Location = new System.Drawing.Point(19, 203);
 			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(77, 20);
+			this.label17.Size = new System.Drawing.Size(37, 20);
 			this.label17.TabIndex = 26;
-			this.label17.Text = "Shoulder:";
+			this.label17.Text = "Hip:";
 			// 
 			// textBox4
 			// 
 			this.textBox4.Enabled = false;
-			this.textBox4.Location = new System.Drawing.Point(782, 126);
+			this.textBox4.Location = new System.Drawing.Point(504, 199);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(71, 26);
 			this.textBox4.TabIndex = 27;
@@ -707,7 +709,7 @@
 			this.tabPageBack.Location = new System.Drawing.Point(4, 29);
 			this.tabPageBack.Name = "tabPageBack";
 			this.tabPageBack.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageBack.Size = new System.Drawing.Size(881, 513);
+			this.tabPageBack.Size = new System.Drawing.Size(881, 475);
 			this.tabPageBack.TabIndex = 3;
 			this.tabPageBack.Text = "Back";
 			// 
@@ -740,7 +742,7 @@
 			this.tabPageLifeStyle.Location = new System.Drawing.Point(4, 29);
 			this.tabPageLifeStyle.Name = "tabPageLifeStyle";
 			this.tabPageLifeStyle.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLifeStyle.Size = new System.Drawing.Size(881, 513);
+			this.tabPageLifeStyle.Size = new System.Drawing.Size(881, 475);
 			this.tabPageLifeStyle.TabIndex = 4;
 			this.tabPageLifeStyle.Text = "LifeStyle";
 			// 
@@ -1051,6 +1053,7 @@
 			this.textBoxTotalWarPoints.Name = "textBoxTotalWarPoints";
 			this.textBoxTotalWarPoints.Size = new System.Drawing.Size(86, 30);
 			this.textBoxTotalWarPoints.TabIndex = 75;
+			this.textBoxTotalWarPoints.Text = "0";
 			this.textBoxTotalWarPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label32
@@ -1071,6 +1074,7 @@
 			this.textBoxTotalPeacePoints.Name = "textBoxTotalPeacePoints";
 			this.textBoxTotalPeacePoints.Size = new System.Drawing.Size(110, 30);
 			this.textBoxTotalPeacePoints.TabIndex = 77;
+			this.textBoxTotalPeacePoints.Text = "0";
 			this.textBoxTotalPeacePoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label33
@@ -1107,7 +1111,7 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(881, 513);
+			this.tabPage1.Size = new System.Drawing.Size(881, 475);
 			this.tabPage1.TabIndex = 5;
 			this.tabPage1.Text = "Joint Pain";
 			// 
@@ -1191,7 +1195,7 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(350, 121);
+			this.button1.Location = new System.Drawing.Point(353, 195);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(99, 37);
 			this.button1.TabIndex = 49;
@@ -1200,7 +1204,7 @@
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(350, 177);
+			this.button2.Location = new System.Drawing.Point(353, 251);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(99, 37);
 			this.button2.TabIndex = 48;
@@ -1209,7 +1213,7 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(350, 229);
+			this.button3.Location = new System.Drawing.Point(353, 303);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(99, 37);
 			this.button3.TabIndex = 47;
@@ -1218,7 +1222,7 @@
 			// 
 			// buttonKnee
 			// 
-			this.buttonKnee.Location = new System.Drawing.Point(350, 63);
+			this.buttonKnee.Location = new System.Drawing.Point(353, 137);
 			this.buttonKnee.Name = "buttonKnee";
 			this.buttonKnee.Size = new System.Drawing.Size(99, 37);
 			this.buttonKnee.TabIndex = 46;
@@ -1340,6 +1344,7 @@
 			this.textBoxRightElbow.TabIndex = 51;
 			this.textBoxRightElbow.Text = "0";
 			this.textBoxRightElbow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxRightElbow.TextChanged += new System.EventHandler(this.textBoxRightElbow_TextChanged);
 			// 
 			// label43
 			// 
@@ -1368,6 +1373,7 @@
 			this.textBoxRightFingers.TabIndex = 57;
 			this.textBoxRightFingers.Text = "0";
 			this.textBoxRightFingers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxRightFingers.TextChanged += new System.EventHandler(this.textBoxRightFingers_TextChanged);
 			// 
 			// textBoxRightWrist
 			// 
@@ -1378,6 +1384,7 @@
 			this.textBoxRightWrist.TabIndex = 53;
 			this.textBoxRightWrist.Text = "0";
 			this.textBoxRightWrist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxRightWrist.TextChanged += new System.EventHandler(this.textBoxRightWrist_TextChanged);
 			// 
 			// label45
 			// 
@@ -1406,6 +1413,7 @@
 			this.textBoxRightShoulder.TabIndex = 55;
 			this.textBoxRightShoulder.Text = "0";
 			this.textBoxRightShoulder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxRightShoulder.TextChanged += new System.EventHandler(this.textBoxRightShoulder_TextChanged);
 			// 
 			// label47
 			// 
@@ -1479,12 +1487,23 @@
 			this.groupBox2.TabIndex = 71;
 			this.groupBox2.TabStop = false;
 			// 
+			// buttonROMInfo
+			// 
+			this.buttonROMInfo.Location = new System.Drawing.Point(19, 538);
+			this.buttonROMInfo.Name = "buttonROMInfo";
+			this.buttonROMInfo.Size = new System.Drawing.Size(287, 48);
+			this.buttonROMInfo.TabIndex = 72;
+			this.buttonROMInfo.Text = "Range of Joint movement info";
+			this.buttonROMInfo.UseVisualStyleBackColor = true;
+			this.buttonROMInfo.Click += new System.EventHandler(this.buttonROMInfo_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
 			this.ClientSize = new System.Drawing.Size(905, 829);
+			this.Controls.Add(this.buttonROMInfo);
 			this.Controls.Add(this.label34);
 			this.Controls.Add(this.label33);
 			this.Controls.Add(this.label32);
@@ -1651,6 +1670,7 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label label48;
 		private System.Windows.Forms.Label label47;
+		private System.Windows.Forms.Button buttonROMInfo;
 	}
 }
 

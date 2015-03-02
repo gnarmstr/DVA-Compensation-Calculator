@@ -130,7 +130,7 @@
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
-			// Ebow
+			// Wrist
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,8 +147,8 @@
 			this.Controls.Add(this.checkBoxOption1);
 			this.MaximumSize = new System.Drawing.Size(727, 683);
 			this.MinimumSize = new System.Drawing.Size(727, 683);
-			this.Name = "Ebow";
-			this.Text = "Recreational and Community Activities";
+			this.Name = "Wrist";
+			this.Text = "Wrist";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
