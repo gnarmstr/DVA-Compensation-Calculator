@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Back\ThoracoROM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Back\ThoracoROM.Designer.cs">
+      <DependentUpon>ThoracoROM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Back\Cervical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Back\Cervical.Designer.cs">
+      <DependentUpon>Cervical.cs</DependentUpon>
+    </Compile>
     <Compile Include="EarNoseThroat\Throat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +230,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Back\ThoracoROM.resx">
+      <DependentUpon>ThoracoROM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Back\Cervical.resx">
+      <DependentUpon>Cervical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EarNoseThroat\Throat.resx">
       <DependentUpon>Throat.cs</DependentUpon>
     </EmbeddedResource>

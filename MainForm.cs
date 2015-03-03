@@ -117,6 +117,12 @@ namespace DVA_Compensation_Calculator
 			textBoxThoraco.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", "0");
 			ThoracoLumbar.thoracoLumbar = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", "0"));
 			checkBoxThoracoWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", false);
+			textBoxThoracoROM.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoracoROM", "0");
+			ThoracoROM.thoracoROM = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "ThoracoROM", "0"));
+			checkBoxThoracoROMWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoROMWar", false);
+			textBoxCervicalSpine.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxCervicalSpine", "0");
+			Cervical.cervical = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "Cervical", "0"));
+			checkBoxCervicalSpineWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxCervicalSpineWar", false);
 
 			textBoxTinnitus.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxTinnitus", "0");
 			Tinnitus.tinnitus = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Tinnitus", "0"));
@@ -454,10 +460,24 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.HighestLegPoints = Math.Max(GlobalVar.LegPoints, Convert.ToInt16(textBoxWholeLimb.Text));
 
 			//Thoraco Lumber Spine
-			var thoracoLumbarWar = 0;
+			var thoracoWar = 0;
 			if (checkBoxThoracoWar.Checked)
 			{
-				thoracoLumbarWar = 1;
+				thoracoWar = 1;
+			}
+
+			//ThoracoROM
+			if (checkBoxThoracoROMWar.Checked)
+			{
+				thoracoWar = 1;
+			}
+			GlobalVar.TheracoHighestPoints = Math.Max(Convert.ToInt16(textBoxThoraco.Text), Convert.ToInt16(textBoxThoracoROM.Text));
+
+			//Cervical Spine
+			var cervicalSpineWar = 0;
+			if (checkBoxCervicalSpineWar.Checked)
+			{
+				cervicalSpineWar = 1;
 			}
 
 			//Joint Pain
@@ -499,7 +519,8 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxJointPain.Text);
-			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxThoraco.Text);
+			GlobalVar.WarlikePoints += GlobalVar.TheracoHighestPoints;
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxCervicalSpine.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxTinnitus.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxEars.Text);
@@ -509,12 +530,14 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxJointPain.Text);
-			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThoraco.Text);
+			GlobalVar.PeacelikePoints += GlobalVar.TheracoHighestPoints;
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxCervicalSpine.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxTinnitus.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxEars.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxNose.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThroat.Text);
+
 			//
 
 			textBoxTotalWarPoints.Text = "0";
@@ -543,13 +566,13 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxJointPain.Text)).ToString();
 			}
-			if (thoracoLumbarWar == 1)
+			if (thoracoWar == 1)
 			{
-				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxThoraco.Text)).ToString();
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + GlobalVar.TheracoHighestPoints).ToString();
 			}
 			else
 			{
-				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxThoraco.Text)).ToString();
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + GlobalVar.TheracoHighestPoints).ToString();
 			}
 			if (legWar == 1)
 			{
@@ -591,6 +614,14 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxThroat.Text)).ToString();
 			}
+			if (cervicalSpineWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxCervicalSpine.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxCervicalSpine.Text)).ToString();
+			}
 			
 		}
 
@@ -605,7 +636,8 @@ namespace DVA_Compensation_Calculator
 			decimal combinedPoints;
 			combinedPoints = Math.Round(GlobalVar.HighestLeftArmPoints + Convert.ToDecimal(textBoxJointPain.Text) * (1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar) / 100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestRightArmPoints * (1 - combinedPoints / 100));
-			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThoraco.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + GlobalVar.TheracoHighestPoints * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxCervicalSpine.Text) * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestLegPoints * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxTinnitus.Text) * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEars.Text) * (1 - combinedPoints / 100));
@@ -814,6 +846,12 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", textBoxThoraco.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", ThoracoLumbar.thoracoLumbar);
 			profile.PutSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", checkBoxThoracoWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "textBoxThoracoROM", textBoxThoracoROM.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "ThoracoROM", ThoracoROM.thoracoROM);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoROMWar", checkBoxThoracoROMWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "textBoxCervicalSpine", textBoxCervicalSpine.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "Cervical", Cervical.cervical);
+			profile.PutSetting(XmlProfileSettings.SettingType.Back, "checkBoxCervicalSpineWar", checkBoxCervicalSpineWar.Checked.ToString());
 
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "textBoxTinnitus", textBoxTinnitus.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "Tinnitus", Tinnitus.tinnitus);
@@ -870,6 +908,44 @@ namespace DVA_Compensation_Calculator
 		}
 
 		private void textBoxThoracoLumbar_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void buttonCervicalSpine_Click(object sender, EventArgs e)
+		{
+			var cervical = new Cervical();
+			cervical.ShowDialog();
+			textBoxCervicalSpine.Text = GlobalVar.ExcelData[4][Cervical.cervical][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxCervicalSpine_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxCervicalSpineWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void buttonThoracoROM_Click(object sender, EventArgs e)
+		{
+			var thoracoROM = new ThoracoROM();
+			thoracoROM.ShowDialog();
+			textBoxThoracoROM.Text = GlobalVar.ExcelData[4][ThoracoROM.thoracoROM][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxThoracoROM_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxThoracoROM_CheckedChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
 		}
@@ -1357,7 +1433,7 @@ namespace DVA_Compensation_Calculator
 		{
 			var throat = new Throat();
 			throat.ShowDialog();
-			textBoxThroat.Text = Throat.throat.ToString(); //No age adjustment
+			textBoxThroat.Text = Throat.throat.ToString();  //No age adjustment
 			UpdateAll();
 			UpdateAll();
 		}
@@ -1372,7 +1448,7 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 		#endregion
-
+		
 		#endregion
 	}
 }

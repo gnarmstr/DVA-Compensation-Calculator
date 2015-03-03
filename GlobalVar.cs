@@ -57,5 +57,8 @@ namespace DVA_Compensation_Calculator
 		public static decimal LegPoints;
 
 		public static decimal HighestLegPoints;
+
+		public static int TheracoHighestPoints;
+
 	}
 }

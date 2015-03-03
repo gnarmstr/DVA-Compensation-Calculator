@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label47.Text" xml:space="preserve">
-    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement. The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.</value>
-  </data>
-  <data name="label54.Text" xml:space="preserve">
-    <value>Note: Because the two lower limbs constitute a functional unit, a single functional impairment rating is calculated for both lower limbs together.
-
-Establish which joints in the lower limbs, if any, have some restriction of movement as a result of accepted conditions affecting the lower limbs.
-
-The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement. The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
-  </data>
-  <data name="label37.Text" xml:space="preserve">
-    <value>An additional rating is to be given for certain joint pain. This table is to be applied only for frequent joint pain that continues to affect a joint when the joint is no longer in use: for example, pain in the knees continuing for a significant period after ceasing walking and standing, or pain in the shoulders persisting for a significant period after ceasing some task such as hanging out the washing.
-
-Pain that limits range of movement or distance that can be walked is already assessed elsewhere. may be applied for pain in both the upper limbs and lower limbs and intervertebral joints. Only one selection may be made for pain in any joint or combination of joints. However, this is not to be applied to rate sciatic pain.</value>
-  </data>
-  <data name="label67.Text" xml:space="preserve">
-    <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label85.Text" xml:space="preserve">
-    <value>This calculator is designed to give you an idea of what Compensation you may be entitled too. Please use this information as a guide only. If the Compensation offered by DVA does not equal this calculator then you may have over/under stated your injuries or DVA may have not included all conditions. Please check against what DVA have provided and you may need to speak with DVA if you still think you are entiled to more.</value>
-  </data>
 </root>

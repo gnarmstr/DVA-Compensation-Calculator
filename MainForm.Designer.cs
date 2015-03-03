@@ -215,6 +215,21 @@
 			this.label77 = new System.Windows.Forms.Label();
 			this.textBoxThroat = new System.Windows.Forms.TextBox();
 			this.label78 = new System.Windows.Forms.Label();
+			this.groupBox11 = new System.Windows.Forms.GroupBox();
+			this.label79 = new System.Windows.Forms.Label();
+			this.label80 = new System.Windows.Forms.Label();
+			this.textBoxThoracoROM = new System.Windows.Forms.TextBox();
+			this.label81 = new System.Windows.Forms.Label();
+			this.textBoxCervicalSpine = new System.Windows.Forms.TextBox();
+			this.label82 = new System.Windows.Forms.Label();
+			this.checkBoxCervicalSpineWar = new System.Windows.Forms.CheckBox();
+			this.buttonCervicalSpine = new System.Windows.Forms.Button();
+			this.buttonThoracoROM = new System.Windows.Forms.Button();
+			this.checkBoxThoracoROMWar = new System.Windows.Forms.CheckBox();
+			this.label83 = new System.Windows.Forms.Label();
+			this.groupBox12 = new System.Windows.Forms.GroupBox();
+			this.label84 = new System.Windows.Forms.Label();
+			this.label85 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPagePersonalDetails.SuspendLayout();
 			this.tabPageUpperLimb.SuspendLayout();
@@ -234,6 +249,8 @@
 			this.groupBox8.SuspendLayout();
 			this.groupBox9.SuspendLayout();
 			this.groupBox10.SuspendLayout();
+			this.groupBox11.SuspendLayout();
+			this.groupBox12.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// textBoxWeeklyPayout
@@ -255,6 +272,8 @@
 			this.label1.Size = new System.Drawing.Size(295, 25);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Compensation Payout per week:";
+			this.toolTip1.SetToolTip(this.label1, "This is the amount of money you will receive if you take the Compensation as 100%" +
+        " weekly payout.");
 			// 
 			// label2
 			// 
@@ -265,6 +284,7 @@
 			this.label2.Size = new System.Drawing.Size(179, 25);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "Lump Sum Payout:";
+			this.toolTip1.SetToolTip(this.label2, "This is the amount of money if you took the Compensation as a 100% lump sum.");
 			// 
 			// textBoxLumpSumPayout
 			// 
@@ -295,6 +315,7 @@
 			// tabPagePersonalDetails
 			// 
 			this.tabPagePersonalDetails.BackColor = System.Drawing.SystemColors.Info;
+			this.tabPagePersonalDetails.Controls.Add(this.label85);
 			this.tabPagePersonalDetails.Controls.Add(this.label35);
 			this.tabPagePersonalDetails.Controls.Add(this.checkBoxFemale);
 			this.tabPagePersonalDetails.Controls.Add(this.checkBoxMale);
@@ -313,7 +334,7 @@
 			// 
 			this.label35.AutoSize = true;
 			this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label35.Location = new System.Drawing.Point(248, 316);
+			this.label35.Location = new System.Drawing.Point(239, 254);
 			this.label35.Name = "label35";
 			this.label35.Size = new System.Drawing.Size(53, 25);
 			this.label35.TabIndex = 18;
@@ -324,7 +345,7 @@
 			this.checkBoxFemale.AutoSize = true;
 			this.checkBoxFemale.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.checkBoxFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxFemale.Location = new System.Drawing.Point(381, 291);
+			this.checkBoxFemale.Location = new System.Drawing.Point(372, 229);
 			this.checkBoxFemale.Name = "checkBoxFemale";
 			this.checkBoxFemale.Size = new System.Drawing.Size(81, 50);
 			this.checkBoxFemale.TabIndex = 17;
@@ -339,7 +360,7 @@
 			this.checkBoxMale.Checked = true;
 			this.checkBoxMale.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.checkBoxMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxMale.Location = new System.Drawing.Point(319, 291);
+			this.checkBoxMale.Location = new System.Drawing.Point(310, 229);
 			this.checkBoxMale.Name = "checkBoxMale";
 			this.checkBoxMale.Size = new System.Drawing.Size(59, 50);
 			this.checkBoxMale.TabIndex = 16;
@@ -350,7 +371,7 @@
 			// textBoxWeeklyPayment
 			// 
 			this.textBoxWeeklyPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxWeeklyPayment.Location = new System.Drawing.Point(557, 163);
+			this.textBoxWeeklyPayment.Location = new System.Drawing.Point(548, 101);
 			this.textBoxWeeklyPayment.Name = "textBoxWeeklyPayment";
 			this.textBoxWeeklyPayment.Size = new System.Drawing.Size(112, 30);
 			this.textBoxWeeklyPayment.TabIndex = 15;
@@ -360,7 +381,7 @@
 			// 
 			this.comboBoxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBoxAge.FormattingEnabled = true;
-			this.comboBoxAge.Location = new System.Drawing.Point(557, 222);
+			this.comboBoxAge.Location = new System.Drawing.Point(548, 160);
 			this.comboBoxAge.Name = "comboBoxAge";
 			this.comboBoxAge.Size = new System.Drawing.Size(102, 33);
 			this.comboBoxAge.TabIndex = 12;
@@ -372,7 +393,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(248, 225);
+			this.label5.Location = new System.Drawing.Point(239, 163);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(193, 25);
 			this.label5.TabIndex = 8;
@@ -382,7 +403,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(248, 166);
+			this.label4.Location = new System.Drawing.Point(239, 104);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(295, 25);
 			this.label4.TabIndex = 6;
@@ -589,7 +610,7 @@
 			this.groupBox2.Size = new System.Drawing.Size(435, 271);
 			this.groupBox2.TabIndex = 71;
 			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Right Arm";
+			this.groupBox2.Text = "Right Arm Movement";
 			// 
 			// label41
 			// 
@@ -802,7 +823,7 @@
 			this.groupBox1.Size = new System.Drawing.Size(442, 272);
 			this.groupBox1.TabIndex = 70;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Left Arm";
+			this.groupBox1.Text = "Left Arm Movement";
 			// 
 			// label13
 			// 
@@ -1114,7 +1135,7 @@
 			this.groupBox3.Size = new System.Drawing.Size(423, 281);
 			this.groupBox3.TabIndex = 56;
 			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Range of motion";
+			this.groupBox3.Text = "Lower Limb  Movement";
 			// 
 			// checkBoxKneeWar
 			// 
@@ -1324,12 +1345,10 @@
 			// tabPageBack
 			// 
 			this.tabPageBack.BackColor = System.Drawing.SystemColors.Info;
-			this.tabPageBack.Controls.Add(this.label50);
-			this.tabPageBack.Controls.Add(this.textBoxThoraco);
-			this.tabPageBack.Controls.Add(this.label51);
-			this.tabPageBack.Controls.Add(this.checkBoxThoracoWar);
-			this.tabPageBack.Controls.Add(this.buttonThoraco);
-			this.tabPageBack.Controls.Add(this.label52);
+			this.tabPageBack.Controls.Add(this.label84);
+			this.tabPageBack.Controls.Add(this.groupBox12);
+			this.tabPageBack.Controls.Add(this.label79);
+			this.tabPageBack.Controls.Add(this.groupBox11);
 			this.tabPageBack.Controls.Add(this.label49);
 			this.tabPageBack.Location = new System.Drawing.Point(4, 29);
 			this.tabPageBack.Name = "tabPageBack";
@@ -1340,7 +1359,7 @@
 			// 
 			// label50
 			// 
-			this.label50.Location = new System.Drawing.Point(533, 130);
+			this.label50.Location = new System.Drawing.Point(517, 12);
 			this.label50.Name = "label50";
 			this.label50.Size = new System.Drawing.Size(114, 49);
 			this.label50.TabIndex = 52;
@@ -1350,7 +1369,7 @@
 			// textBoxThoraco
 			// 
 			this.textBoxThoraco.Enabled = false;
-			this.textBoxThoraco.Location = new System.Drawing.Point(555, 182);
+			this.textBoxThoraco.Location = new System.Drawing.Point(539, 64);
 			this.textBoxThoraco.Name = "textBoxThoraco";
 			this.textBoxThoraco.Size = new System.Drawing.Size(70, 26);
 			this.textBoxThoraco.TabIndex = 51;
@@ -1361,7 +1380,7 @@
 			// label51
 			// 
 			this.label51.AutoSize = true;
-			this.label51.Location = new System.Drawing.Point(30, 185);
+			this.label51.Location = new System.Drawing.Point(14, 67);
 			this.label51.Name = "label51";
 			this.label51.Size = new System.Drawing.Size(347, 20);
 			this.label51.TabIndex = 50;
@@ -1371,7 +1390,7 @@
 			// 
 			this.checkBoxThoracoWar.AutoSize = true;
 			this.checkBoxThoracoWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxThoracoWar.Location = new System.Drawing.Point(696, 186);
+			this.checkBoxThoracoWar.Location = new System.Drawing.Point(680, 68);
 			this.checkBoxThoracoWar.Name = "checkBoxThoracoWar";
 			this.checkBoxThoracoWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxThoracoWar.TabIndex = 53;
@@ -1381,7 +1400,7 @@
 			// 
 			// buttonThoraco
 			// 
-			this.buttonThoraco.Location = new System.Drawing.Point(424, 177);
+			this.buttonThoraco.Location = new System.Drawing.Point(408, 59);
 			this.buttonThoraco.Name = "buttonThoraco";
 			this.buttonThoraco.Size = new System.Drawing.Size(74, 37);
 			this.buttonThoraco.TabIndex = 54;
@@ -1391,7 +1410,7 @@
 			// 
 			// label52
 			// 
-			this.label52.Location = new System.Drawing.Point(668, 130);
+			this.label52.Location = new System.Drawing.Point(652, 12);
 			this.label52.Name = "label52";
 			this.label52.Size = new System.Drawing.Size(79, 45);
 			this.label52.TabIndex = 55;
@@ -1401,7 +1420,7 @@
 			// label49
 			// 
 			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label49.Location = new System.Drawing.Point(47, 12);
+			this.label49.Location = new System.Drawing.Point(65, 322);
 			this.label49.Name = "label49";
 			this.label49.Size = new System.Drawing.Size(762, 75);
 			this.label49.TabIndex = 0;
@@ -1774,7 +1793,7 @@
 			this.label29.TabIndex = 72;
 			this.label29.Text = "Total Combined Points:";
 			this.toolTip1.SetToolTip(this.label29, "Combined Points is not a total amount of points but uses a formular to determine " +
-        "Total.");
+        "Total and is then used to determine Compensation.");
 			// 
 			// textBoxComibinedPoints
 			// 
@@ -1796,6 +1815,8 @@
 			this.label30.Size = new System.Drawing.Size(252, 25);
 			this.label30.TabIndex = 74;
 			this.label30.Text = "Final Compensation Factor:";
+			this.toolTip1.SetToolTip(this.label30, "This is used to determine the Compensation payout and is multiplied by the Weekly" +
+        " Rate to get your Compensation.");
 			// 
 			// textBoxFinalCompensationFactor
 			// 
@@ -1816,6 +1837,7 @@
 			this.label31.Size = new System.Drawing.Size(234, 25);
 			this.label31.TabIndex = 76;
 			this.label31.Text = "Total War Service Points:";
+			this.toolTip1.SetToolTip(this.label31, "This is just for Display only as the total has not be combined.");
 			// 
 			// textBoxTotalWarPoints
 			// 
@@ -1837,6 +1859,7 @@
 			this.label32.Size = new System.Drawing.Size(253, 25);
 			this.label32.TabIndex = 78;
 			this.label32.Text = "Total Peace Service Points:";
+			this.toolTip1.SetToolTip(this.label32, "This is just for Display only as the total has not be combined.");
 			// 
 			// textBoxTotalPeacePoints
 			// 
@@ -1871,7 +1894,7 @@
 			// 
 			// buttonROMInfo
 			// 
-			this.buttonROMInfo.Location = new System.Drawing.Point(17, 652);
+			this.buttonROMInfo.Location = new System.Drawing.Point(17, 650);
 			this.buttonROMInfo.Name = "buttonROMInfo";
 			this.buttonROMInfo.Size = new System.Drawing.Size(287, 48);
 			this.buttonROMInfo.TabIndex = 72;
@@ -2257,6 +2280,171 @@
 			this.label78.Text = "Points:";
 			this.label78.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
+			// groupBox11
+			// 
+			this.groupBox11.Controls.Add(this.label80);
+			this.groupBox11.Controls.Add(this.textBoxThoracoROM);
+			this.groupBox11.Controls.Add(this.label81);
+			this.groupBox11.Controls.Add(this.textBoxCervicalSpine);
+			this.groupBox11.Controls.Add(this.label82);
+			this.groupBox11.Controls.Add(this.checkBoxCervicalSpineWar);
+			this.groupBox11.Controls.Add(this.buttonCervicalSpine);
+			this.groupBox11.Controls.Add(this.buttonThoracoROM);
+			this.groupBox11.Controls.Add(this.checkBoxThoracoROMWar);
+			this.groupBox11.Controls.Add(this.label83);
+			this.groupBox11.Location = new System.Drawing.Point(6, 90);
+			this.groupBox11.Name = "groupBox11";
+			this.groupBox11.Size = new System.Drawing.Size(533, 179);
+			this.groupBox11.TabIndex = 56;
+			this.groupBox11.TabStop = false;
+			this.groupBox11.Text = "Spinal Movement";
+			// 
+			// label79
+			// 
+			this.label79.AutoSize = true;
+			this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label79.Location = new System.Drawing.Point(28, 18);
+			this.label79.Name = "label79";
+			this.label79.Size = new System.Drawing.Size(786, 29);
+			this.label79.TabIndex = 57;
+			this.label79.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: SPINAL MOVEMENT";
+			// 
+			// label80
+			// 
+			this.label80.Location = new System.Drawing.Point(248, 22);
+			this.label80.Name = "label80";
+			this.label80.Size = new System.Drawing.Size(114, 49);
+			this.label80.TabIndex = 54;
+			this.label80.Text = "Age Adjusted Points:";
+			this.label80.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// textBoxThoracoROM
+			// 
+			this.textBoxThoracoROM.Enabled = false;
+			this.textBoxThoracoROM.Location = new System.Drawing.Point(269, 124);
+			this.textBoxThoracoROM.Name = "textBoxThoracoROM";
+			this.textBoxThoracoROM.Size = new System.Drawing.Size(71, 26);
+			this.textBoxThoracoROM.TabIndex = 53;
+			this.textBoxThoracoROM.Text = "0";
+			this.textBoxThoracoROM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxThoracoROM.TextChanged += new System.EventHandler(this.textBoxThoracoROM_TextChanged);
+			// 
+			// label81
+			// 
+			this.label81.AutoSize = true;
+			this.label81.Location = new System.Drawing.Point(18, 127);
+			this.label81.Name = "label81";
+			this.label81.Size = new System.Drawing.Size(71, 20);
+			this.label81.TabIndex = 52;
+			this.label81.Text = "Thoraco:";
+			// 
+			// textBoxCervicalSpine
+			// 
+			this.textBoxCervicalSpine.Enabled = false;
+			this.textBoxCervicalSpine.Location = new System.Drawing.Point(270, 74);
+			this.textBoxCervicalSpine.Name = "textBoxCervicalSpine";
+			this.textBoxCervicalSpine.Size = new System.Drawing.Size(70, 26);
+			this.textBoxCervicalSpine.TabIndex = 51;
+			this.textBoxCervicalSpine.Text = "0";
+			this.textBoxCervicalSpine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxCervicalSpine.TextChanged += new System.EventHandler(this.textBoxCervicalSpine_TextChanged);
+			// 
+			// label82
+			// 
+			this.label82.AutoSize = true;
+			this.label82.Location = new System.Drawing.Point(18, 77);
+			this.label82.Name = "label82";
+			this.label82.Size = new System.Drawing.Size(110, 20);
+			this.label82.TabIndex = 50;
+			this.label82.Text = "Cervical spine:";
+			// 
+			// checkBoxCervicalSpineWar
+			// 
+			this.checkBoxCervicalSpineWar.AutoSize = true;
+			this.checkBoxCervicalSpineWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxCervicalSpineWar.Location = new System.Drawing.Point(386, 78);
+			this.checkBoxCervicalSpineWar.Name = "checkBoxCervicalSpineWar";
+			this.checkBoxCervicalSpineWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxCervicalSpineWar.TabIndex = 55;
+			this.toolTip1.SetToolTip(this.checkBoxCervicalSpineWar, "Check when injury happened during War Service.");
+			this.checkBoxCervicalSpineWar.UseVisualStyleBackColor = true;
+			this.checkBoxCervicalSpineWar.CheckedChanged += new System.EventHandler(this.checkBoxCervicalSpineWar_CheckedChanged);
+			// 
+			// buttonCervicalSpine
+			// 
+			this.buttonCervicalSpine.Location = new System.Drawing.Point(176, 69);
+			this.buttonCervicalSpine.Name = "buttonCervicalSpine";
+			this.buttonCervicalSpine.Size = new System.Drawing.Size(74, 37);
+			this.buttonCervicalSpine.TabIndex = 56;
+			this.buttonCervicalSpine.Text = "CLICK";
+			this.buttonCervicalSpine.UseVisualStyleBackColor = true;
+			this.buttonCervicalSpine.Click += new System.EventHandler(this.buttonCervicalSpine_Click);
+			// 
+			// buttonThoracoROM
+			// 
+			this.buttonThoracoROM.Location = new System.Drawing.Point(176, 119);
+			this.buttonThoracoROM.Name = "buttonThoracoROM";
+			this.buttonThoracoROM.Size = new System.Drawing.Size(74, 37);
+			this.buttonThoracoROM.TabIndex = 57;
+			this.buttonThoracoROM.Text = "CLICK";
+			this.buttonThoracoROM.UseVisualStyleBackColor = true;
+			this.buttonThoracoROM.Click += new System.EventHandler(this.buttonThoracoROM_Click);
+			// 
+			// checkBoxThoracoROMWar
+			// 
+			this.checkBoxThoracoROMWar.AutoSize = true;
+			this.checkBoxThoracoROMWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxThoracoROMWar.Location = new System.Drawing.Point(386, 128);
+			this.checkBoxThoracoROMWar.Name = "checkBoxThoracoROMWar";
+			this.checkBoxThoracoROMWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxThoracoROMWar.TabIndex = 58;
+			this.toolTip1.SetToolTip(this.checkBoxThoracoROMWar, "Check when injury happened during War Service.");
+			this.checkBoxThoracoROMWar.UseVisualStyleBackColor = true;
+			this.checkBoxThoracoROMWar.CheckedChanged += new System.EventHandler(this.checkBoxThoracoROM_CheckedChanged);
+			// 
+			// label83
+			// 
+			this.label83.Location = new System.Drawing.Point(358, 22);
+			this.label83.Name = "label83";
+			this.label83.Size = new System.Drawing.Size(79, 45);
+			this.label83.TabIndex = 59;
+			this.label83.Text = "War Service";
+			this.label83.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// groupBox12
+			// 
+			this.groupBox12.Controls.Add(this.label50);
+			this.groupBox12.Controls.Add(this.textBoxThoraco);
+			this.groupBox12.Controls.Add(this.label51);
+			this.groupBox12.Controls.Add(this.checkBoxThoracoWar);
+			this.groupBox12.Controls.Add(this.buttonThoraco);
+			this.groupBox12.Controls.Add(this.label52);
+			this.groupBox12.Location = new System.Drawing.Point(6, 402);
+			this.groupBox12.Name = "groupBox12";
+			this.groupBox12.Size = new System.Drawing.Size(747, 109);
+			this.groupBox12.TabIndex = 58;
+			this.groupBox12.TabStop = false;
+			this.groupBox12.Text = "Thoraco";
+			// 
+			// label84
+			// 
+			this.label84.AutoSize = true;
+			this.label84.Location = new System.Drawing.Point(24, 532);
+			this.label84.Name = "label84";
+			this.label84.Size = new System.Drawing.Size(602, 20);
+			this.label84.TabIndex = 60;
+			this.label84.Text = "The higher of the Thoraco Spinal Movement and Thoraco-Lumber rating will be used." +
+    "";
+			// 
+			// label85
+			// 
+			this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label85.Location = new System.Drawing.Point(21, 403);
+			this.label85.Name = "label85";
+			this.label85.Size = new System.Drawing.Size(836, 154);
+			this.label85.TabIndex = 19;
+			this.label85.Text = resources.GetString("label85.Text");
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2326,6 +2514,10 @@
 			this.groupBox9.PerformLayout();
 			this.groupBox10.ResumeLayout(false);
 			this.groupBox10.PerformLayout();
+			this.groupBox11.ResumeLayout(false);
+			this.groupBox11.PerformLayout();
+			this.groupBox12.ResumeLayout(false);
+			this.groupBox12.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -2518,6 +2710,21 @@
 		private System.Windows.Forms.Label label75;
 		private System.Windows.Forms.Label label72;
 		private System.Windows.Forms.Label label68;
+		private System.Windows.Forms.Label label79;
+		private System.Windows.Forms.GroupBox groupBox11;
+		private System.Windows.Forms.Label label80;
+		private System.Windows.Forms.TextBox textBoxThoracoROM;
+		private System.Windows.Forms.Label label81;
+		private System.Windows.Forms.TextBox textBoxCervicalSpine;
+		private System.Windows.Forms.Label label82;
+		private System.Windows.Forms.CheckBox checkBoxCervicalSpineWar;
+		private System.Windows.Forms.Button buttonCervicalSpine;
+		private System.Windows.Forms.Button buttonThoracoROM;
+		private System.Windows.Forms.CheckBox checkBoxThoracoROMWar;
+		private System.Windows.Forms.Label label83;
+		private System.Windows.Forms.Label label84;
+		private System.Windows.Forms.GroupBox groupBox12;
+		private System.Windows.Forms.Label label85;
 	}
 }
 
