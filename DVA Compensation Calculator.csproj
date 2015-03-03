@@ -76,16 +76,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hearing\Ears.cs">
+    <Compile Include="EarNoseThroat\Throat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hearing\Ears.Designer.cs">
+    <Compile Include="EarNoseThroat\Throat.Designer.cs">
+      <DependentUpon>Throat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EarNoseThroat\Nose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EarNoseThroat\Nose.Designer.cs">
+      <DependentUpon>Nose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EarNoseThroat\Ears.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EarNoseThroat\Ears.Designer.cs">
       <DependentUpon>Ears.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hearing\Tinnitus.cs">
+    <Compile Include="EarNoseThroat\Tinnitus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hearing\Tinnitus.Designer.cs">
+    <Compile Include="EarNoseThroat\Tinnitus.Designer.cs">
       <DependentUpon>Tinnitus.cs</DependentUpon>
     </Compile>
     <Compile Include="LowerBody\WholeLimb.cs">
@@ -206,10 +218,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Hearing\Ears.resx">
+    <EmbeddedResource Include="EarNoseThroat\Throat.resx">
+      <DependentUpon>Throat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EarNoseThroat\Nose.resx">
+      <DependentUpon>Nose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EarNoseThroat\Ears.resx">
       <DependentUpon>Ears.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hearing\Tinnitus.resx">
+    <EmbeddedResource Include="EarNoseThroat\Tinnitus.resx">
       <DependentUpon>Tinnitus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LowerBody\WholeLimb.resx">

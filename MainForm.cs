@@ -59,6 +59,7 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
+		// Add to this when adding new injury types
 		#region Load Data
 
 		private void LoadData()
@@ -123,6 +124,14 @@ namespace DVA_Compensation_Calculator
 			textBoxEars.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxEars", "0");
 			Ears.ears = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Ears", "0"));
 			checkBoxEarsWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", false);
+
+			textBoxNose.Text = profile.GetSetting(XmlProfileSettings.SettingType.Nose, "textBoxNose", "0");
+			Nose.nose = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Nose, "Nose", "0"));
+			checkBoxNoseWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Nose, "checkBoxNoseWar", false);
+
+			textBoxThroat.Text = profile.GetSetting(XmlProfileSettings.SettingType.Throat, "textBoxThroat", "0");
+			Throat.throat = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Throat, "Throat", "0"));
+			checkBoxThroatWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Throat, "checkBoxThroatWar", false);
 
 			textBoxPersonalRelationships.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
 			textBoxMobility.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
@@ -286,7 +295,8 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
-		#region Total Points - Add to this when adding new injury types
+		// Add to this when adding new injury types
+		#region Total Points
 
 		private void totalPoint()
 		{
@@ -471,6 +481,20 @@ namespace DVA_Compensation_Calculator
 				earsWar = 1;
 			}
 
+			//Nose
+			var noseWar = 0;
+			if (checkBoxNoseWar.Checked)
+			{
+				noseWar = 1;
+			}
+
+			//Throat
+			var throatWar = 0;
+			if (checkBoxThroatWar.Checked)
+			{
+				throatWar = 1;
+			}
+
 			// Just for Display Only
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
@@ -479,6 +503,8 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxTinnitus.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxEars.Text);
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxNose.Text);
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxThroat.Text);
 
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
@@ -487,6 +513,8 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxTinnitus.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxEars.Text);
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxNose.Text);
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThroat.Text);
 			//
 
 			textBoxTotalWarPoints.Text = "0";
@@ -547,12 +575,29 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxEars.Text)).ToString();
 			}
+			if (noseWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxNose.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxNose.Text)).ToString();
+			}
+			if (throatWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxThroat.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxThroat.Text)).ToString();
+			}
 			
 		}
 
 		#endregion
 
-		#region Total Combined Point - Add to this when adding new injury types
+		// Add to this when adding new injury types
+		#region Total Combined Point
 
 		private void combinedPoints()
 		{
@@ -564,6 +609,8 @@ namespace DVA_Compensation_Calculator
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestLegPoints * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxTinnitus.Text) * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEars.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxNose.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThroat.Text) * (1 - combinedPoints / 100));
 
 			textBoxComibinedPoints.Text = combinedPoints.ToString();
 		}
@@ -708,6 +755,7 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
+		// Add to this when adding new injury types
 		#region Save Data
 		private void Save()
 		{
@@ -774,6 +822,16 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "Ears", Ears.ears);
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", checkBoxEarsWar.Checked.ToString());
 
+			profile.PutSetting(XmlProfileSettings.SettingType.Nose, "textBoxNose", textBoxNose.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Nose, "Nose", Nose.nose);
+			profile.PutSetting(XmlProfileSettings.SettingType.Nose, "checkBoxNoseWar", checkBoxNoseWar.Checked.ToString());
+
+			profile.PutSetting(XmlProfileSettings.SettingType.Throat, "textBoxThroat", textBoxThroat.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Throat, "Throat", Throat.throat);
+			profile.PutSetting(XmlProfileSettings.SettingType.Throat, "checkBoxThroatWar", checkBoxThroatWar.Checked.ToString());
+
+
+
 			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", textBoxRecreationalActivities.Text);
@@ -794,7 +852,6 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		//Injury Types
-
 		#region Back
 
 		private void buttonThoraco_Click(object sender, EventArgs e)
@@ -1226,7 +1283,7 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-		#region Hearing
+		#region Ear, Nose and Throat
 
 		#region Tennitus
 
@@ -1271,6 +1328,49 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
+		#endregion
+
+		#region Nose
+		private void buttonNose_Click(object sender, EventArgs e)
+		{
+			var nose = new Nose();
+			nose.ShowDialog();
+			textBoxNose.Text = Nose.nose.ToString(); //No age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxNose_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxNoseWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+		#endregion
+
+		#region Throat
+
+		private void buttonThroat_Click(object sender, EventArgs e)
+		{
+			var throat = new Throat();
+			throat.ShowDialog();
+			textBoxThroat.Text = Throat.throat.ToString(); //No age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxThroat_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxThroatWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
 		#endregion
 
 		#endregion

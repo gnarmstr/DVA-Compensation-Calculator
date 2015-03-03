@@ -1,6 +1,6 @@
 ﻿namespace DVA_Compensation_Calculator
 {
-	partial class Ears
+	partial class Nose
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
-			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption3 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption1 = new System.Windows.Forms.CheckBox();
 			this.pictureBoxCancel = new System.Windows.Forms.PictureBox();
@@ -41,48 +40,38 @@
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(31, 113);
+			this.checkBoxOption2.Location = new System.Drawing.Point(30, 167);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 60);
 			this.checkBoxOption2.TabIndex = 11;
-			this.checkBoxOption2.Text = "Otitis externa.";
+			this.checkBoxOption2.Text = "Recurrent upper respiratory tract infection.";
 			this.checkBoxOption2.UseVisualStyleBackColor = true;
 			this.checkBoxOption2.CheckedChanged += new System.EventHandler(this.checkBoxOption2_CheckedChanged);
 			// 
-			// checkBoxOption4
-			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(31, 242);
-			this.checkBoxOption4.Name = "checkBoxOption4";
-			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
-			this.checkBoxOption4.TabIndex = 9;
-			this.checkBoxOption4.Text = "Frequent severe otalgia.";
-			this.checkBoxOption4.UseVisualStyleBackColor = true;
-			this.checkBoxOption4.CheckedChanged += new System.EventHandler(this.checkBoxOption4_CheckedChanged);
-			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(31, 163);
+			this.checkBoxOption3.Location = new System.Drawing.Point(30, 249);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 75);
 			this.checkBoxOption3.TabIndex = 7;
-			this.checkBoxOption3.Text = " Otalgia every day, but tolerable for much of the time.\r\n Continuous otorrhoea." +
-    "";
+			this.checkBoxOption3.Text = "Symptoms of rhinitis and sinusitis or both which are not relieved by medication a" +
+    "nd which occur for more than 4 months every year.";
 			this.checkBoxOption3.UseVisualStyleBackColor = true;
 			this.checkBoxOption3.CheckedChanged += new System.EventHandler(this.checkBoxOption3_CheckedChanged);
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(31, 66);
+			this.checkBoxOption1.Location = new System.Drawing.Point(30, 96);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
 			this.checkBoxOption1.TabIndex = 6;
-			this.checkBoxOption1.Text = "Intermittent otalgia, intermittent otorrhoea, or both.";
+			this.checkBoxOption1.Text = "Intermittent post-nasal discharge, rhinorrhoea and/or sneezing.";
 			this.checkBoxOption1.UseVisualStyleBackColor = true;
 			this.checkBoxOption1.CheckedChanged += new System.EventHandler(this.checkBoxOption1_CheckedChanged);
 			// 
 			// pictureBoxCancel
 			// 
-			this.pictureBoxCancel.Location = new System.Drawing.Point(585, 370);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(720, 370);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -92,7 +81,7 @@
 			// 
 			// pictureBoxOK
 			// 
-			this.pictureBoxOK.Location = new System.Drawing.Point(461, 370);
+			this.pictureBoxOK.Location = new System.Drawing.Point(596, 370);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -109,24 +98,23 @@
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
-			// Ears
+			// Nose
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.ClientSize = new System.Drawing.Size(705, 474);
+			this.ClientSize = new System.Drawing.Size(828, 474);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBoxCancel);
 			this.Controls.Add(this.pictureBoxOK);
 			this.Controls.Add(this.checkBoxOption2);
-			this.Controls.Add(this.checkBoxOption4);
 			this.Controls.Add(this.checkBoxOption3);
 			this.Controls.Add(this.checkBoxOption1);
-			this.MaximumSize = new System.Drawing.Size(727, 530);
-			this.MinimumSize = new System.Drawing.Size(727, 530);
-			this.Name = "Ears";
+			this.MaximumSize = new System.Drawing.Size(850, 530);
+			this.MinimumSize = new System.Drawing.Size(850, 530);
+			this.Name = "Nose";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "Ears";
+			this.Text = "UPPER RESPIRATORY TRACT AND NASAL CONDITIONS";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
@@ -137,7 +125,6 @@
 		#endregion
 
 		private System.Windows.Forms.CheckBox checkBoxOption2;
-		private System.Windows.Forms.CheckBox checkBoxOption4;
 		private System.Windows.Forms.CheckBox checkBoxOption3;
 		private System.Windows.Forms.CheckBox checkBoxOption1;
 		public System.Windows.Forms.PictureBox pictureBoxCancel;

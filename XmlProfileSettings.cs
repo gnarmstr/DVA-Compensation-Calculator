@@ -128,6 +128,8 @@ namespace DVA_Compensation_Calculator
 			LifeStyle,
 			Back,
 			Hearing,
+			Nose,
+			Throat,
 			Other
 		};
 
