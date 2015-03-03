@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hearing\Ears.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hearing\Ears.Designer.cs">
+      <DependentUpon>Ears.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hearing\Tinnitus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Hearing\Ears.resx">
+      <DependentUpon>Ears.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hearing\Tinnitus.resx">
       <DependentUpon>Tinnitus.cs</DependentUpon>
     </EmbeddedResource>

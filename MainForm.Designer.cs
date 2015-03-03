@@ -191,6 +191,14 @@
 			this.label65 = new System.Windows.Forms.Label();
 			this.label66 = new System.Windows.Forms.Label();
 			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.label67 = new System.Windows.Forms.Label();
+			this.groupBox8 = new System.Windows.Forms.GroupBox();
+			this.checkBoxEarsWar = new System.Windows.Forms.CheckBox();
+			this.label69 = new System.Windows.Forms.Label();
+			this.buttonEars = new System.Windows.Forms.Button();
+			this.label70 = new System.Windows.Forms.Label();
+			this.textBoxEars = new System.Windows.Forms.TextBox();
+			this.label71 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPagePersonalDetails.SuspendLayout();
 			this.tabPageUpperLimb.SuspendLayout();
@@ -207,6 +215,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			this.tabPageHearing.SuspendLayout();
 			this.groupBox7.SuspendLayout();
+			this.groupBox8.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// textBoxWeeklyPayout
@@ -381,9 +390,9 @@
 			// label47
 			// 
 			this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label47.Location = new System.Drawing.Point(6, 496);
+			this.label47.Location = new System.Drawing.Point(6, 475);
 			this.label47.Name = "label47";
-			this.label47.Size = new System.Drawing.Size(862, 89);
+			this.label47.Size = new System.Drawing.Size(862, 110);
 			this.label47.TabIndex = 74;
 			this.label47.Text = resources.GetString("label47.Text");
 			// 
@@ -1875,6 +1884,8 @@
 			// tabPageHearing
 			// 
 			this.tabPageHearing.BackColor = System.Drawing.SystemColors.Info;
+			this.tabPageHearing.Controls.Add(this.groupBox8);
+			this.tabPageHearing.Controls.Add(this.label67);
 			this.tabPageHearing.Controls.Add(this.groupBox7);
 			this.tabPageHearing.Controls.Add(this.label66);
 			this.tabPageHearing.Location = new System.Drawing.Point(4, 29);
@@ -1969,6 +1980,90 @@
 			this.groupBox7.TabStop = false;
 			this.groupBox7.Text = "Tinnitus";
 			// 
+			// label67
+			// 
+			this.label67.Location = new System.Drawing.Point(37, 532);
+			this.label67.Name = "label67";
+			this.label67.Size = new System.Drawing.Size(829, 35);
+			this.label67.TabIndex = 69;
+			this.label67.Text = "If impairment ratings are obtained for hearing loss and tinnitus then both will b" +
+    "e included in the final combed points.";
+			// 
+			// groupBox8
+			// 
+			this.groupBox8.Controls.Add(this.checkBoxEarsWar);
+			this.groupBox8.Controls.Add(this.label69);
+			this.groupBox8.Controls.Add(this.buttonEars);
+			this.groupBox8.Controls.Add(this.label70);
+			this.groupBox8.Controls.Add(this.textBoxEars);
+			this.groupBox8.Controls.Add(this.label71);
+			this.groupBox8.Location = new System.Drawing.Point(37, 310);
+			this.groupBox8.Name = "groupBox8";
+			this.groupBox8.Size = new System.Drawing.Size(468, 139);
+			this.groupBox8.TabIndex = 70;
+			this.groupBox8.TabStop = false;
+			this.groupBox8.Text = "Ears";
+			// 
+			// checkBoxEarsWar
+			// 
+			this.checkBoxEarsWar.AutoSize = true;
+			this.checkBoxEarsWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxEarsWar.Location = new System.Drawing.Point(384, 89);
+			this.checkBoxEarsWar.Name = "checkBoxEarsWar";
+			this.checkBoxEarsWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxEarsWar.TabIndex = 65;
+			this.toolTip1.SetToolTip(this.checkBoxEarsWar, "Check when injury happened during War Service.");
+			this.checkBoxEarsWar.UseVisualStyleBackColor = true;
+			this.checkBoxEarsWar.CheckedChanged += new System.EventHandler(this.checkBoxEarsWar_CheckedChanged);
+			// 
+			// label69
+			// 
+			this.label69.Location = new System.Drawing.Point(356, 33);
+			this.label69.Name = "label69";
+			this.label69.Size = new System.Drawing.Size(79, 45);
+			this.label69.TabIndex = 66;
+			this.label69.Text = "War Service";
+			this.label69.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// buttonEars
+			// 
+			this.buttonEars.Location = new System.Drawing.Point(118, 80);
+			this.buttonEars.Name = "buttonEars";
+			this.buttonEars.Size = new System.Drawing.Size(99, 37);
+			this.buttonEars.TabIndex = 64;
+			this.buttonEars.Text = "CLICK";
+			this.buttonEars.UseVisualStyleBackColor = true;
+			this.buttonEars.Click += new System.EventHandler(this.buttonEars_Click);
+			// 
+			// label70
+			// 
+			this.label70.Location = new System.Drawing.Point(27, 74);
+			this.label70.Name = "label70";
+			this.label70.Size = new System.Drawing.Size(83, 46);
+			this.label70.TabIndex = 61;
+			this.label70.Text = "Ears:";
+			this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// textBoxEars
+			// 
+			this.textBoxEars.Enabled = false;
+			this.textBoxEars.Location = new System.Drawing.Point(248, 85);
+			this.textBoxEars.Name = "textBoxEars";
+			this.textBoxEars.Size = new System.Drawing.Size(70, 26);
+			this.textBoxEars.TabIndex = 62;
+			this.textBoxEars.Text = "0";
+			this.textBoxEars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxEars.TextChanged += new System.EventHandler(this.textBoxEars_TextChanged);
+			// 
+			// label71
+			// 
+			this.label71.Location = new System.Drawing.Point(248, 52);
+			this.label71.Name = "label71";
+			this.label71.Size = new System.Drawing.Size(70, 30);
+			this.label71.TabIndex = 63;
+			this.label71.Text = "Points:";
+			this.label71.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2032,6 +2127,8 @@
 			this.tabPageHearing.PerformLayout();
 			this.groupBox7.ResumeLayout(false);
 			this.groupBox7.PerformLayout();
+			this.groupBox8.ResumeLayout(false);
+			this.groupBox8.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -2200,6 +2297,14 @@
 		private System.Windows.Forms.Label label65;
 		private System.Windows.Forms.GroupBox groupBox7;
 		private System.Windows.Forms.Label label66;
+		private System.Windows.Forms.GroupBox groupBox8;
+		private System.Windows.Forms.CheckBox checkBoxEarsWar;
+		private System.Windows.Forms.Label label69;
+		private System.Windows.Forms.Button buttonEars;
+		private System.Windows.Forms.Label label70;
+		private System.Windows.Forms.TextBox textBoxEars;
+		private System.Windows.Forms.Label label71;
+		private System.Windows.Forms.Label label67;
 	}
 }
 

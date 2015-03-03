@@ -92,6 +92,10 @@ namespace DVA_Compensation_Calculator
 			checkBoxRightShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", false);
 			checkBoxRightWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", false);
 			checkBoxRightFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingersWar", false);
+			checkBoxWholeRightArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeRightArmWar", false);
+			textBoxWholeRightArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeRightArm", "0");
+			checkBoxWholeLeftArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeLeftArmWar", false);
+			textBoxWholeLeftArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeLeftArm", "0");
 
 			textBoxKnee.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxKnee", "0");
 			Knee.knee = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Knee", "0"));
@@ -113,9 +117,12 @@ namespace DVA_Compensation_Calculator
 			ThoracoLumbar.thoracoLumbar = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", "0"));
 			checkBoxThoracoWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", false);
 
-			textBoxTinnitus.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxTinnitus", "0");
-			Tinnitus.tinnitus = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "Tinnitus", "0"));
-			checkBoxTinnitusWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxTinnitusWar", false);
+			textBoxTinnitus.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxTinnitus", "0");
+			Tinnitus.tinnitus = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Tinnitus", "0"));
+			checkBoxTinnitusWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxTinnitusWar", false);
+			textBoxEars.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxEars", "0");
+			Ears.ears = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Ears", "0"));
+			checkBoxEarsWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", false);
 
 			textBoxPersonalRelationships.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
 			textBoxMobility.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
@@ -457,6 +464,13 @@ namespace DVA_Compensation_Calculator
 				tinnitusWar = 1;
 			}
 
+			//Hearing Ears
+			var earsWar = 0;
+			if (checkBoxEarsWar.Checked)
+			{
+				earsWar = 1;
+			}
+
 			// Just for Display Only
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
@@ -464,12 +478,15 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxThoraco.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxTinnitus.Text);
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxEars.Text);
+
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxJointPain.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThoraco.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLegPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxTinnitus.Text);
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxEars.Text);
 			//
 
 			textBoxTotalWarPoints.Text = "0";
@@ -522,6 +539,14 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxTinnitus.Text)).ToString();
 			}
+			if (earsWar == 1)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxEars.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxEars.Text)).ToString();
+			}
 			
 		}
 
@@ -538,6 +563,8 @@ namespace DVA_Compensation_Calculator
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThoraco.Text) * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestLegPoints * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxTinnitus.Text) * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEars.Text) * (1 - combinedPoints / 100));
+
 			textBoxComibinedPoints.Text = combinedPoints.ToString();
 		}
 		#endregion
@@ -713,6 +740,12 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", checkBoxRightShoulderWar.Checked.ToString());
 			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", checkBoxRightWristWar.Checked.ToString());
 			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingerWar", checkBoxRightFingersWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWholeRightArm", textBoxWholeRightArm.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeRightArm", WholeArm.wholeRightArm);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeRightArmWar", checkBoxWholeRightArmWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxWholeLeftArm", textBoxWholeLeftArm.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeLeftArm", WholeArm.wholeLeftArm);
+			profile.PutSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeLeftArmWar", checkBoxWholeLeftArmWar.Checked.ToString());
 
 			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxKnee", textBoxKnee.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.LowerLimb, "Knee", Knee.knee);
@@ -737,6 +770,9 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "textBoxTinnitus", textBoxTinnitus.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "Tinnitus", Tinnitus.tinnitus);
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxTinnitusWar", checkBoxTinnitusWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "textBoxEars", textBoxEars.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "Ears", Ears.ears);
+			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", checkBoxEarsWar.Checked.ToString());
 
 			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
@@ -1192,6 +1228,8 @@ namespace DVA_Compensation_Calculator
 
 		#region Hearing
 
+		#region Tennitus
+
 		private void buttonTinnitus_Click(object sender, EventArgs e)
 		{
 			var tinnitus = new Tinnitus();
@@ -1210,6 +1248,31 @@ namespace DVA_Compensation_Calculator
 		{
 			UpdateAll();
 		}
+		#endregion
+
+		#region Ears
+
+		private void buttonEars_Click(object sender, EventArgs e)
+		{
+			var ears = new Ears();
+			ears.ShowDialog();
+			textBoxEars.Text = Ears.ears.ToString(); //No age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxEars_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxEarsWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
+
 		#endregion
 	}
 }
