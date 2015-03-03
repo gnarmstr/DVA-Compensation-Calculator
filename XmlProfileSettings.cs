@@ -127,6 +127,7 @@ namespace DVA_Compensation_Calculator
 			LowerLimb,
 			LifeStyle,
 			Back,
+			Hearing,
 			Other
 		};
 

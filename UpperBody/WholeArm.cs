@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace DVA_Compensation_Calculator
 {
-	public partial class WholeLimb : Form
+	public partial class WholeArm : Form
 	{
-		public WholeLimb()
+		public WholeArm()
 		{
 			if (ActiveForm != null)
 				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
@@ -34,7 +34,9 @@ namespace DVA_Compensation_Calculator
 			Points = 0;
 		}
 
-		public static int wholeLimb;
+		public static int wholeLeftArm;
+
+		public static int wholeRightArm;
 
 		public static int Points;
 
@@ -48,7 +50,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 5;
+			Points = 2;
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 10;
+			Points = 5;
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 20;
+			Points = 10;
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 30;
+			Points = 15;
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
@@ -100,7 +102,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 40;
+			Points = 20;
 		}
 
 		private void checkBoxOption7_CheckedChanged(object sender, EventArgs e)
@@ -113,7 +115,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption6.Checked = false;
 			checkBoxOption8.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 50;
+			Points = 30;
 		}
 
 		private void checkBoxOption8_CheckedChanged(object sender, EventArgs e)
@@ -126,7 +128,7 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption6.Checked = false;
 			checkBoxOption7.Checked = false;
 			checkBoxOption9.Checked = false;
-			Points = 60;
+			Points = 40;
 		}
 
 		private void checkBoxOption9_CheckedChanged(object sender, EventArgs e)
@@ -139,18 +141,46 @@ namespace DVA_Compensation_Calculator
 			checkBoxOption6.Checked = false;
 			checkBoxOption7.Checked = false;
 			checkBoxOption8.Checked = false;
-			Points = 70;
+			Points = 50;
+		}
+
+		private void checkBoxOption10_CheckedChanged(object sender, EventArgs e)
+		{
+			checkBoxOption1.Checked = false;
+			checkBoxOption2.Checked = false;
+			checkBoxOption3.Checked = false;
+			checkBoxOption4.Checked = false;
+			checkBoxOption5.Checked = false;
+			checkBoxOption6.Checked = false;
+			checkBoxOption7.Checked = false;
+			checkBoxOption8.Checked = false;
+			checkBoxOption9.Checked = false;
+			Points = 60;
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			wholeLimb = 0;
+			if (GlobalVar.Selection == "LeftArm")
+			{
+				wholeLeftArm = 0;
+			}
+			else
+			{
+				wholeRightArm = 0;
+			}
 			Close();
 		}
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			wholeLimb = Points;
+			if (GlobalVar.Selection == "LeftArm")
+			{
+				wholeLeftArm = Points;
+			}
+			else
+			{
+				wholeRightArm = Points;
+			}
 			Close();
 		}
 

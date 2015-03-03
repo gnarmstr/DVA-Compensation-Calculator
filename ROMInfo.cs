@@ -10,6 +10,8 @@ namespace DVA_Compensation_Calculator
 	{
 		public ROMInfo()
 		{
+			if (ActiveForm != null)
+				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
 			InitializeComponent();
 		}
 
