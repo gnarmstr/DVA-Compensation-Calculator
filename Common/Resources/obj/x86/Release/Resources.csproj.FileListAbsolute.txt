@@ -14,3 +14,8 @@ C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Reso
 C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Release\Common\Resources.dll
 C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Release\Common\Resources.pdb
 C:\Users\Geoff\Documents\Visual Studio 2013\Projects\Vixen Messaging\Common\Resources\obj\x86\Release\Resources.csprojResolveAssemblyReference.cache
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Common\Resources\obj\x86\Release\Resources.csprojResolveAssemblyReference.cache
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Common\Resources\obj\x86\Release\Common.Resources.Properties.Resources.resources
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Common\Resources\obj\x86\Release\Resources.csproj.GenerateResource.Cache
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Common\Resources\obj\x86\Release\Resources.dll
+C:\Users\Geoff\Documents\Visual Studio 2013\Projects\DVA Compensation Calculator\DVA Compensation Calculator\Common\Resources\obj\x86\Release\Resources.pdb

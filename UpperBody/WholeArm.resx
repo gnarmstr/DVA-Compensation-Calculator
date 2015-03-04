@@ -117,35 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBoxOption2.Text" xml:space="preserve">
-    <value>· Walks with intermittent difficulty, such as locking or giving way, without falling. Caution needed on steps and uneven ground, or when running.
-· Has intermittent pain from weight-bearing, ie, not all the time, or only after weight-bearing for some time.
-· Sciatic pain occurring frequently: present some of the time when walking.</value>
-  </data>
   <data name="checkBoxOption4.Text" xml:space="preserve">
-    <value>· Walks at moderately reduced pace in comparison with peers on flat ground; and is unable to
--- manage stairs or ramps without rails; or
--- rise from the sitting position without the assistance of one hand.
-· Pain restricts walking (4 km/h) to 250 m or less at a time. Can walk further after resting.</value>
+    <value> Can use limb reasonably well in most circumstances, but frequent difficulties are manifested by:
+-- minor loss of digital dexterity causing handwriting changes, or difficulty in manipulation of small or fine objects, or
+-- minor loss of grip strength causing difficulty in gripping moderately heavy to heavy objects.
+ Can use limb efficiently for normal tasks without excessive fatigue for no more than ten minutes.</value>
   </data>
   <data name="checkBoxOption5.Text" xml:space="preserve">
-    <value>· Walks at significantly reduced pace in comparison with peers and:
--- legs give way frequently, resulting in falls. Can walk more efficiently with a brace or an artificial limb; or
--- is unable to negotiate stairs without personal assistance; or
--- is unable to rise to standing position without the assistance of both hands.
-· Pain restricts walking (4 km/h) to 100 m or less at a time. Can walk further after resting.</value>
-  </data>
-  <data name="checkBoxOption3.Text" xml:space="preserve">
-    <value>· Walks at normal pace on level ground, but has constant difficulty up and down steps and over uneven ground. Need for a walking stick may be manifested:
--- Pain and/or slowness; or
--- constant pain from weight-bearing.
-· Pain restricts walking to 500 m or less, at a slow to moderate pace (4 km/h). Can walk further after resting.
-· Sciatic pain daily — present most of the time during walking.</value>
+    <value>Can use limb reasonably well in most circumstances, but frequent difficulties are manifested by:
+-- minor loss of digital dexterity causing handwriting changes, or difficulty in manipulation of small or fine objects, and
+-- minor loss of grip strength causing difficulty in gripping moderately heavy to heavy objects.</value>
   </data>
   <data name="checkBoxOption6.Text" xml:space="preserve">
-    <value>· Walks at greatly reduced pace in comparison with peers, is unable to negotiate kerbs, gutters or uneven ground, and
--- is restricted to walking in home and around block. Probably needs a walking aid; or
--- finds transfer difficult without personal assistance.
-· Pain restricts walking (4 km/h) to 50 m or less at a time. Can walk further after resting.</value>
+    <value>Can use limb reasonably well in some circumstances, but with more noticeable difficulty manifested by either or both of:
+-- minor loss of digital dexterity and reduced grip strength causing difficulty in manipulation of larger objects, or
+-- major loss of digital dexterity causing marked difficulty in handwriting or manipulation of everyday domestic objects.</value>
+  </data>
+  <data name="checkBoxOption7.Text" xml:space="preserve">
+    <value>Can use limb reasonably well in a few circumstances only. Use of limb is otherwise inefficient, with increasing difficulty for self-care activities. Poor digital co-ordination and markedly reduced grip strength in, eg, lifting light objects. Problems with dressing, feeding or writing.</value>
   </data>
 </root>

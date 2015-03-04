@@ -23,105 +23,128 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxPersonalRelations1_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 0;
+			if (checkBoxPersonalRelations1.Checked)
+			{
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 0;
+			}
 		}
 
 		private void checkBoxPersonalRelations2_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 1;
+			if (checkBoxPersonalRelations2.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 1;
+			}
 		}
 
 		private void checkBoxPersonalRelations3_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 2;
+			if (checkBoxPersonalRelations3.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 2;
+			}
 		}
 
 		private void checkBoxPersonalRelations4_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 3;
+			if (checkBoxPersonalRelations4.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 3;
+			}
 		}
 
 		private void checkBoxPersonalRelations5_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 4;
+			if (checkBoxPersonalRelations5.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 4;
+			}
 		}
 
 		private void checkBoxPersonalRelations6_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 5;
+			if (checkBoxPersonalRelations6.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 5;
+			}
 		}
 
 		private void checkBoxPersonalRelations7_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations8.Checked = false;
-			personalRelationship = 6;
+			if (checkBoxPersonalRelations7.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations8.Checked = false;
+				personalRelationship = 6;
+			}
 		}
 
 		private void checkBoxPersonalRelations8_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxPersonalRelations1.Checked = false;
-			checkBoxPersonalRelations2.Checked = false;
-			checkBoxPersonalRelations3.Checked = false;
-			checkBoxPersonalRelations4.Checked = false;
-			checkBoxPersonalRelations5.Checked = false;
-			checkBoxPersonalRelations6.Checked = false;
-			checkBoxPersonalRelations7.Checked = false;
-			personalRelationship = 7;
+			if (checkBoxPersonalRelations8.Checked)
+			{
+				checkBoxPersonalRelations1.Checked = false;
+				checkBoxPersonalRelations2.Checked = false;
+				checkBoxPersonalRelations3.Checked = false;
+				checkBoxPersonalRelations4.Checked = false;
+				checkBoxPersonalRelations5.Checked = false;
+				checkBoxPersonalRelations6.Checked = false;
+				checkBoxPersonalRelations7.Checked = false;
+				personalRelationship = 7;
+			}
 		}
 
 		public static int personalRelationship;
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			personalRelationship = 0;
 			Close();
 		}
 

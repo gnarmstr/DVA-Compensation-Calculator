@@ -46,7 +46,7 @@
 			// 
 			// checkBoxMobility2
 			// 
-			this.checkBoxMobility2.Location = new System.Drawing.Point(17, 289);
+			this.checkBoxMobility2.Location = new System.Drawing.Point(12, 307);
 			this.checkBoxMobility2.Name = "checkBoxMobility2";
 			this.checkBoxMobility2.Size = new System.Drawing.Size(1043, 77);
 			this.checkBoxMobility2.TabIndex = 11;
@@ -56,7 +56,7 @@
 			// 
 			// checkBoxMobility7
 			// 
-			this.checkBoxMobility7.Location = new System.Drawing.Point(17, 750);
+			this.checkBoxMobility7.Location = new System.Drawing.Point(12, 768);
 			this.checkBoxMobility7.Name = "checkBoxMobility7";
 			this.checkBoxMobility7.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility7.TabIndex = 10;
@@ -66,7 +66,7 @@
 			// 
 			// checkBoxMobility4
 			// 
-			this.checkBoxMobility4.Location = new System.Drawing.Point(17, 431);
+			this.checkBoxMobility4.Location = new System.Drawing.Point(12, 449);
 			this.checkBoxMobility4.Name = "checkBoxMobility4";
 			this.checkBoxMobility4.Size = new System.Drawing.Size(1043, 121);
 			this.checkBoxMobility4.TabIndex = 9;
@@ -76,7 +76,7 @@
 			// 
 			// checkBoxMobility5
 			// 
-			this.checkBoxMobility5.Location = new System.Drawing.Point(17, 558);
+			this.checkBoxMobility5.Location = new System.Drawing.Point(12, 576);
 			this.checkBoxMobility5.Name = "checkBoxMobility5";
 			this.checkBoxMobility5.Size = new System.Drawing.Size(1043, 93);
 			this.checkBoxMobility5.TabIndex = 8;
@@ -86,7 +86,7 @@
 			// 
 			// checkBoxMobility3
 			// 
-			this.checkBoxMobility3.Location = new System.Drawing.Point(17, 367);
+			this.checkBoxMobility3.Location = new System.Drawing.Point(12, 385);
 			this.checkBoxMobility3.Name = "checkBoxMobility3";
 			this.checkBoxMobility3.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility3.TabIndex = 7;
@@ -97,7 +97,7 @@
 			// 
 			// checkBoxMobility1
 			// 
-			this.checkBoxMobility1.Location = new System.Drawing.Point(17, 232);
+			this.checkBoxMobility1.Location = new System.Drawing.Point(12, 250);
 			this.checkBoxMobility1.Name = "checkBoxMobility1";
 			this.checkBoxMobility1.Size = new System.Drawing.Size(1043, 46);
 			this.checkBoxMobility1.TabIndex = 6;
@@ -107,7 +107,7 @@
 			// 
 			// checkBoxMobility6
 			// 
-			this.checkBoxMobility6.Location = new System.Drawing.Point(17, 668);
+			this.checkBoxMobility6.Location = new System.Drawing.Point(12, 686);
 			this.checkBoxMobility6.Name = "checkBoxMobility6";
 			this.checkBoxMobility6.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility6.TabIndex = 13;
@@ -117,7 +117,7 @@
 			// 
 			// checkBoxMobility8
 			// 
-			this.checkBoxMobility8.Location = new System.Drawing.Point(17, 834);
+			this.checkBoxMobility8.Location = new System.Drawing.Point(12, 852);
 			this.checkBoxMobility8.Name = "checkBoxMobility8";
 			this.checkBoxMobility8.Size = new System.Drawing.Size(679, 69);
 			this.checkBoxMobility8.TabIndex = 12;
@@ -152,7 +152,7 @@
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(39, 19);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(1006, 195);
+			this.label1.Size = new System.Drawing.Size(1006, 228);
 			this.label1.TabIndex = 21;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 

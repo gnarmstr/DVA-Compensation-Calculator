@@ -23,15 +23,18 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 0;
+			if (checkBoxOption1.Checked)
+			{
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 0;
+			}
 		}
 
 		public static int wholeLeftArm;
@@ -42,132 +45,151 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 2;
+			if (checkBoxOption2.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 2;
+			}
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 5;
+			if (checkBoxOption3.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 5;
+			}
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 10;
+			if (checkBoxOption4.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 10;
+			}
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 15;
+			if (checkBoxOption5.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 15;
+			}
 		}
 
 		private void checkBoxOption6_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 20;
+			if (checkBoxOption6.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 20;
+			}
 		}
 
 		private void checkBoxOption7_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 30;
+			if (checkBoxOption7.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 30;
+			}
 		}
 
 		private void checkBoxOption8_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 40;
+			if (checkBoxOption8.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 40;
+			}
 		}
 
 		private void checkBoxOption9_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			Points = 50;
+			if (checkBoxOption9.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				Points = 50;
+			}
 		}
 
 		private void checkBoxOption10_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			checkBoxOption6.Checked = false;
-			checkBoxOption7.Checked = false;
-			checkBoxOption8.Checked = false;
-			checkBoxOption9.Checked = false;
-			Points = 60;
+			if (checkBoxOption10.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				checkBoxOption6.Checked = false;
+				checkBoxOption7.Checked = false;
+				checkBoxOption8.Checked = false;
+				checkBoxOption9.Checked = false;
+				Points = 60;
+			}
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			if (GlobalVar.Selection == "LeftArm")
-			{
-				wholeLeftArm = 0;
-			}
-			else
-			{
-				wholeRightArm = 0;
-			}
 			Close();
 		}
 

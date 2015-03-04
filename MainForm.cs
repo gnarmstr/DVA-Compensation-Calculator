@@ -15,6 +15,7 @@ using GemBox.Spreadsheet;
 using GemBox.Spreadsheet.WinFormsUtilities;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
+using System.IO;
 
 #endregion
 
@@ -44,6 +45,7 @@ namespace DVA_Compensation_Calculator
 		#region Settings
 		private void Settings()
 		{
+			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVA Compensation Calculator");
 			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
 			GlobalVar.ExcelData = new[] { GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue, GlobalVar.LimbsAgeAdjust };
 			//Add Days for Date of Birth
@@ -66,7 +68,7 @@ namespace DVA_Compensation_Calculator
 		{
 			var profile = new XmlProfileSettings();
 			comboBoxAge.Text = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "comboBoxAge", "50");
-			textBoxWeeklyPayment.Text = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "textBoxWeeklyPayment", "0");
+			textBoxWeeklyPayment.Text = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "textBoxWeeklyPayment", "324.60");
 			checkBoxMale.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "checkBoxMale", true);
 			
 			textBoxElbow.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxElbow", "0");
@@ -194,7 +196,7 @@ namespace DVA_Compensation_Calculator
 		private void importExcel(int columns, int sheet, int excelData)
 		{
 			SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
-			ExcelFile ef = ExcelFile.Load("DVA_Tables.xls");
+			ExcelFile ef = ExcelFile.Load(GlobalVar.SettingsPath + @"\DVA_Tables.xls");
 			DataTable dataTable = new DataTable();
 			// Depending on the format of the input file, you need to change this:
 			var i = 0;
@@ -253,31 +255,31 @@ namespace DVA_Compensation_Calculator
 
 		private void comboBoxAge_Leave(object sender, EventArgs e)
 		{
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) <= 36)
+			if (Convert.ToInt16(comboBoxAge.Text) <= 36)
 			{
 				GlobalVar.AgeAdjustRange = 0;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 36 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 45)
+			if (Convert.ToInt16(comboBoxAge.Text) >= 36 & Convert.ToInt16(comboBoxAge.Text) <= 45)
 			{
 				GlobalVar.AgeAdjustRange = 1;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 46 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 55)
+			if (Convert.ToInt16(comboBoxAge.Text) >= 46 & Convert.ToInt16(comboBoxAge.Text) <= 55)
 			{
 				GlobalVar.AgeAdjustRange = 2;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 56 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 65)
+			if (Convert.ToInt16(comboBoxAge.Text) >= 56 & Convert.ToInt16(comboBoxAge.Text) <= 65)
 			{
 				GlobalVar.AgeAdjustRange = 3;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 66 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 75)
+			if (Convert.ToInt16(comboBoxAge.Text) >= 66 & Convert.ToInt16(comboBoxAge.Text) <= 75)
 			{
 				GlobalVar.AgeAdjustRange = 4;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) >= 76 & Convert.ToInt16(comboBoxAge.SelectedItem) <= 85)
+			if (Convert.ToInt16(comboBoxAge.Text) >= 76 & Convert.ToInt16(comboBoxAge.Text) <= 85)
 			{
 				GlobalVar.AgeAdjustRange = 5;
 			}
-			if (Convert.ToInt16(comboBoxAge.SelectedItem) > 85)
+			if (Convert.ToInt16(comboBoxAge.Text) > 85)
 			{
 				GlobalVar.AgeAdjustRange = 6;
 			}
@@ -763,7 +765,7 @@ namespace DVA_Compensation_Calculator
 
 		private void comboBoxAge_MouseLeave(object sender, EventArgs e)
 		{
-			UpdateAll();
+			comboBoxAge_Leave(null, null);
 		}
 
 		#endregion
@@ -1448,7 +1450,12 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 		#endregion
-		
+
+		private void comboBoxAge_KeyUp(object sender, KeyEventArgs e)
+		{
+			comboBoxAge_Leave(null, null);
+		}
+
 		#endregion
 	}
 }

@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WholeLimb));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WholeArm));
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption5 = new System.Windows.Forms.CheckBox();
@@ -41,23 +41,25 @@
 			this.checkBoxOption9 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption7 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption8 = new System.Windows.Forms.CheckBox();
+			this.checkBoxOption10 = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(12, 93);
+			this.checkBoxOption2.Location = new System.Drawing.Point(12, 107);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(845, 100);
+			this.checkBoxOption2.Size = new System.Drawing.Size(845, 49);
 			this.checkBoxOption2.TabIndex = 11;
-			this.checkBoxOption2.Text = resources.GetString("checkBoxOption2.Text");
+			this.checkBoxOption2.Text = "Can use limb efficiently for normal tasks but with excessive fatigue towards the " +
+    "end of the day.";
 			this.checkBoxOption2.UseVisualStyleBackColor = true;
 			this.checkBoxOption2.CheckedChanged += new System.EventHandler(this.checkBoxOption2_CheckedChanged);
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(12, 352);
+			this.checkBoxOption4.Location = new System.Drawing.Point(12, 227);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(845, 91);
 			this.checkBoxOption4.TabIndex = 9;
@@ -67,7 +69,7 @@
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(12, 467);
+			this.checkBoxOption5.Location = new System.Drawing.Point(12, 324);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(845, 118);
 			this.checkBoxOption5.TabIndex = 8;
@@ -77,29 +79,28 @@
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(12, 200);
+			this.checkBoxOption3.Location = new System.Drawing.Point(12, 176);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(845, 130);
+			this.checkBoxOption3.Size = new System.Drawing.Size(845, 45);
 			this.checkBoxOption3.TabIndex = 7;
-			this.checkBoxOption3.Text = resources.GetString("checkBoxOption3.Text");
+			this.checkBoxOption3.Text = "Can use limb efficiently for normal tasks without excessive fatigue for no more t" +
+    "han half an hour.";
 			this.checkBoxOption3.UseVisualStyleBackColor = true;
 			this.checkBoxOption3.CheckedChanged += new System.EventHandler(this.checkBoxOption3_CheckedChanged);
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(12, 42);
+			this.checkBoxOption1.Location = new System.Drawing.Point(12, 54);
 			this.checkBoxOption1.Name = "checkBoxOption1";
-			this.checkBoxOption1.Size = new System.Drawing.Size(845, 48);
+			this.checkBoxOption1.Size = new System.Drawing.Size(845, 36);
 			this.checkBoxOption1.TabIndex = 6;
-			this.checkBoxOption1.Text = " Walks in a manner normal for age on a variety of different terrains and at vary" +
-    "ing speeds.\r\n Sciatic pain — occasional twinges but no effect on walking most o" +
-    "f the time.";
+			this.checkBoxOption1.Text = "Can use limb efficiently for normal tasks and without undue fatigue.";
 			this.checkBoxOption1.UseVisualStyleBackColor = true;
 			this.checkBoxOption1.CheckedChanged += new System.EventHandler(this.checkBoxOption1_CheckedChanged);
 			// 
 			// checkBoxOption6
 			// 
-			this.checkBoxOption6.Location = new System.Drawing.Point(12, 605);
+			this.checkBoxOption6.Location = new System.Drawing.Point(12, 448);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(845, 110);
 			this.checkBoxOption6.TabIndex = 13;
@@ -138,42 +139,53 @@
 			// 
 			// checkBoxOption9
 			// 
-			this.checkBoxOption9.Location = new System.Drawing.Point(12, 894);
+			this.checkBoxOption9.Location = new System.Drawing.Point(12, 776);
 			this.checkBoxOption9.Name = "checkBoxOption9";
-			this.checkBoxOption9.Size = new System.Drawing.Size(608, 38);
+			this.checkBoxOption9.Size = new System.Drawing.Size(569, 38);
 			this.checkBoxOption9.TabIndex = 24;
-			this.checkBoxOption9.Text = "Unable to walk or stand. Mobile only in a wheelchair.";
+			this.checkBoxOption9.Text = "Has only some movement against gravity at elbow, shoulder or wrist.";
 			this.checkBoxOption9.UseVisualStyleBackColor = true;
 			this.checkBoxOption9.CheckedChanged += new System.EventHandler(this.checkBoxOption9_CheckedChanged);
 			// 
 			// checkBoxOption7
 			// 
-			this.checkBoxOption7.Location = new System.Drawing.Point(12, 725);
+			this.checkBoxOption7.Location = new System.Drawing.Point(12, 576);
 			this.checkBoxOption7.Name = "checkBoxOption7";
 			this.checkBoxOption7.Size = new System.Drawing.Size(845, 86);
 			this.checkBoxOption7.TabIndex = 23;
-			this.checkBoxOption7.Text = "Restricted to walking in and around home; and\r\n-- requires quad stick, crutches o" +
-    "r similar walking aid;\r\n-- is unable to transfer without personal assistance.";
+			this.checkBoxOption7.Text = resources.GetString("checkBoxOption7.Text");
 			this.checkBoxOption7.UseVisualStyleBackColor = true;
 			this.checkBoxOption7.CheckedChanged += new System.EventHandler(this.checkBoxOption7_CheckedChanged);
 			// 
 			// checkBoxOption8
 			// 
-			this.checkBoxOption8.Location = new System.Drawing.Point(12, 830);
+			this.checkBoxOption8.Location = new System.Drawing.Point(12, 691);
 			this.checkBoxOption8.Name = "checkBoxOption8";
 			this.checkBoxOption8.Size = new System.Drawing.Size(621, 47);
 			this.checkBoxOption8.TabIndex = 22;
-			this.checkBoxOption8.Text = "Restricted to walking in and around home. Can walk only with personal assistance," +
-    " or with a walking aid such as a pickup frame.";
+			this.checkBoxOption8.Text = "Uses limb inefficiently in all circumstances. Use of limb subject to major limita" +
+    "tions, capable of light grip only. Aids, eg, splints, required for everyday acti" +
+    "vities such as writing and eating.";
 			this.checkBoxOption8.UseVisualStyleBackColor = true;
 			this.checkBoxOption8.CheckedChanged += new System.EventHandler(this.checkBoxOption8_CheckedChanged);
 			// 
-			// WholeLimb
+			// checkBoxOption10
+			// 
+			this.checkBoxOption10.Location = new System.Drawing.Point(12, 852);
+			this.checkBoxOption10.Name = "checkBoxOption10";
+			this.checkBoxOption10.Size = new System.Drawing.Size(334, 38);
+			this.checkBoxOption10.TabIndex = 25;
+			this.checkBoxOption10.Text = "Unable to use upper limb at all.";
+			this.checkBoxOption10.UseVisualStyleBackColor = true;
+			this.checkBoxOption10.CheckedChanged += new System.EventHandler(this.checkBoxOption10_CheckedChanged);
+			// 
+			// WholeArm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.ClientSize = new System.Drawing.Size(878, 944);
+			this.Controls.Add(this.checkBoxOption10);
 			this.Controls.Add(this.checkBoxOption9);
 			this.Controls.Add(this.checkBoxOption7);
 			this.Controls.Add(this.checkBoxOption8);
@@ -188,9 +200,9 @@
 			this.Controls.Add(this.checkBoxOption1);
 			this.MaximumSize = new System.Drawing.Size(900, 1000);
 			this.MinimumSize = new System.Drawing.Size(900, 1000);
-			this.Name = "WholeLimb";
+			this.Name = "WholeArm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "Whole Lower Limb";
+			this.Text = "Whole Upper Left or Right Limb";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
@@ -212,5 +224,6 @@
 		private System.Windows.Forms.CheckBox checkBoxOption9;
 		private System.Windows.Forms.CheckBox checkBoxOption7;
 		private System.Windows.Forms.CheckBox checkBoxOption8;
+		private System.Windows.Forms.CheckBox checkBoxOption10;
 	}
 }

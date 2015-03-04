@@ -46,7 +46,7 @@
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(12, 243);
+			this.checkBoxOption2.Location = new System.Drawing.Point(12, 267);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(1043, 77);
 			this.checkBoxOption2.TabIndex = 11;
@@ -58,7 +58,7 @@
 			// 
 			// checkBoxOption7
 			// 
-			this.checkBoxOption7.Location = new System.Drawing.Point(12, 747);
+			this.checkBoxOption7.Location = new System.Drawing.Point(12, 771);
 			this.checkBoxOption7.Name = "checkBoxOption7";
 			this.checkBoxOption7.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxOption7.TabIndex = 10;
@@ -70,7 +70,7 @@
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(12, 385);
+			this.checkBoxOption4.Location = new System.Drawing.Point(12, 409);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(1043, 121);
 			this.checkBoxOption4.TabIndex = 9;
@@ -80,7 +80,7 @@
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(12, 512);
+			this.checkBoxOption5.Location = new System.Drawing.Point(12, 536);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(1043, 104);
 			this.checkBoxOption5.TabIndex = 8;
@@ -90,7 +90,7 @@
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(12, 321);
+			this.checkBoxOption3.Location = new System.Drawing.Point(12, 345);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxOption3.TabIndex = 7;
@@ -102,7 +102,7 @@
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(12, 186);
+			this.checkBoxOption1.Location = new System.Drawing.Point(12, 210);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(1043, 46);
 			this.checkBoxOption1.TabIndex = 6;
@@ -113,7 +113,7 @@
 			// 
 			// checkBoxOption6
 			// 
-			this.checkBoxOption6.Location = new System.Drawing.Point(12, 622);
+			this.checkBoxOption6.Location = new System.Drawing.Point(12, 646);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(1043, 119);
 			this.checkBoxOption6.TabIndex = 13;
@@ -123,7 +123,7 @@
 			// 
 			// checkBoxOption8
 			// 
-			this.checkBoxOption8.Location = new System.Drawing.Point(12, 836);
+			this.checkBoxOption8.Location = new System.Drawing.Point(12, 860);
 			this.checkBoxOption8.Name = "checkBoxOption8";
 			this.checkBoxOption8.Size = new System.Drawing.Size(679, 43);
 			this.checkBoxOption8.TabIndex = 12;
@@ -154,9 +154,9 @@
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(39, 32);
+			this.label1.Location = new System.Drawing.Point(39, 21);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(1006, 151);
+			this.label1.Size = new System.Drawing.Size(1006, 176);
 			this.label1.TabIndex = 21;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 

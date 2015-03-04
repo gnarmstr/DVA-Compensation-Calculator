@@ -23,54 +23,68 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			jointPain = 0;
+			if (checkBoxOption1.Checked)
+			{
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				jointPain = 0;
+			}
 		}
 
 		public static int jointPain;
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			jointPain = 2;
+			if (checkBoxOption2.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				jointPain = 2;
+			}
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption4.Checked = false;
-			checkBoxOption5.Checked = false;
-			jointPain = 5;
+			if (checkBoxOption3.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption4.Checked = false;
+				checkBoxOption5.Checked = false;
+				jointPain = 5;
+			}
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption5.Checked = false;
-			jointPain = 10;
+			if (checkBoxOption4.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption5.Checked = false;
+				jointPain = 10;
+			}
 		}
 
 		private void checkBoxOption5_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			jointPain = 15;
+			if (checkBoxOption5.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				jointPain = 15;
+			}
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			jointPain = 0;
 			Close();
 		}
 

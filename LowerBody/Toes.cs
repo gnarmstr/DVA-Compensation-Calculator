@@ -23,10 +23,13 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			Points = 0;
+			if (checkBoxOption1.Checked)
+			{
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				Points = 0;
+			}
 		}
 
 		public static int toes;
@@ -35,31 +38,39 @@ namespace DVA_Compensation_Calculator
 
 		private void checkBoxOption2_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption3.Checked = false;
-			checkBoxOption4.Checked = false;
-			Points = 2;
+			if (checkBoxOption2.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption3.Checked = false;
+				checkBoxOption4.Checked = false;
+				Points = 2;
+			}
 		}
 
 		private void checkBoxOption3_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption4.Checked = false;
-			Points = 5;
+			if (checkBoxOption3.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption4.Checked = false;
+				Points = 5;
+			}
 		}
 
 		private void checkBoxOption4_CheckedChanged(object sender, EventArgs e)
 		{
-			checkBoxOption1.Checked = false;
-			checkBoxOption2.Checked = false;
-			checkBoxOption3.Checked = false;
-			Points = 10;
+			if (checkBoxOption4.Checked)
+			{
+				checkBoxOption1.Checked = false;
+				checkBoxOption2.Checked = false;
+				checkBoxOption3.Checked = false;
+				Points = 10;
+			}
 		}
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
-			toes = 0;
 			Close();
 		}
 
