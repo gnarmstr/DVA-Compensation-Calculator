@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Common.Resources;
 using Common.Resources.Properties;
 using GemBox.Spreadsheet;
@@ -16,6 +18,8 @@ using GemBox.Spreadsheet.WinFormsUtilities;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using System.IO;
+using Application = System.Windows.Forms.Application;
+using System.Diagnostics;
 
 #endregion
 
@@ -28,6 +32,7 @@ namespace DVA_Compensation_Calculator
 		{
 			InitializeComponent();
 			Settings();
+			DVALinks();
 			getLifeStyleWar();
 			getLifeStylePeace();
 			getActuaryTable();
@@ -58,7 +63,175 @@ namespace DVA_Compensation_Calculator
 			} while (i > 17);
 
 			GlobalVar.startup = true;
+
+			listViewSummary.Columns.Add("CONDITION", 120, HorizontalAlignment.Left);
+			listViewSummary.Columns.Add("RATING", 120, HorizontalAlignment.Left);
+			listViewSummary1.Columns.Add("CONDITION", 120, HorizontalAlignment.Left);
+			listViewSummary1.Columns.Add("RATING", 120, HorizontalAlignment.Left);
+
+			
 		}
+		#endregion
+
+		#region DVA LINKS
+
+		private void DVALinks()
+		{
+			var linkAll = new LinkLabel.Link();
+			linkAll.LinkData = @"http://factsheets.dva.gov.au/plain-facts-htm.htm";
+			linkLabelAllSheets.Links.Add(linkAll);
+			var link = new LinkLabel.Link();
+			link.LinkData = @"http://www.comlaw.gov.au/Details/F2013C00479/Download";
+			linkLabel.Links.Add(link);
+			var link1 = new LinkLabel.Link();
+			link1.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC01%20Overview.pdf";
+			linkLabel1.Links.Add(link1);
+			var link2 = new LinkLabel.Link();
+			link2.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC02%20Compensation%20coverage%20for%20members%20and%20former%20members%20of%20the%20australian%20defence%20force.pdf";
+			linkLabel2.Links.Add(link2);
+			var link3 = new LinkLabel.Link();
+			link3.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC03%20Types%20of%20MRCA%20service.pdf";
+			linkLabel3.Links.Add(link3);
+			var link4 = new LinkLabel.Link();
+			link4.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC04%20Compensation%20Payment%20Rates.pdf";
+			linkLabel4.Links.Add(link4);
+			var link5 = new LinkLabel.Link();
+			link5.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC05%20Rehabilitation.pdf";
+			linkLabel5.Links.Add(link5);
+			var link7 = new LinkLabel.Link();
+			link7.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC07%20Permanent%20Impairment%20Compensation%20Payments.htm";
+			linkLabel7.Links.Add(link7);
+			var link8 = new LinkLabel.Link();
+			link8.LinkData = @"http://factsheets.dva.gov.au/documents/MRC08%20Incapacity%20Payments.pdf";
+			linkLabel8.Links.Add(link8);
+			var link9 = new LinkLabel.Link();
+			link9.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC09%20Special%20Rate%20DP%20Safety%20Net%20Payment.htm";
+			linkLabel9.Links.Add(link9);
+			var link10 = new LinkLabel.Link();
+			link10.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC10%20MVCS.pdf";
+			linkLabel10.Links.Add(link10);
+			var link14 = new LinkLabel.Link();
+			link14.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC14%20Partners.htm";
+			linkLabel14.Links.Add(link14);
+			var link15 = new LinkLabel.Link();
+			link15.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC15%20Eligible%20Young%20Persons.htm";
+			linkLabel15.Links.Add(link15);
+			var link20 = new LinkLabel.Link();
+			link20.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC20%20Permanent%20Impairment%20Payment%20Choices.htm";
+			linkLabel20.Links.Add(link20);
+			var link25 = new LinkLabel.Link();
+			link25.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC25%20How%20to%20lodge%20a%20claim.htm";
+			linkLabel25.Links.Add(link25);
+			var link27 = new LinkLabel.Link();
+			link27.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC27%20Recon%20and%20Review.htm";
+			linkLabel27.Links.Add(link27);
+			var link29 = new LinkLabel.Link();
+			link29.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC29%20Actuary%20Tables.htm";
+			linkLabel29.Links.Add(link29);
+			var link33 = new LinkLabel.Link();
+			link33.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC33%20%20Common%20Law%20injuries%20and%20diseases.htm";
+			linkLabel33.Links.Add(link33);
+			var link34 = new LinkLabel.Link();
+			link34.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC34%20Needs%20Assessment.htm";
+			linkLabel34.Links.Add(link34);
+		}
+
+		private void linkLabelAllSheets_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+
+		}
+
+		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel25_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel27_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel29_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel33_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel34_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
 		#endregion
 
 		// Add to this when adding new injury types
@@ -721,7 +894,48 @@ namespace DVA_Compensation_Calculator
 					textBoxLumpSumPayout.Text = (Math.Round(Convert.ToDecimal(GlobalVar.ExcelData[2][Convert.ToInt16(comboBoxAge.Text) - 31][sex]) * Convert.ToDecimal(textBoxWeeklyPayout.Text), 2)).ToString();
 				}
 			}
+
+			//Add Information on Summary Page
+			listViewSummary.Items.Clear();
+			listViewSummary.Items.Add(new ListViewItem(new[] { "UPPER LEFT LIMB", "" }));
+			if (textBoxElbow.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label9.Text, textBoxElbow.Text }));
+			if (textBoxShoulder.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label11.Text, textBoxShoulder.Text }));
+			if (textBoxWrist.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label10.Text, textBoxWrist.Text }));
+			if (textBoxFingers.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label12.Text, textBoxFingers.Text }));
+			if (textBoxWholeLeftArm.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label59.Text, textBoxWholeLeftArm.Text }));
+			listViewSummary.Items.Add(new ListViewItem(new[] { "", "" }));
+			listViewSummary.Items.Add(new ListViewItem(new[] { "UPPER RIGHT LIMB", "" }));
+			if (textBoxRightElbow.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label42.Text, textBoxRightElbow.Text }));
+			if (textBoxRightShoulder.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label46.Text, textBoxRightShoulder.Text }));
+			if (textBoxRightWrist.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label44.Text, textBoxRightWrist.Text }));
+			if (textBoxRightFingers.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label45.Text, textBoxRightFingers.Text }));
+			if (textBoxWholeRightArm.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label62.Text, textBoxWholeRightArm.Text }));
+			listViewSummary.Items.Add(new ListViewItem(new[] { "", "" }));
+			listViewSummary.Items.Add(new ListViewItem(new[] { "LOWER LIMB", "" }));
+			if (textBoxKnee.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label7.Text, textBoxKnee.Text }));
+			if (textBoxToes.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label17.Text, textBoxToes.Text }));
+			if (textBoxHip.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label15.Text, textBoxHip.Text }));
+			if (textBoxAnkle.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label16.Text, textBoxAnkle.Text }));
+			if (textBoxWholeLimb.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label56.Text, textBoxWholeLimb.Text }));
+
+			//Add Information on Summary1 Page
+			listViewSummary1.Items.Clear();
+			listViewSummary1.Items.Add(new ListViewItem(new[] { "BACK", "" }));
+			if (textBoxCervicalSpine.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label82.Text, textBoxCervicalSpine.Text }));
+			if (textBoxThoracoROM.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label81.Text, textBoxThoracoROM.Text }));
+			if (textBoxThoraco.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { "Thoraco Lumbar:", textBoxThoraco.Text }));
+			listViewSummary1.Items.Add(new ListViewItem(new[] { "", "" }));
+			listViewSummary1.Items.Add(new ListViewItem(new[] { "EAR, NOSE, THROAT", "" }));
+			if (textBoxEars.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label70.Text, textBoxEars.Text }));
+			if (textBoxTinnitus.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label64.Text, textBoxTinnitus.Text }));
+			if (textBoxNose.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label74.Text, textBoxNose.Text }));
+			if (textBoxThroat.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label77.Text, textBoxThroat.Text }));
+			listViewSummary1.Items.Add(new ListViewItem(new[] { "", "" }));
+			listViewSummary1.Items.Add(new ListViewItem(new[] { "JOINT PAIN", "" }));
+			if (textBoxJointPain.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label39.Text, textBoxJointPain.Text }));
+
 		}
+
 		#endregion
 
 		#region Misc
@@ -1457,5 +1671,11 @@ namespace DVA_Compensation_Calculator
 		}
 
 		#endregion
+
+		private void buttonPrint_Click(object sender, EventArgs e)
+		{
+			var printSummary = new PrintSummary();
+			printSummary.ShowDialog();
+		}
 	}
 }

@@ -162,6 +162,12 @@
     <Compile Include="LowerBody\Toes.Designer.cs">
       <DependentUpon>Toes.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSummary.Designer.cs">
+      <DependentUpon>PrintSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpperBody\Fingers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LowerBody\Toes.resx">
       <DependentUpon>Toes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSummary.resx">
+      <DependentUpon>PrintSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpperBody\Fingers.resx">
       <DependentUpon>Fingers.cs</DependentUpon>
