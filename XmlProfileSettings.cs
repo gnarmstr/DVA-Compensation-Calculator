@@ -130,6 +130,7 @@ namespace DVA_Compensation_Calculator
 			Hearing,
 			Nose,
 			Throat,
+			Eyes,
 			Other
 		};
 

@@ -62,5 +62,13 @@ namespace DVA_Compensation_Calculator
 
 		public static int TheracoHighestPoints;
 
+		public static decimal combinedLeftEyePoints;
+
+		public static decimal combinedRightEyePoints;
+
+		public static decimal combinedEyePoints;
+
+		public static int EyeConversaion;
+
 	}
 }
