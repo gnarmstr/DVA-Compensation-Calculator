@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -20,6 +21,8 @@ using DataTable = System.Data.DataTable;
 using System.IO;
 using Application = System.Windows.Forms.Application;
 using System.Diagnostics;
+using Font = System.Drawing.Font;
+using Rectangle = System.Drawing.Rectangle;
 
 #endregion
 
@@ -44,13 +47,16 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 			GlobalVar.startup = false;
 			UpdateAll();
-		}
+        }
+
 		#endregion
+
 
 		#region Settings
 		private void Settings()
 		{
-			MinimumSize = new Size(730, 720);
+			MinimumSize = new Size(725, 790);
+			MaximumSize = new Size(725, 790);
 			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVA Compensation Calculator");
 			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
 			GlobalVar.ExcelData = new[] { GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue, GlobalVar.LimbsAgeAdjust };
@@ -65,12 +71,38 @@ namespace DVA_Compensation_Calculator
 
 			GlobalVar.startup = true;
 
-			listViewSummary.Columns.Add("CONDITION", 120, HorizontalAlignment.Left);
-			listViewSummary.Columns.Add("RATING", 120, HorizontalAlignment.Left);
-			listViewSummary1.Columns.Add("CONDITION", 120, HorizontalAlignment.Left);
-			listViewSummary1.Columns.Add("RATING", 120, HorizontalAlignment.Left);
+			tabPagePersonalDetails.BackgroundImage = Tools.ResizeImage(Resources.Bones_Blue, 700, 430);
+			BackgroundImage = Resources.MainBackground_Green;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			buttonImportantInfo.BackgroundImage = Resources.button_Blue;
+			buttonROMInfo.BackgroundImage = Resources.button_Blue;
+			buttonThoraco.BackgroundImage = Resources.Button_Green;
+			buttonWholeLeftArm.BackgroundImage = Resources.Button_Green;
+			buttonJointPain.BackgroundImage = Resources.Button_Green;
+			buttonWholeLimb.BackgroundImage = Resources.Button_Green;
+			buttonWholeRightArm.BackgroundImage = Resources.Button_Green;
+			buttonLeftKnee.FlatStyle = FlatStyle.Flat;
+			buttonRightKnee.FlatStyle = FlatStyle.Flat;
+			buttonLeftHip.FlatStyle = FlatStyle.Flat;
+			buttonRightHip.FlatStyle = FlatStyle.Flat;
+			buttonLeftAnkle.FlatStyle = FlatStyle.Flat;
+			buttonRightAnkle.FlatStyle = FlatStyle.Flat;
+			buttonLeftToes.FlatStyle = FlatStyle.Flat;
+			buttonRightToes.FlatStyle = FlatStyle.Flat;
+			buttonLeftElbow.FlatStyle = FlatStyle.Flat;
+			buttonRightElbow.FlatStyle = FlatStyle.Flat;
+			buttonLeftFingers.FlatStyle = FlatStyle.Flat;
+			buttonRightFingers.FlatStyle = FlatStyle.Flat;
+			buttonLeftShoulder.FlatStyle = FlatStyle.Flat;
+			buttonRightShoulder.FlatStyle = FlatStyle.Flat;
+			buttonLeftWrist.FlatStyle = FlatStyle.Flat;
+			buttonRightWrist.FlatStyle = FlatStyle.Flat;
+			buttonThoracoROM.FlatStyle = FlatStyle.Flat;
+			buttonCervical.FlatStyle = FlatStyle.Flat;
+			buttonThroat.FlatStyle = FlatStyle.Flat;
 
-			
+			textBoxKnee.Visible = false;
+
 		}
 		#endregion
 
@@ -135,6 +167,9 @@ namespace DVA_Compensation_Calculator
 			var link34 = new LinkLabel.Link();
 			link34.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC34%20Needs%20Assessment.htm";
 			linkLabel34.Links.Add(link34);
+			var link6 = new LinkLabel.Link();
+			link6.LinkData = @"http://dva.gov.au/dvaforms";
+			linkLabel6.Links.Add(link6);
 		}
 
 		private void linkLabelAllSheets_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -229,6 +264,11 @@ namespace DVA_Compensation_Calculator
 		}
 
 		private void linkLabel34_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(e.Link.LinkData as string);
+		}
+
+		private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			Process.Start(e.Link.LinkData as string);
 		}
@@ -1039,45 +1079,209 @@ namespace DVA_Compensation_Calculator
 				}
 			}
 
-			//Add Information on Summary Page
-			listViewSummary.Items.Clear();
-			listViewSummary.Items.Add(new ListViewItem(new[] { "UPPER LEFT LIMB", "" }));
-			if (textBoxElbow.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label9.Text, textBoxElbow.Text }));
-			if (textBoxShoulder.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label11.Text, textBoxShoulder.Text }));
-			if (textBoxWrist.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label10.Text, textBoxWrist.Text }));
-			if (textBoxFingers.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label12.Text, textBoxFingers.Text }));
-			if (textBoxWholeLeftArm.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label59.Text, textBoxWholeLeftArm.Text }));
-			listViewSummary.Items.Add(new ListViewItem(new[] { "", "" }));
-			listViewSummary.Items.Add(new ListViewItem(new[] { "UPPER RIGHT LIMB", "" }));
-			if (textBoxRightElbow.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label42.Text, textBoxRightElbow.Text }));
-			if (textBoxRightShoulder.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label46.Text, textBoxRightShoulder.Text }));
-			if (textBoxRightWrist.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label44.Text, textBoxRightWrist.Text }));
-			if (textBoxRightFingers.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label45.Text, textBoxRightFingers.Text }));
-			if (textBoxWholeRightArm.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label62.Text, textBoxWholeRightArm.Text }));
-			listViewSummary.Items.Add(new ListViewItem(new[] { "", "" }));
-			listViewSummary.Items.Add(new ListViewItem(new[] { "LOWER LIMB", "" }));
-			if (textBoxKnee.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label7.Text, textBoxKnee.Text }));
-			if (textBoxToes.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label17.Text, textBoxToes.Text }));
-			if (textBoxHip.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label15.Text, textBoxHip.Text }));
-			if (textBoxAnkle.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label16.Text, textBoxAnkle.Text }));
-			if (textBoxWholeLimb.Text != "0") listViewSummary.Items.Add(new ListViewItem(new[] { label56.Text, textBoxWholeLimb.Text }));
-
-			//Add Information on Summary1 Page
-			listViewSummary1.Items.Clear();
-			listViewSummary1.Items.Add(new ListViewItem(new[] { "BACK", "" }));
-			if (textBoxCervicalSpine.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label82.Text, textBoxCervicalSpine.Text }));
-			if (textBoxThoracoROM.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label81.Text, textBoxThoracoROM.Text }));
-			if (textBoxThoraco.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { "Thoraco Lumbar:", textBoxThoraco.Text }));
-			listViewSummary1.Items.Add(new ListViewItem(new[] { "", "" }));
-			listViewSummary1.Items.Add(new ListViewItem(new[] { "EAR, NOSE, THROAT", "" }));
-			if (textBoxEars.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label70.Text, textBoxEars.Text }));
-			if (textBoxTinnitus.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label64.Text, textBoxTinnitus.Text }));
-			if (textBoxNose.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label74.Text, textBoxNose.Text }));
-			if (textBoxThroat.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label77.Text, textBoxThroat.Text }));
-			listViewSummary1.Items.Add(new ListViewItem(new[] { "", "" }));
-			listViewSummary1.Items.Add(new ListViewItem(new[] { "JOINT PAIN", "" }));
-			if (textBoxJointPain.Text != "0") listViewSummary1.Items.Add(new ListViewItem(new[] { label39.Text, textBoxJointPain.Text }));
-
+			if (textBoxShoulder.Text != "0")
+			{
+				textBoxShoulder.Visible = true;
+				checkBoxShoulderWar.Visible = true;
+			}
+			else
+			{
+				textBoxShoulder.Visible = false;
+				checkBoxShoulderWar.Visible = false;
+			} 
+			if (textBoxRightShoulder.Text != "0")
+			{
+				textBoxRightShoulder.Visible = true;
+				checkBoxRightShoulderWar.Visible = true;
+			}
+			else
+			{
+				textBoxRightShoulder.Visible = false;
+				checkBoxRightShoulderWar.Visible = false;
+			}
+			if (textBoxKnee.Text != "0")
+			{
+				textBoxKnee.Visible = true;
+				checkBoxKneeWar.Visible = true;
+			}
+			else
+			{
+				textBoxKnee.Visible = false;
+				checkBoxKneeWar.Visible = false;
+			}
+			if (textBoxWrist.Text != "0")
+			{
+				textBoxWrist.Visible = true;
+				checkBoxWristWar.Visible = true;
+			}
+			else
+			{
+				textBoxWrist.Visible = false;
+				checkBoxWristWar.Visible = false;
+			}
+			if (textBoxRightWrist.Text != "0")
+			{
+				textBoxRightWrist.Visible = true;
+				checkBoxRightWristWar.Visible = true;
+			}
+			else
+			{
+				textBoxRightWrist.Visible = false;
+				checkBoxRightWristWar.Visible = false;
+			}
+			if (textBoxFingers.Text != "0")
+			{
+				textBoxFingers.Visible = true;
+				checkBoxFingersWar.Visible = true;
+			}
+			else
+			{
+				textBoxFingers.Visible = false;
+				checkBoxFingersWar.Visible = false;
+			}
+			if (textBoxRightFingers.Text != "0")
+			{
+				textBoxRightFingers.Visible = true;
+				checkBoxRightFingersWar.Visible = true;
+			}
+			else
+			{
+				textBoxRightFingers.Visible = false;
+				checkBoxRightFingersWar.Visible = false;
+			}
+			if (textBoxElbow.Text != "0")
+			{
+				textBoxElbow.Visible = true;
+				checkBoxElbowWar.Visible = true;
+			}
+			else
+			{
+				textBoxElbow.Visible = false;
+				checkBoxElbowWar.Visible = false;
+			}
+			if (textBoxRightElbow.Text != "0")
+			{
+				textBoxRightElbow.Visible = true;
+				checkBoxRightElbowWar.Visible = true;
+			}
+			else
+			{
+				textBoxRightElbow.Visible = false;
+				checkBoxRightElbowWar.Visible = false;
+			}
+			if (textBoxHip.Text != "0")
+			{
+				textBoxHip.Visible = true;
+				checkBoxHipWar.Visible = true;
+			}
+			else
+			{
+				textBoxHip.Visible = false;
+				checkBoxHipWar.Visible = false;
+			}
+			if (textBoxAnkle.Text != "0")
+			{
+				textBoxAnkle.Visible = true;
+				checkBoxAnkleWar.Visible = true;
+			}
+			else
+			{
+				textBoxAnkle.Visible = false;
+				checkBoxAnkleWar.Visible = false;
+			}
+			if (textBoxToes.Text != "0")
+			{
+				textBoxToes.Visible = true;
+				checkBoxToesWar.Visible = true;
+			}
+			else
+			{
+				textBoxToes.Visible = false;
+				checkBoxToesWar.Visible = false;
+			}
+			if (textBoxWholeLeftArm.Text != "0")
+			{
+				textBoxWholeLeftArm.Visible = true;
+				checkBoxWholeLeftArmWar.Visible = true;
+			}
+			else
+			{
+				textBoxWholeLeftArm.Visible = false;
+				checkBoxWholeLeftArmWar.Visible = false;
+			}
+			if (textBoxWholeRightArm.Text != "0")
+			{
+				textBoxWholeRightArm.Visible = true;
+				checkBoxWholeRightArmWar.Visible = true;
+			}
+			else
+			{
+				textBoxWholeRightArm.Visible = false;
+				checkBoxWholeRightArmWar.Visible = false;
+			}
+			if (textBoxWholeLimb.Text != "0")
+			{
+				textBoxWholeLimb.Visible = true;
+				checkBoxWholeLimbWar.Visible = true;
+			}
+			else
+			{
+				textBoxWholeLimb.Visible = false;
+				checkBoxWholeLimbWar.Visible = false;
+			}
+			if (textBoxJointPain.Text != "0")
+			{
+				textBoxJointPain.Visible = true;
+				checkBoxJointPainWar.Visible = true;
+			}
+			else
+			{
+				textBoxJointPain.Visible = false;
+				checkBoxJointPainWar.Visible = false;
+			}
+			if (textBoxThoracoROM.Text != "0")
+			{
+				textBoxThoracoROM.Visible = true;
+				checkBoxThoracoROMWar.Visible = true;
+			}
+			else
+			{
+				textBoxThoracoROM.Visible = false;
+				checkBoxThoracoROMWar.Visible = false;
+			}
+			if (textBoxCervicalSpine.Text != "0")
+			{
+				textBoxCervicalSpine.Visible = true;
+				checkBoxCervicalSpineWar.Visible = true;
+			}
+			else
+			{
+				textBoxCervicalSpine.Visible = false;
+				checkBoxCervicalSpineWar.Visible = false;
+			}
+			if (textBoxThoraco.Text != "0")
+			{
+				textBoxThoraco.Visible = true;
+				checkBoxThoracoWar.Visible = true;
+			}
+			else
+			{
+				textBoxThoraco.Visible = false;
+				checkBoxThoracoWar.Visible = false;
+			}
+			if (textBoxThroat.Text != "0")
+			{
+				textBoxThroat.Visible = true;
+				checkBoxThroatWar.Visible = true;
+				labelThroat.Visible = true;
+			}
+			else
+			{
+				textBoxThroat.Visible = false;
+				checkBoxThroatWar.Visible = false;
+				labelThroat.Visible = false;
+			}
+			
 		}
 
 		#endregion
@@ -1324,14 +1528,7 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void buttonThoracoROM_Click(object sender, EventArgs e)
-		{
-			var thoracoROM = new ThoracoROM();
-			thoracoROM.ShowDialog();
-			textBoxThoracoROM.Text = GlobalVar.ExcelData[4][ThoracoROM.thoracoROM][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
+		
 
 		private void textBoxThoracoROM_TextChanged(object sender, EventArgs e)
 		{
@@ -1648,45 +1845,6 @@ namespace DVA_Compensation_Calculator
 
 		#region Right Arm
 
-		private void buttonRightElbow_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightElbow";
-			var elbow = new Elbow();
-			elbow.ShowDialog();
-			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightShoulder_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
 
 		private void buttonWholeRightArm_Click(object sender, EventArgs e)
 		{
@@ -2102,7 +2260,483 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var importantInformation = new ImportantInformation();
+			importantInformation.ShowDialog();
+		}
+
 		#endregion
 
+		private void buttonLeftKnee_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftKnee.BackgroundImage = Resources.Blank;
+			buttonRightKnee.BackgroundImage = Resources.Blank;
+			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
+		}
+
+		private void buttonLeftKnee_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
+			buttonRightKnee.BackgroundImage = Resources.RightKnee;
+			toolTip1.Hide(buttonRightKnee);
+		}
+
+		private void buttonRightKnee_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightKnee.BackgroundImage = Resources.RightKnee;
+			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
+			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
+		}
+
+		private void buttonRightKnee_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightKnee.BackgroundImage = Resources.Blank;
+			buttonLeftKnee.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightKnee);
+		}
+
+		private void buttonLeftKnee_Click(object sender, EventArgs e)
+		{
+			var knee = new Knee();
+			knee.ShowDialog();
+			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightKnee_Click(object sender, EventArgs e)
+		{
+			var knee = new Knee();
+			knee.ShowDialog();
+			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightHip_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightHip.BackgroundImage = Resources.RightHip;
+			buttonLeftHip.BackgroundImage = Resources.LeftHip;
+			toolTip1.Show("Hip", buttonRightHip, -27, 35, 10000);
+		}
+
+		private void buttonRightHip_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightHip.BackgroundImage = Resources.Blank;
+			buttonLeftHip.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightHip);
+		}
+
+		private void buttonLeftHip_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftHip.BackgroundImage = Resources.LeftHip;
+			buttonRightHip.BackgroundImage = Resources.RightHip;
+			toolTip1.Show("Hip", buttonRightHip, -27, 35, 10000);
+		}
+
+		private void buttonLeftHip_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftHip.BackgroundImage = Resources.Blank;
+			buttonRightHip.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightHip);
+		}
+
+		private void buttonLeftHip_Click(object sender, EventArgs e)
+		{
+			var hip = new Hip();
+			hip.ShowDialog();
+			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightHip_Click(object sender, EventArgs e)
+		{
+			var hip = new Hip();
+			hip.ShowDialog();
+			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftAnkle_Click(object sender, EventArgs e)
+		{
+			var ankle = new Ankle();
+			ankle.ShowDialog();
+			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftAnkle_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
+			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
+			toolTip1.Show("Ankle", buttonRightAnkle, 30, -10, 10000);
+		}
+
+		private void buttonLeftAnkle_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftAnkle.BackgroundImage = Resources.Blank;
+			buttonRightAnkle.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightAnkle);
+		}
+
+		private void buttonRightAnkle_Click(object sender, EventArgs e)
+		{
+			var ankle = new Ankle();
+			ankle.ShowDialog();
+			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightAnkle_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
+			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
+			toolTip1.Show("Ankle", buttonRightAnkle, 30, -10, 10000);
+		}
+
+		private void buttonRightAnkle_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightAnkle.BackgroundImage = Resources.Blank;
+			buttonLeftAnkle.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightAnkle);
+		}
+
+		private void buttonLeftToes_Click(object sender, EventArgs e)
+		{
+			var toes = new Toes();
+			toes.ShowDialog();
+			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftToes_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftToes.BackgroundImage = Resources.LeftToes;
+			buttonRightToes.BackgroundImage = Resources.RightToes;
+			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
+		}
+
+		private void buttonLeftToes_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftToes.BackgroundImage = Resources.Blank;
+			buttonRightToes.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightToes);
+		}
+
+		private void buttonRightToes_Click(object sender, EventArgs e)
+		{
+			var toes = new Toes();
+			toes.ShowDialog();
+			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightToes_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightToes.BackgroundImage = Resources.RightToes;
+			buttonLeftToes.BackgroundImage = Resources.LeftToes;
+			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
+		}
+
+		private void buttonRightToes_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightToes.BackgroundImage = Resources.Blank;
+			buttonLeftToes.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightToes);
+		}
+
+		private void buttonLeftElbow_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftElbow";
+			var ebow = new Elbow();
+			ebow.ShowDialog();
+			textBoxElbow.Text = GlobalVar.ExcelData[4][Elbow.LeftElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftElbow_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftElbow.BackgroundImage = Resources.LeftElbow;
+			toolTip1.Show("Elbow", buttonLeftElbow, -60, -10, 10000);
+		}
+
+		private void buttonLeftElbow_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftElbow.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftElbow);
+		}
+
+		private void buttonRightElbow_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightElbow";
+			var elbow = new Elbow();
+			elbow.ShowDialog();
+			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightElbow_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightElbow.BackgroundImage = Resources.RightElbow;
+			toolTip1.Show("Elbow", buttonRightElbow, 30, -10, 10000);
+		}
+
+		private void buttonRightElbow_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightElbow.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightElbow);
+		}
+
+		private void buttonLeftFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftFingers_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftFingers.BackgroundImage = Resources.LeftFingers;
+			toolTip1.Show("Fingers", buttonLeftFingers, -65, -10, 10000);
+		}
+
+		private void buttonLeftFingers_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftFingers.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftFingers);
+		}
+
+		private void buttonRightFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightFingers_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightFingers.BackgroundImage = Resources.RightFingers;
+			toolTip1.Show("Fingers", buttonRightFingers, 30, -10, 10000);
+		}
+
+		private void buttonRightFingers_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightFingers.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightFingers);
+		}
+
+		private void buttonLeftShoulder_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftShoulder_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftShoulder.BackgroundImage = Resources.LeftShoulder;
+			toolTip1.Show("Shoulder", buttonLeftShoulder, -65, -10, 10000);
+			
+		}
+
+		private void buttonLeftShoulder_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftShoulder.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftShoulder);
+		}
+
+		private void buttonRightShoulder_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightShoulder_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightShoulder.BackgroundImage = Resources.RightShoulder;
+			toolTip1.Show("Shoulder", buttonRightShoulder, 30, -10, 10000);
+		}
+
+		private void buttonRightShoulder_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightShoulder.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightShoulder);
+		}
+
+		private void buttonLeftWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftWrist_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftWrist.BackgroundImage = Resources.LeftWrist;
+			toolTip1.Show("Wrist", buttonLeftWrist, -60, -10, 10000);
+		}
+
+		private void buttonLeftWrist_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftWrist.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftWrist);
+		}
+
+		private void buttonRightWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightWrist_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightWrist.BackgroundImage = Resources.RightWrist;
+			toolTip1.Show("Wrist", buttonRightWrist, 30, -10, 10000);
+		}
+
+		private void buttonRightWrist_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightWrist.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightWrist);
+		}
+
+		private void buttonThoracoROM_Click(object sender, EventArgs e)
+		{
+			var thoracoROM = new ThoracoROM();
+			thoracoROM.ShowDialog();
+			textBoxThoracoROM.Text = GlobalVar.ExcelData[4][ThoracoROM.thoracoROM][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonThoracoROM_MouseEnter(object sender, EventArgs e)
+		{
+			buttonThoracoROM.BackgroundImage = Resources.Thoraco;
+			toolTip1.Show("Thoraco - Lumbar Spine", buttonThoracoROM, 30, -10, 10000);
+		}
+
+		private void buttonThoracoROM_MouseLeave(object sender, EventArgs e)
+		{
+			buttonThoracoROM.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonThoracoROM);
+		}
+
+		private void buttonCervical_MouseEnter(object sender, EventArgs e)
+		{
+			buttonCervical.BackgroundImage = Resources.Cervical;
+			toolTip1.Show("Cervical Spine", buttonCervical, 30, -10, 10000);
+		}
+
+		private void buttonCervical_MouseLeave(object sender, EventArgs e)
+		{
+			buttonCervical.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonCervical);
+		}
+
+		private void buttonThroat_MouseEnter(object sender, EventArgs e)
+		{
+			buttonThroat.BackgroundImage = Resources.Throat;
+			toolTip1.Show("Throat", buttonThroat, 30, -10, 10000);
+		}
+
+		private void buttonThroat_MouseLeave(object sender, EventArgs e)
+		{
+			buttonThroat.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonThroat);
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+		}
+
+		private void tabControl1_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
+		{
+			try
+			{
+				//This line of code will help you to change the apperance like size,name,style.
+				Font f;
+				//For background color
+				Brush backBrush;
+				//For forground color
+				Brush foreBrush;
+
+				//This construct will hell you to deside which tab page have current focus
+				//to change the style.
+				if (e.Index == this.tabControl1.SelectedIndex)
+				{
+					//This line of code will help you to change the apperance like size,name,style.
+					f = new Font(e.Font, FontStyle.Bold | FontStyle.Bold);
+					f = new Font(e.Font, FontStyle.Bold);
+
+					backBrush = new System.Drawing.SolidBrush(Color.FromArgb(255, 128, 128));
+					foreBrush = Brushes.Black;
+				}
+				else
+				{
+					f = e.Font;
+					backBrush = new SolidBrush(e.BackColor);
+					foreBrush = new SolidBrush(e.ForeColor);
+				}
+
+				//To set the alignment of the caption.
+				string tabName = this.tabControl1.TabPages[e.Index].Text;
+				StringFormat sf = new StringFormat();
+				sf.Alignment = StringAlignment.Center;
+
+				//Thsi will help you to fill the interior portion of
+				//selected tabpage.
+				e.Graphics.FillRectangle(backBrush, e.Bounds);
+				Rectangle r = e.Bounds;
+				r = new Rectangle(r.X, r.Y + 3, r.Width, r.Height - 3);
+				e.Graphics.DrawString(tabName, f, foreBrush, r, sf);
+
+				sf.Dispose();
+				if (e.Index == this.tabControl1.SelectedIndex)
+				{
+					f.Dispose();
+					backBrush.Dispose();
+				}
+				else
+				{
+					backBrush.Dispose();
+					foreBrush.Dispose();
+				}
+			}
+			catch (Exception Ex)
+			{
+				MessageBox.Show(Ex.Message.ToString(), "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			}
+
+		}
 	}
 }

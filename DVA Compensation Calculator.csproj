@@ -108,6 +108,12 @@
     <Compile Include="Back\Cervical.Designer.cs">
       <DependentUpon>Cervical.cs</DependentUpon>
     </Compile>
+    <Compile Include="CTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CTabControl.Designer.cs">
+      <DependentUpon>CTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EarNoseThroat\Throat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="LowerBody\Toes.Designer.cs">
       <DependentUpon>Toes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportantInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportantInformation.Designer.cs">
+      <DependentUpon>ImportantInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintSummary.cs">
       <SubType>Form</SubType>
@@ -306,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LowerBody\Toes.resx">
       <DependentUpon>Toes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportantInformation.resx">
+      <DependentUpon>ImportantInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintSummary.resx">
       <DependentUpon>PrintSummary.cs</DependentUpon>

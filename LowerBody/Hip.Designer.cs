@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hip));
 			this.pictureBoxCancel = new System.Windows.Forms.PictureBox();
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -64,17 +65,17 @@
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(109, 31);
+			this.label1.Location = new System.Drawing.Point(12, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(681, 170);
 			this.label1.TabIndex = 21;
-			this.label1.Text = "Select the one that best meets your situation.";
+			this.label1.Text = resources.GetString("label1.Text");
 			// 
 			// checkBoxOption6
 			// 
-			this.checkBoxOption6.Location = new System.Drawing.Point(40, 456);
+			this.checkBoxOption6.Location = new System.Drawing.Point(35, 531);
 			this.checkBoxOption6.Name = "checkBoxOption6";
-			this.checkBoxOption6.Size = new System.Drawing.Size(591, 42);
+			this.checkBoxOption6.Size = new System.Drawing.Size(415, 42);
 			this.checkBoxOption6.TabIndex = 27;
 			this.checkBoxOption6.Text = "Ankylosis in an unfavourable position, or a fail joint.";
 			this.checkBoxOption6.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(40, 167);
+			this.checkBoxOption2.Location = new System.Drawing.Point(35, 242);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 36);
 			this.checkBoxOption2.TabIndex = 26;
@@ -92,7 +93,7 @@
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(40, 303);
+			this.checkBoxOption4.Location = new System.Drawing.Point(35, 378);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 25;
@@ -102,7 +103,7 @@
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(40, 378);
+			this.checkBoxOption5.Location = new System.Drawing.Point(35, 453);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(591, 50);
 			this.checkBoxOption5.TabIndex = 24;
@@ -112,7 +113,7 @@
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(40, 233);
+			this.checkBoxOption3.Location = new System.Drawing.Point(35, 308);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 37);
 			this.checkBoxOption3.TabIndex = 23;
@@ -122,7 +123,7 @@
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(40, 107);
+			this.checkBoxOption1.Location = new System.Drawing.Point(35, 182);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
 			this.checkBoxOption1.TabIndex = 22;

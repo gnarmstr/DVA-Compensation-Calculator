@@ -24,5 +24,16 @@ namespace DVA_Compensation_Calculator
 		{
 			Close();
 		}
+
+		private void button1_MouseHover(object sender, EventArgs e)
+		{
+			button1.Text = "Left Arm";
+
+		}
+
+		private void button1_MouseLeave(object sender, EventArgs e)
+		{
+			button1.Text = "";
+		}
 	}
 }

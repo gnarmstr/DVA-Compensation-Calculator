@@ -169,4 +169,88 @@
   <data name="Range_of_Motion_Table3_5_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Range of Motion Table3.5.11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="human_bones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\human-bones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftAnkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftAnkle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftElbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftElbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftFingers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftFingers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftHip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftHip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftKnee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftKnee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftShoulder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftShoulder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftToes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftToes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftWrist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftWrist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightAnkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightAnkle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightElbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightElbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightFingers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightFingers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightHip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightHip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightKnee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightKnee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightShoulder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightShoulder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightToes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightToes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightWrist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightWrist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bones_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bones_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cervical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cervical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftEye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftEye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainBackground_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainBackground_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightEye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightEye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thoraco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Thoraco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Throat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Throat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

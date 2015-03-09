@@ -92,6 +92,37 @@
     <None Include="Resources\control_play_blue.png" />
     <None Include="Save.png" />
     <None Include="Range of Motion Table3.5.11.jpg" />
+    <None Include="Resources\human-bones.bmp" />
+    <None Include="Resources\human-bones.jpg" />
+    <None Include="Resources\human-bones.png" />
+    <None Include="Resources\LeftKnee.png" />
+    <None Include="Resources\RightKnee.png" />
+    <None Include="Resources\LeftHip.png" />
+    <None Include="Resources\RightHip.png" />
+    <None Include="Resources\LeftWrist.png" />
+    <None Include="Resources\RightWrist.png" />
+    <None Include="Resources\LeftToes.png" />
+    <None Include="Resources\RightToes.png" />
+    <None Include="Resources\LeftFingers.png" />
+    <None Include="Resources\RightFingers.png" />
+    <None Include="Resources\LeftElbow.png" />
+    <None Include="Resources\RightElbow.png" />
+    <None Include="Resources\LeftShoulder.png" />
+    <None Include="Resources\RightShoulder.png" />
+    <None Include="Resources\Blank.png" />
+    <None Include="Resources\RightAnkle.png" />
+    <None Include="Resources\LeftAnkle.png" />
+    <None Include="Resources\Thoraco.png" />
+    <None Include="Resources\Cervical.png" />
+    <None Include="Resources\Throat.png" />
+    <None Include="Resources\LeftEye.png" />
+    <None Include="Resources\RightEye.png" />
+    <None Include="Resources\Bones_Blue.png" />
+    <None Include="Resources\Button_Green.png" />
+    <None Include="Resources\Button_Red.png" />
+    <None Include="Resources\MainBackground_Green.jpg" />
+    <None Include="Resources\button_Blue.png" />
+    <None Include="Resources\MainBackground_Green.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

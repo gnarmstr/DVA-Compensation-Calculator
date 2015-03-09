@@ -143,7 +143,7 @@
 			this.MinimumSize = new System.Drawing.Size(727, 683);
 			this.Name = "ThoracoLumbar";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "Shoulder";
+			this.Text = "Thoraco - Lumbar";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();

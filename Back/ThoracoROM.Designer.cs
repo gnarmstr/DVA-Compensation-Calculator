@@ -37,13 +37,14 @@
 			this.pictureBoxCancel = new System.Windows.Forms.PictureBox();
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label79 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(31, 151);
+			this.checkBoxOption2.Location = new System.Drawing.Point(28, 191);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 36);
 			this.checkBoxOption2.TabIndex = 11;
@@ -53,7 +54,7 @@
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(31, 287);
+			this.checkBoxOption4.Location = new System.Drawing.Point(28, 327);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 9;
@@ -63,7 +64,7 @@
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(31, 359);
+			this.checkBoxOption5.Location = new System.Drawing.Point(28, 399);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(591, 50);
 			this.checkBoxOption5.TabIndex = 8;
@@ -73,7 +74,7 @@
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(31, 217);
+			this.checkBoxOption3.Location = new System.Drawing.Point(28, 257);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 37);
 			this.checkBoxOption3.TabIndex = 7;
@@ -83,7 +84,7 @@
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(31, 91);
+			this.checkBoxOption1.Location = new System.Drawing.Point(28, 131);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
 			this.checkBoxOption1.TabIndex = 6;
@@ -93,7 +94,7 @@
 			// 
 			// checkBoxOption6
 			// 
-			this.checkBoxOption6.Location = new System.Drawing.Point(31, 436);
+			this.checkBoxOption6.Location = new System.Drawing.Point(28, 476);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(591, 42);
 			this.checkBoxOption6.TabIndex = 13;
@@ -124,18 +125,29 @@
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(114, 21);
+			this.label1.Location = new System.Drawing.Point(113, 46);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(466, 42);
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
-			// Cervical
+			// label79
+			// 
+			this.label79.AutoSize = true;
+			this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label79.Location = new System.Drawing.Point(23, 9);
+			this.label79.Name = "label79";
+			this.label79.Size = new System.Drawing.Size(670, 25);
+			this.label79.TabIndex = 59;
+			this.label79.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: SPINAL MOVEMENT";
+			// 
+			// ThoracoROM
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.ClientSize = new System.Drawing.Size(705, 627);
+			this.Controls.Add(this.label79);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBoxCancel);
 			this.Controls.Add(this.pictureBoxOK);
@@ -147,13 +159,14 @@
 			this.Controls.Add(this.checkBoxOption1);
 			this.MaximumSize = new System.Drawing.Size(727, 683);
 			this.MinimumSize = new System.Drawing.Size(727, 683);
-			this.Name = "Cervical";
+			this.Name = "ThoracoROM";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "Shoulder";
+			this.Text = "Thoraco Spine Movement";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -168,5 +181,6 @@
 		public System.Windows.Forms.PictureBox pictureBoxCancel;
 		private System.Windows.Forms.PictureBox pictureBoxOK;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label79;
 	}
 }
