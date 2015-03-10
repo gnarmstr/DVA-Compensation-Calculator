@@ -120,25 +120,6 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="label114.Text" xml:space="preserve">
-    <value>NOTE: Select the body part you wish to be assessed on, also click on whole body type as DVA will take the highest of the two for each area.
-
-Select checkbox next to each point if condition was accepted as War Service.</value>
-  </data>
-  <data name="buttonWholeLimb.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
-  </data>
-  <data name="buttonWholeRightArm.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
-</value>
-  </data>
-  <data name="buttonWholeLeftArm.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
-</value>
-  </data>
   <data name="label67.Text" xml:space="preserve">
     <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.</value>
   </data>
@@ -158,10 +139,29 @@ then included in both monocular assessments.</value>
 criterion resulting in the higher or highest monocular assessment is to be chosen. The single assessment is
 then included in both monocular assessments.</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="label114.Text" xml:space="preserve">
+    <value>NOTE: Select the body part you wish to be assessed on, also click on whole body type as DVA will take the highest of the two for each area.
+
+Select checkbox next to each point if condition was accepted as War Service.</value>
+  </data>
+  <data name="buttonWholeLimb.ToolTip" xml:space="preserve">
+    <value>The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement.
+The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
+  </data>
+  <data name="buttonWholeRightArm.ToolTip" xml:space="preserve">
+    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
+The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
+</value>
+  </data>
+  <data name="buttonWholeLeftArm.ToolTip" xml:space="preserve">
+    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
+The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
+</value>
+  </data>
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>69</value>
   </metadata>
 </root>

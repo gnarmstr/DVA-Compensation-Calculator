@@ -83,6 +83,16 @@ namespace Common.Resources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Background_Blue {
+            get {
+                object obj = ResourceManager.GetObject("Background_Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Blank {
             get {
                 object obj = ResourceManager.GetObject("Blank", resourceCulture);
@@ -163,6 +173,16 @@ namespace Common.Resources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Close {
+            get {
+                object obj = ResourceManager.GetObject("Close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -196,6 +216,16 @@ namespace Common.Resources.Properties {
         public static System.Drawing.Bitmap LeftAnkle {
             get {
                 object obj = ResourceManager.GetObject("LeftAnkle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap LeftEar {
+            get {
+                object obj = ResourceManager.GetObject("LeftEar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +323,16 @@ namespace Common.Resources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Nose {
+            get {
+                object obj = ResourceManager.GetObject("Nose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Ok {
             get {
                 object obj = ResourceManager.GetObject("Ok", resourceCulture);
@@ -326,6 +366,16 @@ namespace Common.Resources.Properties {
         public static System.Drawing.Bitmap RightAnkle {
             get {
                 object obj = ResourceManager.GetObject("RightAnkle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap RightEar {
+            get {
+                object obj = ResourceManager.GetObject("RightEar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

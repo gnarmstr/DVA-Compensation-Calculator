@@ -223,6 +223,9 @@
   <data name="RightWrist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RightWrist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bones_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bones_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,6 +241,9 @@
   <data name="Cervical" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cervical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LeftEye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LeftEye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -252,5 +258,14 @@
   </data>
   <data name="Throat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Throat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftEar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftEar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightEar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightEar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

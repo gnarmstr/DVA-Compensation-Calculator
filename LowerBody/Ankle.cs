@@ -19,6 +19,7 @@ namespace DVA_Compensation_Calculator
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
+			BackgroundImage = Resources.Background_Blue;
 		}
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)

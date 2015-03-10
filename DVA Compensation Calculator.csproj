@@ -270,6 +270,12 @@
     <Compile Include="LifeStyle\PersonalRelationships.Designer.cs">
       <DependentUpon>PersonalRelationships.cs</DependentUpon>
     </Compile>
+    <Compile Include="DVALinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DVALinks.Designer.cs">
+      <DependentUpon>DVALinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="XmlProfileSettings.cs" />
     <Compile Include="GlobalVar.cs" />
     <Compile Include="MainForm.cs">
@@ -376,6 +382,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DVALinks.resx">
+      <DependentUpon>DVALinks.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

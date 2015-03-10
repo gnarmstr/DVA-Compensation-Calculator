@@ -44,67 +44,80 @@
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(17, 234);
+			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption2.Location = new System.Drawing.Point(17, 253);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 36);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Loss of about one-quarter normal range of movement.";
-			this.checkBoxOption2.UseVisualStyleBackColor = true;
+			this.checkBoxOption2.UseVisualStyleBackColor = false;
 			this.checkBoxOption2.CheckedChanged += new System.EventHandler(this.checkBoxOption2_CheckedChanged);
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(17, 370);
+			this.checkBoxOption4.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption4.Location = new System.Drawing.Point(17, 389);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 9;
 			this.checkBoxOption4.Text = "Loss of about three-quarters normal range of movement.";
-			this.checkBoxOption4.UseVisualStyleBackColor = true;
+			this.checkBoxOption4.UseVisualStyleBackColor = false;
 			this.checkBoxOption4.CheckedChanged += new System.EventHandler(this.checkBoxOption4_CheckedChanged);
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(17, 445);
+			this.checkBoxOption5.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption5.Location = new System.Drawing.Point(17, 464);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(591, 50);
 			this.checkBoxOption5.TabIndex = 8;
 			this.checkBoxOption5.Text = "Loss of almost all movement, or complete ankylosis in position of function.";
-			this.checkBoxOption5.UseVisualStyleBackColor = true;
+			this.checkBoxOption5.UseVisualStyleBackColor = false;
 			this.checkBoxOption5.CheckedChanged += new System.EventHandler(this.checkBoxOption5_CheckedChanged);
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(17, 300);
+			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption3.Location = new System.Drawing.Point(17, 319);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 37);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Loss of about one-half normal range of movement.";
-			this.checkBoxOption3.UseVisualStyleBackColor = true;
+			this.checkBoxOption3.UseVisualStyleBackColor = false;
 			this.checkBoxOption3.CheckedChanged += new System.EventHandler(this.checkBoxOption3_CheckedChanged);
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(17, 174);
+			this.checkBoxOption1.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption1.Location = new System.Drawing.Point(17, 193);
 			this.checkBoxOption1.Name = "checkBoxOption1";
-			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
+			this.checkBoxOption1.Size = new System.Drawing.Size(638, 38);
 			this.checkBoxOption1.TabIndex = 6;
 			this.checkBoxOption1.Text = "No abnormality. X-ray changes only with normal range of movement.";
-			this.checkBoxOption1.UseVisualStyleBackColor = true;
+			this.checkBoxOption1.UseVisualStyleBackColor = false;
 			this.checkBoxOption1.CheckedChanged += new System.EventHandler(this.checkBoxOption1_CheckedChanged);
 			// 
 			// checkBoxOption6
 			// 
-			this.checkBoxOption6.Location = new System.Drawing.Point(17, 515);
+			this.checkBoxOption6.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxOption6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBoxOption6.Location = new System.Drawing.Point(17, 534);
 			this.checkBoxOption6.Name = "checkBoxOption6";
-			this.checkBoxOption6.Size = new System.Drawing.Size(426, 42);
+			this.checkBoxOption6.Size = new System.Drawing.Size(426, 55);
 			this.checkBoxOption6.TabIndex = 13;
 			this.checkBoxOption6.Text = "Ankylosis in an unfavourable position, or a flail joint.";
-			this.checkBoxOption6.UseVisualStyleBackColor = true;
+			this.checkBoxOption6.UseVisualStyleBackColor = false;
 			this.checkBoxOption6.CheckedChanged += new System.EventHandler(this.checkBoxOption6_CheckedChanged);
 			// 
 			// pictureBoxCancel
 			// 
-			this.pictureBoxCancel.Location = new System.Drawing.Point(594, 526);
+			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBoxCancel.Location = new System.Drawing.Point(603, 535);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -114,7 +127,8 @@
 			// 
 			// pictureBoxOK
 			// 
-			this.pictureBoxOK.Location = new System.Drawing.Point(470, 526);
+			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBoxOK.Location = new System.Drawing.Point(479, 535);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -124,8 +138,9 @@
 			// 
 			// label1
 			// 
+			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Location = new System.Drawing.Point(12, 28);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(681, 162);
 			this.label1.TabIndex = 21;
@@ -136,6 +151,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(705, 627);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBoxCancel);

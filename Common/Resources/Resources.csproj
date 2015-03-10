@@ -123,6 +123,11 @@
     <None Include="Resources\MainBackground_Green.jpg" />
     <None Include="Resources\button_Blue.png" />
     <None Include="Resources\MainBackground_Green.png" />
+    <None Include="Resources\Background_Blue.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\RightEar.png" />
+    <None Include="Resources\Nose.png" />
+    <None Include="Resources\LeftEar.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

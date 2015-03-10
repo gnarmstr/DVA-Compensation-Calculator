@@ -35,7 +35,6 @@ namespace DVA_Compensation_Calculator
 		{
 			InitializeComponent();
 			Settings();
-			DVALinks();
 			getLifeStyleWar();
 			getLifeStylePeace();
 			getActuaryTable();
@@ -55,8 +54,8 @@ namespace DVA_Compensation_Calculator
 		#region Settings
 		private void Settings()
 		{
-			MinimumSize = new Size(725, 790);
-			MaximumSize = new Size(725, 790);
+			MinimumSize = new Size(1450, 790);
+			MaximumSize = new Size(1450, 790);
 			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVA Compensation Calculator");
 			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
 			GlobalVar.ExcelData = new[] { GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue, GlobalVar.LimbsAgeAdjust };
@@ -71,16 +70,22 @@ namespace DVA_Compensation_Calculator
 
 			GlobalVar.startup = true;
 
-			tabPagePersonalDetails.BackgroundImage = Tools.ResizeImage(Resources.Bones_Blue, 700, 430);
+			panelMainPoints.BackgroundImage = Resources.Bones_Blue;
 			BackgroundImage = Resources.MainBackground_Green;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			buttonImportantInfo.BackgroundImage = Resources.button_Blue;
+			buttonDVALinks.BackgroundImage = Resources.button_Blue;
+			buttonLifeStyle.BackgroundImage = Resources.button_Blue;
 			buttonROMInfo.BackgroundImage = Resources.button_Blue;
 			buttonThoraco.BackgroundImage = Resources.Button_Green;
 			buttonWholeLeftArm.BackgroundImage = Resources.Button_Green;
 			buttonJointPain.BackgroundImage = Resources.Button_Green;
 			buttonWholeLimb.BackgroundImage = Resources.Button_Green;
 			buttonWholeRightArm.BackgroundImage = Resources.Button_Green;
+			pictureBoxClose.BackgroundImage = Resources.Close;
+			buttonMainTitle.BackgroundImage = Resources.button_Blue;
+			buttonLeftEye.BackgroundImage = Resources.LeftEye;
+			buttonRightEye.BackgroundImage = Resources.RightEye;
 			buttonLeftKnee.FlatStyle = FlatStyle.Flat;
 			buttonRightKnee.FlatStyle = FlatStyle.Flat;
 			buttonLeftHip.FlatStyle = FlatStyle.Flat;
@@ -100,179 +105,17 @@ namespace DVA_Compensation_Calculator
 			buttonThoracoROM.FlatStyle = FlatStyle.Flat;
 			buttonCervical.FlatStyle = FlatStyle.Flat;
 			buttonThroat.FlatStyle = FlatStyle.Flat;
+			buttonLeftEye.FlatStyle = FlatStyle.Flat;
+			buttonRightEye.FlatStyle = FlatStyle.Flat;
+			buttonLeftEar.FlatStyle = FlatStyle.Flat;
+			buttonRightEar.FlatStyle = FlatStyle.Flat;
+			buttonNose.FlatStyle = FlatStyle.Flat;
+			buttonRightEye.BackgroundImage = Resources.Blank;
+			buttonLeftEye.BackgroundImage = Resources.Blank;
 
 			textBoxKnee.Visible = false;
 
 		}
-		#endregion
-
-		#region DVA LINKS
-
-		private void DVALinks()
-		{
-			var linkAll = new LinkLabel.Link();
-			linkAll.LinkData = @"http://factsheets.dva.gov.au/plain-facts-htm.htm";
-			linkLabelAllSheets.Links.Add(linkAll);
-			var link = new LinkLabel.Link();
-			link.LinkData = @"http://www.comlaw.gov.au/Details/F2013C00479/Download";
-			linkLabel.Links.Add(link);
-			var link1 = new LinkLabel.Link();
-			link1.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC01%20Overview.pdf";
-			linkLabel1.Links.Add(link1);
-			var link2 = new LinkLabel.Link();
-			link2.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC02%20Compensation%20coverage%20for%20members%20and%20former%20members%20of%20the%20australian%20defence%20force.pdf";
-			linkLabel2.Links.Add(link2);
-			var link3 = new LinkLabel.Link();
-			link3.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC03%20Types%20of%20MRCA%20service.pdf";
-			linkLabel3.Links.Add(link3);
-			var link4 = new LinkLabel.Link();
-			link4.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC04%20Compensation%20Payment%20Rates.pdf";
-			linkLabel4.Links.Add(link4);
-			var link5 = new LinkLabel.Link();
-			link5.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC05%20Rehabilitation.pdf";
-			linkLabel5.Links.Add(link5);
-			var link7 = new LinkLabel.Link();
-			link7.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC07%20Permanent%20Impairment%20Compensation%20Payments.htm";
-			linkLabel7.Links.Add(link7);
-			var link8 = new LinkLabel.Link();
-			link8.LinkData = @"http://factsheets.dva.gov.au/documents/MRC08%20Incapacity%20Payments.pdf";
-			linkLabel8.Links.Add(link8);
-			var link9 = new LinkLabel.Link();
-			link9.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC09%20Special%20Rate%20DP%20Safety%20Net%20Payment.htm";
-			linkLabel9.Links.Add(link9);
-			var link10 = new LinkLabel.Link();
-			link10.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC10%20MVCS.pdf";
-			linkLabel10.Links.Add(link10);
-			var link14 = new LinkLabel.Link();
-			link14.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC14%20Partners.htm";
-			linkLabel14.Links.Add(link14);
-			var link15 = new LinkLabel.Link();
-			link15.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC15%20Eligible%20Young%20Persons.htm";
-			linkLabel15.Links.Add(link15);
-			var link20 = new LinkLabel.Link();
-			link20.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC20%20Permanent%20Impairment%20Payment%20Choices.htm";
-			linkLabel20.Links.Add(link20);
-			var link25 = new LinkLabel.Link();
-			link25.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC25%20How%20to%20lodge%20a%20claim.htm";
-			linkLabel25.Links.Add(link25);
-			var link27 = new LinkLabel.Link();
-			link27.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC27%20Recon%20and%20Review.htm";
-			linkLabel27.Links.Add(link27);
-			var link29 = new LinkLabel.Link();
-			link29.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC29%20Actuary%20Tables.htm";
-			linkLabel29.Links.Add(link29);
-			var link33 = new LinkLabel.Link();
-			link33.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC33%20%20Common%20Law%20injuries%20and%20diseases.htm";
-			linkLabel33.Links.Add(link33);
-			var link34 = new LinkLabel.Link();
-			link34.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC34%20Needs%20Assessment.htm";
-			linkLabel34.Links.Add(link34);
-			var link6 = new LinkLabel.Link();
-			link6.LinkData = @"http://dva.gov.au/dvaforms";
-			linkLabel6.Links.Add(link6);
-		}
-
-		private void linkLabelAllSheets_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-
-		}
-
-		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel25_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel27_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel29_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel33_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel34_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
-		private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(e.Link.LinkData as string);
-		}
-
 		#endregion
 
 		// Add to this when adding new injury types
@@ -1281,6 +1124,42 @@ namespace DVA_Compensation_Calculator
 				checkBoxThroatWar.Visible = false;
 				labelThroat.Visible = false;
 			}
+			if (textBoxNose.Text != "0")
+			{
+				textBoxNose.Visible = true;
+				checkBoxNoseWar.Visible = true;
+				labelNose.Visible = true;
+			}
+			else
+			{
+				textBoxNose.Visible = false;
+				checkBoxNoseWar.Visible = false;
+				labelNose.Visible = false;
+			}
+			if (textBoxEars.Text != "0")
+			{
+				textBoxEars.Visible = true;
+				checkBoxEarsWar.Visible = true;
+				labelHearingLoss.Visible = true;
+			}
+			else
+			{
+				textBoxEars.Visible = false;
+				checkBoxEarsWar.Visible = false;
+				labelHearingLoss.Visible = false;
+			}
+			if (textBoxTinnitus.Text != "0")
+			{
+				textBoxTinnitus.Visible = true;
+				checkBoxTinnitusWar.Visible = true;
+				labelTinnitus.Visible = true;
+			}
+			else
+			{
+				textBoxTinnitus.Visible = false;
+				checkBoxTinnitusWar.Visible = false;
+				labelTinnitus.Visible = false;
+			}
 			
 		}
 
@@ -2272,14 +2151,14 @@ namespace DVA_Compensation_Calculator
 		{
 			buttonLeftKnee.BackgroundImage = Resources.Blank;
 			buttonRightKnee.BackgroundImage = Resources.Blank;
-			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
+			toolTip1.Hide(buttonRightKnee);
 		}
 
 		private void buttonLeftKnee_MouseEnter(object sender, EventArgs e)
 		{
 			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
 			buttonRightKnee.BackgroundImage = Resources.RightKnee;
-			toolTip1.Hide(buttonRightKnee);
+			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
 		}
 
 		private void buttonRightKnee_MouseEnter(object sender, EventArgs e)
@@ -2697,7 +2576,7 @@ namespace DVA_Compensation_Calculator
 					f = new Font(e.Font, FontStyle.Bold | FontStyle.Bold);
 					f = new Font(e.Font, FontStyle.Bold);
 
-					backBrush = new System.Drawing.SolidBrush(Color.FromArgb(255, 128, 128));
+					backBrush = new System.Drawing.SolidBrush(Color.YellowGreen);
 					foreBrush = Brushes.Black;
 				}
 				else
@@ -2738,5 +2617,124 @@ namespace DVA_Compensation_Calculator
 			}
 
 		}
+
+		public static bool dragging;
+
+		public static int offsetX;
+
+		public static int offsetY;
+
+		private void pictureBoxClose_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				dragging = true;
+				offsetX = e.X;
+				offsetY = e.Y;
+			}
+		}
+
+		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (dragging)
+			{
+				Left = e.X + Left - offsetX;
+				Top = e.Y + Top - offsetY;
+			}
+		}
+
+		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				dragging = false;
+			}
+		}
+
+		private void buttonDVALinks_Click(object sender, EventArgs e)
+		{
+			var dVALinks = new DVALinks();
+			dVALinks.ShowDialog();
+		}
+
+		private void buttonLeftEye_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftEye.BackgroundImage = Resources.LeftEye;
+			toolTip1.Show("Eye", buttonLeftEye, -55, -10, 10000);
+		}
+
+		private void buttonLeftEye_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftEye.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftEye);
+		}
+
+		private void buttonRightEye_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightEye.BackgroundImage = Resources.RightEye;
+			toolTip1.Show("Eye", buttonRightEye, 30, -10, 10000);
+		}
+
+		private void buttonRightEye_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightEye.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightEye);
+		}
+
+		private void buttonLeftEar_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void buttonLeftEar_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftEar.BackgroundImage = Resources.LeftEar;
+			buttonRightEar.BackgroundImage = Resources.RightEar;
+			toolTip1.Show("Hearing", buttonLeftEar, -65, -10, 10000);
+		}
+
+		private void buttonLeftEar_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightEar.BackgroundImage = Resources.Blank;
+			buttonLeftEar.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightEar);
+		}
+
+		private void buttonRightEar_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void buttonRightEar_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightEar.BackgroundImage = Resources.RightEar;
+			buttonLeftEar.BackgroundImage = Resources.LeftEar;
+			toolTip1.Show("Hearing", buttonRightEar, 30, -10, 10000);
+		}
+
+		private void buttonRightEar_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightEar.BackgroundImage = Resources.Blank;
+			buttonLeftEar.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightEar);
+		}
+
+		private void buttonNose_MouseEnter(object sender, EventArgs e)
+		{
+			buttonNose.BackgroundImage = Resources.Nose;
+			toolTip1.Show("Nose", buttonNose, 50, -10, 10000);
+		}
+
+		private void buttonNose_MouseLeave(object sender, EventArgs e)
+		{
+			buttonNose.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonNose);
+		}
+
 	}
 }
