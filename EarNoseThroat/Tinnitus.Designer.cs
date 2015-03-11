@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tinnitus));
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption3 = new System.Windows.Forms.CheckBox();
@@ -42,7 +43,7 @@
 			// 
 			// checkBoxOption2
 			// 
-			this.checkBoxOption2.Location = new System.Drawing.Point(31, 113);
+			this.checkBoxOption2.Location = new System.Drawing.Point(31, 270);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 60);
 			this.checkBoxOption2.TabIndex = 11;
@@ -52,7 +53,7 @@
 			// 
 			// checkBoxOption4
 			// 
-			this.checkBoxOption4.Location = new System.Drawing.Point(31, 242);
+			this.checkBoxOption4.Location = new System.Drawing.Point(31, 399);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 9;
@@ -63,7 +64,7 @@
 			// 
 			// checkBoxOption3
 			// 
-			this.checkBoxOption3.Location = new System.Drawing.Point(31, 163);
+			this.checkBoxOption3.Location = new System.Drawing.Point(31, 320);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 75);
 			this.checkBoxOption3.TabIndex = 7;
@@ -73,7 +74,7 @@
 			// 
 			// checkBoxOption1
 			// 
-			this.checkBoxOption1.Location = new System.Drawing.Point(31, 66);
+			this.checkBoxOption1.Location = new System.Drawing.Point(31, 223);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
 			this.checkBoxOption1.TabIndex = 6;
@@ -83,7 +84,7 @@
 			// 
 			// pictureBoxCancel
 			// 
-			this.pictureBoxCancel.Location = new System.Drawing.Point(585, 370);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(603, 496);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -93,7 +94,7 @@
 			// 
 			// pictureBoxOK
 			// 
-			this.pictureBoxOK.Location = new System.Drawing.Point(461, 370);
+			this.pictureBoxOK.Location = new System.Drawing.Point(494, 496);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -104,17 +105,17 @@
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(114, 21);
+			this.label1.Location = new System.Drawing.Point(17, 19);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(676, 187);
 			this.label1.TabIndex = 21;
-			this.label1.Text = "Select the one that best meets your situation.";
+			this.label1.Text = resources.GetString("label1.Text");
 			// 
 			// checkBoxOption5
 			// 
-			this.checkBoxOption5.Location = new System.Drawing.Point(31, 312);
+			this.checkBoxOption5.Location = new System.Drawing.Point(31, 469);
 			this.checkBoxOption5.Name = "checkBoxOption5";
-			this.checkBoxOption5.Size = new System.Drawing.Size(591, 47);
+			this.checkBoxOption5.Size = new System.Drawing.Size(436, 83);
 			this.checkBoxOption5.TabIndex = 22;
 			this.checkBoxOption5.Text = "Very severe tinnitus, present every day, causing distraction, loss of concentrati" +
     "on and extreme discomfort, and regularly interfering with sleep.";
@@ -126,7 +127,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.ClientSize = new System.Drawing.Size(705, 474);
+			this.ClientSize = new System.Drawing.Size(705, 594);
 			this.Controls.Add(this.checkBoxOption5);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBoxCancel);
@@ -135,8 +136,8 @@
 			this.Controls.Add(this.checkBoxOption4);
 			this.Controls.Add(this.checkBoxOption3);
 			this.Controls.Add(this.checkBoxOption1);
-			this.MaximumSize = new System.Drawing.Size(727, 530);
-			this.MinimumSize = new System.Drawing.Size(727, 530);
+			this.MaximumSize = new System.Drawing.Size(727, 650);
+			this.MinimumSize = new System.Drawing.Size(727, 650);
 			this.Name = "Tinnitus";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Tinnitus";

@@ -128,6 +128,11 @@
     <None Include="Resources\RightEar.png" />
     <None Include="Resources\Nose.png" />
     <None Include="Resources\LeftEar.png" />
+    <None Include="Resources\human-bones_Small.jpg" />
+    <None Include="Resources\Bones_Blue_Small.jpg" />
+    <None Include="Resources\button_Blue_Small.png" />
+    <None Include="Resources\MainBackground_Green_Small.jpg" />
+    <None Include="Resources\MainBackground_Green_Small.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

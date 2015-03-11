@@ -108,12 +108,6 @@
     <Compile Include="Back\Cervical.Designer.cs">
       <DependentUpon>Cervical.cs</DependentUpon>
     </Compile>
-    <Compile Include="CTabControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CTabControl.Designer.cs">
-      <DependentUpon>CTabControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="EarNoseThroat\Throat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +131,24 @@
     </Compile>
     <Compile Include="EarNoseThroat\Tinnitus.Designer.cs">
       <DependentUpon>Tinnitus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eyes\RightEye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eyes\RightEye.Designer.cs">
+      <DependentUpon>RightEye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eyes\LeftEye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eyes\LeftEye.Designer.cs">
+      <DependentUpon>LeftEye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LifeStyle\LifeStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LifeStyle\LifeStyle.Designer.cs">
+      <DependentUpon>LifeStyle.cs</DependentUpon>
     </Compile>
     <Compile Include="Eyes\OcularImpairment.cs">
       <SubType>Form</SubType>
@@ -303,6 +315,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EarNoseThroat\Tinnitus.resx">
       <DependentUpon>Tinnitus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eyes\RightEye.resx">
+      <DependentUpon>RightEye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eyes\LeftEye.resx">
+      <DependentUpon>LeftEye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LifeStyle\LifeStyle.resx">
+      <DependentUpon>LifeStyle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eyes\OcularImpairment.resx">
       <DependentUpon>OcularImpairment.cs</DependentUpon>

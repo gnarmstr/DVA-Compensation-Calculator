@@ -117,12 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Note: This checklist is only to be used for the injury type above. Any other form of Hearing damage/loss then the formluars can be complicated and as it will take into account hearing damage/loss at different frequencies and therefore I have not included this in the program.</value>
+  <data name="label100.Text" xml:space="preserve">
+    <value>All assessments of visual acuity are to be based on corrected visual acuity, that is, the visual acuity as measured when the veteran is wearing glasses or contact lenses correctly prescribed. No additional impairment rating is to be given for the need to wear corrective lenses.</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.
-
-Select the one that best meets your situation.</value>
+  <data name="label97.Text" xml:space="preserve">
+    <value>* In applying the above table, if the veteran’s visual acuity in either eye is such that he or she is only capable of counting fingers or of perceiving the difference between light and darkness with that eye, then he or she is to be taken as “blind” in the eye so affected.</value>
   </data>
 </root>

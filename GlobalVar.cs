@@ -70,5 +70,40 @@ namespace DVA_Compensation_Calculator
 
 		public static int EyeConversaion;
 
+		public static string FinalLifeStylePoint;
+
+		public static string personalRelationships;
+
+		public static string Mobility;
+
+		public static string RecreationalActivities;
+
+		public static string DomesticActivities;
+
+		public static string EmploymentActivities;
+
+		public static int EyeWar;
+
+		public static int LeftEyeConversion;
+
+		public static int RightEyeConversion;
+
+		public static string LeftVisualFOL;
+
+		public static string RightVisualFOL;
+
+		public static string LeftMonocular;
+
+		public static string RightMonocular;
+
+		public static string LeftOtherOcular;
+
+		public static string RightOtherOcular;
+
+		public static string LeftMiscVisual;
+
+		public static string RightMiscVisual;
+
+
 	}
 }

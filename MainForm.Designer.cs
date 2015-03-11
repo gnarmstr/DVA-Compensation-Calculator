@@ -34,99 +34,14 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBoxLumpSumPayout = new System.Windows.Forms.TextBox();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPageHearing = new System.Windows.Forms.TabPage();
 			this.checkBoxNoseWar = new System.Windows.Forms.CheckBox();
 			this.textBoxNose = new System.Windows.Forms.TextBox();
-			this.groupBox8 = new System.Windows.Forms.GroupBox();
 			this.checkBoxEarsWar = new System.Windows.Forms.CheckBox();
-			this.label69 = new System.Windows.Forms.Label();
 			this.buttonEars = new System.Windows.Forms.Button();
-			this.label70 = new System.Windows.Forms.Label();
 			this.textBoxEars = new System.Windows.Forms.TextBox();
-			this.label71 = new System.Windows.Forms.Label();
-			this.label67 = new System.Windows.Forms.Label();
-			this.groupBox7 = new System.Windows.Forms.GroupBox();
 			this.checkBoxTinnitusWar = new System.Windows.Forms.CheckBox();
-			this.label48 = new System.Windows.Forms.Label();
 			this.buttonTinnitus = new System.Windows.Forms.Button();
-			this.label64 = new System.Windows.Forms.Label();
 			this.textBoxTinnitus = new System.Windows.Forms.TextBox();
-			this.label65 = new System.Windows.Forms.Label();
-			this.label66 = new System.Windows.Forms.Label();
-			this.tabPageVisual = new System.Windows.Forms.TabPage();
-			this.groupBox16 = new System.Windows.Forms.GroupBox();
-			this.label107 = new System.Windows.Forms.Label();
-			this.buttonRightVisualFOL = new System.Windows.Forms.Button();
-			this.checkBoxRightVisualFOLWar = new System.Windows.Forms.CheckBox();
-			this.label108 = new System.Windows.Forms.Label();
-			this.textBoxRightVisualFOL = new System.Windows.Forms.TextBox();
-			this.label109 = new System.Windows.Forms.Label();
-			this.label110 = new System.Windows.Forms.Label();
-			this.textBoxLeftVisualFOL = new System.Windows.Forms.TextBox();
-			this.label111 = new System.Windows.Forms.Label();
-			this.checkBoxLeftVisualFOLWar = new System.Windows.Forms.CheckBox();
-			this.buttonLeftVisualFOL = new System.Windows.Forms.Button();
-			this.label112 = new System.Windows.Forms.Label();
-			this.groupBox15 = new System.Windows.Forms.GroupBox();
-			this.label100 = new System.Windows.Forms.Label();
-			this.label97 = new System.Windows.Forms.Label();
-			this.comboBoxLeftMonocular = new System.Windows.Forms.ComboBox();
-			this.comboBoxRightMonocular = new System.Windows.Forms.ComboBox();
-			this.label104 = new System.Windows.Forms.Label();
-			this.checkBoxRightMonocularWar = new System.Windows.Forms.CheckBox();
-			this.label105 = new System.Windows.Forms.Label();
-			this.textBoxRightMonocular = new System.Windows.Forms.TextBox();
-			this.label106 = new System.Windows.Forms.Label();
-			this.label101 = new System.Windows.Forms.Label();
-			this.textBoxLeftMonocular = new System.Windows.Forms.TextBox();
-			this.label102 = new System.Windows.Forms.Label();
-			this.checkBoxLeftMonocularWar = new System.Windows.Forms.CheckBox();
-			this.label103 = new System.Windows.Forms.Label();
-			this.groupBox13 = new System.Windows.Forms.GroupBox();
-			this.label90 = new System.Windows.Forms.Label();
-			this.buttonRightOtherOcular = new System.Windows.Forms.Button();
-			this.checkBoxRightOtherOcularWar = new System.Windows.Forms.CheckBox();
-			this.label95 = new System.Windows.Forms.Label();
-			this.textBoxRightOtherOcular = new System.Windows.Forms.TextBox();
-			this.label96 = new System.Windows.Forms.Label();
-			this.label87 = new System.Windows.Forms.Label();
-			this.buttonLeftOtherOcular = new System.Windows.Forms.Button();
-			this.checkBoxLeftOtherOcularWar = new System.Windows.Forms.CheckBox();
-			this.label88 = new System.Windows.Forms.Label();
-			this.textBoxLeftOtherOcular = new System.Windows.Forms.TextBox();
-			this.label89 = new System.Windows.Forms.Label();
-			this.groupBox14 = new System.Windows.Forms.GroupBox();
-			this.comboBoxRightMiscVisual = new System.Windows.Forms.ComboBox();
-			this.comboBoxLeftMiscVisual = new System.Windows.Forms.ComboBox();
-			this.label91 = new System.Windows.Forms.Label();
-			this.checkBoxRightMiscVisualWar = new System.Windows.Forms.CheckBox();
-			this.label92 = new System.Windows.Forms.Label();
-			this.textBoxRightMiscVisual = new System.Windows.Forms.TextBox();
-			this.label93 = new System.Windows.Forms.Label();
-			this.label94 = new System.Windows.Forms.Label();
-			this.textBoxLeftMiscVisual = new System.Windows.Forms.TextBox();
-			this.label98 = new System.Windows.Forms.Label();
-			this.checkBoxLeftMiscVisualWar = new System.Windows.Forms.CheckBox();
-			this.label99 = new System.Windows.Forms.Label();
-			this.tabPageLifeStyle = new System.Windows.Forms.TabPage();
-			this.buttonEmploymentActivities = new System.Windows.Forms.Button();
-			this.textBoxEmploymentActivities = new System.Windows.Forms.TextBox();
-			this.label26 = new System.Windows.Forms.Label();
-			this.buttonMobility = new System.Windows.Forms.Button();
-			this.buttonRecreationalActivities = new System.Windows.Forms.Button();
-			this.buttonDomesticActivities = new System.Windows.Forms.Button();
-			this.buttonPersonalRelationships = new System.Windows.Forms.Button();
-			this.label20 = new System.Windows.Forms.Label();
-			this.label21 = new System.Windows.Forms.Label();
-			this.textBoxPersonalRelationships = new System.Windows.Forms.TextBox();
-			this.label22 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.textBoxDomesticActivities = new System.Windows.Forms.TextBox();
-			this.textBoxRecreationalActivities = new System.Windows.Forms.TextBox();
-			this.label24 = new System.Windows.Forms.Label();
-			this.label25 = new System.Windows.Forms.Label();
-			this.textBoxMobility = new System.Windows.Forms.TextBox();
 			this.labelThroat = new System.Windows.Forms.Label();
 			this.checkBoxThroatWar = new System.Windows.Forms.CheckBox();
 			this.buttonThroat = new System.Windows.Forms.Button();
@@ -227,26 +142,30 @@
 			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			this.buttonMainTitle = new System.Windows.Forms.Button();
 			this.panelMainPoints = new System.Windows.Forms.Panel();
-			this.buttonLifeStyle = new System.Windows.Forms.Button();
-			this.buttonDVALinks = new System.Windows.Forms.Button();
-			this.buttonLeftEye = new System.Windows.Forms.Button();
-			this.buttonRightEye = new System.Windows.Forms.Button();
+			this.labelTinnitus = new System.Windows.Forms.Label();
+			this.labelHearingLoss = new System.Windows.Forms.Label();
+			this.labelNose = new System.Windows.Forms.Label();
+			this.buttonNose = new System.Windows.Forms.Button();
 			this.buttonRightEar = new System.Windows.Forms.Button();
 			this.buttonLeftEar = new System.Windows.Forms.Button();
-			this.buttonNose = new System.Windows.Forms.Button();
-			this.labelNose = new System.Windows.Forms.Label();
-			this.labelHearingLoss = new System.Windows.Forms.Label();
-			this.labelTinnitus = new System.Windows.Forms.Label();
-			this.tabControl1.SuspendLayout();
-			this.tabPageHearing.SuspendLayout();
-			this.groupBox8.SuspendLayout();
-			this.groupBox7.SuspendLayout();
-			this.tabPageVisual.SuspendLayout();
-			this.groupBox16.SuspendLayout();
-			this.groupBox15.SuspendLayout();
-			this.groupBox13.SuspendLayout();
-			this.groupBox14.SuspendLayout();
-			this.tabPageLifeStyle.SuspendLayout();
+			this.buttonRightEye = new System.Windows.Forms.Button();
+			this.buttonLeftEye = new System.Windows.Forms.Button();
+			this.buttonLifeStyle = new System.Windows.Forms.Button();
+			this.buttonDVALinks = new System.Windows.Forms.Button();
+			this.labelEyes = new System.Windows.Forms.Label();
+			this.checkBoxEyesWar = new System.Windows.Forms.CheckBox();
+			this.textBoxFinalEyes = new System.Windows.Forms.TextBox();
+			this.labelLeftShoulder = new System.Windows.Forms.Label();
+			this.labelLeftElbow = new System.Windows.Forms.Label();
+			this.labelLeftWrist = new System.Windows.Forms.Label();
+			this.labelLeftFingers = new System.Windows.Forms.Label();
+			this.labelRightElbow = new System.Windows.Forms.Label();
+			this.labelRightWrist = new System.Windows.Forms.Label();
+			this.labelRightFingers = new System.Windows.Forms.Label();
+			this.labelKnees = new System.Windows.Forms.Label();
+			this.labelAnkles = new System.Windows.Forms.Label();
+			this.labelToes = new System.Windows.Forms.Label();
+			this.labelRightShoulder = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -301,44 +220,17 @@
 			this.textBoxLumpSumPayout.TabIndex = 2;
 			this.textBoxLumpSumPayout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPageHearing);
-			this.tabControl1.Controls.Add(this.tabPageVisual);
-			this.tabControl1.Controls.Add(this.tabPageLifeStyle);
-			this.tabControl1.Location = new System.Drawing.Point(1085, 42);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.Padding = new System.Drawing.Point(15, 3);
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(623, 1145);
-			this.tabControl1.TabIndex = 4;
-			this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
-			this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-			// 
-			// tabPageHearing
-			// 
-			this.tabPageHearing.BackColor = System.Drawing.Color.Azure;
-			this.tabPageHearing.Controls.Add(this.groupBox8);
-			this.tabPageHearing.Controls.Add(this.label67);
-			this.tabPageHearing.Controls.Add(this.groupBox7);
-			this.tabPageHearing.Controls.Add(this.label66);
-			this.tabPageHearing.Location = new System.Drawing.Point(4, 29);
-			this.tabPageHearing.Name = "tabPageHearing";
-			this.tabPageHearing.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageHearing.Size = new System.Drawing.Size(615, 1112);
-			this.tabPageHearing.TabIndex = 6;
-			this.tabPageHearing.Text = "Ear, Nose, Throat";
-			// 
 			// checkBoxNoseWar
 			// 
 			this.checkBoxNoseWar.AutoSize = true;
+			this.checkBoxNoseWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxNoseWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxNoseWar.Location = new System.Drawing.Point(321, 76);
 			this.checkBoxNoseWar.Name = "checkBoxNoseWar";
 			this.checkBoxNoseWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxNoseWar.TabIndex = 65;
 			this.toolTip1.SetToolTip(this.checkBoxNoseWar, "Check when injury happened during War Service.");
-			this.checkBoxNoseWar.UseVisualStyleBackColor = true;
+			this.checkBoxNoseWar.UseVisualStyleBackColor = false;
 			this.checkBoxNoseWar.CheckedChanged += new System.EventHandler(this.checkBoxNoseWar_CheckedChanged);
 			// 
 			// textBoxNose
@@ -353,43 +245,22 @@
 			this.textBoxNose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBoxNose.TextChanged += new System.EventHandler(this.textBoxNose_TextChanged);
 			// 
-			// groupBox8
-			// 
-			this.groupBox8.Controls.Add(this.label69);
-			this.groupBox8.Controls.Add(this.buttonEars);
-			this.groupBox8.Controls.Add(this.label70);
-			this.groupBox8.Controls.Add(this.label71);
-			this.groupBox8.Location = new System.Drawing.Point(61, 60);
-			this.groupBox8.Name = "groupBox8";
-			this.groupBox8.Size = new System.Drawing.Size(423, 118);
-			this.groupBox8.TabIndex = 70;
-			this.groupBox8.TabStop = false;
-			this.groupBox8.Text = "Ears";
-			// 
 			// checkBoxEarsWar
 			// 
 			this.checkBoxEarsWar.AutoSize = true;
+			this.checkBoxEarsWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxEarsWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxEarsWar.Location = new System.Drawing.Point(890, 39);
 			this.checkBoxEarsWar.Name = "checkBoxEarsWar";
 			this.checkBoxEarsWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxEarsWar.TabIndex = 65;
 			this.toolTip1.SetToolTip(this.checkBoxEarsWar, "Check when injury happened during War Service.");
-			this.checkBoxEarsWar.UseVisualStyleBackColor = true;
+			this.checkBoxEarsWar.UseVisualStyleBackColor = false;
 			this.checkBoxEarsWar.CheckedChanged += new System.EventHandler(this.checkBoxEarsWar_CheckedChanged);
-			// 
-			// label69
-			// 
-			this.label69.Location = new System.Drawing.Point(338, 18);
-			this.label69.Name = "label69";
-			this.label69.Size = new System.Drawing.Size(79, 45);
-			this.label69.TabIndex = 66;
-			this.label69.Text = "War Service";
-			this.label69.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// buttonEars
 			// 
-			this.buttonEars.Location = new System.Drawing.Point(100, 65);
+			this.buttonEars.Location = new System.Drawing.Point(931, 27);
 			this.buttonEars.Name = "buttonEars";
 			this.buttonEars.Size = new System.Drawing.Size(99, 37);
 			this.buttonEars.TabIndex = 64;
@@ -397,81 +268,34 @@
 			this.buttonEars.UseVisualStyleBackColor = true;
 			this.buttonEars.Click += new System.EventHandler(this.buttonEars_Click);
 			// 
-			// label70
-			// 
-			this.label70.Location = new System.Drawing.Point(9, 59);
-			this.label70.Name = "label70";
-			this.label70.Size = new System.Drawing.Size(83, 46);
-			this.label70.TabIndex = 61;
-			this.label70.Text = "Ears:";
-			this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// textBoxEars
 			// 
 			this.textBoxEars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxEars.Enabled = false;
 			this.textBoxEars.Location = new System.Drawing.Point(806, 35);
 			this.textBoxEars.Name = "textBoxEars";
+			this.textBoxEars.ReadOnly = true;
 			this.textBoxEars.Size = new System.Drawing.Size(70, 26);
 			this.textBoxEars.TabIndex = 62;
 			this.textBoxEars.Text = "0";
 			this.textBoxEars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBoxEars.TextChanged += new System.EventHandler(this.textBoxEars_TextChanged);
 			// 
-			// label71
-			// 
-			this.label71.Location = new System.Drawing.Point(230, 37);
-			this.label71.Name = "label71";
-			this.label71.Size = new System.Drawing.Size(70, 30);
-			this.label71.TabIndex = 63;
-			this.label71.Text = "Points:";
-			this.label71.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label67
-			// 
-			this.label67.Location = new System.Drawing.Point(22, 191);
-			this.label67.Name = "label67";
-			this.label67.Size = new System.Drawing.Size(462, 91);
-			this.label67.TabIndex = 69;
-			this.label67.Text = resources.GetString("label67.Text");
-			// 
-			// groupBox7
-			// 
-			this.groupBox7.Controls.Add(this.label48);
-			this.groupBox7.Controls.Add(this.buttonTinnitus);
-			this.groupBox7.Controls.Add(this.label64);
-			this.groupBox7.Controls.Add(this.label65);
-			this.groupBox7.Location = new System.Drawing.Point(35, 293);
-			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.Size = new System.Drawing.Size(423, 118);
-			this.groupBox7.TabIndex = 68;
-			this.groupBox7.TabStop = false;
-			this.groupBox7.Text = "Tinnitus";
-			// 
 			// checkBoxTinnitusWar
 			// 
 			this.checkBoxTinnitusWar.AutoSize = true;
+			this.checkBoxTinnitusWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxTinnitusWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxTinnitusWar.Location = new System.Drawing.Point(890, 93);
 			this.checkBoxTinnitusWar.Name = "checkBoxTinnitusWar";
 			this.checkBoxTinnitusWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxTinnitusWar.TabIndex = 65;
 			this.toolTip1.SetToolTip(this.checkBoxTinnitusWar, "Check when injury happened during War Service.");
-			this.checkBoxTinnitusWar.UseVisualStyleBackColor = true;
+			this.checkBoxTinnitusWar.UseVisualStyleBackColor = false;
 			this.checkBoxTinnitusWar.CheckedChanged += new System.EventHandler(this.checkBoxTinnitusWar_CheckedChanged);
-			// 
-			// label48
-			// 
-			this.label48.Location = new System.Drawing.Point(338, 16);
-			this.label48.Name = "label48";
-			this.label48.Size = new System.Drawing.Size(79, 45);
-			this.label48.TabIndex = 66;
-			this.label48.Text = "War Service";
-			this.label48.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// buttonTinnitus
 			// 
-			this.buttonTinnitus.Location = new System.Drawing.Point(100, 63);
+			this.buttonTinnitus.Location = new System.Drawing.Point(931, 84);
 			this.buttonTinnitus.Name = "buttonTinnitus";
 			this.buttonTinnitus.Size = new System.Drawing.Size(99, 37);
 			this.buttonTinnitus.TabIndex = 64;
@@ -479,921 +303,23 @@
 			this.buttonTinnitus.UseVisualStyleBackColor = true;
 			this.buttonTinnitus.Click += new System.EventHandler(this.buttonTinnitus_Click);
 			// 
-			// label64
-			// 
-			this.label64.Location = new System.Drawing.Point(9, 57);
-			this.label64.Name = "label64";
-			this.label64.Size = new System.Drawing.Size(83, 46);
-			this.label64.TabIndex = 61;
-			this.label64.Text = "Tinnitus:";
-			this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// textBoxTinnitus
 			// 
 			this.textBoxTinnitus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxTinnitus.Enabled = false;
 			this.textBoxTinnitus.Location = new System.Drawing.Point(806, 89);
 			this.textBoxTinnitus.Name = "textBoxTinnitus";
+			this.textBoxTinnitus.ReadOnly = true;
 			this.textBoxTinnitus.Size = new System.Drawing.Size(70, 26);
 			this.textBoxTinnitus.TabIndex = 62;
 			this.textBoxTinnitus.Text = "0";
 			this.textBoxTinnitus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBoxTinnitus.TextChanged += new System.EventHandler(this.textBoxTinnitus_TextChanged);
 			// 
-			// label65
-			// 
-			this.label65.Location = new System.Drawing.Point(230, 35);
-			this.label65.Name = "label65";
-			this.label65.Size = new System.Drawing.Size(70, 30);
-			this.label65.TabIndex = 63;
-			this.label65.Text = "Points:";
-			this.label65.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label66
-			// 
-			this.label66.AutoSize = true;
-			this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label66.Location = new System.Drawing.Point(59, 13);
-			this.label66.Name = "label66";
-			this.label66.Size = new System.Drawing.Size(390, 29);
-			this.label66.TabIndex = 67;
-			this.label66.Text = "HEARING LOSS AND TINNITUS";
-			// 
-			// tabPageVisual
-			// 
-			this.tabPageVisual.BackColor = System.Drawing.Color.Azure;
-			this.tabPageVisual.Controls.Add(this.groupBox16);
-			this.tabPageVisual.Controls.Add(this.groupBox15);
-			this.tabPageVisual.Controls.Add(this.groupBox13);
-			this.tabPageVisual.Controls.Add(this.groupBox14);
-			this.tabPageVisual.Location = new System.Drawing.Point(4, 29);
-			this.tabPageVisual.Name = "tabPageVisual";
-			this.tabPageVisual.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageVisual.Size = new System.Drawing.Size(615, 1112);
-			this.tabPageVisual.TabIndex = 9;
-			this.tabPageVisual.Text = "Visual";
-			// 
-			// groupBox16
-			// 
-			this.groupBox16.Controls.Add(this.label107);
-			this.groupBox16.Controls.Add(this.buttonRightVisualFOL);
-			this.groupBox16.Controls.Add(this.checkBoxRightVisualFOLWar);
-			this.groupBox16.Controls.Add(this.label108);
-			this.groupBox16.Controls.Add(this.textBoxRightVisualFOL);
-			this.groupBox16.Controls.Add(this.label109);
-			this.groupBox16.Controls.Add(this.label110);
-			this.groupBox16.Controls.Add(this.textBoxLeftVisualFOL);
-			this.groupBox16.Controls.Add(this.label111);
-			this.groupBox16.Controls.Add(this.checkBoxLeftVisualFOLWar);
-			this.groupBox16.Controls.Add(this.buttonLeftVisualFOL);
-			this.groupBox16.Controls.Add(this.label112);
-			this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox16.Location = new System.Drawing.Point(16, 378);
-			this.groupBox16.Name = "groupBox16";
-			this.groupBox16.Size = new System.Drawing.Size(430, 225);
-			this.groupBox16.TabIndex = 74;
-			this.groupBox16.TabStop = false;
-			this.groupBox16.Text = "VISUAL FIELD OF LOSS";
-			// 
-			// label107
-			// 
-			this.label107.Location = new System.Drawing.Point(316, 111);
-			this.label107.Name = "label107";
-			this.label107.Size = new System.Drawing.Size(76, 45);
-			this.label107.TabIndex = 73;
-			this.label107.Text = "War Service";
-			this.label107.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// buttonRightVisualFOL
-			// 
-			this.buttonRightVisualFOL.Location = new System.Drawing.Point(134, 158);
-			this.buttonRightVisualFOL.Name = "buttonRightVisualFOL";
-			this.buttonRightVisualFOL.Size = new System.Drawing.Size(71, 37);
-			this.buttonRightVisualFOL.TabIndex = 72;
-			this.buttonRightVisualFOL.Text = "CLICK";
-			this.buttonRightVisualFOL.UseVisualStyleBackColor = true;
-			this.buttonRightVisualFOL.Click += new System.EventHandler(this.buttonRightVisualFOL_Click);
-			// 
-			// checkBoxRightVisualFOLWar
-			// 
-			this.checkBoxRightVisualFOLWar.AutoSize = true;
-			this.checkBoxRightVisualFOLWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightVisualFOLWar.Location = new System.Drawing.Point(344, 167);
-			this.checkBoxRightVisualFOLWar.Name = "checkBoxRightVisualFOLWar";
-			this.checkBoxRightVisualFOLWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxRightVisualFOLWar.TabIndex = 71;
-			this.toolTip1.SetToolTip(this.checkBoxRightVisualFOLWar, "Check when injury happened during War Service.");
-			this.checkBoxRightVisualFOLWar.UseVisualStyleBackColor = true;
-			this.checkBoxRightVisualFOLWar.CheckedChanged += new System.EventHandler(this.checkBoxRightVisualFOLWar_CheckedChanged);
-			// 
-			// label108
-			// 
-			this.label108.AutoSize = true;
-			this.label108.Location = new System.Drawing.Point(6, 166);
-			this.label108.Name = "label108";
-			this.label108.Size = new System.Drawing.Size(82, 20);
-			this.label108.TabIndex = 68;
-			this.label108.Text = "Right Eye:";
-			// 
-			// textBoxRightVisualFOL
-			// 
-			this.textBoxRightVisualFOL.Enabled = false;
-			this.textBoxRightVisualFOL.Location = new System.Drawing.Point(226, 163);
-			this.textBoxRightVisualFOL.Name = "textBoxRightVisualFOL";
-			this.textBoxRightVisualFOL.Size = new System.Drawing.Size(70, 26);
-			this.textBoxRightVisualFOL.TabIndex = 69;
-			this.textBoxRightVisualFOL.Text = "0";
-			this.textBoxRightVisualFOL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxRightVisualFOL.TextChanged += new System.EventHandler(this.textBoxRightVisualFOL_TextChanged);
-			// 
-			// label109
-			// 
-			this.label109.Location = new System.Drawing.Point(225, 131);
-			this.label109.Name = "label109";
-			this.label109.Size = new System.Drawing.Size(71, 26);
-			this.label109.TabIndex = 70;
-			this.label109.Text = "Points:";
-			this.label109.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label110
-			// 
-			this.label110.Location = new System.Drawing.Point(223, 38);
-			this.label110.Name = "label110";
-			this.label110.Size = new System.Drawing.Size(71, 23);
-			this.label110.TabIndex = 17;
-			this.label110.Text = "Points:";
-			this.label110.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// textBoxLeftVisualFOL
-			// 
-			this.textBoxLeftVisualFOL.Enabled = false;
-			this.textBoxLeftVisualFOL.Location = new System.Drawing.Point(228, 71);
-			this.textBoxLeftVisualFOL.Name = "textBoxLeftVisualFOL";
-			this.textBoxLeftVisualFOL.Size = new System.Drawing.Size(70, 26);
-			this.textBoxLeftVisualFOL.TabIndex = 7;
-			this.textBoxLeftVisualFOL.Text = "0";
-			this.textBoxLeftVisualFOL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxLeftVisualFOL.TextChanged += new System.EventHandler(this.textBoxLeftVisualFOL_TextChanged);
-			// 
-			// label111
-			// 
-			this.label111.AutoSize = true;
-			this.label111.Location = new System.Drawing.Point(17, 74);
-			this.label111.Name = "label111";
-			this.label111.Size = new System.Drawing.Size(72, 20);
-			this.label111.TabIndex = 6;
-			this.label111.Text = "Left Eye:";
-			// 
-			// checkBoxLeftVisualFOLWar
-			// 
-			this.checkBoxLeftVisualFOLWar.AutoSize = true;
-			this.checkBoxLeftVisualFOLWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxLeftVisualFOLWar.Location = new System.Drawing.Point(344, 75);
-			this.checkBoxLeftVisualFOLWar.Name = "checkBoxLeftVisualFOLWar";
-			this.checkBoxLeftVisualFOLWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxLeftVisualFOLWar.TabIndex = 22;
-			this.toolTip1.SetToolTip(this.checkBoxLeftVisualFOLWar, "Check when injury happened during War Service.");
-			this.checkBoxLeftVisualFOLWar.UseVisualStyleBackColor = true;
-			this.checkBoxLeftVisualFOLWar.CheckedChanged += new System.EventHandler(this.checkBoxLeftVisualFOLWar_CheckedChanged);
-			// 
-			// buttonLeftVisualFOL
-			// 
-			this.buttonLeftVisualFOL.Location = new System.Drawing.Point(134, 66);
-			this.buttonLeftVisualFOL.Name = "buttonLeftVisualFOL";
-			this.buttonLeftVisualFOL.Size = new System.Drawing.Size(74, 37);
-			this.buttonLeftVisualFOL.TabIndex = 42;
-			this.buttonLeftVisualFOL.Text = "CLICK";
-			this.buttonLeftVisualFOL.UseVisualStyleBackColor = true;
-			this.buttonLeftVisualFOL.Click += new System.EventHandler(this.buttonLeftVisualFOL_Click);
-			// 
-			// label112
-			// 
-			this.label112.Location = new System.Drawing.Point(316, 19);
-			this.label112.Name = "label112";
-			this.label112.Size = new System.Drawing.Size(79, 45);
-			this.label112.TabIndex = 49;
-			this.label112.Text = "War Service";
-			this.label112.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// groupBox15
-			// 
-			this.groupBox15.Controls.Add(this.label100);
-			this.groupBox15.Controls.Add(this.label97);
-			this.groupBox15.Controls.Add(this.comboBoxLeftMonocular);
-			this.groupBox15.Controls.Add(this.comboBoxRightMonocular);
-			this.groupBox15.Controls.Add(this.label104);
-			this.groupBox15.Controls.Add(this.checkBoxRightMonocularWar);
-			this.groupBox15.Controls.Add(this.label105);
-			this.groupBox15.Controls.Add(this.textBoxRightMonocular);
-			this.groupBox15.Controls.Add(this.label106);
-			this.groupBox15.Controls.Add(this.label101);
-			this.groupBox15.Controls.Add(this.textBoxLeftMonocular);
-			this.groupBox15.Controls.Add(this.label102);
-			this.groupBox15.Controls.Add(this.checkBoxLeftMonocularWar);
-			this.groupBox15.Controls.Add(this.label103);
-			this.groupBox15.Location = new System.Drawing.Point(16, 18);
-			this.groupBox15.Name = "groupBox15";
-			this.groupBox15.Size = new System.Drawing.Size(521, 341);
-			this.groupBox15.TabIndex = 76;
-			this.groupBox15.TabStop = false;
-			this.groupBox15.Text = "MONOCULAR ASSESSMENTS FOR CORRECTED VISUAL ACUITY";
-			// 
-			// label100
-			// 
-			this.label100.Location = new System.Drawing.Point(6, 22);
-			this.label100.Name = "label100";
-			this.label100.Size = new System.Drawing.Size(482, 68);
-			this.label100.TabIndex = 77;
-			this.label100.Text = resources.GetString("label100.Text");
-			// 
-			// label97
-			// 
-			this.label97.Location = new System.Drawing.Point(6, 275);
-			this.label97.Name = "label97";
-			this.label97.Size = new System.Drawing.Size(472, 63);
-			this.label97.TabIndex = 76;
-			this.label97.Text = resources.GetString("label97.Text");
-			// 
-			// comboBoxLeftMonocular
-			// 
-			this.comboBoxLeftMonocular.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxLeftMonocular.FormattingEnabled = true;
-			this.comboBoxLeftMonocular.Items.AddRange(new object[] {
-            "6/6",
-            "6/9",
-            "6/12",
-            "6/18",
-            "6/24",
-            "6/30",
-            "6/36",
-            "6/48",
-            "6/60",
-            "3/60",
-            "Blind"});
-			this.comboBoxLeftMonocular.Location = new System.Drawing.Point(122, 142);
-			this.comboBoxLeftMonocular.Name = "comboBoxLeftMonocular";
-			this.comboBoxLeftMonocular.Size = new System.Drawing.Size(85, 28);
-			this.comboBoxLeftMonocular.TabIndex = 75;
-			this.comboBoxLeftMonocular.SelectedIndexChanged += new System.EventHandler(this.comboBoxLeftMonocular_SelectedIndexChanged);
-			// 
-			// comboBoxRightMonocular
-			// 
-			this.comboBoxRightMonocular.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxRightMonocular.FormattingEnabled = true;
-			this.comboBoxRightMonocular.Items.AddRange(new object[] {
-            "6/6",
-            "6/9",
-            "6/12",
-            "6/18",
-            "6/24",
-            "6/30",
-            "6/36",
-            "6/48",
-            "6/60",
-            "3/60",
-            "Blind"});
-			this.comboBoxRightMonocular.Location = new System.Drawing.Point(123, 235);
-			this.comboBoxRightMonocular.Name = "comboBoxRightMonocular";
-			this.comboBoxRightMonocular.Size = new System.Drawing.Size(85, 28);
-			this.comboBoxRightMonocular.TabIndex = 74;
-			this.comboBoxRightMonocular.SelectedIndexChanged += new System.EventHandler(this.comboBoxRightMonocular_SelectedIndexChanged);
-			// 
-			// label104
-			// 
-			this.label104.Location = new System.Drawing.Point(319, 179);
-			this.label104.Name = "label104";
-			this.label104.Size = new System.Drawing.Size(76, 45);
-			this.label104.TabIndex = 73;
-			this.label104.Text = "War Service";
-			this.label104.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// checkBoxRightMonocularWar
-			// 
-			this.checkBoxRightMonocularWar.AutoSize = true;
-			this.checkBoxRightMonocularWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightMonocularWar.Location = new System.Drawing.Point(347, 239);
-			this.checkBoxRightMonocularWar.Name = "checkBoxRightMonocularWar";
-			this.checkBoxRightMonocularWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxRightMonocularWar.TabIndex = 71;
-			this.toolTip1.SetToolTip(this.checkBoxRightMonocularWar, "Check when injury happened during War Service.");
-			this.checkBoxRightMonocularWar.UseVisualStyleBackColor = true;
-			this.checkBoxRightMonocularWar.CheckedChanged += new System.EventHandler(this.checkBoxRightMonocularWar_CheckedChanged);
-			// 
-			// label105
-			// 
-			this.label105.AutoSize = true;
-			this.label105.Location = new System.Drawing.Point(9, 238);
-			this.label105.Name = "label105";
-			this.label105.Size = new System.Drawing.Size(82, 20);
-			this.label105.TabIndex = 68;
-			this.label105.Text = "Right Eye:";
-			// 
-			// textBoxRightMonocular
-			// 
-			this.textBoxRightMonocular.Enabled = false;
-			this.textBoxRightMonocular.Location = new System.Drawing.Point(229, 235);
-			this.textBoxRightMonocular.Name = "textBoxRightMonocular";
-			this.textBoxRightMonocular.Size = new System.Drawing.Size(70, 26);
-			this.textBoxRightMonocular.TabIndex = 69;
-			this.textBoxRightMonocular.Text = "0";
-			this.textBoxRightMonocular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxRightMonocular.TextChanged += new System.EventHandler(this.textBoxRightMonocular_TextChanged);
-			// 
-			// label106
-			// 
-			this.label106.Location = new System.Drawing.Point(228, 199);
-			this.label106.Name = "label106";
-			this.label106.Size = new System.Drawing.Size(71, 26);
-			this.label106.TabIndex = 70;
-			this.label106.Text = "Points:";
-			this.label106.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label101
-			// 
-			this.label101.Location = new System.Drawing.Point(223, 109);
-			this.label101.Name = "label101";
-			this.label101.Size = new System.Drawing.Size(71, 23);
-			this.label101.TabIndex = 52;
-			this.label101.Text = "Points:";
-			this.label101.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// textBoxLeftMonocular
-			// 
-			this.textBoxLeftMonocular.Enabled = false;
-			this.textBoxLeftMonocular.Location = new System.Drawing.Point(228, 142);
-			this.textBoxLeftMonocular.Name = "textBoxLeftMonocular";
-			this.textBoxLeftMonocular.Size = new System.Drawing.Size(70, 26);
-			this.textBoxLeftMonocular.TabIndex = 51;
-			this.textBoxLeftMonocular.Text = "0";
-			this.textBoxLeftMonocular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxLeftMonocular.TextChanged += new System.EventHandler(this.textBoxLeftMonocular_TextChanged);
-			// 
-			// label102
-			// 
-			this.label102.AutoSize = true;
-			this.label102.Location = new System.Drawing.Point(17, 145);
-			this.label102.Name = "label102";
-			this.label102.Size = new System.Drawing.Size(72, 20);
-			this.label102.TabIndex = 50;
-			this.label102.Text = "Left Eye:";
-			// 
-			// checkBoxLeftMonocularWar
-			// 
-			this.checkBoxLeftMonocularWar.AutoSize = true;
-			this.checkBoxLeftMonocularWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxLeftMonocularWar.Location = new System.Drawing.Point(344, 146);
-			this.checkBoxLeftMonocularWar.Name = "checkBoxLeftMonocularWar";
-			this.checkBoxLeftMonocularWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxLeftMonocularWar.TabIndex = 53;
-			this.toolTip1.SetToolTip(this.checkBoxLeftMonocularWar, "Check when injury happened during War Service.");
-			this.checkBoxLeftMonocularWar.UseVisualStyleBackColor = true;
-			this.checkBoxLeftMonocularWar.CheckedChanged += new System.EventHandler(this.checkBoxLeftMonocularWar_CheckedChanged);
-			// 
-			// label103
-			// 
-			this.label103.Location = new System.Drawing.Point(316, 90);
-			this.label103.Name = "label103";
-			this.label103.Size = new System.Drawing.Size(79, 45);
-			this.label103.TabIndex = 55;
-			this.label103.Text = "War Service";
-			this.label103.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// groupBox13
-			// 
-			this.groupBox13.Controls.Add(this.label90);
-			this.groupBox13.Controls.Add(this.buttonRightOtherOcular);
-			this.groupBox13.Controls.Add(this.checkBoxRightOtherOcularWar);
-			this.groupBox13.Controls.Add(this.label95);
-			this.groupBox13.Controls.Add(this.textBoxRightOtherOcular);
-			this.groupBox13.Controls.Add(this.label96);
-			this.groupBox13.Controls.Add(this.label87);
-			this.groupBox13.Controls.Add(this.buttonLeftOtherOcular);
-			this.groupBox13.Controls.Add(this.checkBoxLeftOtherOcularWar);
-			this.groupBox13.Controls.Add(this.label88);
-			this.groupBox13.Controls.Add(this.textBoxLeftOtherOcular);
-			this.groupBox13.Controls.Add(this.label89);
-			this.groupBox13.Location = new System.Drawing.Point(16, 857);
-			this.groupBox13.Name = "groupBox13";
-			this.groupBox13.Size = new System.Drawing.Size(430, 235);
-			this.groupBox13.TabIndex = 73;
-			this.groupBox13.TabStop = false;
-			this.groupBox13.Text = "OTHER OCULAR IMPAIRMENT";
-			// 
-			// label90
-			// 
-			this.label90.Location = new System.Drawing.Point(319, 126);
-			this.label90.Name = "label90";
-			this.label90.Size = new System.Drawing.Size(76, 45);
-			this.label90.TabIndex = 79;
-			this.label90.Text = "War Service";
-			this.label90.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// buttonRightOtherOcular
-			// 
-			this.buttonRightOtherOcular.Location = new System.Drawing.Point(137, 173);
-			this.buttonRightOtherOcular.Name = "buttonRightOtherOcular";
-			this.buttonRightOtherOcular.Size = new System.Drawing.Size(71, 37);
-			this.buttonRightOtherOcular.TabIndex = 78;
-			this.buttonRightOtherOcular.Text = "CLICK";
-			this.buttonRightOtherOcular.UseVisualStyleBackColor = true;
-			this.buttonRightOtherOcular.Click += new System.EventHandler(this.buttonRightOtherOcular_Click);
-			// 
-			// checkBoxRightOtherOcularWar
-			// 
-			this.checkBoxRightOtherOcularWar.AutoSize = true;
-			this.checkBoxRightOtherOcularWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightOtherOcularWar.Location = new System.Drawing.Point(347, 182);
-			this.checkBoxRightOtherOcularWar.Name = "checkBoxRightOtherOcularWar";
-			this.checkBoxRightOtherOcularWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxRightOtherOcularWar.TabIndex = 77;
-			this.toolTip1.SetToolTip(this.checkBoxRightOtherOcularWar, "Check when injury happened during War Service.");
-			this.checkBoxRightOtherOcularWar.UseVisualStyleBackColor = true;
-			this.checkBoxRightOtherOcularWar.CheckedChanged += new System.EventHandler(this.checkBoxRightOtherOcularWar_CheckedChanged);
-			// 
-			// label95
-			// 
-			this.label95.AutoSize = true;
-			this.label95.Location = new System.Drawing.Point(9, 181);
-			this.label95.Name = "label95";
-			this.label95.Size = new System.Drawing.Size(82, 20);
-			this.label95.TabIndex = 74;
-			this.label95.Text = "Right Eye:";
-			// 
-			// textBoxRightOtherOcular
-			// 
-			this.textBoxRightOtherOcular.Enabled = false;
-			this.textBoxRightOtherOcular.Location = new System.Drawing.Point(229, 178);
-			this.textBoxRightOtherOcular.Name = "textBoxRightOtherOcular";
-			this.textBoxRightOtherOcular.Size = new System.Drawing.Size(70, 26);
-			this.textBoxRightOtherOcular.TabIndex = 75;
-			this.textBoxRightOtherOcular.Text = "0";
-			this.textBoxRightOtherOcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxRightOtherOcular.TextChanged += new System.EventHandler(this.textBoxRightOtherOcular_TextChanged);
-			// 
-			// label96
-			// 
-			this.label96.Location = new System.Drawing.Point(228, 146);
-			this.label96.Name = "label96";
-			this.label96.Size = new System.Drawing.Size(71, 26);
-			this.label96.TabIndex = 76;
-			this.label96.Text = "Points:";
-			this.label96.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label87
-			// 
-			this.label87.Location = new System.Drawing.Point(316, 18);
-			this.label87.Name = "label87";
-			this.label87.Size = new System.Drawing.Size(76, 45);
-			this.label87.TabIndex = 67;
-			this.label87.Text = "War Service";
-			this.label87.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// buttonLeftOtherOcular
-			// 
-			this.buttonLeftOtherOcular.Location = new System.Drawing.Point(134, 65);
-			this.buttonLeftOtherOcular.Name = "buttonLeftOtherOcular";
-			this.buttonLeftOtherOcular.Size = new System.Drawing.Size(74, 37);
-			this.buttonLeftOtherOcular.TabIndex = 60;
-			this.buttonLeftOtherOcular.Text = "CLICK";
-			this.buttonLeftOtherOcular.UseVisualStyleBackColor = true;
-			this.buttonLeftOtherOcular.Click += new System.EventHandler(this.buttonLeftOtherOcular_Click);
-			// 
-			// checkBoxLeftOtherOcularWar
-			// 
-			this.checkBoxLeftOtherOcularWar.AutoSize = true;
-			this.checkBoxLeftOtherOcularWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxLeftOtherOcularWar.Location = new System.Drawing.Point(344, 74);
-			this.checkBoxLeftOtherOcularWar.Name = "checkBoxLeftOtherOcularWar";
-			this.checkBoxLeftOtherOcularWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxLeftOtherOcularWar.TabIndex = 59;
-			this.toolTip1.SetToolTip(this.checkBoxLeftOtherOcularWar, "Check when injury happened during War Service.");
-			this.checkBoxLeftOtherOcularWar.UseVisualStyleBackColor = true;
-			this.checkBoxLeftOtherOcularWar.CheckedChanged += new System.EventHandler(this.checkBoxLeftOtherOcularWar_CheckedChanged);
-			// 
-			// label88
-			// 
-			this.label88.AutoSize = true;
-			this.label88.Location = new System.Drawing.Point(16, 73);
-			this.label88.Name = "label88";
-			this.label88.Size = new System.Drawing.Size(72, 20);
-			this.label88.TabIndex = 50;
-			this.label88.Text = "Left Eye:";
-			// 
-			// textBoxLeftOtherOcular
-			// 
-			this.textBoxLeftOtherOcular.Enabled = false;
-			this.textBoxLeftOtherOcular.Location = new System.Drawing.Point(227, 70);
-			this.textBoxLeftOtherOcular.Name = "textBoxLeftOtherOcular";
-			this.textBoxLeftOtherOcular.Size = new System.Drawing.Size(71, 26);
-			this.textBoxLeftOtherOcular.TabIndex = 51;
-			this.textBoxLeftOtherOcular.Text = "0";
-			this.textBoxLeftOtherOcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxLeftOtherOcular.TextChanged += new System.EventHandler(this.textBoxLeftOtherOcular_TextChanged);
-			// 
-			// label89
-			// 
-			this.label89.Location = new System.Drawing.Point(225, 38);
-			this.label89.Name = "label89";
-			this.label89.Size = new System.Drawing.Size(71, 26);
-			this.label89.TabIndex = 58;
-			this.label89.Text = "Points:";
-			this.label89.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// groupBox14
-			// 
-			this.groupBox14.Controls.Add(this.comboBoxRightMiscVisual);
-			this.groupBox14.Controls.Add(this.comboBoxLeftMiscVisual);
-			this.groupBox14.Controls.Add(this.label91);
-			this.groupBox14.Controls.Add(this.checkBoxRightMiscVisualWar);
-			this.groupBox14.Controls.Add(this.label92);
-			this.groupBox14.Controls.Add(this.textBoxRightMiscVisual);
-			this.groupBox14.Controls.Add(this.label93);
-			this.groupBox14.Controls.Add(this.label94);
-			this.groupBox14.Controls.Add(this.textBoxLeftMiscVisual);
-			this.groupBox14.Controls.Add(this.label98);
-			this.groupBox14.Controls.Add(this.checkBoxLeftMiscVisualWar);
-			this.groupBox14.Controls.Add(this.label99);
-			this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox14.Location = new System.Drawing.Point(16, 633);
-			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.Size = new System.Drawing.Size(430, 206);
-			this.groupBox14.TabIndex = 72;
-			this.groupBox14.TabStop = false;
-			this.groupBox14.Text = "MISCELLANEOUS VISUAL FUNCTION";
-			// 
-			// comboBoxRightMiscVisual
-			// 
-			this.comboBoxRightMiscVisual.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxRightMiscVisual.DropDownWidth = 320;
-			this.comboBoxRightMiscVisual.FormattingEnabled = true;
-			this.comboBoxRightMiscVisual.Items.AddRange(new object[] {
-            "N/A 0",
-            "Heterophoria 0",
-            "Nystagmus without diplopia 0",
-            "Cataract with no loss of visual acuity 2",
-            "Glaucoma without loss of visual fields 2",
-            "Bilateral intraocular lens 5",
-            "Unilateral intraocular lens 5",
-            "Bilateral aphakia 5",
-            "Unilateral aphakia 10",
-            "Loss of stereopsis in absence of heterotropia 5",
-            "Heterotropia with diplopia one quadrant of upward gaze 5",
-            "Heterotropia without diplopia near vision only 5",
-            "Heterotropia with diplopia one quadrant of downward gaze 10",
-            "Heterotropia without diplopia all directions of gaze 10",
-            "Heterotropia with diplopia one direction of sideways gaze 10",
-            "Heterotropia with diplopia all directions of upward gaze 10",
-            "Heterotropia with diplopia all directions of downward gaze 15",
-            "Heterotropia with diplopia both directions of sideways gaze 15",
-            "Heterotropia with diplopia all range of near vision 15",
-            "Heterotropia with diplopia all directions of gaze 25",
-            "Gaze defects vertical 10",
-            "Gaze defects horizontal 10",
-            "Gaze defects vertical and horizontal 25"});
-			this.comboBoxRightMiscVisual.Location = new System.Drawing.Point(123, 161);
-			this.comboBoxRightMiscVisual.Name = "comboBoxRightMiscVisual";
-			this.comboBoxRightMiscVisual.Size = new System.Drawing.Size(85, 28);
-			this.comboBoxRightMiscVisual.TabIndex = 77;
-			this.comboBoxRightMiscVisual.SelectedIndexChanged += new System.EventHandler(this.comboBoxRightMiscVisual_SelectedIndexChanged);
-			// 
-			// comboBoxLeftMiscVisual
-			// 
-			this.comboBoxLeftMiscVisual.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxLeftMiscVisual.DropDownWidth = 320;
-			this.comboBoxLeftMiscVisual.FormattingEnabled = true;
-			this.comboBoxLeftMiscVisual.Items.AddRange(new object[] {
-            "N/A 0",
-            "Heterophoria 0",
-            "Nystagmus without diplopia 0",
-            "Cataract with no loss of visual acuity 2",
-            "Glaucoma without loss of visual fields 2",
-            "Bilateral intraocular lens 5",
-            "Unilateral intraocular lens 5",
-            "Bilateral aphakia 5",
-            "Unilateral aphakia 10",
-            "Loss of stereopsis in absence of heterotropia 5",
-            "Heterotropia with diplopia one quadrant of upward gaze 5",
-            "Heterotropia without diplopia near vision only 5",
-            "Heterotropia with diplopia one quadrant of downward gaze 10",
-            "Heterotropia without diplopia all directions of gaze 10",
-            "Heterotropia with diplopia one direction of sideways gaze 10",
-            "Heterotropia with diplopia all directions of upward gaze 10",
-            "Heterotropia with diplopia all directions of downward gaze 15",
-            "Heterotropia with diplopia both directions of sideways gaze 15",
-            "Heterotropia with diplopia all range of near vision 15",
-            "Heterotropia with diplopia all directions of gaze 25",
-            "Gaze defects vertical 10",
-            "Gaze defects horizontal 10",
-            "Gaze defects vertical and horizontal 25"});
-			this.comboBoxLeftMiscVisual.Location = new System.Drawing.Point(123, 69);
-			this.comboBoxLeftMiscVisual.Name = "comboBoxLeftMiscVisual";
-			this.comboBoxLeftMiscVisual.Size = new System.Drawing.Size(85, 28);
-			this.comboBoxLeftMiscVisual.TabIndex = 76;
-			this.comboBoxLeftMiscVisual.SelectedIndexChanged += new System.EventHandler(this.comboBoxLeftMiscVisual_SelectedIndexChanged);
-			// 
-			// label91
-			// 
-			this.label91.Location = new System.Drawing.Point(319, 111);
-			this.label91.Name = "label91";
-			this.label91.Size = new System.Drawing.Size(76, 45);
-			this.label91.TabIndex = 73;
-			this.label91.Text = "War Service";
-			this.label91.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// checkBoxRightMiscVisualWar
-			// 
-			this.checkBoxRightMiscVisualWar.AutoSize = true;
-			this.checkBoxRightMiscVisualWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightMiscVisualWar.Location = new System.Drawing.Point(347, 167);
-			this.checkBoxRightMiscVisualWar.Name = "checkBoxRightMiscVisualWar";
-			this.checkBoxRightMiscVisualWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxRightMiscVisualWar.TabIndex = 71;
-			this.toolTip1.SetToolTip(this.checkBoxRightMiscVisualWar, "Check when injury happened during War Service.");
-			this.checkBoxRightMiscVisualWar.UseVisualStyleBackColor = true;
-			this.checkBoxRightMiscVisualWar.CheckedChanged += new System.EventHandler(this.checkBoxRightMiscVisualWar_CheckedChanged);
-			// 
-			// label92
-			// 
-			this.label92.AutoSize = true;
-			this.label92.Location = new System.Drawing.Point(9, 166);
-			this.label92.Name = "label92";
-			this.label92.Size = new System.Drawing.Size(82, 20);
-			this.label92.TabIndex = 68;
-			this.label92.Text = "Right Eye:";
-			this.toolTip1.SetToolTip(this.label92, resources.GetString("label92.ToolTip"));
-			// 
-			// textBoxRightMiscVisual
-			// 
-			this.textBoxRightMiscVisual.Enabled = false;
-			this.textBoxRightMiscVisual.Location = new System.Drawing.Point(229, 163);
-			this.textBoxRightMiscVisual.Name = "textBoxRightMiscVisual";
-			this.textBoxRightMiscVisual.Size = new System.Drawing.Size(70, 26);
-			this.textBoxRightMiscVisual.TabIndex = 69;
-			this.textBoxRightMiscVisual.Text = "0";
-			this.textBoxRightMiscVisual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxRightMiscVisual.TextChanged += new System.EventHandler(this.textBoxRightMiscVisual_TextChanged);
-			// 
-			// label93
-			// 
-			this.label93.Location = new System.Drawing.Point(228, 131);
-			this.label93.Name = "label93";
-			this.label93.Size = new System.Drawing.Size(71, 26);
-			this.label93.TabIndex = 70;
-			this.label93.Text = "Points:";
-			this.label93.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label94
-			// 
-			this.label94.Location = new System.Drawing.Point(223, 36);
-			this.label94.Name = "label94";
-			this.label94.Size = new System.Drawing.Size(71, 23);
-			this.label94.TabIndex = 17;
-			this.label94.Text = "Points:";
-			this.label94.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// textBoxLeftMiscVisual
-			// 
-			this.textBoxLeftMiscVisual.Enabled = false;
-			this.textBoxLeftMiscVisual.Location = new System.Drawing.Point(228, 69);
-			this.textBoxLeftMiscVisual.Name = "textBoxLeftMiscVisual";
-			this.textBoxLeftMiscVisual.Size = new System.Drawing.Size(70, 26);
-			this.textBoxLeftMiscVisual.TabIndex = 7;
-			this.textBoxLeftMiscVisual.Text = "0";
-			this.textBoxLeftMiscVisual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxLeftMiscVisual.TextChanged += new System.EventHandler(this.textBoxLeftMiscVisual_TextChanged);
-			// 
-			// label98
-			// 
-			this.label98.AutoSize = true;
-			this.label98.Location = new System.Drawing.Point(17, 72);
-			this.label98.Name = "label98";
-			this.label98.Size = new System.Drawing.Size(72, 20);
-			this.label98.TabIndex = 6;
-			this.label98.Text = "Left Eye:";
-			this.toolTip1.SetToolTip(this.label98, resources.GetString("label98.ToolTip"));
-			// 
-			// checkBoxLeftMiscVisualWar
-			// 
-			this.checkBoxLeftMiscVisualWar.AutoSize = true;
-			this.checkBoxLeftMiscVisualWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxLeftMiscVisualWar.Location = new System.Drawing.Point(344, 73);
-			this.checkBoxLeftMiscVisualWar.Name = "checkBoxLeftMiscVisualWar";
-			this.checkBoxLeftMiscVisualWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxLeftMiscVisualWar.TabIndex = 22;
-			this.toolTip1.SetToolTip(this.checkBoxLeftMiscVisualWar, "Check when injury happened during War Service.");
-			this.checkBoxLeftMiscVisualWar.UseVisualStyleBackColor = true;
-			this.checkBoxLeftMiscVisualWar.CheckedChanged += new System.EventHandler(this.checkBoxLeftMiscVisualWar_CheckedChanged);
-			// 
-			// label99
-			// 
-			this.label99.Location = new System.Drawing.Point(316, 17);
-			this.label99.Name = "label99";
-			this.label99.Size = new System.Drawing.Size(79, 45);
-			this.label99.TabIndex = 49;
-			this.label99.Text = "War Service";
-			this.label99.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// tabPageLifeStyle
-			// 
-			this.tabPageLifeStyle.BackColor = System.Drawing.Color.Azure;
-			this.tabPageLifeStyle.Controls.Add(this.buttonEmploymentActivities);
-			this.tabPageLifeStyle.Controls.Add(this.textBoxEmploymentActivities);
-			this.tabPageLifeStyle.Controls.Add(this.label26);
-			this.tabPageLifeStyle.Controls.Add(this.buttonMobility);
-			this.tabPageLifeStyle.Controls.Add(this.buttonRecreationalActivities);
-			this.tabPageLifeStyle.Controls.Add(this.buttonDomesticActivities);
-			this.tabPageLifeStyle.Controls.Add(this.buttonPersonalRelationships);
-			this.tabPageLifeStyle.Controls.Add(this.label20);
-			this.tabPageLifeStyle.Controls.Add(this.label21);
-			this.tabPageLifeStyle.Controls.Add(this.textBoxPersonalRelationships);
-			this.tabPageLifeStyle.Controls.Add(this.label22);
-			this.tabPageLifeStyle.Controls.Add(this.label23);
-			this.tabPageLifeStyle.Controls.Add(this.textBoxDomesticActivities);
-			this.tabPageLifeStyle.Controls.Add(this.textBoxRecreationalActivities);
-			this.tabPageLifeStyle.Controls.Add(this.label24);
-			this.tabPageLifeStyle.Controls.Add(this.label25);
-			this.tabPageLifeStyle.Controls.Add(this.textBoxMobility);
-			this.tabPageLifeStyle.Location = new System.Drawing.Point(4, 29);
-			this.tabPageLifeStyle.Name = "tabPageLifeStyle";
-			this.tabPageLifeStyle.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLifeStyle.Size = new System.Drawing.Size(615, 1112);
-			this.tabPageLifeStyle.TabIndex = 4;
-			this.tabPageLifeStyle.Text = "LifeStyle";
-			// 
-			// buttonEmploymentActivities
-			// 
-			this.buttonEmploymentActivities.Location = new System.Drawing.Point(324, 453);
-			this.buttonEmploymentActivities.Name = "buttonEmploymentActivities";
-			this.buttonEmploymentActivities.Size = new System.Drawing.Size(99, 37);
-			this.buttonEmploymentActivities.TabIndex = 44;
-			this.buttonEmploymentActivities.Text = "CLICK";
-			this.buttonEmploymentActivities.UseVisualStyleBackColor = true;
-			this.buttonEmploymentActivities.Click += new System.EventHandler(this.buttonEmploymentActivities_Click);
-			// 
-			// textBoxEmploymentActivities
-			// 
-			this.textBoxEmploymentActivities.Enabled = false;
-			this.textBoxEmploymentActivities.Location = new System.Drawing.Point(485, 458);
-			this.textBoxEmploymentActivities.Name = "textBoxEmploymentActivities";
-			this.textBoxEmploymentActivities.Size = new System.Drawing.Size(71, 26);
-			this.textBoxEmploymentActivities.TabIndex = 43;
-			this.textBoxEmploymentActivities.Text = "0";
-			this.textBoxEmploymentActivities.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxEmploymentActivities.TextChanged += new System.EventHandler(this.textBoxEmploymentActivities_TextChanged);
-			// 
-			// label26
-			// 
-			this.label26.AutoSize = true;
-			this.label26.Location = new System.Drawing.Point(28, 467);
-			this.label26.Name = "label26";
-			this.label26.Size = new System.Drawing.Size(167, 20);
-			this.label26.TabIndex = 42;
-			this.label26.Text = "Employment Activities:";
-			// 
-			// buttonMobility
-			// 
-			this.buttonMobility.Location = new System.Drawing.Point(324, 232);
-			this.buttonMobility.Name = "buttonMobility";
-			this.buttonMobility.Size = new System.Drawing.Size(99, 37);
-			this.buttonMobility.TabIndex = 41;
-			this.buttonMobility.Text = "CLICK";
-			this.buttonMobility.UseVisualStyleBackColor = true;
-			this.buttonMobility.Click += new System.EventHandler(this.buttonMobility_Click);
-			// 
-			// buttonRecreationalActivities
-			// 
-			this.buttonRecreationalActivities.Location = new System.Drawing.Point(324, 302);
-			this.buttonRecreationalActivities.Name = "buttonRecreationalActivities";
-			this.buttonRecreationalActivities.Size = new System.Drawing.Size(99, 37);
-			this.buttonRecreationalActivities.TabIndex = 40;
-			this.buttonRecreationalActivities.Text = "CLICK";
-			this.buttonRecreationalActivities.UseVisualStyleBackColor = true;
-			this.buttonRecreationalActivities.Click += new System.EventHandler(this.buttonRecreationalActivities_Click);
-			// 
-			// buttonDomesticActivities
-			// 
-			this.buttonDomesticActivities.Location = new System.Drawing.Point(324, 377);
-			this.buttonDomesticActivities.Name = "buttonDomesticActivities";
-			this.buttonDomesticActivities.Size = new System.Drawing.Size(99, 37);
-			this.buttonDomesticActivities.TabIndex = 39;
-			this.buttonDomesticActivities.Text = "CLICK";
-			this.buttonDomesticActivities.UseVisualStyleBackColor = true;
-			this.buttonDomesticActivities.Click += new System.EventHandler(this.buttonDomesticActivities_Click);
-			// 
-			// buttonPersonalRelationships
-			// 
-			this.buttonPersonalRelationships.Location = new System.Drawing.Point(324, 160);
-			this.buttonPersonalRelationships.Name = "buttonPersonalRelationships";
-			this.buttonPersonalRelationships.Size = new System.Drawing.Size(99, 37);
-			this.buttonPersonalRelationships.TabIndex = 38;
-			this.buttonPersonalRelationships.Text = "CLICK";
-			this.buttonPersonalRelationships.UseVisualStyleBackColor = true;
-			this.buttonPersonalRelationships.Click += new System.EventHandler(this.buttonPersonalRelationships_Click);
-			// 
-			// label20
-			// 
-			this.label20.AutoSize = true;
-			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label20.Location = new System.Drawing.Point(27, 44);
-			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(527, 29);
-			this.label20.TabIndex = 37;
-			this.label20.Text = "LIFESTYLE EFFECTS SELF ASSESSMENT";
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(28, 174);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(175, 20);
-			this.label21.TabIndex = 24;
-			this.label21.Text = "Personal Relationships:";
-			// 
-			// textBoxPersonalRelationships
-			// 
-			this.textBoxPersonalRelationships.Enabled = false;
-			this.textBoxPersonalRelationships.Location = new System.Drawing.Point(486, 165);
-			this.textBoxPersonalRelationships.Name = "textBoxPersonalRelationships";
-			this.textBoxPersonalRelationships.Size = new System.Drawing.Size(70, 26);
-			this.textBoxPersonalRelationships.TabIndex = 25;
-			this.textBoxPersonalRelationships.Text = "0";
-			this.textBoxPersonalRelationships.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxPersonalRelationships.TextChanged += new System.EventHandler(this.textBoxPersonalRelationships_TextChanged);
-			// 
-			// label22
-			// 
-			this.label22.Location = new System.Drawing.Point(462, 128);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(114, 34);
-			this.label22.TabIndex = 32;
-			this.label22.Text = "Points:";
-			this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(28, 316);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(283, 20);
-			this.label23.TabIndex = 26;
-			this.label23.Text = "Recreational and Community Activities:";
-			// 
-			// textBoxDomesticActivities
-			// 
-			this.textBoxDomesticActivities.Enabled = false;
-			this.textBoxDomesticActivities.Location = new System.Drawing.Point(485, 382);
-			this.textBoxDomesticActivities.Name = "textBoxDomesticActivities";
-			this.textBoxDomesticActivities.Size = new System.Drawing.Size(71, 26);
-			this.textBoxDomesticActivities.TabIndex = 31;
-			this.textBoxDomesticActivities.Text = "0";
-			this.textBoxDomesticActivities.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxDomesticActivities.TextChanged += new System.EventHandler(this.textBoxDomesticActivities_TextChanged);
-			// 
-			// textBoxRecreationalActivities
-			// 
-			this.textBoxRecreationalActivities.Enabled = false;
-			this.textBoxRecreationalActivities.Location = new System.Drawing.Point(486, 307);
-			this.textBoxRecreationalActivities.Name = "textBoxRecreationalActivities";
-			this.textBoxRecreationalActivities.Size = new System.Drawing.Size(71, 26);
-			this.textBoxRecreationalActivities.TabIndex = 27;
-			this.textBoxRecreationalActivities.Text = "0";
-			this.textBoxRecreationalActivities.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxRecreationalActivities.TextChanged += new System.EventHandler(this.textBoxRecreationalActivities_TextChanged);
-			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(28, 391);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(146, 20);
-			this.label24.TabIndex = 30;
-			this.label24.Text = "Domestic Activities:";
-			// 
-			// label25
-			// 
-			this.label25.AutoSize = true;
-			this.label25.Location = new System.Drawing.Point(28, 246);
-			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(65, 20);
-			this.label25.TabIndex = 28;
-			this.label25.Text = "Mobility:";
-			// 
-			// textBoxMobility
-			// 
-			this.textBoxMobility.Enabled = false;
-			this.textBoxMobility.Location = new System.Drawing.Point(485, 237);
-			this.textBoxMobility.Name = "textBoxMobility";
-			this.textBoxMobility.Size = new System.Drawing.Size(71, 26);
-			this.textBoxMobility.TabIndex = 29;
-			this.textBoxMobility.Text = "0";
-			this.textBoxMobility.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxMobility.TextChanged += new System.EventHandler(this.textBoxMobility_TextChanged);
-			// 
 			// labelThroat
 			// 
 			this.labelThroat.AutoSize = true;
 			this.labelThroat.BackColor = System.Drawing.Color.Transparent;
-			this.labelThroat.Location = new System.Drawing.Point(645, 46);
+			this.labelThroat.Location = new System.Drawing.Point(658, 72);
 			this.labelThroat.Name = "labelThroat";
 			this.labelThroat.Size = new System.Drawing.Size(59, 20);
 			this.labelThroat.TabIndex = 82;
@@ -1402,13 +328,14 @@
 			// checkBoxThroatWar
 			// 
 			this.checkBoxThroatWar.AutoSize = true;
+			this.checkBoxThroatWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxThroatWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxThroatWar.Location = new System.Drawing.Point(731, 76);
+			this.checkBoxThroatWar.Location = new System.Drawing.Point(753, 99);
 			this.checkBoxThroatWar.Name = "checkBoxThroatWar";
 			this.checkBoxThroatWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxThroatWar.TabIndex = 65;
 			this.toolTip1.SetToolTip(this.checkBoxThroatWar, "Check when injury happened during War Service.");
-			this.checkBoxThroatWar.UseVisualStyleBackColor = true;
+			this.checkBoxThroatWar.UseVisualStyleBackColor = false;
 			this.checkBoxThroatWar.CheckedChanged += new System.EventHandler(this.checkBoxThroatWar_CheckedChanged);
 			// 
 			// buttonThroat
@@ -1443,7 +370,7 @@
 			// textBoxThroat
 			// 
 			this.textBoxThroat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxThroat.Location = new System.Drawing.Point(649, 72);
+			this.textBoxThroat.Location = new System.Drawing.Point(671, 95);
 			this.textBoxThroat.Name = "textBoxThroat";
 			this.textBoxThroat.ReadOnly = true;
 			this.textBoxThroat.Size = new System.Drawing.Size(70, 26);
@@ -1508,13 +435,14 @@
 			// checkBoxThoracoWar
 			// 
 			this.checkBoxThoracoWar.AutoSize = true;
+			this.checkBoxThoracoWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxThoracoWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxThoracoWar.Location = new System.Drawing.Point(978, 213);
 			this.checkBoxThoracoWar.Name = "checkBoxThoracoWar";
 			this.checkBoxThoracoWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxThoracoWar.TabIndex = 53;
 			this.toolTip1.SetToolTip(this.checkBoxThoracoWar, "Check when injury happened during War Service.");
-			this.checkBoxThoracoWar.UseVisualStyleBackColor = true;
+			this.checkBoxThoracoWar.UseVisualStyleBackColor = false;
 			this.checkBoxThoracoWar.CheckedChanged += new System.EventHandler(this.checkBoxThoracoWar_CheckedChanged);
 			// 
 			// checkBoxThoracoROMWar
@@ -1565,25 +493,27 @@
 			// checkBoxWholeLimbWar
 			// 
 			this.checkBoxWholeLimbWar.AutoSize = true;
+			this.checkBoxWholeLimbWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeLimbWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxWholeLimbWar.Location = new System.Drawing.Point(128, 551);
 			this.checkBoxWholeLimbWar.Name = "checkBoxWholeLimbWar";
 			this.checkBoxWholeLimbWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeLimbWar.TabIndex = 59;
 			this.toolTip1.SetToolTip(this.checkBoxWholeLimbWar, "Check when injury happened during War Service.");
-			this.checkBoxWholeLimbWar.UseVisualStyleBackColor = true;
+			this.checkBoxWholeLimbWar.UseVisualStyleBackColor = false;
 			this.checkBoxWholeLimbWar.CheckedChanged += new System.EventHandler(this.checkBoxWholeLimbWar_CheckedChanged);
 			// 
 			// checkBoxJointPainWar
 			// 
 			this.checkBoxJointPainWar.AutoSize = true;
+			this.checkBoxJointPainWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxJointPainWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxJointPainWar.Location = new System.Drawing.Point(978, 551);
 			this.checkBoxJointPainWar.Name = "checkBoxJointPainWar";
 			this.checkBoxJointPainWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxJointPainWar.TabIndex = 53;
 			this.toolTip1.SetToolTip(this.checkBoxJointPainWar, "Check when injury happened during War Service.");
-			this.checkBoxJointPainWar.UseVisualStyleBackColor = true;
+			this.checkBoxJointPainWar.UseVisualStyleBackColor = false;
 			this.checkBoxJointPainWar.CheckedChanged += new System.EventHandler(this.checkBoxJointPainWar_CheckedChanged);
 			// 
 			// buttonJointPain
@@ -1611,13 +541,14 @@
 			// checkBoxWholeRightArmWar
 			// 
 			this.checkBoxWholeRightArmWar.AutoSize = true;
+			this.checkBoxWholeRightArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeRightArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxWholeRightArmWar.Location = new System.Drawing.Point(981, 361);
 			this.checkBoxWholeRightArmWar.Name = "checkBoxWholeRightArmWar";
 			this.checkBoxWholeRightArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeRightArmWar.TabIndex = 59;
 			this.toolTip1.SetToolTip(this.checkBoxWholeRightArmWar, "Check when injury happened during War Service.");
-			this.checkBoxWholeRightArmWar.UseVisualStyleBackColor = true;
+			this.checkBoxWholeRightArmWar.UseVisualStyleBackColor = false;
 			this.checkBoxWholeRightArmWar.CheckedChanged += new System.EventHandler(this.checkBoxWholeRightArmWar_CheckedChanged);
 			// 
 			// textBoxJointPain
@@ -1635,13 +566,14 @@
 			// checkBoxWholeLeftArmWar
 			// 
 			this.checkBoxWholeLeftArmWar.AutoSize = true;
+			this.checkBoxWholeLeftArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeLeftArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxWholeLeftArmWar.Location = new System.Drawing.Point(117, 362);
 			this.checkBoxWholeLeftArmWar.Name = "checkBoxWholeLeftArmWar";
 			this.checkBoxWholeLeftArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeLeftArmWar.TabIndex = 59;
 			this.toolTip1.SetToolTip(this.checkBoxWholeLeftArmWar, "Check when injury happened during War Service.");
-			this.checkBoxWholeLeftArmWar.UseVisualStyleBackColor = true;
+			this.checkBoxWholeLeftArmWar.UseVisualStyleBackColor = false;
 			this.checkBoxWholeLeftArmWar.CheckedChanged += new System.EventHandler(this.checkBoxWholeLeftArmWar_CheckedChanged);
 			// 
 			// buttonWholeLimb
@@ -1687,13 +619,14 @@
 			// checkBoxKneeWar
 			// 
 			this.checkBoxKneeWar.AutoSize = true;
+			this.checkBoxKneeWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxKneeWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxKneeWar.Location = new System.Drawing.Point(708, 474);
 			this.checkBoxKneeWar.Name = "checkBoxKneeWar";
 			this.checkBoxKneeWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxKneeWar.TabIndex = 74;
 			this.toolTip1.SetToolTip(this.checkBoxKneeWar, "Check when injury happened during War Service.");
-			this.checkBoxKneeWar.UseVisualStyleBackColor = true;
+			this.checkBoxKneeWar.UseVisualStyleBackColor = false;
 			this.checkBoxKneeWar.CheckedChanged += new System.EventHandler(this.checkBoxKneeWar_CheckedChanged);
 			// 
 			// checkBoxHipWar
@@ -1737,25 +670,27 @@
 			// checkBoxAnkleWar
 			// 
 			this.checkBoxAnkleWar.AutoSize = true;
+			this.checkBoxAnkleWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxAnkleWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxAnkleWar.Location = new System.Drawing.Point(690, 589);
 			this.checkBoxAnkleWar.Name = "checkBoxAnkleWar";
 			this.checkBoxAnkleWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxAnkleWar.TabIndex = 76;
 			this.toolTip1.SetToolTip(this.checkBoxAnkleWar, "Check when injury happened during War Service.");
-			this.checkBoxAnkleWar.UseVisualStyleBackColor = true;
+			this.checkBoxAnkleWar.UseVisualStyleBackColor = false;
 			this.checkBoxAnkleWar.CheckedChanged += new System.EventHandler(this.checkBoxAnkleWar_CheckedChanged);
 			// 
 			// checkBoxToesWar
 			// 
 			this.checkBoxToesWar.AutoSize = true;
+			this.checkBoxToesWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxToesWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxToesWar.Location = new System.Drawing.Point(705, 632);
+			this.checkBoxToesWar.Location = new System.Drawing.Point(705, 643);
 			this.checkBoxToesWar.Name = "checkBoxToesWar";
 			this.checkBoxToesWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxToesWar.TabIndex = 77;
 			this.toolTip1.SetToolTip(this.checkBoxToesWar, "Check when injury happened during War Service.");
-			this.checkBoxToesWar.UseVisualStyleBackColor = true;
+			this.checkBoxToesWar.UseVisualStyleBackColor = false;
 			this.checkBoxToesWar.CheckedChanged += new System.EventHandler(this.checkBoxToesWar_CheckedChanged);
 			// 
 			// textBoxWholeLeftArm
@@ -1773,103 +708,111 @@
 			// checkBoxElbowWar
 			// 
 			this.checkBoxElbowWar.AutoSize = true;
+			this.checkBoxElbowWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxElbowWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxElbowWar.Location = new System.Drawing.Point(315, 231);
 			this.checkBoxElbowWar.Name = "checkBoxElbowWar";
 			this.checkBoxElbowWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxElbowWar.TabIndex = 70;
 			this.toolTip1.SetToolTip(this.checkBoxElbowWar, "Check when injury happened during War Service.");
-			this.checkBoxElbowWar.UseVisualStyleBackColor = true;
+			this.checkBoxElbowWar.UseVisualStyleBackColor = false;
 			this.checkBoxElbowWar.CheckedChanged += new System.EventHandler(this.checkBoxElbowWar_CheckedChanged);
 			// 
 			// checkBoxShoulderWar
 			// 
 			this.checkBoxShoulderWar.AutoSize = true;
+			this.checkBoxShoulderWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxShoulderWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxShoulderWar.Location = new System.Drawing.Point(336, 138);
 			this.checkBoxShoulderWar.Name = "checkBoxShoulderWar";
 			this.checkBoxShoulderWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxShoulderWar.TabIndex = 71;
 			this.toolTip1.SetToolTip(this.checkBoxShoulderWar, "Check when injury happened during War Service.");
-			this.checkBoxShoulderWar.UseVisualStyleBackColor = true;
+			this.checkBoxShoulderWar.UseVisualStyleBackColor = false;
 			this.checkBoxShoulderWar.CheckedChanged += new System.EventHandler(this.checkBoxShoulderWar_CheckedChanged);
 			// 
 			// checkBoxWristWar
 			// 
 			this.checkBoxWristWar.AutoSize = true;
+			this.checkBoxWristWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWristWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxWristWar.Location = new System.Drawing.Point(284, 307);
 			this.checkBoxWristWar.Name = "checkBoxWristWar";
 			this.checkBoxWristWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWristWar.TabIndex = 72;
 			this.toolTip1.SetToolTip(this.checkBoxWristWar, "Check when injury happened during War Service.");
-			this.checkBoxWristWar.UseVisualStyleBackColor = true;
+			this.checkBoxWristWar.UseVisualStyleBackColor = false;
 			this.checkBoxWristWar.CheckedChanged += new System.EventHandler(this.checkBoxWristWar_CheckedChanged);
 			// 
 			// checkBoxFingersWar
 			// 
 			this.checkBoxFingersWar.AutoSize = true;
+			this.checkBoxFingersWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxFingersWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxFingersWar.Location = new System.Drawing.Point(261, 364);
 			this.checkBoxFingersWar.Name = "checkBoxFingersWar";
 			this.checkBoxFingersWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxFingersWar.TabIndex = 73;
 			this.toolTip1.SetToolTip(this.checkBoxFingersWar, "Check when injury happened during War Service.");
-			this.checkBoxFingersWar.UseVisualStyleBackColor = true;
+			this.checkBoxFingersWar.UseVisualStyleBackColor = false;
 			this.checkBoxFingersWar.CheckedChanged += new System.EventHandler(this.checkBoxFingersWar_CheckedChanged);
 			// 
 			// checkBoxRightFingersWar
 			// 
 			this.checkBoxRightFingersWar.AutoSize = true;
+			this.checkBoxRightFingersWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxRightFingersWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxRightFingersWar.Location = new System.Drawing.Point(796, 364);
 			this.checkBoxRightFingersWar.Name = "checkBoxRightFingersWar";
 			this.checkBoxRightFingersWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightFingersWar.TabIndex = 69;
 			this.toolTip1.SetToolTip(this.checkBoxRightFingersWar, "Check when injury happened during War Service.");
-			this.checkBoxRightFingersWar.UseVisualStyleBackColor = true;
+			this.checkBoxRightFingersWar.UseVisualStyleBackColor = false;
 			this.checkBoxRightFingersWar.CheckedChanged += new System.EventHandler(this.checkBoxRightFingersWar_CheckedChanged);
 			// 
 			// checkBoxRightWristWar
 			// 
 			this.checkBoxRightWristWar.AutoSize = true;
+			this.checkBoxRightWristWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxRightWristWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxRightWristWar.Location = new System.Drawing.Point(774, 307);
 			this.checkBoxRightWristWar.Name = "checkBoxRightWristWar";
 			this.checkBoxRightWristWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightWristWar.TabIndex = 68;
 			this.toolTip1.SetToolTip(this.checkBoxRightWristWar, "Check when injury happened during War Service.");
-			this.checkBoxRightWristWar.UseVisualStyleBackColor = true;
+			this.checkBoxRightWristWar.UseVisualStyleBackColor = false;
 			this.checkBoxRightWristWar.CheckedChanged += new System.EventHandler(this.checkBoxRightWristWar_CheckedChanged);
 			// 
 			// checkBoxRightShoulderWar
 			// 
 			this.checkBoxRightShoulderWar.AutoSize = true;
+			this.checkBoxRightShoulderWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxRightShoulderWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxRightShoulderWar.Location = new System.Drawing.Point(739, 138);
+			this.checkBoxRightShoulderWar.Location = new System.Drawing.Point(751, 155);
 			this.checkBoxRightShoulderWar.Name = "checkBoxRightShoulderWar";
 			this.checkBoxRightShoulderWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightShoulderWar.TabIndex = 67;
 			this.toolTip1.SetToolTip(this.checkBoxRightShoulderWar, "Check when injury happened during War Service.");
-			this.checkBoxRightShoulderWar.UseVisualStyleBackColor = true;
+			this.checkBoxRightShoulderWar.UseVisualStyleBackColor = false;
 			this.checkBoxRightShoulderWar.CheckedChanged += new System.EventHandler(this.checkBoxRightShoulderWar_CheckedChanged);
 			// 
 			// checkBoxRightElbowWar
 			// 
 			this.checkBoxRightElbowWar.AutoSize = true;
+			this.checkBoxRightElbowWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxRightElbowWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.checkBoxRightElbowWar.Location = new System.Drawing.Point(741, 231);
 			this.checkBoxRightElbowWar.Name = "checkBoxRightElbowWar";
 			this.checkBoxRightElbowWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxRightElbowWar.TabIndex = 66;
 			this.toolTip1.SetToolTip(this.checkBoxRightElbowWar, "Check when injury happened during War Service.");
-			this.checkBoxRightElbowWar.UseVisualStyleBackColor = true;
+			this.checkBoxRightElbowWar.UseVisualStyleBackColor = false;
 			this.checkBoxRightElbowWar.CheckedChanged += new System.EventHandler(this.checkBoxRightElbowWar_CheckedChanged);
 			// 
 			// textBoxToes
 			// 
 			this.textBoxToes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxToes.Location = new System.Drawing.Point(634, 628);
+			this.textBoxToes.Location = new System.Drawing.Point(634, 639);
 			this.textBoxToes.Name = "textBoxToes";
 			this.textBoxToes.ReadOnly = true;
 			this.textBoxToes.Size = new System.Drawing.Size(56, 26);
@@ -1977,7 +920,7 @@
 			// textBoxRightShoulder
 			// 
 			this.textBoxRightShoulder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxRightShoulder.Location = new System.Drawing.Point(659, 134);
+			this.textBoxRightShoulder.Location = new System.Drawing.Point(671, 151);
 			this.textBoxRightShoulder.Name = "textBoxRightShoulder";
 			this.textBoxRightShoulder.ReadOnly = true;
 			this.textBoxRightShoulder.Size = new System.Drawing.Size(71, 26);
@@ -2285,6 +1228,7 @@
 			// label28
 			// 
 			this.label28.AutoSize = true;
+			this.label28.BackColor = System.Drawing.Color.Transparent;
 			this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label28.ForeColor = System.Drawing.Color.DarkRed;
 			this.label28.Location = new System.Drawing.Point(590, 872);
@@ -2296,10 +1240,11 @@
 			// textBoxCompensationFactorPeace
 			// 
 			this.textBoxCompensationFactorPeace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(960, 871);
+			this.textBoxCompensationFactorPeace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(984, 874);
 			this.textBoxCompensationFactorPeace.Name = "textBoxCompensationFactorPeace";
 			this.textBoxCompensationFactorPeace.ReadOnly = true;
-			this.textBoxCompensationFactorPeace.Size = new System.Drawing.Size(70, 26);
+			this.textBoxCompensationFactorPeace.Size = new System.Drawing.Size(70, 30);
 			this.textBoxCompensationFactorPeace.TabIndex = 45;
 			this.textBoxCompensationFactorPeace.Text = "0";
 			this.textBoxCompensationFactorPeace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2307,6 +1252,7 @@
 			// label19
 			// 
 			this.label19.AutoSize = true;
+			this.label19.BackColor = System.Drawing.Color.Transparent;
 			this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label19.ForeColor = System.Drawing.Color.DarkRed;
 			this.label19.Location = new System.Drawing.Point(590, 829);
@@ -2318,10 +1264,11 @@
 			// textBoxCompensationFactorWar
 			// 
 			this.textBoxCompensationFactorWar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(960, 828);
+			this.textBoxCompensationFactorWar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(984, 831);
 			this.textBoxCompensationFactorWar.Name = "textBoxCompensationFactorWar";
 			this.textBoxCompensationFactorWar.ReadOnly = true;
-			this.textBoxCompensationFactorWar.Size = new System.Drawing.Size(70, 26);
+			this.textBoxCompensationFactorWar.Size = new System.Drawing.Size(70, 30);
 			this.textBoxCompensationFactorWar.TabIndex = 22;
 			this.textBoxCompensationFactorWar.Text = "0";
 			this.textBoxCompensationFactorWar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2619,7 +1566,7 @@
 			// 
 			this.textBoxFinalLifeStylePoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxFinalLifeStylePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(960, 925);
+			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(984, 928);
 			this.textBoxFinalLifeStylePoint.Name = "textBoxFinalLifeStylePoint";
 			this.textBoxFinalLifeStylePoint.ReadOnly = true;
 			this.textBoxFinalLifeStylePoint.Size = new System.Drawing.Size(71, 30);
@@ -2674,8 +1621,8 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.3                             DVA Compensation Calulator - by Geoff Armstro" +
-    "ng                 ";
+			this.buttonMainTitle.Text = "Ver 1.4                             DVA COMPENSATION CALCULATOR - by Geoff Armstr" +
+    "ong                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
 			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
@@ -2683,8 +1630,25 @@
 			// 
 			// panelMainPoints
 			// 
+			this.panelMainPoints.BackColor = System.Drawing.Color.Transparent;
 			this.panelMainPoints.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panelMainPoints.Controls.Add(this.labelRightShoulder);
+			this.panelMainPoints.Controls.Add(this.labelToes);
+			this.panelMainPoints.Controls.Add(this.labelAnkles);
+			this.panelMainPoints.Controls.Add(this.labelKnees);
+			this.panelMainPoints.Controls.Add(this.labelRightFingers);
+			this.panelMainPoints.Controls.Add(this.labelRightWrist);
+			this.panelMainPoints.Controls.Add(this.labelRightElbow);
+			this.panelMainPoints.Controls.Add(this.labelLeftFingers);
+			this.panelMainPoints.Controls.Add(this.labelLeftWrist);
+			this.panelMainPoints.Controls.Add(this.labelLeftElbow);
+			this.panelMainPoints.Controls.Add(this.labelLeftShoulder);
+			this.panelMainPoints.Controls.Add(this.labelEyes);
+			this.panelMainPoints.Controls.Add(this.checkBoxEyesWar);
+			this.panelMainPoints.Controls.Add(this.textBoxFinalEyes);
 			this.panelMainPoints.Controls.Add(this.labelTinnitus);
+			this.panelMainPoints.Controls.Add(this.buttonTinnitus);
+			this.panelMainPoints.Controls.Add(this.buttonEars);
 			this.panelMainPoints.Controls.Add(this.labelHearingLoss);
 			this.panelMainPoints.Controls.Add(this.checkBoxTinnitusWar);
 			this.panelMainPoints.Controls.Add(this.checkBoxEarsWar);
@@ -2769,60 +1733,52 @@
 			this.panelMainPoints.Size = new System.Drawing.Size(1070, 674);
 			this.panelMainPoints.TabIndex = 83;
 			// 
-			// buttonLifeStyle
+			// labelTinnitus
 			// 
-			this.buttonLifeStyle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonLifeStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonLifeStyle.Location = new System.Drawing.Point(6, 62);
-			this.buttonLifeStyle.Name = "buttonLifeStyle";
-			this.buttonLifeStyle.Size = new System.Drawing.Size(228, 33);
-			this.buttonLifeStyle.TabIndex = 89;
-			this.buttonLifeStyle.Text = "Life Style Assessment";
-			this.buttonLifeStyle.UseVisualStyleBackColor = true;
+			this.labelTinnitus.AutoSize = true;
+			this.labelTinnitus.BackColor = System.Drawing.Color.Transparent;
+			this.labelTinnitus.Location = new System.Drawing.Point(805, 66);
+			this.labelTinnitus.Name = "labelTinnitus";
+			this.labelTinnitus.Size = new System.Drawing.Size(68, 20);
+			this.labelTinnitus.TabIndex = 90;
+			this.labelTinnitus.Text = "Tinnitus:";
 			// 
-			// buttonDVALinks
+			// labelHearingLoss
 			// 
-			this.buttonDVALinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonDVALinks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonDVALinks.Location = new System.Drawing.Point(263, 62);
-			this.buttonDVALinks.Name = "buttonDVALinks";
-			this.buttonDVALinks.Size = new System.Drawing.Size(228, 33);
-			this.buttonDVALinks.TabIndex = 90;
-			this.buttonDVALinks.Text = "DVA Links";
-			this.buttonDVALinks.UseVisualStyleBackColor = true;
-			this.buttonDVALinks.Click += new System.EventHandler(this.buttonDVALinks_Click);
+			this.labelHearingLoss.AutoSize = true;
+			this.labelHearingLoss.BackColor = System.Drawing.Color.Transparent;
+			this.labelHearingLoss.Location = new System.Drawing.Point(805, 12);
+			this.labelHearingLoss.Name = "labelHearingLoss";
+			this.labelHearingLoss.Size = new System.Drawing.Size(107, 20);
+			this.labelHearingLoss.TabIndex = 89;
+			this.labelHearingLoss.Text = "Hearing Loss:";
 			// 
-			// buttonLeftEye
+			// labelNose
 			// 
-			this.buttonLeftEye.BackColor = System.Drawing.Color.Transparent;
-			this.buttonLeftEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonLeftEye.FlatAppearance.BorderSize = 0;
-			this.buttonLeftEye.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.buttonLeftEye.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.buttonLeftEye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonLeftEye.Location = new System.Drawing.Point(517, 35);
-			this.buttonLeftEye.Name = "buttonLeftEye";
-			this.buttonLeftEye.Size = new System.Drawing.Size(20, 20);
-			this.buttonLeftEye.TabIndex = 83;
-			this.buttonLeftEye.UseVisualStyleBackColor = false;
-			this.buttonLeftEye.MouseEnter += new System.EventHandler(this.buttonLeftEye_MouseEnter);
-			this.buttonLeftEye.MouseLeave += new System.EventHandler(this.buttonLeftEye_MouseLeave);
+			this.labelNose.AutoSize = true;
+			this.labelNose.BackColor = System.Drawing.Color.Transparent;
+			this.labelNose.Location = new System.Drawing.Point(347, 46);
+			this.labelNose.Name = "labelNose";
+			this.labelNose.Size = new System.Drawing.Size(50, 20);
+			this.labelNose.TabIndex = 88;
+			this.labelNose.Text = "Nose:";
 			// 
-			// buttonRightEye
+			// buttonNose
 			// 
-			this.buttonRightEye.BackColor = System.Drawing.Color.Transparent;
-			this.buttonRightEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonRightEye.FlatAppearance.BorderSize = 0;
-			this.buttonRightEye.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.buttonRightEye.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.buttonRightEye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonRightEye.Location = new System.Drawing.Point(545, 35);
-			this.buttonRightEye.Name = "buttonRightEye";
-			this.buttonRightEye.Size = new System.Drawing.Size(20, 20);
-			this.buttonRightEye.TabIndex = 84;
-			this.buttonRightEye.UseVisualStyleBackColor = false;
-			this.buttonRightEye.MouseEnter += new System.EventHandler(this.buttonRightEye_MouseEnter);
-			this.buttonRightEye.MouseLeave += new System.EventHandler(this.buttonRightEye_MouseLeave);
+			this.buttonNose.BackColor = System.Drawing.Color.Transparent;
+			this.buttonNose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonNose.FlatAppearance.BorderSize = 0;
+			this.buttonNose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.buttonNose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.buttonNose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonNose.Location = new System.Drawing.Point(531, 55);
+			this.buttonNose.Name = "buttonNose";
+			this.buttonNose.Size = new System.Drawing.Size(20, 20);
+			this.buttonNose.TabIndex = 87;
+			this.buttonNose.UseVisualStyleBackColor = false;
+			this.buttonNose.Click += new System.EventHandler(this.buttonNose_Click);
+			this.buttonNose.MouseEnter += new System.EventHandler(this.buttonNose_MouseEnter);
+			this.buttonNose.MouseLeave += new System.EventHandler(this.buttonNose_MouseLeave);
 			// 
 			// buttonRightEar
 			// 
@@ -2858,60 +1814,216 @@
 			this.buttonLeftEar.MouseEnter += new System.EventHandler(this.buttonLeftEar_MouseEnter);
 			this.buttonLeftEar.MouseLeave += new System.EventHandler(this.buttonLeftEar_MouseLeave);
 			// 
-			// buttonNose
+			// buttonRightEye
 			// 
-			this.buttonNose.BackColor = System.Drawing.Color.Transparent;
-			this.buttonNose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonNose.FlatAppearance.BorderSize = 0;
-			this.buttonNose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.buttonNose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.buttonNose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonNose.Location = new System.Drawing.Point(531, 55);
-			this.buttonNose.Name = "buttonNose";
-			this.buttonNose.Size = new System.Drawing.Size(20, 20);
-			this.buttonNose.TabIndex = 87;
-			this.buttonNose.UseVisualStyleBackColor = false;
-			this.buttonNose.Click += new System.EventHandler(this.buttonNose_Click);
-			this.buttonNose.MouseEnter += new System.EventHandler(this.buttonNose_MouseEnter);
-			this.buttonNose.MouseLeave += new System.EventHandler(this.buttonNose_MouseLeave);
+			this.buttonRightEye.BackColor = System.Drawing.Color.Transparent;
+			this.buttonRightEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonRightEye.FlatAppearance.BorderSize = 0;
+			this.buttonRightEye.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.buttonRightEye.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.buttonRightEye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonRightEye.Location = new System.Drawing.Point(545, 35);
+			this.buttonRightEye.Name = "buttonRightEye";
+			this.buttonRightEye.Size = new System.Drawing.Size(20, 20);
+			this.buttonRightEye.TabIndex = 84;
+			this.buttonRightEye.UseVisualStyleBackColor = false;
+			this.buttonRightEye.Click += new System.EventHandler(this.buttonRightEye_Click);
+			this.buttonRightEye.MouseEnter += new System.EventHandler(this.buttonRightEye_MouseEnter);
+			this.buttonRightEye.MouseLeave += new System.EventHandler(this.buttonRightEye_MouseLeave);
 			// 
-			// labelNose
+			// buttonLeftEye
 			// 
-			this.labelNose.AutoSize = true;
-			this.labelNose.BackColor = System.Drawing.Color.Transparent;
-			this.labelNose.Location = new System.Drawing.Point(347, 46);
-			this.labelNose.Name = "labelNose";
-			this.labelNose.Size = new System.Drawing.Size(50, 20);
-			this.labelNose.TabIndex = 88;
-			this.labelNose.Text = "Nose:";
+			this.buttonLeftEye.BackColor = System.Drawing.Color.Transparent;
+			this.buttonLeftEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonLeftEye.FlatAppearance.BorderSize = 0;
+			this.buttonLeftEye.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.buttonLeftEye.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.buttonLeftEye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonLeftEye.Location = new System.Drawing.Point(517, 35);
+			this.buttonLeftEye.Name = "buttonLeftEye";
+			this.buttonLeftEye.Size = new System.Drawing.Size(20, 20);
+			this.buttonLeftEye.TabIndex = 83;
+			this.buttonLeftEye.UseVisualStyleBackColor = false;
+			this.buttonLeftEye.Click += new System.EventHandler(this.buttonLeftEye_Click);
+			this.buttonLeftEye.MouseEnter += new System.EventHandler(this.buttonLeftEye_MouseEnter);
+			this.buttonLeftEye.MouseLeave += new System.EventHandler(this.buttonLeftEye_MouseLeave);
 			// 
-			// labelHearingLoss
+			// buttonLifeStyle
 			// 
-			this.labelHearingLoss.AutoSize = true;
-			this.labelHearingLoss.BackColor = System.Drawing.Color.Transparent;
-			this.labelHearingLoss.Location = new System.Drawing.Point(805, 12);
-			this.labelHearingLoss.Name = "labelHearingLoss";
-			this.labelHearingLoss.Size = new System.Drawing.Size(107, 20);
-			this.labelHearingLoss.TabIndex = 89;
-			this.labelHearingLoss.Text = "Hearing Loss:";
+			this.buttonLifeStyle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonLifeStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonLifeStyle.Location = new System.Drawing.Point(6, 62);
+			this.buttonLifeStyle.Name = "buttonLifeStyle";
+			this.buttonLifeStyle.Size = new System.Drawing.Size(228, 33);
+			this.buttonLifeStyle.TabIndex = 89;
+			this.buttonLifeStyle.Text = "Life Style Assessment";
+			this.buttonLifeStyle.UseVisualStyleBackColor = true;
+			this.buttonLifeStyle.Click += new System.EventHandler(this.buttonLifeStyle_Click);
 			// 
-			// labelTinnitus
+			// buttonDVALinks
 			// 
-			this.labelTinnitus.AutoSize = true;
-			this.labelTinnitus.BackColor = System.Drawing.Color.Transparent;
-			this.labelTinnitus.Location = new System.Drawing.Point(805, 66);
-			this.labelTinnitus.Name = "labelTinnitus";
-			this.labelTinnitus.Size = new System.Drawing.Size(68, 20);
-			this.labelTinnitus.TabIndex = 90;
-			this.labelTinnitus.Text = "Tinnitus:";
+			this.buttonDVALinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonDVALinks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonDVALinks.Location = new System.Drawing.Point(263, 62);
+			this.buttonDVALinks.Name = "buttonDVALinks";
+			this.buttonDVALinks.Size = new System.Drawing.Size(228, 33);
+			this.buttonDVALinks.TabIndex = 90;
+			this.buttonDVALinks.Text = "DVA Links";
+			this.buttonDVALinks.UseVisualStyleBackColor = true;
+			this.buttonDVALinks.Click += new System.EventHandler(this.buttonDVALinks_Click);
+			// 
+			// labelEyes
+			// 
+			this.labelEyes.AutoSize = true;
+			this.labelEyes.BackColor = System.Drawing.Color.Transparent;
+			this.labelEyes.Location = new System.Drawing.Point(643, 14);
+			this.labelEyes.Name = "labelEyes";
+			this.labelEyes.Size = new System.Drawing.Size(48, 20);
+			this.labelEyes.TabIndex = 93;
+			this.labelEyes.Text = "Eyes:";
+			// 
+			// checkBoxEyesWar
+			// 
+			this.checkBoxEyesWar.AutoSize = true;
+			this.checkBoxEyesWar.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxEyesWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxEyesWar.Location = new System.Drawing.Point(729, 44);
+			this.checkBoxEyesWar.Name = "checkBoxEyesWar";
+			this.checkBoxEyesWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxEyesWar.TabIndex = 92;
+			this.toolTip1.SetToolTip(this.checkBoxEyesWar, "Check when injury happened during War Service.");
+			this.checkBoxEyesWar.UseVisualStyleBackColor = false;
+			this.checkBoxEyesWar.CheckedChanged += new System.EventHandler(this.checkBoxEyesWar_CheckedChanged);
+			// 
+			// textBoxFinalEyes
+			// 
+			this.textBoxFinalEyes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.textBoxFinalEyes.Location = new System.Drawing.Point(647, 40);
+			this.textBoxFinalEyes.Name = "textBoxFinalEyes";
+			this.textBoxFinalEyes.ReadOnly = true;
+			this.textBoxFinalEyes.Size = new System.Drawing.Size(70, 26);
+			this.textBoxFinalEyes.TabIndex = 91;
+			this.textBoxFinalEyes.Text = "0";
+			this.textBoxFinalEyes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxFinalEyes.TextChanged += new System.EventHandler(this.textBoxFinalEyes_TextChanged);
+			// 
+			// labelLeftShoulder
+			// 
+			this.labelLeftShoulder.AutoSize = true;
+			this.labelLeftShoulder.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftShoulder.Location = new System.Drawing.Point(368, 111);
+			this.labelLeftShoulder.Name = "labelLeftShoulder";
+			this.labelLeftShoulder.Size = new System.Drawing.Size(77, 20);
+			this.labelLeftShoulder.TabIndex = 94;
+			this.labelLeftShoulder.Text = "Shoulder:";
+			// 
+			// labelLeftElbow
+			// 
+			this.labelLeftElbow.AutoSize = true;
+			this.labelLeftElbow.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftElbow.Location = new System.Drawing.Point(347, 204);
+			this.labelLeftElbow.Name = "labelLeftElbow";
+			this.labelLeftElbow.Size = new System.Drawing.Size(56, 20);
+			this.labelLeftElbow.TabIndex = 95;
+			this.labelLeftElbow.Text = "Elbow:";
+			// 
+			// labelLeftWrist
+			// 
+			this.labelLeftWrist.AutoSize = true;
+			this.labelLeftWrist.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftWrist.Location = new System.Drawing.Point(317, 280);
+			this.labelLeftWrist.Name = "labelLeftWrist";
+			this.labelLeftWrist.Size = new System.Drawing.Size(49, 20);
+			this.labelLeftWrist.TabIndex = 96;
+			this.labelLeftWrist.Text = "Wrist:";
+			// 
+			// labelLeftFingers
+			// 
+			this.labelLeftFingers.AutoSize = true;
+			this.labelLeftFingers.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftFingers.Location = new System.Drawing.Point(293, 339);
+			this.labelLeftFingers.Name = "labelLeftFingers";
+			this.labelLeftFingers.Size = new System.Drawing.Size(66, 20);
+			this.labelLeftFingers.TabIndex = 97;
+			this.labelLeftFingers.Text = "Fingers:";
+			// 
+			// labelRightElbow
+			// 
+			this.labelRightElbow.AutoSize = true;
+			this.labelRightElbow.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightElbow.Location = new System.Drawing.Point(671, 204);
+			this.labelRightElbow.Name = "labelRightElbow";
+			this.labelRightElbow.Size = new System.Drawing.Size(56, 20);
+			this.labelRightElbow.TabIndex = 98;
+			this.labelRightElbow.Text = "Elbow:";
+			// 
+			// labelRightWrist
+			// 
+			this.labelRightWrist.AutoSize = true;
+			this.labelRightWrist.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightWrist.Location = new System.Drawing.Point(701, 280);
+			this.labelRightWrist.Name = "labelRightWrist";
+			this.labelRightWrist.Size = new System.Drawing.Size(49, 20);
+			this.labelRightWrist.TabIndex = 99;
+			this.labelRightWrist.Text = "Wrist:";
+			// 
+			// labelRightFingers
+			// 
+			this.labelRightFingers.AutoSize = true;
+			this.labelRightFingers.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightFingers.Location = new System.Drawing.Point(719, 339);
+			this.labelRightFingers.Name = "labelRightFingers";
+			this.labelRightFingers.Size = new System.Drawing.Size(66, 20);
+			this.labelRightFingers.TabIndex = 100;
+			this.labelRightFingers.Text = "Fingers:";
+			// 
+			// labelKnees
+			// 
+			this.labelKnees.AutoSize = true;
+			this.labelKnees.BackColor = System.Drawing.Color.Transparent;
+			this.labelKnees.Location = new System.Drawing.Point(630, 447);
+			this.labelKnees.Name = "labelKnees";
+			this.labelKnees.Size = new System.Drawing.Size(58, 20);
+			this.labelKnees.TabIndex = 101;
+			this.labelKnees.Text = "Knees:";
+			// 
+			// labelAnkles
+			// 
+			this.labelAnkles.AutoSize = true;
+			this.labelAnkles.BackColor = System.Drawing.Color.Transparent;
+			this.labelAnkles.Location = new System.Drawing.Point(615, 562);
+			this.labelAnkles.Name = "labelAnkles";
+			this.labelAnkles.Size = new System.Drawing.Size(61, 20);
+			this.labelAnkles.TabIndex = 102;
+			this.labelAnkles.Text = "Ankles:";
+			// 
+			// labelToes
+			// 
+			this.labelToes.AutoSize = true;
+			this.labelToes.BackColor = System.Drawing.Color.Transparent;
+			this.labelToes.Location = new System.Drawing.Point(630, 616);
+			this.labelToes.Name = "labelToes";
+			this.labelToes.Size = new System.Drawing.Size(48, 20);
+			this.labelToes.TabIndex = 103;
+			this.labelToes.Text = "Toes:";
+			// 
+			// labelRightShoulder
+			// 
+			this.labelRightShoulder.AutoSize = true;
+			this.labelRightShoulder.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightShoulder.Location = new System.Drawing.Point(662, 128);
+			this.labelRightShoulder.Name = "labelRightShoulder";
+			this.labelRightShoulder.Size = new System.Drawing.Size(77, 20);
+			this.labelRightShoulder.TabIndex = 104;
+			this.labelRightShoulder.Text = "Shoulder:";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1730, 1200);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+			this.ClientSize = new System.Drawing.Size(1090, 1200);
 			this.Controls.Add(this.buttonDVALinks);
 			this.Controls.Add(this.buttonLifeStyle);
 			this.Controls.Add(this.label28);
@@ -2938,7 +2050,6 @@
 			this.Controls.Add(this.label19);
 			this.Controls.Add(this.textBoxCompensationFactorWar);
 			this.Controls.Add(this.label8);
-			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.textBoxLumpSumPayout);
 			this.Controls.Add(this.label1);
@@ -2953,31 +2064,14 @@
 			this.Controls.Add(this.label85);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Location = new System.Drawing.Point(100, 100);
-			this.MaximumSize = new System.Drawing.Size(1730, 1200);
-			this.MinimumSize = new System.Drawing.Size(1730, 1200);
+			this.MaximumSize = new System.Drawing.Size(1090, 1200);
+			this.MinimumSize = new System.Drawing.Size(1090, 1200);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Ver 1.2                             DVA Compensation Calulator - by Geoff Armstro" +
     "ng                 ";
-			this.TransparencyKey = System.Drawing.SystemColors.Control;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
-			this.tabControl1.ResumeLayout(false);
-			this.tabPageHearing.ResumeLayout(false);
-			this.tabPageHearing.PerformLayout();
-			this.groupBox8.ResumeLayout(false);
-			this.groupBox7.ResumeLayout(false);
-			this.tabPageVisual.ResumeLayout(false);
-			this.groupBox16.ResumeLayout(false);
-			this.groupBox16.PerformLayout();
-			this.groupBox15.ResumeLayout(false);
-			this.groupBox15.PerformLayout();
-			this.groupBox13.ResumeLayout(false);
-			this.groupBox13.PerformLayout();
-			this.groupBox14.ResumeLayout(false);
-			this.groupBox14.PerformLayout();
-			this.tabPageLifeStyle.ResumeLayout(false);
-			this.tabPageLifeStyle.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.panelMainPoints.ResumeLayout(false);
@@ -2993,7 +2087,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBoxLumpSumPayout;
-		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.ComboBox comboBoxAge;
@@ -3001,26 +2094,8 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox textBoxWeeklyPayment;
 		private System.Windows.Forms.PictureBox SaveAll;
-		private System.Windows.Forms.TabPage tabPageLifeStyle;
-		private System.Windows.Forms.Label label20;
-		private System.Windows.Forms.Label label21;
-		private System.Windows.Forms.TextBox textBoxPersonalRelationships;
-		private System.Windows.Forms.Label label22;
-		private System.Windows.Forms.Label label23;
-		private System.Windows.Forms.TextBox textBoxDomesticActivities;
-		private System.Windows.Forms.TextBox textBoxRecreationalActivities;
-		private System.Windows.Forms.Label label24;
-		private System.Windows.Forms.Label label25;
-		private System.Windows.Forms.TextBox textBoxMobility;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.TextBox textBoxCompensationFactorWar;
-		private System.Windows.Forms.Button buttonPersonalRelationships;
-		private System.Windows.Forms.Button buttonMobility;
-		private System.Windows.Forms.Button buttonRecreationalActivities;
-		private System.Windows.Forms.Button buttonDomesticActivities;
-		private System.Windows.Forms.Button buttonEmploymentActivities;
-		private System.Windows.Forms.TextBox textBoxEmploymentActivities;
-		private System.Windows.Forms.Label label26;
 		private System.Windows.Forms.Label label28;
 		private System.Windows.Forms.TextBox textBoxCompensationFactorPeace;
 		private System.Windows.Forms.Label label29;
@@ -3041,7 +2116,6 @@
 		private System.Windows.Forms.TextBox textBoxJointPain;
 		private System.Windows.Forms.Button buttonROMInfo;
 		private System.Windows.Forms.Label label18;
-		private System.Windows.Forms.TextBox textBoxFinalLifeStylePoint;
 		private System.Windows.Forms.TextBox textBoxThoraco;
 		private System.Windows.Forms.CheckBox checkBoxThoracoWar;
 		private System.Windows.Forms.Button buttonThoraco;
@@ -3054,23 +2128,12 @@
 		private System.Windows.Forms.CheckBox checkBoxWholeLeftArmWar;
 		private System.Windows.Forms.Button buttonWholeLeftArm;
 		private System.Windows.Forms.TextBox textBoxWholeLeftArm;
-		private System.Windows.Forms.TabPage tabPageHearing;
 		private System.Windows.Forms.CheckBox checkBoxTinnitusWar;
-		private System.Windows.Forms.Label label48;
 		private System.Windows.Forms.Button buttonTinnitus;
-		private System.Windows.Forms.Label label64;
 		private System.Windows.Forms.TextBox textBoxTinnitus;
-		private System.Windows.Forms.Label label65;
-		private System.Windows.Forms.GroupBox groupBox7;
-		private System.Windows.Forms.Label label66;
-		private System.Windows.Forms.GroupBox groupBox8;
 		private System.Windows.Forms.CheckBox checkBoxEarsWar;
-		private System.Windows.Forms.Label label69;
 		private System.Windows.Forms.Button buttonEars;
-		private System.Windows.Forms.Label label70;
 		private System.Windows.Forms.TextBox textBoxEars;
-		private System.Windows.Forms.Label label71;
-		private System.Windows.Forms.Label label67;
 		private System.Windows.Forms.CheckBox checkBoxThroatWar;
 		private System.Windows.Forms.TextBox textBoxThroat;
 		private System.Windows.Forms.CheckBox checkBoxNoseWar;
@@ -3081,61 +2144,6 @@
 		private System.Windows.Forms.TextBox textBoxCervicalSpine;
 		private System.Windows.Forms.PrintDialog printDialog1;
 		private System.Windows.Forms.Button buttonPrint;
-		private System.Windows.Forms.TabPage tabPageVisual;
-		private System.Windows.Forms.GroupBox groupBox15;
-		private System.Windows.Forms.Label label104;
-		private System.Windows.Forms.CheckBox checkBoxRightMonocularWar;
-		private System.Windows.Forms.Label label105;
-		private System.Windows.Forms.TextBox textBoxRightMonocular;
-		private System.Windows.Forms.Label label106;
-		private System.Windows.Forms.Label label101;
-		private System.Windows.Forms.TextBox textBoxLeftMonocular;
-		private System.Windows.Forms.Label label102;
-		private System.Windows.Forms.CheckBox checkBoxLeftMonocularWar;
-		private System.Windows.Forms.Label label103;
-		private System.Windows.Forms.GroupBox groupBox13;
-		private System.Windows.Forms.Label label87;
-		private System.Windows.Forms.Button buttonLeftOtherOcular;
-		private System.Windows.Forms.CheckBox checkBoxLeftOtherOcularWar;
-		private System.Windows.Forms.Label label88;
-		private System.Windows.Forms.TextBox textBoxLeftOtherOcular;
-		private System.Windows.Forms.Label label89;
-		private System.Windows.Forms.GroupBox groupBox14;
-		private System.Windows.Forms.Label label94;
-		private System.Windows.Forms.TextBox textBoxLeftMiscVisual;
-		private System.Windows.Forms.Label label98;
-		private System.Windows.Forms.CheckBox checkBoxLeftMiscVisualWar;
-		private System.Windows.Forms.Label label99;
-		private System.Windows.Forms.Label label90;
-		private System.Windows.Forms.Button buttonRightOtherOcular;
-		private System.Windows.Forms.CheckBox checkBoxRightOtherOcularWar;
-		private System.Windows.Forms.Label label95;
-		private System.Windows.Forms.TextBox textBoxRightOtherOcular;
-		private System.Windows.Forms.Label label96;
-		private System.Windows.Forms.Label label91;
-		private System.Windows.Forms.CheckBox checkBoxRightMiscVisualWar;
-		private System.Windows.Forms.Label label92;
-		private System.Windows.Forms.TextBox textBoxRightMiscVisual;
-		private System.Windows.Forms.Label label93;
-		private System.Windows.Forms.Label label100;
-		private System.Windows.Forms.Label label97;
-		private System.Windows.Forms.ComboBox comboBoxLeftMonocular;
-		private System.Windows.Forms.ComboBox comboBoxRightMonocular;
-		private System.Windows.Forms.GroupBox groupBox16;
-		private System.Windows.Forms.Label label107;
-		private System.Windows.Forms.Button buttonRightVisualFOL;
-		private System.Windows.Forms.CheckBox checkBoxRightVisualFOLWar;
-		private System.Windows.Forms.Label label108;
-		private System.Windows.Forms.TextBox textBoxRightVisualFOL;
-		private System.Windows.Forms.Label label109;
-		private System.Windows.Forms.Label label110;
-		private System.Windows.Forms.TextBox textBoxLeftVisualFOL;
-		private System.Windows.Forms.Label label111;
-		private System.Windows.Forms.CheckBox checkBoxLeftVisualFOLWar;
-		private System.Windows.Forms.Button buttonLeftVisualFOL;
-		private System.Windows.Forms.Label label112;
-		private System.Windows.Forms.ComboBox comboBoxLeftMiscVisual;
-		private System.Windows.Forms.ComboBox comboBoxRightMiscVisual;
 		private System.Windows.Forms.Button buttonImportantInfo;
 		private System.Windows.Forms.Label label85;
 		private System.Windows.Forms.Button buttonLeftKnee;
@@ -3196,6 +2204,21 @@
 		private System.Windows.Forms.Label labelNose;
 		private System.Windows.Forms.Label labelTinnitus;
 		private System.Windows.Forms.Label labelHearingLoss;
+		public System.Windows.Forms.TextBox textBoxFinalLifeStylePoint;
+		private System.Windows.Forms.Label labelEyes;
+		private System.Windows.Forms.CheckBox checkBoxEyesWar;
+		private System.Windows.Forms.TextBox textBoxFinalEyes;
+		private System.Windows.Forms.Label labelRightShoulder;
+		private System.Windows.Forms.Label labelToes;
+		private System.Windows.Forms.Label labelAnkles;
+		private System.Windows.Forms.Label labelKnees;
+		private System.Windows.Forms.Label labelRightFingers;
+		private System.Windows.Forms.Label labelRightWrist;
+		private System.Windows.Forms.Label labelRightElbow;
+		private System.Windows.Forms.Label labelLeftFingers;
+		private System.Windows.Forms.Label labelLeftWrist;
+		private System.Windows.Forms.Label labelLeftElbow;
+		private System.Windows.Forms.Label labelLeftShoulder;
 	}
 }
 

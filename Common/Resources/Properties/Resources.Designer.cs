@@ -103,9 +103,9 @@ namespace Common.Resources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Bones_Blue {
+        public static System.Drawing.Bitmap Bones_Blue_Small {
             get {
-                object obj = ResourceManager.GetObject("Bones_Blue", resourceCulture);
+                object obj = ResourceManager.GetObject("Bones_Blue_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +116,16 @@ namespace Common.Resources.Properties {
         public static System.Drawing.Bitmap button_Blue {
             get {
                 object obj = ResourceManager.GetObject("button_Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap button_Blue_Small {
+            get {
+                object obj = ResourceManager.GetObject("button_Blue_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +323,9 @@ namespace Common.Resources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap MainBackground_Green {
+        public static System.Drawing.Bitmap MainBackground_Green_Small {
             get {
-                object obj = ResourceManager.GetObject("MainBackground_Green", resourceCulture);
+                object obj = ResourceManager.GetObject("MainBackground_Green_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

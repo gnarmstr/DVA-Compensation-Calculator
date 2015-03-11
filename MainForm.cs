@@ -19,10 +19,6 @@ using GemBox.Spreadsheet.WinFormsUtilities;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using System.IO;
-using Application = System.Windows.Forms.Application;
-using System.Diagnostics;
-using Font = System.Drawing.Font;
-using Rectangle = System.Drawing.Rectangle;
 
 #endregion
 
@@ -50,12 +46,11 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-
 		#region Settings
 		private void Settings()
 		{
-			MinimumSize = new Size(1450, 790);
-			MaximumSize = new Size(1450, 790);
+			MinimumSize = new Size(725, 790);
+			MaximumSize = new Size(725, 790);
 			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVA Compensation Calculator");
 			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
 			GlobalVar.ExcelData = new[] { GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue, GlobalVar.LimbsAgeAdjust };
@@ -70,20 +65,20 @@ namespace DVA_Compensation_Calculator
 
 			GlobalVar.startup = true;
 
-			panelMainPoints.BackgroundImage = Resources.Bones_Blue;
-			BackgroundImage = Resources.MainBackground_Green;
+			panelMainPoints.BackgroundImage = Resources.Bones_Blue_Small;
+			BackgroundImage = Resources.MainBackground_Green_Small;
 			BackgroundImageLayout = ImageLayout.Stretch;
-			buttonImportantInfo.BackgroundImage = Resources.button_Blue;
-			buttonDVALinks.BackgroundImage = Resources.button_Blue;
-			buttonLifeStyle.BackgroundImage = Resources.button_Blue;
-			buttonROMInfo.BackgroundImage = Resources.button_Blue;
+			buttonImportantInfo.BackgroundImage = Resources.button_Blue_Small;
+			buttonDVALinks.BackgroundImage = Resources.button_Blue_Small;
+			buttonLifeStyle.BackgroundImage = Resources.button_Blue_Small;
+			buttonROMInfo.BackgroundImage = Resources.button_Blue_Small;
 			buttonThoraco.BackgroundImage = Resources.Button_Green;
 			buttonWholeLeftArm.BackgroundImage = Resources.Button_Green;
 			buttonJointPain.BackgroundImage = Resources.Button_Green;
 			buttonWholeLimb.BackgroundImage = Resources.Button_Green;
 			buttonWholeRightArm.BackgroundImage = Resources.Button_Green;
 			pictureBoxClose.BackgroundImage = Resources.Close;
-			buttonMainTitle.BackgroundImage = Resources.button_Blue;
+			buttonMainTitle.BackgroundImage = Resources.button_Blue_Small;
 			buttonLeftEye.BackgroundImage = Resources.LeftEye;
 			buttonRightEye.BackgroundImage = Resources.RightEye;
 			buttonLeftKnee.FlatStyle = FlatStyle.Flat;
@@ -197,38 +192,33 @@ namespace DVA_Compensation_Calculator
 			textBoxThroat.Text = profile.GetSetting(XmlProfileSettings.SettingType.Throat, "textBoxThroat", "0");
 			Throat.throat = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Throat, "Throat", "0"));
 			checkBoxThroatWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Throat, "checkBoxThroatWar", false);
-			
-			textBoxLeftMonocular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftMonocular", "0");
-			comboBoxLeftMonocular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMonocular", "6/6");
-			checkBoxLeftMonocularWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftMonocularWar", false);
-			textBoxRightMonocular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightMonocular", "0");
-			comboBoxRightMonocular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMonocular", "6/6");
-			checkBoxRightMonocularWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightMonocularWar", false);
-			textBoxLeftVisualFOL.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftVisualFOL", "0");
+
+			GlobalVar.LeftEyeConversion = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftEyeConversion", 0);
+			GlobalVar.RightEyeConversion = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightEyeConversion", 0);
+			GlobalVar.combinedEyePoints = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "combinedEyePoints", 0);
+			GlobalVar.EyeWar = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "EyeWar", 0);
+			GlobalVar.RightMonocular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightMonocular", "0");
+			GlobalVar.RightVisualFOL = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightVisualFOL", "0");
+			GlobalVar.RightMiscVisual = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightMiscVisual", "0");
+			GlobalVar.RightOtherOcular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightOtherOcular", "0");
+			GlobalVar.LeftMonocular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftMonocular", "0");
+			GlobalVar.LeftVisualFOL = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftVisualFOL", "0");
+			GlobalVar.LeftMiscVisual = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftMiscVisual", "0");
+			GlobalVar.LeftOtherOcular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftOtherOcular", "0");
 			VisualFOL.LeftEye = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftEye", "0"));
-			checkBoxLeftVisualFOLWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftVisualFOLWar", false);
-			textBoxRightVisualFOL.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightVisualFOL", "0");
 			VisualFOL.RightEye = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightEye", "0"));
-			checkBoxRightVisualFOLWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightVisualFOLWar", false);
-			textBoxLeftOtherOcular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftOtherOcular", "0");
 			OcularImpairment.LeftOcular = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftOcular", "0"));
-			checkBoxLeftOtherOcularWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftOtherOcularWar", false);
-			textBoxRightOtherOcular.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightOtherOcular", "0");
 			OcularImpairment.RightOcular = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightOcular", "0"));
-			checkBoxRightOtherOcularWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightOtherOcularWar", false);
+			textBoxFinalEyes.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxFinalEyes", "0");
+			checkBoxEyesWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxEyesWar", false);
 
-			textBoxLeftMiscVisual.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftMiscVisual", "0");
-			comboBoxLeftMiscVisual.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMiscVisual", "");
-			checkBoxLeftMiscVisualWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftMiscVisualWar", false);
-			textBoxRightMiscVisual.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightMiscVisual", "0");
-			comboBoxRightMiscVisual.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMiscVisual", "");
-			checkBoxRightMiscVisualWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightMiscVisualWar", false);
-
-			textBoxPersonalRelationships.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
-			textBoxMobility.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
-			textBoxRecreationalActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", "0");
-			textBoxDomesticActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", "0");
-			textBoxEmploymentActivities.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", "0");
+			GlobalVar.personalRelationships = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", "0");
+			GlobalVar.Mobility = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", "0");
+			GlobalVar.RecreationalActivities = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", "0");
+			GlobalVar.DomesticActivities = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", "0");
+			GlobalVar.EmploymentActivities = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", "0");
+			GlobalVar.FinalLifeStylePoint = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "FinalLifeStylePoint", "0");
+			textBoxFinalLifeStylePoint.Text = profile.GetSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxFinalLifeStylePoint", "0");
 
 			textBoxJointPain.Text = profile.GetSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", "0");
 			JointPain.jointPain = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Other, "JointPain", "0"));
@@ -614,32 +604,8 @@ namespace DVA_Compensation_Calculator
 			#endregion
 
 			#region Eyes
-			//Eyes
-			//Left Eye
-			var eyeWar = 0;
-			if (checkBoxLeftMonocularWar.Checked | checkBoxLeftVisualFOLWar.Checked | checkBoxLeftMiscVisualWar.Checked | checkBoxLeftOtherOcularWar.Checked)
-			{
-				eyeWar = 1;
-			}
-			GlobalVar.combinedLeftEyePoints = Math.Round(Convert.ToInt16(textBoxLeftVisualFOL.Text) + Convert.ToDecimal(textBoxLeftMonocular.Text) * (1 - Convert.ToDecimal(textBoxLeftVisualFOL.Text) / 100));
-			GlobalVar.combinedLeftEyePoints = Math.Round(GlobalVar.combinedLeftEyePoints + Convert.ToInt16(textBoxLeftMiscVisual.Text) * (1 - GlobalVar.combinedLeftEyePoints / 100));
-			GlobalVar.combinedLeftEyePoints = Math.Max(GlobalVar.combinedLeftEyePoints, Convert.ToInt16(textBoxLeftOtherOcular.Text));
-			GlobalVar.combinedLeftEyePoints = Math.Round(GlobalVar.combinedLeftEyePoints/5)*5; //Round to nearest 5
-			//Right Eye
-			if (checkBoxRightMonocularWar.Checked | checkBoxRightVisualFOLWar.Checked | checkBoxRightMiscVisualWar.Checked | checkBoxRightOtherOcularWar.Checked)
-			{
-				eyeWar = 1;
-			}
-			GlobalVar.combinedRightEyePoints = Math.Round(Convert.ToInt16(textBoxRightVisualFOL.Text) + Convert.ToDecimal(textBoxRightMonocular.Text) * (1 - Convert.ToDecimal(textBoxRightVisualFOL.Text) / 100));
-			GlobalVar.combinedRightEyePoints = Math.Round(GlobalVar.combinedRightEyePoints + Convert.ToInt16(textBoxRightMiscVisual.Text) * (1 - GlobalVar.combinedRightEyePoints / 100));
-			GlobalVar.combinedRightEyePoints = Math.Max(GlobalVar.combinedRightEyePoints, Convert.ToInt16(textBoxRightOtherOcular.Text));
-			GlobalVar.combinedRightEyePoints = Math.Round(GlobalVar.combinedRightEyePoints / 5) * 5; //Round to nearest 5
-			//Both Eyes
-			int leftEyeConversion;
-			int rightEyeConversion;
-			EyeConversion(out leftEyeConversion, GlobalVar.combinedLeftEyePoints);
-			EyeConversion(out rightEyeConversion, GlobalVar.combinedRightEyePoints);
-			GlobalVar.combinedEyePoints = Convert.ToDecimal(GlobalVar.ExcelData[0][leftEyeConversion + 77][rightEyeConversion]);
+			GlobalVar.combinedEyePoints = Convert.ToDecimal(GlobalVar.ExcelData[0][GlobalVar.LeftEyeConversion + 77][GlobalVar.RightEyeConversion]);
+			textBoxFinalEyes.Text = GlobalVar.combinedEyePoints.ToString();
 			#endregion
 
 			#region Display War and Peace values. Display only
@@ -753,7 +719,7 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxCervicalSpine.Text)).ToString();
 			}
-			if (eyeWar == 1)
+			if (checkBoxEyesWar.Checked)
 			{
 				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + GlobalVar.combinedEyePoints).ToString();
 			}
@@ -769,7 +735,7 @@ namespace DVA_Compensation_Calculator
 
 		#region Eye Conversion for chart
 
-		private void EyeConversion(out int eyeConversion, decimal combinedEyePoints)
+		public static void EyeConversion(out int eyeConversion, decimal combinedEyePoints)
 		{
 			var eyeConversionInt = Convert.ToInt16(combinedEyePoints);
 			switch (eyeConversionInt)
@@ -894,7 +860,6 @@ namespace DVA_Compensation_Calculator
 		private void UpdateAll()
 		{
 			FinalPayout();
-			finalLifeStylePoint();
 			combinedPoints();
 			totalPoint();
 			finalCompensationFactor();
@@ -926,91 +891,109 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxShoulder.Visible = true;
 				checkBoxShoulderWar.Visible = true;
+				labelLeftShoulder.Visible = true;
 			}
 			else
 			{
 				textBoxShoulder.Visible = false;
 				checkBoxShoulderWar.Visible = false;
+				labelLeftShoulder.Visible = false;
 			} 
 			if (textBoxRightShoulder.Text != "0")
 			{
 				textBoxRightShoulder.Visible = true;
 				checkBoxRightShoulderWar.Visible = true;
+				labelRightShoulder.Visible = true;
 			}
 			else
 			{
 				textBoxRightShoulder.Visible = false;
 				checkBoxRightShoulderWar.Visible = false;
+				labelRightShoulder.Visible = false;
 			}
 			if (textBoxKnee.Text != "0")
 			{
 				textBoxKnee.Visible = true;
 				checkBoxKneeWar.Visible = true;
+				labelKnees.Visible = true;
 			}
 			else
 			{
 				textBoxKnee.Visible = false;
 				checkBoxKneeWar.Visible = false;
+				labelKnees.Visible = false;
 			}
 			if (textBoxWrist.Text != "0")
 			{
 				textBoxWrist.Visible = true;
 				checkBoxWristWar.Visible = true;
+				labelLeftWrist.Visible = true;
 			}
 			else
 			{
 				textBoxWrist.Visible = false;
 				checkBoxWristWar.Visible = false;
+				labelLeftWrist.Visible = false;
 			}
 			if (textBoxRightWrist.Text != "0")
 			{
 				textBoxRightWrist.Visible = true;
 				checkBoxRightWristWar.Visible = true;
+				labelRightWrist.Visible = true;
 			}
 			else
 			{
 				textBoxRightWrist.Visible = false;
 				checkBoxRightWristWar.Visible = false;
+				labelRightWrist.Visible = false;
 			}
 			if (textBoxFingers.Text != "0")
 			{
 				textBoxFingers.Visible = true;
 				checkBoxFingersWar.Visible = true;
+				labelLeftFingers.Visible = true;
 			}
 			else
 			{
 				textBoxFingers.Visible = false;
 				checkBoxFingersWar.Visible = false;
+				labelLeftFingers.Visible = false;
 			}
 			if (textBoxRightFingers.Text != "0")
 			{
 				textBoxRightFingers.Visible = true;
 				checkBoxRightFingersWar.Visible = true;
+				labelRightFingers.Visible = true;
 			}
 			else
 			{
 				textBoxRightFingers.Visible = false;
 				checkBoxRightFingersWar.Visible = false;
+				labelRightFingers.Visible = false;
 			}
 			if (textBoxElbow.Text != "0")
 			{
 				textBoxElbow.Visible = true;
 				checkBoxElbowWar.Visible = true;
+				labelLeftElbow.Visible = true;
 			}
 			else
 			{
 				textBoxElbow.Visible = false;
 				checkBoxElbowWar.Visible = false;
+				labelLeftElbow.Visible = false;
 			}
 			if (textBoxRightElbow.Text != "0")
 			{
 				textBoxRightElbow.Visible = true;
 				checkBoxRightElbowWar.Visible = true;
+				labelRightElbow.Visible = true;
 			}
 			else
 			{
 				textBoxRightElbow.Visible = false;
 				checkBoxRightElbowWar.Visible = false;
+				labelRightElbow.Visible = false;
 			}
 			if (textBoxHip.Text != "0")
 			{
@@ -1026,21 +1009,25 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxAnkle.Visible = true;
 				checkBoxAnkleWar.Visible = true;
+				labelAnkles.Visible = true;
 			}
 			else
 			{
 				textBoxAnkle.Visible = false;
 				checkBoxAnkleWar.Visible = false;
+				labelAnkles.Visible = false;
 			}
 			if (textBoxToes.Text != "0")
 			{
 				textBoxToes.Visible = true;
 				checkBoxToesWar.Visible = true;
+				labelToes.Visible = true;
 			}
 			else
 			{
 				textBoxToes.Visible = false;
 				checkBoxToesWar.Visible = false;
+				labelToes.Visible = false;
 			}
 			if (textBoxWholeLeftArm.Text != "0")
 			{
@@ -1159,6 +1146,18 @@ namespace DVA_Compensation_Calculator
 				textBoxTinnitus.Visible = false;
 				checkBoxTinnitusWar.Visible = false;
 				labelTinnitus.Visible = false;
+			}
+			if (textBoxFinalEyes.Text != "0")
+			{
+				textBoxFinalEyes.Visible = true;
+				checkBoxEyesWar.Visible = true;
+				labelEyes.Visible = true;
+			}
+			else
+			{
+				textBoxFinalEyes.Visible = false;
+				checkBoxEyesWar.Visible = false;
+				labelEyes.Visible = false;
 			}
 			
 		}
@@ -1321,36 +1320,32 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Throat, "Throat", Throat.throat);
 			profile.PutSetting(XmlProfileSettings.SettingType.Throat, "checkBoxThroatWar", checkBoxThroatWar.Checked.ToString());
 
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftMonocular", textBoxLeftMonocular.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMonocular", comboBoxLeftMonocular.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftMonocularWar", checkBoxLeftMonocularWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightMonocular", textBoxRightMonocular.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMonocular", comboBoxRightMonocular.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightMonocularWar", checkBoxRightMonocularWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftVisualFOL", textBoxLeftVisualFOL.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftEyeConversion", GlobalVar.LeftEyeConversion.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightEyeConversion", GlobalVar.RightEyeConversion.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "combinedEyePoints", GlobalVar.combinedEyePoints.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxEyesWar", checkBoxEyesWar.Checked.ToString());
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxFinalEyes", textBoxFinalEyes.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "EyeWar", GlobalVar.EyeWar);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightMonocular", GlobalVar.RightMonocular);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightVisualFOL", GlobalVar.RightVisualFOL);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightMiscVisual", GlobalVar.RightMiscVisual);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightOtherOcular", GlobalVar.RightOtherOcular);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftMonocular", GlobalVar.LeftMonocular);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftVisualFOL", GlobalVar.LeftVisualFOL);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftMiscVisual", GlobalVar.LeftMiscVisual);
+			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftOtherOcular", GlobalVar.LeftOtherOcular);
 			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftEye", VisualFOL.LeftEye);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftVisualFOLWar", checkBoxLeftVisualFOLWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightVisualFOL", textBoxRightVisualFOL.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightEye", VisualFOL.RightEye);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightVisualFOLWar", checkBoxRightVisualFOLWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftMiscVisual", textBoxLeftMiscVisual.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMiscVisual", comboBoxLeftMiscVisual.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftMiscVisualWar", checkBoxLeftMiscVisualWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightMiscVisual", textBoxRightMiscVisual.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMiscVisual", comboBoxRightMiscVisual.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightMiscVisualWar", checkBoxRightMiscVisualWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxLeftOtherOcular", textBoxLeftOtherOcular.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "LeftOcular", OcularImpairment.LeftOcular);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxLeftOtherOcularWar", checkBoxLeftOtherOcularWar.Checked.ToString());
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "textBoxRightOtherOcular", textBoxRightOtherOcular.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "RightOcular", OcularImpairment.RightOcular);
-			profile.PutSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxRightOtherOcularWar", checkBoxRightOtherOcularWar.Checked.ToString());
 
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", textBoxPersonalRelationships.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", textBoxMobility.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", textBoxRecreationalActivities.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", textBoxDomesticActivities.Text);
-			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", textBoxEmploymentActivities.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxFinalLifeStylePoint", textBoxFinalLifeStylePoint.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxPersonalRelationships", GlobalVar.personalRelationships);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxMobility", GlobalVar.Mobility);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxRecreationalActivities", GlobalVar.RecreationalActivities);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxDomesticActivities", GlobalVar.DomesticActivities);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "textBoxEmploymentActivities", GlobalVar.EmploymentActivities);
+			profile.PutSetting(XmlProfileSettings.SettingType.LifeStyle, "FinalLifeStylePoint", GlobalVar.FinalLifeStylePoint);
 
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", textBoxJointPain.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "JointPain", JointPain.jointPain);
@@ -1407,8 +1402,6 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		
-
 		private void textBoxThoracoROM_TextChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
@@ -1421,79 +1414,11 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-		#region LifeStyle
-
-		private void buttonPersonalRelationships_Click(object sender, EventArgs e)
-		{
-			var personalRelationships = new PersonalRelationships();
-			personalRelationships.ShowDialog();
-			textBoxPersonalRelationships.Text = PersonalRelationships.personalRelationship.ToString();  //No age adjustment
-		}
-
-		private void buttonMobility_Click(object sender, EventArgs e)
-		{
-			var mobility = new Mobility();
-			mobility.ShowDialog();
-			textBoxMobility.Text = Mobility.mobility.ToString();
-		}
-
-		private void buttonRecreationalActivities_Click(object sender, EventArgs e)
-		{
-			var recreationalActivities = new RecreationalActivities();
-			recreationalActivities.ShowDialog();
-			textBoxRecreationalActivities.Text = RecreationalActivities.recreationalActivities.ToString();  //No age adjustment
-		}
-
-		private void buttonDomesticActivities_Click(object sender, EventArgs e)
-		{
-			var domesticActivities = new DomesticActivities();
-			domesticActivities.ShowDialog();
-			textBoxDomesticActivities.Text = DomesticActivities.domesticActivities.ToString();  //No age adjustment
-		}
-
-		private void buttonEmploymentActivities_Click(object sender, EventArgs e)
-		{
-
-			var employmentActivities = new EmploymentActivities();
-			employmentActivities.ShowDialog();
-			textBoxEmploymentActivities.Text = EmploymentActivities.employmentActivities.ToString();  //No age adjustment
-		}
-
-		private void textBoxPersonalRelationships_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxMobility_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxRecreationalActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxDomesticActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxEmploymentActivities_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void finalLifeStylePoint()
-		{
-			textBoxFinalLifeStylePoint.Text = (Math.Round(((Convert.ToDecimal(textBoxPersonalRelationships.Text) + Convert.ToDecimal(textBoxMobility.Text) + Convert.ToDecimal(textBoxRecreationalActivities.Text) + (Math.Max(Convert.ToDecimal(textBoxDomesticActivities.Text), Convert.ToDecimal(textBoxEmploymentActivities.Text)))) / 4), 0)).ToString();
-		}
-
+		#region Life Style
 		private void textBoxFinalLifeStylePoint_TextChanged(object sender, EventArgs e)
 		{
 			FinalPayout();
 		}
-
 		#endregion
 
 		#region Lower Body
@@ -1886,267 +1811,13 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-		#region EYES
-
-		#region Left Eyes
-
-		private void comboBoxLeftMonocular_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			textBoxLeftMonocular.Text = (comboBoxLeftMonocular.SelectedIndex * 10).ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void checkBoxLeftMonocularWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxLeftMonocular_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void buttonLeftVisualFOL_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftEye";
-			var visualFOL = new VisualFOL();
-			visualFOL.ShowDialog();
-			textBoxLeftVisualFOL.Text = VisualFOL.LeftEye.ToString();  //Not age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-		private void textBoxLeftVisualFOL_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxLeftVisualFOLWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void comboBoxLeftMiscVisual_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			switch (comboBoxLeftMiscVisual.SelectedIndex)
-			{
-				case 0: textBoxLeftMiscVisual.Text = "0";
-					break;
-				case 1: textBoxLeftMiscVisual.Text = "0";
-					break;
-				case 2: textBoxLeftMiscVisual.Text = "0";
-					break;
-				case 3: textBoxLeftMiscVisual.Text = "2";
-					break;
-				case 4: textBoxLeftMiscVisual.Text = "2";
-					break;
-				case 5: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 6: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 7: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 8: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 9: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 10: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 11: textBoxLeftMiscVisual.Text = "5";
-					break;
-				case 12: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 13: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 14: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 15: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 16: textBoxLeftMiscVisual.Text = "15";
-					break;
-				case 17: textBoxLeftMiscVisual.Text = "15";
-					break;
-				case 18: textBoxLeftMiscVisual.Text = "15";
-					break;
-				case 19: textBoxLeftMiscVisual.Text = "25";
-					break;
-				case 20: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 21: textBoxLeftMiscVisual.Text = "10";
-					break;
-				case 22: textBoxLeftMiscVisual.Text = "25";
-					break;
-			}
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxLeftMiscVisual_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxLeftMiscVisualWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void buttonLeftOtherOcular_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftOcular";
-			var ocular = new OcularImpairment();
-			ocular.ShowDialog();
-			textBoxLeftOtherOcular.Text = OcularImpairment.LeftOcular.ToString();  //Not age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxLeftOtherOcular_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxLeftOtherOcularWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		#endregion
-
-		#region Rights Eyes
-
-		private void comboBoxRightMonocular_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			textBoxRightMonocular.Text = (comboBoxRightMonocular.SelectedIndex * 10).ToString();
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightVisualFOL_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightEye";
-			var visualFOL = new VisualFOL();
-			visualFOL.ShowDialog();
-			textBoxRightVisualFOL.Text = VisualFOL.RightEye.ToString();  //Not age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void checkBoxRightMonocularWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxRightMonocular_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxRightVisualFOL_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxRightVisualFOLWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void comboBoxRightMiscVisual_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			switch (comboBoxRightMiscVisual.SelectedIndex)
-			{
-				case 0: textBoxRightMiscVisual.Text = "0";
-					break;
-				case 1: textBoxRightMiscVisual.Text = "0";
-					break;
-				case 2: textBoxRightMiscVisual.Text = "0";
-					break;
-				case 3: textBoxRightMiscVisual.Text = "2";
-					break;
-				case 4: textBoxRightMiscVisual.Text = "2";
-					break;
-				case 5: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 6: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 7: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 8: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 9: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 10: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 11: textBoxRightMiscVisual.Text = "5";
-					break;
-				case 12: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 13: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 14: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 15: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 16: textBoxRightMiscVisual.Text = "15";
-					break;
-				case 17: textBoxRightMiscVisual.Text = "15";
-					break;
-				case 18: textBoxRightMiscVisual.Text = "15";
-					break;
-				case 19: textBoxRightMiscVisual.Text = "25";
-					break;
-				case 20: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 21: textBoxRightMiscVisual.Text = "10";
-					break;
-				case 22: textBoxRightMiscVisual.Text = "25";
-					break;
-			}
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxRightMiscVisual_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxRightMiscVisualWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void buttonRightOtherOcular_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightOcular";
-			var ocular = new OcularImpairment();
-			ocular.ShowDialog();
-			textBoxRightOtherOcular.Text = OcularImpairment.RightOcular.ToString();  //Not age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxRightOtherOcular_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxRightOtherOcularWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		#endregion
+		
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			var importantInformation = new ImportantInformation();
 			importantInformation.ShowDialog();
 		}
-
-		#endregion
-
 		private void buttonLeftKnee_MouseLeave(object sender, EventArgs e)
 		{
 			buttonLeftKnee.BackgroundImage = Resources.Blank;
@@ -2555,66 +2226,6 @@ namespace DVA_Compensation_Calculator
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-		}
-
-		private void tabControl1_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
-		{
-			try
-			{
-				//This line of code will help you to change the apperance like size,name,style.
-				Font f;
-				//For background color
-				Brush backBrush;
-				//For forground color
-				Brush foreBrush;
-
-				//This construct will hell you to deside which tab page have current focus
-				//to change the style.
-				if (e.Index == this.tabControl1.SelectedIndex)
-				{
-					//This line of code will help you to change the apperance like size,name,style.
-					f = new Font(e.Font, FontStyle.Bold | FontStyle.Bold);
-					f = new Font(e.Font, FontStyle.Bold);
-
-					backBrush = new System.Drawing.SolidBrush(Color.YellowGreen);
-					foreBrush = Brushes.Black;
-				}
-				else
-				{
-					f = e.Font;
-					backBrush = new SolidBrush(e.BackColor);
-					foreBrush = new SolidBrush(e.ForeColor);
-				}
-
-				//To set the alignment of the caption.
-				string tabName = this.tabControl1.TabPages[e.Index].Text;
-				StringFormat sf = new StringFormat();
-				sf.Alignment = StringAlignment.Center;
-
-				//Thsi will help you to fill the interior portion of
-				//selected tabpage.
-				e.Graphics.FillRectangle(backBrush, e.Bounds);
-				Rectangle r = e.Bounds;
-				r = new Rectangle(r.X, r.Y + 3, r.Width, r.Height - 3);
-				e.Graphics.DrawString(tabName, f, foreBrush, r, sf);
-
-				sf.Dispose();
-				if (e.Index == this.tabControl1.SelectedIndex)
-				{
-					f.Dispose();
-					backBrush.Dispose();
-				}
-				else
-				{
-					backBrush.Dispose();
-					foreBrush.Dispose();
-				}
-			}
-			catch (Exception Ex)
-			{
-				MessageBox.Show(Ex.Message.ToString(), "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-			}
 
 		}
 
@@ -2707,7 +2318,7 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonRightEar_Click(object sender, EventArgs e)
 		{
-			
+
 		}
 
 		private void buttonRightEar_MouseEnter(object sender, EventArgs e)
@@ -2734,6 +2345,42 @@ namespace DVA_Compensation_Calculator
 		{
 			buttonNose.BackgroundImage = Resources.Blank;
 			toolTip1.Hide(buttonNose);
+		}
+
+		private void buttonLifeStyle_Click(object sender, EventArgs e)
+		{
+			var lifeStyle = new LifeStyle();
+			lifeStyle.ShowDialog();
+			textBoxFinalLifeStylePoint.Text = GlobalVar.FinalLifeStylePoint;
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftEye_Click(object sender, EventArgs e)
+		{
+			var leftEye = new LeftEye();
+			leftEye.ShowDialog();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightEye_Click(object sender, EventArgs e)
+		{
+			var rightEye = new RightEye();
+			rightEye.ShowDialog();
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void textBoxFinalEyes_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxEyesWar_CheckedChanged(object sender, EventArgs e)
+		{
+
+			UpdateAll();
 		}
 
 	}

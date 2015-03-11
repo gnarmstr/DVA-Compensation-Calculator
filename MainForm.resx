@@ -120,25 +120,6 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="label67.Text" xml:space="preserve">
-    <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.</value>
-  </data>
-  <data name="label100.Text" xml:space="preserve">
-    <value>All assessments of visual acuity are to be based on corrected visual acuity, that is, the visual acuity as measured when the veteran is wearing glasses or contact lenses correctly prescribed. No additional impairment rating is to be given for the need to wear corrective lenses.</value>
-  </data>
-  <data name="label97.Text" xml:space="preserve">
-    <value>* In applying the above table, if the veteran’s visual acuity in either eye is such that he or she is only capable of counting fingers or of perceiving the difference between light and darkness with that eye, then he or she is to be taken as “blind” in the eye so affected.</value>
-  </data>
-  <data name="label92.ToolTip" xml:space="preserve">
-    <value>Only one criterion is to be selected from the dropdown box. If more than one criterion could be selected, the
-criterion resulting in the higher or highest monocular assessment is to be chosen. The single assessment is
-then included in both monocular assessments.</value>
-  </data>
-  <data name="label98.ToolTip" xml:space="preserve">
-    <value>Only one criterion is to be selected from the dropdown box. If more than one criterion could be selected, the
-criterion resulting in the higher or highest monocular assessment is to be chosen. The single assessment is
-then included in both monocular assessments.</value>
-  </data>
   <data name="label114.Text" xml:space="preserve">
     <value>NOTE: Select the body part you wish to be assessed on, also click on whole body type as DVA will take the highest of the two for each area.
 
