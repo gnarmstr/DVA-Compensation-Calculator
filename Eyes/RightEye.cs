@@ -11,14 +11,31 @@ namespace DVA_Compensation_Calculator
 		public RightEye()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 100, ActiveForm.Location.Y + 100);
+				Location = new Point(ActiveForm.Location.X + 145, ActiveForm.Location.Y + 30);
 			InitializeComponent();
+			MinimumSize = new Size(440, 700);
+			MaximumSize = new Size(440, 700);
+			BackgroundImage = Resources.MainBackground_Green_Form;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			panel1.BackgroundImage = Resources.Background_Blue;
+		}
+
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				var cp = base.CreateParams;
+				cp.ExStyle = cp.ExStyle | 0x2000000;
+				return cp;
+			}
 		}
 
 		private void Eyes_Load(object sender, EventArgs e)
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
+			buttonRightOtherOcular.BackgroundImage = Resources.Button_Green;
+			buttonRightVisualFOL.BackgroundImage = Resources.Button_Green;
 			textBoxRightMonocular.Text = GlobalVar.RightMonocular;
 			textBoxRightVisualFOL.Text = GlobalVar.RightVisualFOL;
 			textBoxRightMiscVisual.Text = GlobalVar.RightMiscVisual;
@@ -36,9 +53,11 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonRightVisualFOL_Click(object sender, EventArgs e)
 		{
+			Hide();
 			GlobalVar.Selection = "RightEye";
 			var visualFOL = new VisualFOL();
 			visualFOL.ShowDialog();
+			Show();
 			textBoxRightVisualFOL.Text = VisualFOL.RightEye.ToString();  //Not age adjustment
 			GlobalVar.RightVisualFOL = textBoxRightVisualFOL.Text;
 		}
@@ -99,9 +118,11 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonRightOtherOcular_Click(object sender, EventArgs e)
 		{
+			Hide();
 			GlobalVar.Selection = "RightOcular";
 			var ocular = new OcularImpairment();
 			ocular.ShowDialog();
+			Show();
 			textBoxRightOtherOcular.Text = OcularImpairment.RightOcular.ToString();  //Not age adjustment
 			GlobalVar.RightOtherOcular = textBoxRightOtherOcular.Text;
 		}

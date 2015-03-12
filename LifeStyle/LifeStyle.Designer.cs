@@ -52,7 +52,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(291, 680);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(324, 680);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -63,7 +63,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(181, 680);
+			this.pictureBoxOK.Location = new System.Drawing.Point(214, 680);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -76,9 +76,9 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.Black;
-			this.label1.Location = new System.Drawing.Point(9, 108);
+			this.label1.Location = new System.Drawing.Point(9, 77);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(519, 142);
+			this.label1.Size = new System.Drawing.Size(556, 173);
 			this.label1.TabIndex = 23;
 			this.label1.Text = "A lifestyle effect is a disadvantage, resulting from an accepted condition, that " +
     "limits or prevents the fulfilment of a role that is normal for a veteran of the " +
@@ -226,7 +226,7 @@
 			this.label20.BackColor = System.Drawing.Color.Transparent;
 			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label20.ForeColor = System.Drawing.Color.Black;
-			this.label20.Location = new System.Drawing.Point(6, 14);
+			this.label20.Location = new System.Drawing.Point(25, 14);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(527, 29);
 			this.label20.TabIndex = 57;
@@ -252,7 +252,7 @@
 			this.panel1.Controls.Add(this.label22);
 			this.panel1.Location = new System.Drawing.Point(28, 30);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(539, 776);
+			this.panel1.Size = new System.Drawing.Size(585, 776);
 			this.panel1.TabIndex = 58;
 			// 
 			// LifeStyle
@@ -260,11 +260,12 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.ClientSize = new System.Drawing.Size(600, 850);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(650, 850);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(600, 850);
-			this.MinimumSize = new System.Drawing.Size(600, 850);
+			this.MaximumSize = new System.Drawing.Size(650, 850);
+			this.MinimumSize = new System.Drawing.Size(650, 850);
 			this.Name = "LifeStyle";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Life Style Assessment";

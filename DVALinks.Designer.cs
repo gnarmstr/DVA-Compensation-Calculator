@@ -51,12 +51,15 @@
 			this.label86 = new System.Windows.Forms.Label();
 			this.linkLabel = new System.Windows.Forms.LinkLabel();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.panel1 = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBoxOK
 			// 
-			this.pictureBoxOK.Location = new System.Drawing.Point(811, 806);
+			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBoxOK.Location = new System.Drawing.Point(853, 776);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -67,8 +70,9 @@
 			// label113
 			// 
 			this.label113.AutoSize = true;
+			this.label113.BackColor = System.Drawing.Color.Transparent;
 			this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label113.Location = new System.Drawing.Point(354, 189);
+			this.label113.Location = new System.Drawing.Point(377, 233);
 			this.label113.Name = "label113";
 			this.label113.Size = new System.Drawing.Size(240, 29);
 			this.label113.TabIndex = 44;
@@ -76,7 +80,8 @@
 			// 
 			// linkLabel6
 			// 
-			this.linkLabel6.Location = new System.Drawing.Point(509, 118);
+			this.linkLabel6.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel6.Location = new System.Drawing.Point(532, 162);
 			this.linkLabel6.Name = "linkLabel6";
 			this.linkLabel6.Size = new System.Drawing.Size(169, 28);
 			this.linkLabel6.TabIndex = 43;
@@ -86,7 +91,8 @@
 			// 
 			// linkLabel34
 			// 
-			this.linkLabel34.Location = new System.Drawing.Point(506, 614);
+			this.linkLabel34.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel34.Location = new System.Drawing.Point(529, 658);
 			this.linkLabel34.Name = "linkLabel34";
 			this.linkLabel34.Size = new System.Drawing.Size(324, 28);
 			this.linkLabel34.TabIndex = 42;
@@ -96,7 +102,8 @@
 			// 
 			// linkLabel25
 			// 
-			this.linkLabel25.Location = new System.Drawing.Point(506, 403);
+			this.linkLabel25.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel25.Location = new System.Drawing.Point(529, 447);
 			this.linkLabel25.Name = "linkLabel25";
 			this.linkLabel25.Size = new System.Drawing.Size(459, 27);
 			this.linkLabel25.TabIndex = 41;
@@ -106,7 +113,8 @@
 			// 
 			// linkLabel33
 			// 
-			this.linkLabel33.Location = new System.Drawing.Point(506, 552);
+			this.linkLabel33.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel33.Location = new System.Drawing.Point(529, 596);
 			this.linkLabel33.Name = "linkLabel33";
 			this.linkLabel33.Size = new System.Drawing.Size(440, 44);
 			this.linkLabel33.TabIndex = 40;
@@ -117,7 +125,8 @@
 			// 
 			// linkLabel29
 			// 
-			this.linkLabel29.Location = new System.Drawing.Point(506, 501);
+			this.linkLabel29.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel29.Location = new System.Drawing.Point(529, 545);
 			this.linkLabel29.Name = "linkLabel29";
 			this.linkLabel29.Size = new System.Drawing.Size(270, 25);
 			this.linkLabel29.TabIndex = 39;
@@ -127,7 +136,8 @@
 			// 
 			// linkLabel27
 			// 
-			this.linkLabel27.Location = new System.Drawing.Point(506, 444);
+			this.linkLabel27.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel27.Location = new System.Drawing.Point(529, 488);
 			this.linkLabel27.Name = "linkLabel27";
 			this.linkLabel27.Size = new System.Drawing.Size(440, 46);
 			this.linkLabel27.TabIndex = 38;
@@ -137,7 +147,8 @@
 			// 
 			// linkLabel20
 			// 
-			this.linkLabel20.Location = new System.Drawing.Point(506, 358);
+			this.linkLabel20.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel20.Location = new System.Drawing.Point(529, 402);
 			this.linkLabel20.Name = "linkLabel20";
 			this.linkLabel20.Size = new System.Drawing.Size(471, 27);
 			this.linkLabel20.TabIndex = 37;
@@ -147,7 +158,8 @@
 			// 
 			// linkLabelAllSheets
 			// 
-			this.linkLabelAllSheets.Location = new System.Drawing.Point(509, 80);
+			this.linkLabelAllSheets.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabelAllSheets.Location = new System.Drawing.Point(532, 124);
 			this.linkLabelAllSheets.Name = "linkLabelAllSheets";
 			this.linkLabelAllSheets.Size = new System.Drawing.Size(207, 29);
 			this.linkLabelAllSheets.TabIndex = 36;
@@ -157,7 +169,8 @@
 			// 
 			// linkLabel15
 			// 
-			this.linkLabel15.Location = new System.Drawing.Point(506, 294);
+			this.linkLabel15.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel15.Location = new System.Drawing.Point(529, 338);
 			this.linkLabel15.Name = "linkLabel15";
 			this.linkLabel15.Size = new System.Drawing.Size(324, 20);
 			this.linkLabel15.TabIndex = 35;
@@ -167,7 +180,8 @@
 			// 
 			// linkLabel14
 			// 
-			this.linkLabel14.Location = new System.Drawing.Point(506, 250);
+			this.linkLabel14.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel14.Location = new System.Drawing.Point(529, 294);
 			this.linkLabel14.Name = "linkLabel14";
 			this.linkLabel14.Size = new System.Drawing.Size(186, 20);
 			this.linkLabel14.TabIndex = 34;
@@ -177,7 +191,8 @@
 			// 
 			// linkLabel10
 			// 
-			this.linkLabel10.Location = new System.Drawing.Point(13, 654);
+			this.linkLabel10.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel10.Location = new System.Drawing.Point(36, 698);
 			this.linkLabel10.Name = "linkLabel10";
 			this.linkLabel10.Size = new System.Drawing.Size(451, 26);
 			this.linkLabel10.TabIndex = 33;
@@ -187,7 +202,8 @@
 			// 
 			// linkLabel9
 			// 
-			this.linkLabel9.Location = new System.Drawing.Point(13, 614);
+			this.linkLabel9.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel9.Location = new System.Drawing.Point(36, 658);
 			this.linkLabel9.Name = "linkLabel9";
 			this.linkLabel9.Size = new System.Drawing.Size(440, 26);
 			this.linkLabel9.TabIndex = 32;
@@ -197,7 +213,8 @@
 			// 
 			// linkLabel8
 			// 
-			this.linkLabel8.Location = new System.Drawing.Point(13, 552);
+			this.linkLabel8.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel8.Location = new System.Drawing.Point(36, 596);
 			this.linkLabel8.Name = "linkLabel8";
 			this.linkLabel8.Size = new System.Drawing.Size(448, 48);
 			this.linkLabel8.TabIndex = 31;
@@ -207,7 +224,8 @@
 			// 
 			// linkLabel7
 			// 
-			this.linkLabel7.Location = new System.Drawing.Point(13, 487);
+			this.linkLabel7.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel7.Location = new System.Drawing.Point(36, 531);
 			this.linkLabel7.Name = "linkLabel7";
 			this.linkLabel7.Size = new System.Drawing.Size(418, 48);
 			this.linkLabel7.TabIndex = 30;
@@ -217,7 +235,8 @@
 			// 
 			// linkLabel2
 			// 
-			this.linkLabel2.Location = new System.Drawing.Point(13, 294);
+			this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel2.Location = new System.Drawing.Point(36, 338);
 			this.linkLabel2.Name = "linkLabel2";
 			this.linkLabel2.Size = new System.Drawing.Size(440, 48);
 			this.linkLabel2.TabIndex = 29;
@@ -227,7 +246,8 @@
 			// 
 			// linkLabel5
 			// 
-			this.linkLabel5.Location = new System.Drawing.Point(13, 444);
+			this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel5.Location = new System.Drawing.Point(36, 488);
 			this.linkLabel5.Name = "linkLabel5";
 			this.linkLabel5.Size = new System.Drawing.Size(234, 20);
 			this.linkLabel5.TabIndex = 28;
@@ -237,7 +257,8 @@
 			// 
 			// linkLabel4
 			// 
-			this.linkLabel4.Location = new System.Drawing.Point(13, 403);
+			this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel4.Location = new System.Drawing.Point(36, 447);
 			this.linkLabel4.Name = "linkLabel4";
 			this.linkLabel4.Size = new System.Drawing.Size(392, 27);
 			this.linkLabel4.TabIndex = 27;
@@ -247,7 +268,8 @@
 			// 
 			// linkLabel3
 			// 
-			this.linkLabel3.Location = new System.Drawing.Point(13, 358);
+			this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel3.Location = new System.Drawing.Point(36, 402);
 			this.linkLabel3.Name = "linkLabel3";
 			this.linkLabel3.Size = new System.Drawing.Size(332, 27);
 			this.linkLabel3.TabIndex = 26;
@@ -258,8 +280,9 @@
 			// label86
 			// 
 			this.label86.AutoSize = true;
+			this.label86.BackColor = System.Drawing.Color.Transparent;
 			this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label86.Location = new System.Drawing.Point(115, 9);
+			this.label86.Location = new System.Drawing.Point(138, 53);
 			this.label86.Name = "label86";
 			this.label86.Size = new System.Drawing.Size(733, 29);
 			this.label86.TabIndex = 25;
@@ -267,7 +290,8 @@
 			// 
 			// linkLabel
 			// 
-			this.linkLabel.Location = new System.Drawing.Point(12, 80);
+			this.linkLabel.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel.Location = new System.Drawing.Point(35, 124);
 			this.linkLabel.Name = "linkLabel";
 			this.linkLabel.Size = new System.Drawing.Size(428, 46);
 			this.linkLabel.TabIndex = 24;
@@ -277,7 +301,8 @@
 			// 
 			// linkLabel1
 			// 
-			this.linkLabel1.Location = new System.Drawing.Point(13, 250);
+			this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+			this.linkLabel1.Location = new System.Drawing.Point(36, 294);
 			this.linkLabel1.Name = "linkLabel1";
 			this.linkLabel1.Size = new System.Drawing.Size(199, 29);
 			this.linkLabel1.TabIndex = 23;
@@ -285,44 +310,56 @@
 			this.linkLabel1.Text = "MRC01 - OVERVIEW";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
+			// panel1
+			// 
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label113);
+			this.panel1.Controls.Add(this.linkLabel6);
+			this.panel1.Controls.Add(this.linkLabel34);
+			this.panel1.Controls.Add(this.linkLabel25);
+			this.panel1.Controls.Add(this.linkLabel33);
+			this.panel1.Controls.Add(this.linkLabel29);
+			this.panel1.Controls.Add(this.linkLabel27);
+			this.panel1.Controls.Add(this.linkLabel20);
+			this.panel1.Controls.Add(this.linkLabelAllSheets);
+			this.panel1.Controls.Add(this.linkLabel15);
+			this.panel1.Controls.Add(this.linkLabel14);
+			this.panel1.Controls.Add(this.linkLabel10);
+			this.panel1.Controls.Add(this.linkLabel9);
+			this.panel1.Controls.Add(this.linkLabel8);
+			this.panel1.Controls.Add(this.linkLabel7);
+			this.panel1.Controls.Add(this.linkLabel2);
+			this.panel1.Controls.Add(this.linkLabel5);
+			this.panel1.Controls.Add(this.linkLabel4);
+			this.panel1.Controls.Add(this.linkLabel3);
+			this.panel1.Controls.Add(this.label86);
+			this.panel1.Controls.Add(this.linkLabel);
+			this.panel1.Controls.Add(this.linkLabel1);
+			this.panel1.Controls.Add(this.pictureBoxOK);
+			this.panel1.Location = new System.Drawing.Point(35, 32);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(1005, 885);
+			this.panel1.TabIndex = 45;
+			// 
 			// DVALinks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.ClientSize = new System.Drawing.Size(978, 944);
-			this.Controls.Add(this.label113);
-			this.Controls.Add(this.linkLabel6);
-			this.Controls.Add(this.linkLabel34);
-			this.Controls.Add(this.linkLabel25);
-			this.Controls.Add(this.linkLabel33);
-			this.Controls.Add(this.linkLabel29);
-			this.Controls.Add(this.linkLabel27);
-			this.Controls.Add(this.linkLabel20);
-			this.Controls.Add(this.linkLabelAllSheets);
-			this.Controls.Add(this.linkLabel15);
-			this.Controls.Add(this.linkLabel14);
-			this.Controls.Add(this.linkLabel10);
-			this.Controls.Add(this.linkLabel9);
-			this.Controls.Add(this.linkLabel8);
-			this.Controls.Add(this.linkLabel7);
-			this.Controls.Add(this.linkLabel2);
-			this.Controls.Add(this.linkLabel5);
-			this.Controls.Add(this.linkLabel4);
-			this.Controls.Add(this.linkLabel3);
-			this.Controls.Add(this.label86);
-			this.Controls.Add(this.linkLabel);
-			this.Controls.Add(this.linkLabel1);
-			this.Controls.Add(this.pictureBoxOK);
-			this.MaximumSize = new System.Drawing.Size(1000, 1000);
-			this.MinimumSize = new System.Drawing.Size(1000, 1000);
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(1080, 960);
+			this.Controls.Add(this.panel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.MaximumSize = new System.Drawing.Size(1080, 960);
+			this.MinimumSize = new System.Drawing.Size(1080, 960);
 			this.Name = "DVALinks";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "DVA LINKS";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -351,5 +388,6 @@
 		private System.Windows.Forms.Label label86;
 		private System.Windows.Forms.LinkLabel linkLabel;
 		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.Panel panel1;
 	}
 }

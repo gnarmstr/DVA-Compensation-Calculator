@@ -11,15 +11,27 @@ namespace DVA_Compensation_Calculator
 		public Ankle()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
+				Location = new Point(ActiveForm.Location.X + 100, ActiveForm.Location.Y + 70);
 			InitializeComponent();
+			BackgroundImage = Resources.MainBackground_Green_Form;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			panel1.BackgroundImage = Resources.Background_Blue;
+		}
+
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				var cp = base.CreateParams;
+				cp.ExStyle = cp.ExStyle | 0x2000000;
+				return cp;
+			}
 		}
 
 		private void DomesticActivities_Load(object sender, EventArgs e)
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
-			BackgroundImage = Resources.Background_Blue;
 		}
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)

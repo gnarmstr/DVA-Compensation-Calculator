@@ -10,9 +10,23 @@ namespace DVA_Compensation_Calculator
 	{
 		public RecreationalActivities()
 		{
-			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
+			Location = new Point(GlobalVar.MainFormLocxationX - 25, GlobalVar.MainFormLocxationY);
 			InitializeComponent();
+			MinimumSize = new Size(800, 730);
+			MaximumSize = new Size(800, 730);
+			BackgroundImage = Resources.MainBackground_Green_Form;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			panel1.BackgroundImage = Resources.Background_Blue;
+		}
+
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				var cp = base.CreateParams;
+				cp.ExStyle = cp.ExStyle | 0x2000000;
+				return cp;
+			}
 		}
 
 		private void Mobility_Load(object sender, EventArgs e)

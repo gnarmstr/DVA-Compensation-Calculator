@@ -10,6 +10,10 @@ namespace DVA_Compensation_Calculator
 	{
 		public static string SettingsPath;
 
+		public static int MainFormLocxationX;
+
+		public static int MainFormLocxationY;
+
 		public static MainForm.MultiDimDictList<int, int> AgeAdjust = new MainForm.MultiDimDictList<int, int>();
 
 		public static MainForm.MultiDimDictList<int, object> CombineValue = new MainForm.MultiDimDictList<int, object>();

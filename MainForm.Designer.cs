@@ -223,7 +223,7 @@
 			this.checkBoxNoseWar.AutoSize = true;
 			this.checkBoxNoseWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxNoseWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxNoseWar.Location = new System.Drawing.Point(321, 76);
+			this.checkBoxNoseWar.Location = new System.Drawing.Point(316, 103);
 			this.checkBoxNoseWar.Name = "checkBoxNoseWar";
 			this.checkBoxNoseWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxNoseWar.TabIndex = 65;
@@ -234,7 +234,7 @@
 			// textBoxNose
 			// 
 			this.textBoxNose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxNose.Location = new System.Drawing.Point(349, 72);
+			this.textBoxNose.Location = new System.Drawing.Point(344, 99);
 			this.textBoxNose.Name = "textBoxNose";
 			this.textBoxNose.ReadOnly = true;
 			this.textBoxNose.Size = new System.Drawing.Size(59, 26);
@@ -248,7 +248,7 @@
 			this.checkBoxEarsWar.AutoSize = true;
 			this.checkBoxEarsWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxEarsWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxEarsWar.Location = new System.Drawing.Point(890, 39);
+			this.checkBoxEarsWar.Location = new System.Drawing.Point(449, 41);
 			this.checkBoxEarsWar.Name = "checkBoxEarsWar";
 			this.checkBoxEarsWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxEarsWar.TabIndex = 65;
@@ -259,7 +259,7 @@
 			// textBoxEars
 			// 
 			this.textBoxEars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxEars.Location = new System.Drawing.Point(806, 35);
+			this.textBoxEars.Location = new System.Drawing.Point(365, 37);
 			this.textBoxEars.Name = "textBoxEars";
 			this.textBoxEars.ReadOnly = true;
 			this.textBoxEars.Size = new System.Drawing.Size(70, 26);
@@ -273,7 +273,7 @@
 			this.checkBoxTinnitusWar.AutoSize = true;
 			this.checkBoxTinnitusWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxTinnitusWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxTinnitusWar.Location = new System.Drawing.Point(890, 93);
+			this.checkBoxTinnitusWar.Location = new System.Drawing.Point(858, 45);
 			this.checkBoxTinnitusWar.Name = "checkBoxTinnitusWar";
 			this.checkBoxTinnitusWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxTinnitusWar.TabIndex = 65;
@@ -284,7 +284,7 @@
 			// textBoxTinnitus
 			// 
 			this.textBoxTinnitus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxTinnitus.Location = new System.Drawing.Point(806, 89);
+			this.textBoxTinnitus.Location = new System.Drawing.Point(774, 41);
 			this.textBoxTinnitus.Name = "textBoxTinnitus";
 			this.textBoxTinnitus.ReadOnly = true;
 			this.textBoxTinnitus.Size = new System.Drawing.Size(70, 26);
@@ -521,7 +521,7 @@
 			this.checkBoxWholeRightArmWar.AutoSize = true;
 			this.checkBoxWholeRightArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeRightArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxWholeRightArmWar.Location = new System.Drawing.Point(981, 361);
+			this.checkBoxWholeRightArmWar.Location = new System.Drawing.Point(125, 372);
 			this.checkBoxWholeRightArmWar.Name = "checkBoxWholeRightArmWar";
 			this.checkBoxWholeRightArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeRightArmWar.TabIndex = 59;
@@ -546,7 +546,7 @@
 			this.checkBoxWholeLeftArmWar.AutoSize = true;
 			this.checkBoxWholeLeftArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeLeftArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxWholeLeftArmWar.Location = new System.Drawing.Point(117, 362);
+			this.checkBoxWholeLeftArmWar.Location = new System.Drawing.Point(973, 376);
 			this.checkBoxWholeLeftArmWar.Name = "checkBoxWholeLeftArmWar";
 			this.checkBoxWholeLeftArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeLeftArmWar.TabIndex = 59;
@@ -573,7 +573,7 @@
 			this.buttonWholeRightArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonWholeRightArm.FlatAppearance.BorderSize = 0;
 			this.buttonWholeRightArm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonWholeRightArm.Location = new System.Drawing.Point(873, 289);
+			this.buttonWholeRightArm.Location = new System.Drawing.Point(17, 300);
 			this.buttonWholeRightArm.Name = "buttonWholeRightArm";
 			this.buttonWholeRightArm.Size = new System.Drawing.Size(149, 54);
 			this.buttonWholeRightArm.TabIndex = 58;
@@ -622,7 +622,7 @@
 			// textBoxWholeRightArm
 			// 
 			this.textBoxWholeRightArm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxWholeRightArm.Location = new System.Drawing.Point(894, 357);
+			this.textBoxWholeRightArm.Location = new System.Drawing.Point(38, 368);
 			this.textBoxWholeRightArm.Name = "textBoxWholeRightArm";
 			this.textBoxWholeRightArm.ReadOnly = true;
 			this.textBoxWholeRightArm.Size = new System.Drawing.Size(70, 26);
@@ -636,7 +636,7 @@
 			this.buttonWholeLeftArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonWholeLeftArm.FlatAppearance.BorderSize = 0;
 			this.buttonWholeLeftArm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonWholeLeftArm.Location = new System.Drawing.Point(17, 289);
+			this.buttonWholeLeftArm.Location = new System.Drawing.Point(873, 303);
 			this.buttonWholeLeftArm.Name = "buttonWholeLeftArm";
 			this.buttonWholeLeftArm.Size = new System.Drawing.Size(149, 54);
 			this.buttonWholeLeftArm.TabIndex = 58;
@@ -674,7 +674,7 @@
 			// textBoxWholeLeftArm
 			// 
 			this.textBoxWholeLeftArm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxWholeLeftArm.Location = new System.Drawing.Point(30, 358);
+			this.textBoxWholeLeftArm.Location = new System.Drawing.Point(886, 372);
 			this.textBoxWholeLeftArm.Name = "textBoxWholeLeftArm";
 			this.textBoxWholeLeftArm.ReadOnly = true;
 			this.textBoxWholeLeftArm.Size = new System.Drawing.Size(70, 26);
@@ -701,7 +701,7 @@
 			this.checkBoxShoulderWar.AutoSize = true;
 			this.checkBoxShoulderWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxShoulderWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxShoulderWar.Location = new System.Drawing.Point(336, 138);
+			this.checkBoxShoulderWar.Location = new System.Drawing.Point(332, 161);
 			this.checkBoxShoulderWar.Name = "checkBoxShoulderWar";
 			this.checkBoxShoulderWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxShoulderWar.TabIndex = 71;
@@ -910,7 +910,7 @@
 			// textBoxShoulder
 			// 
 			this.textBoxShoulder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxShoulder.Location = new System.Drawing.Point(372, 134);
+			this.textBoxShoulder.Location = new System.Drawing.Point(368, 157);
 			this.textBoxShoulder.Name = "textBoxShoulder";
 			this.textBoxShoulder.ReadOnly = true;
 			this.textBoxShoulder.Size = new System.Drawing.Size(56, 26);
@@ -1520,7 +1520,7 @@
 			// 
 			this.buttonROMInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonROMInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonROMInfo.Location = new System.Drawing.Point(521, 62);
+			this.buttonROMInfo.Location = new System.Drawing.Point(400, 61);
 			this.buttonROMInfo.Name = "buttonROMInfo";
 			this.buttonROMInfo.Size = new System.Drawing.Size(274, 33);
 			this.buttonROMInfo.TabIndex = 72;
@@ -1572,7 +1572,7 @@
 			// 
 			this.buttonImportantInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonImportantInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonImportantInfo.Location = new System.Drawing.Point(823, 61);
+			this.buttonImportantInfo.Location = new System.Drawing.Point(747, 61);
 			this.buttonImportantInfo.Name = "buttonImportantInfo";
 			this.buttonImportantInfo.Size = new System.Drawing.Size(253, 34);
 			this.buttonImportantInfo.TabIndex = 84;
@@ -1599,8 +1599,8 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.4                             DVA COMPENSATION CALCULATOR - by Geoff Armstr" +
-    "ong                     ";
+			this.buttonMainTitle.Text = "Ver 1.4               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+    "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
 			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
@@ -1611,6 +1611,7 @@
 			this.panelMainPoints.BackColor = System.Drawing.Color.Transparent;
 			this.panelMainPoints.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.panelMainPoints.Controls.Add(this.labelRightShoulder);
+			this.panelMainPoints.Controls.Add(this.buttonLifeStyle);
 			this.panelMainPoints.Controls.Add(this.labelToes);
 			this.panelMainPoints.Controls.Add(this.labelAnkles);
 			this.panelMainPoints.Controls.Add(this.labelKnees);
@@ -1713,7 +1714,7 @@
 			// 
 			this.labelTinnitus.AutoSize = true;
 			this.labelTinnitus.BackColor = System.Drawing.Color.Transparent;
-			this.labelTinnitus.Location = new System.Drawing.Point(805, 66);
+			this.labelTinnitus.Location = new System.Drawing.Point(770, 14);
 			this.labelTinnitus.Name = "labelTinnitus";
 			this.labelTinnitus.Size = new System.Drawing.Size(68, 20);
 			this.labelTinnitus.TabIndex = 90;
@@ -1723,7 +1724,7 @@
 			// 
 			this.labelHearingLoss.AutoSize = true;
 			this.labelHearingLoss.BackColor = System.Drawing.Color.Transparent;
-			this.labelHearingLoss.Location = new System.Drawing.Point(805, 12);
+			this.labelHearingLoss.Location = new System.Drawing.Point(364, 14);
 			this.labelHearingLoss.Name = "labelHearingLoss";
 			this.labelHearingLoss.Size = new System.Drawing.Size(107, 20);
 			this.labelHearingLoss.TabIndex = 89;
@@ -1733,7 +1734,7 @@
 			// 
 			this.labelNose.AutoSize = true;
 			this.labelNose.BackColor = System.Drawing.Color.Transparent;
-			this.labelNose.Location = new System.Drawing.Point(347, 46);
+			this.labelNose.Location = new System.Drawing.Point(342, 73);
 			this.labelNose.Name = "labelNose";
 			this.labelNose.Size = new System.Drawing.Size(50, 20);
 			this.labelNose.TabIndex = 88;
@@ -1828,11 +1829,11 @@
 			// 
 			this.buttonLifeStyle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonLifeStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonLifeStyle.Location = new System.Drawing.Point(6, 62);
+			this.buttonLifeStyle.Location = new System.Drawing.Point(17, 606);
 			this.buttonLifeStyle.Name = "buttonLifeStyle";
-			this.buttonLifeStyle.Size = new System.Drawing.Size(228, 33);
+			this.buttonLifeStyle.Size = new System.Drawing.Size(337, 44);
 			this.buttonLifeStyle.TabIndex = 89;
-			this.buttonLifeStyle.Text = "Life Style Assessment";
+			this.buttonLifeStyle.Text = "Click to complete Life Style Assessment";
 			this.buttonLifeStyle.UseVisualStyleBackColor = true;
 			this.buttonLifeStyle.Click += new System.EventHandler(this.buttonLifeStyle_Click);
 			// 
@@ -1840,7 +1841,7 @@
 			// 
 			this.buttonDVALinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonDVALinks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonDVALinks.Location = new System.Drawing.Point(263, 62);
+			this.buttonDVALinks.Location = new System.Drawing.Point(69, 61);
 			this.buttonDVALinks.Name = "buttonDVALinks";
 			this.buttonDVALinks.Size = new System.Drawing.Size(228, 33);
 			this.buttonDVALinks.TabIndex = 90;
@@ -1887,7 +1888,7 @@
 			// 
 			this.labelLeftShoulder.AutoSize = true;
 			this.labelLeftShoulder.BackColor = System.Drawing.Color.Transparent;
-			this.labelLeftShoulder.Location = new System.Drawing.Point(368, 111);
+			this.labelLeftShoulder.Location = new System.Drawing.Point(364, 134);
 			this.labelLeftShoulder.Name = "labelLeftShoulder";
 			this.labelLeftShoulder.Size = new System.Drawing.Size(77, 20);
 			this.labelLeftShoulder.TabIndex = 94;
@@ -2001,7 +2002,6 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.ClientSize = new System.Drawing.Size(1090, 1200);
 			this.Controls.Add(this.buttonDVALinks);
-			this.Controls.Add(this.buttonLifeStyle);
 			this.Controls.Add(this.label28);
 			this.Controls.Add(this.panelMainPoints);
 			this.Controls.Add(this.textBoxCompensationFactorPeace);

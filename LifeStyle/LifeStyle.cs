@@ -52,45 +52,55 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonPersonalRelationships_Click(object sender, EventArgs e)
 		{
+			Hide();
 			PersonalRelationships.personalRelationship = Convert.ToInt16(GlobalVar.personalRelationships);
 			var personalRelationships = new PersonalRelationships();
 			personalRelationships.ShowDialog();
+			Show();
 			textBoxPersonalRelationships.Text = PersonalRelationships.personalRelationship.ToString();  //No age adjustment
 			GlobalVar.personalRelationships = textBoxPersonalRelationships.Text;
 		}
 
 		private void buttonMobility_Click(object sender, EventArgs e)
 		{
+			Hide();
 			Mobility.mobility = Convert.ToInt16(GlobalVar.Mobility);
 			var mobility = new Mobility();
 			mobility.ShowDialog();
+			Show();
 			textBoxMobility.Text = Mobility.mobility.ToString();
 			GlobalVar.Mobility = textBoxMobility.Text;
 		}
 
 		private void buttonRecreationalActivities_Click(object sender, EventArgs e)
 		{
+			Hide();
 			RecreationalActivities.recreationalActivities = Convert.ToInt16(GlobalVar.RecreationalActivities);
 			var recreationalActivities = new RecreationalActivities();
 			recreationalActivities.ShowDialog();
+			Show();
 			textBoxRecreationalActivities.Text = RecreationalActivities.recreationalActivities.ToString();  //No age adjustment
 			GlobalVar.RecreationalActivities = textBoxRecreationalActivities.Text;
 		}
 
 		private void buttonDomesticActivities_Click(object sender, EventArgs e)
 		{
+			Hide();
 			DomesticActivities.domesticActivities = Convert.ToInt16(GlobalVar.DomesticActivities);
 			var domesticActivities = new DomesticActivities();
 			domesticActivities.ShowDialog();
+			Show();
 			textBoxDomesticActivities.Text = DomesticActivities.domesticActivities.ToString();  //No age adjustment
 			GlobalVar.DomesticActivities = textBoxDomesticActivities.Text;
 		}
 
 		private void buttonEmploymentActivities_Click(object sender, EventArgs e)
 		{
+			Hide();
 			EmploymentActivities.employmentActivities = Convert.ToInt16(GlobalVar.EmploymentActivities);
 			var employmentActivities = new EmploymentActivities();
 			employmentActivities.ShowDialog();
+			Show();
 			textBoxEmploymentActivities.Text = EmploymentActivities.employmentActivities.ToString();  //No age adjustment
 			GlobalVar.EmploymentActivities = textBoxEmploymentActivities.Text;
 		}

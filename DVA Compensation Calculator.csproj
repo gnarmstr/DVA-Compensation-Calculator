@@ -108,6 +108,18 @@
     <Compile Include="Back\Cervical.Designer.cs">
       <DependentUpon>Cervical.cs</DependentUpon>
     </Compile>
+    <Compile Include="OkMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OkMessage.Designer.cs">
+      <DependentUpon>OkMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveMessage.Designer.cs">
+      <DependentUpon>SaveMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="EarNoseThroat\Throat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +309,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Back\Cervical.resx">
       <DependentUpon>Cervical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OkMessage.resx">
+      <DependentUpon>OkMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveMessage.resx">
+      <DependentUpon>SaveMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EarNoseThroat\Throat.resx">
       <DependentUpon>Throat.cs</DependentUpon>

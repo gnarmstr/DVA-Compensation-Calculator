@@ -10,8 +10,7 @@ namespace DVA_Compensation_Calculator
 	{
 		public DomesticActivities()
 		{
-			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X, ActiveForm.Location.Y);
+			Location = new Point(GlobalVar.MainFormLocxationX - 10, GlobalVar.MainFormLocxationY);
 			InitializeComponent();
 			MinimumSize = new Size(740, 690);
 			MaximumSize = new Size(740, 690);

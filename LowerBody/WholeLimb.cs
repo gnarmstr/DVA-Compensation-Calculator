@@ -11,8 +11,23 @@ namespace DVA_Compensation_Calculator
 		public WholeLimb()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
+				Location = new Point(ActiveForm.Location.X + 25, ActiveForm.Location.Y + 30);
 			InitializeComponent();
+			MinimumSize = new Size(665, 730);
+			MaximumSize = new Size(665, 730);
+			BackgroundImage = Resources.MainBackground_Green_Form;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			panel1.BackgroundImage = Resources.Background_Blue;
+		}
+
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				var cp = base.CreateParams;
+				cp.ExStyle = cp.ExStyle | 0x2000000;
+				return cp;
+			}
 		}
 
 		private void DomesticActivities_Load(object sender, EventArgs e)

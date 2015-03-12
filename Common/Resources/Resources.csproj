@@ -136,6 +136,8 @@
     <None Include="Resources\MainBackground_Green_Small1.png" />
     <None Include="Resources\Bones_Blue_Small.png" />
     <None Include="Resources\MainBackground_Green_Form.png" />
+    <None Include="Resources\No.png" />
+    <None Include="Resources\Range_of_ Motion.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

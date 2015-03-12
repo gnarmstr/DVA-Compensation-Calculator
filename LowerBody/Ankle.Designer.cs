@@ -38,15 +38,18 @@
 			this.pictureBoxCancel = new System.Windows.Forms.PictureBox();
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption2.Location = new System.Drawing.Point(17, 253);
+			this.checkBoxOption2.Location = new System.Drawing.Point(27, 296);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 36);
 			this.checkBoxOption2.TabIndex = 11;
@@ -58,7 +61,7 @@
 			// 
 			this.checkBoxOption4.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption4.Location = new System.Drawing.Point(17, 389);
+			this.checkBoxOption4.Location = new System.Drawing.Point(27, 432);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 9;
@@ -70,7 +73,7 @@
 			// 
 			this.checkBoxOption5.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption5.Location = new System.Drawing.Point(17, 464);
+			this.checkBoxOption5.Location = new System.Drawing.Point(27, 507);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(591, 50);
 			this.checkBoxOption5.TabIndex = 8;
@@ -82,7 +85,7 @@
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption3.Location = new System.Drawing.Point(17, 319);
+			this.checkBoxOption3.Location = new System.Drawing.Point(27, 362);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 37);
 			this.checkBoxOption3.TabIndex = 7;
@@ -94,7 +97,7 @@
 			// 
 			this.checkBoxOption1.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption1.Location = new System.Drawing.Point(17, 193);
+			this.checkBoxOption1.Location = new System.Drawing.Point(27, 236);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(638, 38);
 			this.checkBoxOption1.TabIndex = 6;
@@ -106,7 +109,7 @@
 			// 
 			this.checkBoxOption6.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBoxOption6.Location = new System.Drawing.Point(17, 534);
+			this.checkBoxOption6.Location = new System.Drawing.Point(27, 577);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(426, 55);
 			this.checkBoxOption6.TabIndex = 13;
@@ -117,7 +120,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(603, 535);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(613, 578);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -128,7 +131,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(479, 535);
+			this.pictureBoxOK.Location = new System.Drawing.Point(489, 578);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -140,11 +143,41 @@
 			// 
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 28);
+			this.label1.Location = new System.Drawing.Point(22, 71);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(681, 162);
 			this.label1.TabIndex = 21;
 			this.label1.Text = resources.GetString("label1.Text");
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.SystemColors.Info;
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label2);
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.pictureBoxCancel);
+			this.panel1.Controls.Add(this.pictureBoxOK);
+			this.panel1.Controls.Add(this.checkBoxOption6);
+			this.panel1.Controls.Add(this.checkBoxOption2);
+			this.panel1.Controls.Add(this.checkBoxOption4);
+			this.panel1.Controls.Add(this.checkBoxOption5);
+			this.panel1.Controls.Add(this.checkBoxOption3);
+			this.panel1.Controls.Add(this.checkBoxOption1);
+			this.panel1.Location = new System.Drawing.Point(20, 26);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(729, 670);
+			this.panel1.TabIndex = 22;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(287, 24);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(96, 29);
+			this.label2.TabIndex = 22;
+			this.label2.Text = "ANKLE";
 			// 
 			// Ankle
 			// 
@@ -152,24 +185,19 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(705, 627);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.pictureBoxCancel);
-			this.Controls.Add(this.pictureBoxOK);
-			this.Controls.Add(this.checkBoxOption6);
-			this.Controls.Add(this.checkBoxOption2);
-			this.Controls.Add(this.checkBoxOption4);
-			this.Controls.Add(this.checkBoxOption5);
-			this.Controls.Add(this.checkBoxOption3);
-			this.Controls.Add(this.checkBoxOption1);
-			this.MaximumSize = new System.Drawing.Size(727, 683);
-			this.MinimumSize = new System.Drawing.Size(727, 683);
+			this.ClientSize = new System.Drawing.Size(780, 740);
+			this.Controls.Add(this.panel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.MaximumSize = new System.Drawing.Size(780, 740);
+			this.MinimumSize = new System.Drawing.Size(780, 740);
 			this.Name = "Ankle";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Ankle";
 			this.Load += new System.EventHandler(this.DomesticActivities_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -185,5 +213,7 @@
 		public System.Windows.Forms.PictureBox pictureBoxCancel;
 		private System.Windows.Forms.PictureBox pictureBoxOK;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Label label2;
 	}
 }

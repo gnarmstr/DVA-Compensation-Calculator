@@ -28,38 +28,31 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
+			this.panel1 = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
 			// 
-			// button1
+			// panel1
 			// 
-			this.button1.BackColor = System.Drawing.Color.Transparent;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(451, 350);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(85, 80);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "g";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-			this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Location = new System.Drawing.Point(35, 33);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(1329, 930);
+			this.panel1.TabIndex = 0;
+			this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
 			// 
 			// ROMInfo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(978, 694);
-			this.Controls.Add(this.button1);
-			this.MaximumSize = new System.Drawing.Size(1000, 750);
-			this.MinimumSize = new System.Drawing.Size(1000, 750);
+			this.ClientSize = new System.Drawing.Size(1400, 1000);
+			this.Controls.Add(this.panel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.MaximumSize = new System.Drawing.Size(1400, 1000);
+			this.MinimumSize = new System.Drawing.Size(1400, 1000);
 			this.Name = "ROMInfo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Range Of Motion Information";
-			this.Load += new System.EventHandler(this.ROMInfo_Load);
 			this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ROMInfo_MouseClick);
 			this.ResumeLayout(false);
 
@@ -67,6 +60,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Panel panel1;
+
 	}
 }

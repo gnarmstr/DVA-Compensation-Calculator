@@ -11,13 +11,23 @@ namespace DVA_Compensation_Calculator
 		public ROMInfo()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + ActiveForm.MaximumSize.Width, ActiveForm.Location.Y);
+				Location = new Point(ActiveForm.Location.X, ActiveForm.Location.Y);
 			InitializeComponent();
+			MinimumSize = new Size(940, 650);
+			MaximumSize = new Size(940, 650);
+			BackgroundImage = Resources.MainBackground_Green_Form;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			panel1.BackgroundImage = Resources.Range_of_Motion;
 		}
 
-		private void ROMInfo_Load(object sender, EventArgs e)
+		protected override CreateParams CreateParams
 		{
-			BackgroundImage = Tools.GetIcon(Resources.Range_of_Motion_Table3_5_11, 1700);
+			get
+			{
+				var cp = base.CreateParams;
+				cp.ExStyle = cp.ExStyle | 0x2000000;
+				return cp;
+			}
 		}
 
 		private void ROMInfo_MouseClick(object sender, MouseEventArgs e)
@@ -25,15 +35,10 @@ namespace DVA_Compensation_Calculator
 			Close();
 		}
 
-		private void button1_MouseHover(object sender, EventArgs e)
+		private void panel1_MouseClick(object sender, MouseEventArgs e)
 		{
-			button1.Text = "Left Arm";
-
+			Close();
 		}
 
-		private void button1_MouseLeave(object sender, EventArgs e)
-		{
-			button1.Text = "";
-		}
 	}
 }

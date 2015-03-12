@@ -120,11 +120,17 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label114.Text" xml:space="preserve">
     <value>NOTE: Select the body part you wish to be assessed on, also click on whole body type as DVA will take the highest of the two for each area.
 
 Select checkbox next to each point if condition was accepted as War Service.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="buttonWholeLimb.ToolTip" xml:space="preserve">
     <value>The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement.
 The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
@@ -139,6 +145,9 @@ The higher of these two ratings will be used as the final functional impairment 
 The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
 </value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

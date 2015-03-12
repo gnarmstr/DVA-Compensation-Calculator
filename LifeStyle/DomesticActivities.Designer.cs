@@ -161,15 +161,16 @@
 			// 
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(13, 92);
+			this.label1.Location = new System.Drawing.Point(13, 68);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(1006, 140);
+			this.label1.Size = new System.Drawing.Size(1006, 164);
 			this.label1.TabIndex = 21;
 			this.label1.Text = resources.GetString("label1.Text");
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.Transparent;
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.checkBoxOption8);
 			this.panel1.Controls.Add(this.label1);
@@ -191,9 +192,9 @@
 			// 
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(367, 28);
+			this.label2.Location = new System.Drawing.Point(364, 24);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(295, 44);
+			this.label2.Size = new System.Drawing.Size(458, 44);
 			this.label2.TabIndex = 22;
 			this.label2.Text = "DOMESTIC ACTIVITIES";
 			// 

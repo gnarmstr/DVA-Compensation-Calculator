@@ -71,6 +71,7 @@ namespace DVA_Compensation_Calculator
 				GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue,
 				GlobalVar.LimbsAgeAdjust
 			};
+
 			//Add Days for Date of Birth
 
 			var i = 100;
@@ -87,7 +88,7 @@ namespace DVA_Compensation_Calculator
 			BackgroundImageLayout = ImageLayout.Stretch;
 			buttonImportantInfo.BackgroundImage = Resources.button_Blue_Small;
 			buttonDVALinks.BackgroundImage = Resources.button_Blue_Small;
-			buttonLifeStyle.BackgroundImage = Resources.button_Blue_Small;
+			buttonLifeStyle.BackgroundImage = Resources.Button_Green;
 			buttonROMInfo.BackgroundImage = Resources.button_Blue_Small;
 			buttonThoraco.BackgroundImage = Resources.Button_Green;
 			buttonWholeLeftArm.BackgroundImage = Resources.Button_Green;
@@ -1363,18 +1364,18 @@ namespace DVA_Compensation_Calculator
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			e.Cancel = false;
-			var save = MessageBox.Show(@"Would you like to save all Settings on exit?", @"Save", MessageBoxButtons.YesNoCancel);
-			switch (save)
-			{
-				case DialogResult.Yes:
-					Save();
-					break;
-				case DialogResult.No:
-					break;
-				case DialogResult.Cancel:
-					e.Cancel = true;
-					break;
-			}
+			//var save = MessageBox.Show(@"Would you like to save all Settings on exit?", @"Save", MessageBoxButtons.YesNoCancel);
+				switch (SaveMessage.SaveClose)
+				{
+					case 0:
+						e.Cancel = true;
+						break;
+					case 1:
+						Save();
+						break;
+					case 2:
+						break;
+				}
 		}
 		#endregion
 
@@ -1488,9 +1489,9 @@ namespace DVA_Compensation_Calculator
 
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", textBoxJointPain.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "JointPain", JointPain.jointPain);
-			
 
-			MessageBox.Show(@"Settings and Data have been saved");
+			var okMessage = new OkMessage();
+			okMessage.ShowDialog();
 		}
 
 		private void SaveAll_Click(object sender, EventArgs e)
@@ -2367,6 +2368,8 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxClose_Click(object sender, EventArgs e)
 		{
+			var saveMessage = new SaveMessage();
+			saveMessage.ShowDialog();
 			Close();
 		}
 
@@ -2489,6 +2492,8 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonLifeStyle_Click(object sender, EventArgs e)
 		{
+			GlobalVar.MainFormLocxationX = Location.X;
+			GlobalVar.MainFormLocxationY = Location.Y;
 			var lifeStyle = new LifeStyle();
 			lifeStyle.ShowDialog();
 			textBoxFinalLifeStylePoint.Text = GlobalVar.FinalLifeStylePoint;
@@ -2498,16 +2503,20 @@ namespace DVA_Compensation_Calculator
 
 		private void buttonLeftEye_Click(object sender, EventArgs e)
 		{
-			var leftEye = new LeftEye();
-			leftEye.ShowDialog();
+			GlobalVar.MainFormLocxationX = Location.X;
+			GlobalVar.MainFormLocxationY = Location.Y;
+			var rightEye = new RightEye();
+			rightEye.ShowDialog(); 
 			UpdateAll();
 			UpdateAll();
 		}
 
 		private void buttonRightEye_Click(object sender, EventArgs e)
 		{
-			var rightEye = new RightEye();
-			rightEye.ShowDialog();
+			GlobalVar.MainFormLocxationX = Location.X;
+			GlobalVar.MainFormLocxationY = Location.Y;
+			var leftEye = new LeftEye();
+			leftEye.ShowDialog();
 			UpdateAll();
 			UpdateAll();
 		}
