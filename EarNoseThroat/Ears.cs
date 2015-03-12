@@ -21,6 +21,7 @@ namespace DVA_Compensation_Calculator
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
 		}
 
+#region Hearing Loss
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
 		{
 			if (checkBoxOption1.Checked)
@@ -68,6 +69,75 @@ namespace DVA_Compensation_Calculator
 				Points = 10;
 			}
 		}
+#endregion
+
+#region Tinnitus
+
+		public static int tinnitus;
+
+		public static int PointsTinnitus;
+
+		private void checkBoxTinnitusOption1_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBoxTinnitusOption1.Checked)
+			{
+				checkBoxTinnitusOption2.Checked = false;
+				checkBoxTinnitusOption3.Checked = false;
+				checkBoxTinnitusOption4.Checked = false;
+				checkBoxTinnitusOption5.Checked = false;
+				PointsTinnitus = 0;
+			}
+		}
+
+		private void checkBoxTinnitusOption2_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBoxTinnitusOption2.Checked)
+			{
+				checkBoxTinnitusOption1.Checked = false;
+				checkBoxTinnitusOption3.Checked = false;
+				checkBoxTinnitusOption4.Checked = false;
+				checkBoxTinnitusOption5.Checked = false;
+				PointsTinnitus = 2;
+			}
+		}
+
+		private void checkBoxTinnitusOption3_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBoxTinnitusOption3.Checked)
+			{
+				checkBoxTinnitusOption1.Checked = false;
+				checkBoxTinnitusOption2.Checked = false;
+				checkBoxTinnitusOption4.Checked = false;
+				checkBoxTinnitusOption5.Checked = false;
+				PointsTinnitus = 5;
+			}
+		}
+
+		private void checkBoxTinnitusOption4_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBoxTinnitusOption4.Checked)
+			{
+				checkBoxTinnitusOption1.Checked = false;
+				checkBoxTinnitusOption2.Checked = false;
+				checkBoxTinnitusOption3.Checked = false;
+				checkBoxTinnitusOption5.Checked = false;
+				PointsTinnitus = 10;
+			}
+		}
+
+		private void checkBoxTinnitusOption5_CheckedChanged(object sender, EventArgs e)
+		{
+			if (checkBoxTinnitusOption5.Checked)
+			{
+				checkBoxTinnitusOption1.Checked = false;
+				checkBoxTinnitusOption2.Checked = false;
+				checkBoxTinnitusOption3.Checked = false;
+				checkBoxTinnitusOption4.Checked = false;
+				PointsTinnitus = 15;
+			}
+		}
+
+#endregion
 
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
@@ -77,6 +147,7 @@ namespace DVA_Compensation_Calculator
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
 			ears = Points;
+			tinnitus = PointsTinnitus;
 			Close();
 		}
 

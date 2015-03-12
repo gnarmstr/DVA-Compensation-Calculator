@@ -121,8 +121,6 @@
     <value>Note: This checklist is only to be used for the injury type above. Any other form of Hearing damage/loss then the formluars can be complicated and as it will take into account hearing damage/loss at different frequencies and therefore I have not included this in the program.</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.
-
-Select the one that best meets your situation.</value>
+    <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.</value>
   </data>
 </root>

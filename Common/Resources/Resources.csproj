@@ -133,6 +133,9 @@
     <None Include="Resources\button_Blue_Small.png" />
     <None Include="Resources\MainBackground_Green_Small.jpg" />
     <None Include="Resources\MainBackground_Green_Small.png" />
+    <None Include="Resources\MainBackground_Green_Small1.png" />
+    <None Include="Resources\Bones_Blue_Small.png" />
+    <None Include="Resources\MainBackground_Green_Form.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

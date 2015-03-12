@@ -254,7 +254,7 @@
     <value>..\Resources\Throat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bones_Blue_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bones_Blue_Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Bones_Blue_Small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_Blue_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_Blue_Small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +262,14 @@
   <data name="LeftEar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LeftEar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MainBackground_Green_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainBackground_Green_Form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MainBackground_Green_Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MainBackground_Green_Small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainBackground_Green_Small1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainBackground_Green_Small1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

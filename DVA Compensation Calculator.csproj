@@ -126,12 +126,6 @@
     <Compile Include="EarNoseThroat\Ears.Designer.cs">
       <DependentUpon>Ears.cs</DependentUpon>
     </Compile>
-    <Compile Include="EarNoseThroat\Tinnitus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EarNoseThroat\Tinnitus.Designer.cs">
-      <DependentUpon>Tinnitus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Eyes\RightEye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EarNoseThroat\Ears.resx">
       <DependentUpon>Ears.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EarNoseThroat\Tinnitus.resx">
-      <DependentUpon>Tinnitus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eyes\RightEye.resx">
       <DependentUpon>RightEye.cs</DependentUpon>

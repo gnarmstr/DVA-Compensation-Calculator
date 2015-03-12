@@ -37,10 +37,8 @@
 			this.checkBoxNoseWar = new System.Windows.Forms.CheckBox();
 			this.textBoxNose = new System.Windows.Forms.TextBox();
 			this.checkBoxEarsWar = new System.Windows.Forms.CheckBox();
-			this.buttonEars = new System.Windows.Forms.Button();
 			this.textBoxEars = new System.Windows.Forms.TextBox();
 			this.checkBoxTinnitusWar = new System.Windows.Forms.CheckBox();
-			this.buttonTinnitus = new System.Windows.Forms.Button();
 			this.textBoxTinnitus = new System.Windows.Forms.TextBox();
 			this.labelThroat = new System.Windows.Forms.Label();
 			this.checkBoxThroatWar = new System.Windows.Forms.CheckBox();
@@ -258,16 +256,6 @@
 			this.checkBoxEarsWar.UseVisualStyleBackColor = false;
 			this.checkBoxEarsWar.CheckedChanged += new System.EventHandler(this.checkBoxEarsWar_CheckedChanged);
 			// 
-			// buttonEars
-			// 
-			this.buttonEars.Location = new System.Drawing.Point(931, 27);
-			this.buttonEars.Name = "buttonEars";
-			this.buttonEars.Size = new System.Drawing.Size(99, 37);
-			this.buttonEars.TabIndex = 64;
-			this.buttonEars.Text = "CLICK";
-			this.buttonEars.UseVisualStyleBackColor = true;
-			this.buttonEars.Click += new System.EventHandler(this.buttonEars_Click);
-			// 
 			// textBoxEars
 			// 
 			this.textBoxEars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -292,16 +280,6 @@
 			this.toolTip1.SetToolTip(this.checkBoxTinnitusWar, "Check when injury happened during War Service.");
 			this.checkBoxTinnitusWar.UseVisualStyleBackColor = false;
 			this.checkBoxTinnitusWar.CheckedChanged += new System.EventHandler(this.checkBoxTinnitusWar_CheckedChanged);
-			// 
-			// buttonTinnitus
-			// 
-			this.buttonTinnitus.Location = new System.Drawing.Point(931, 84);
-			this.buttonTinnitus.Name = "buttonTinnitus";
-			this.buttonTinnitus.Size = new System.Drawing.Size(99, 37);
-			this.buttonTinnitus.TabIndex = 64;
-			this.buttonTinnitus.Text = "CLICK";
-			this.buttonTinnitus.UseVisualStyleBackColor = true;
-			this.buttonTinnitus.Click += new System.EventHandler(this.buttonTinnitus_Click);
 			// 
 			// textBoxTinnitus
 			// 
@@ -1647,8 +1625,6 @@
 			this.panelMainPoints.Controls.Add(this.checkBoxEyesWar);
 			this.panelMainPoints.Controls.Add(this.textBoxFinalEyes);
 			this.panelMainPoints.Controls.Add(this.labelTinnitus);
-			this.panelMainPoints.Controls.Add(this.buttonTinnitus);
-			this.panelMainPoints.Controls.Add(this.buttonEars);
 			this.panelMainPoints.Controls.Add(this.labelHearingLoss);
 			this.panelMainPoints.Controls.Add(this.checkBoxTinnitusWar);
 			this.panelMainPoints.Controls.Add(this.checkBoxEarsWar);
@@ -2129,10 +2105,8 @@
 		private System.Windows.Forms.Button buttonWholeLeftArm;
 		private System.Windows.Forms.TextBox textBoxWholeLeftArm;
 		private System.Windows.Forms.CheckBox checkBoxTinnitusWar;
-		private System.Windows.Forms.Button buttonTinnitus;
 		private System.Windows.Forms.TextBox textBoxTinnitus;
 		private System.Windows.Forms.CheckBox checkBoxEarsWar;
-		private System.Windows.Forms.Button buttonEars;
 		private System.Windows.Forms.TextBox textBoxEars;
 		private System.Windows.Forms.CheckBox checkBoxThroatWar;
 		private System.Windows.Forms.TextBox textBoxThroat;
