@@ -47,7 +47,7 @@ namespace DVA_Compensation_Calculator
 			link1.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC01%20Overview.pdf";
 			linkLabel1.Links.Add(link1);
 			var link2 = new LinkLabel.Link();
-			link2.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC02%20Compensation%20coverage%20for%20members%20and%20former%20members%20of%20the%20australian%20defence%20force.pdf";
+			link2.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC02%20Comp%20coverage%20for%20ADF%20under%20MRCA.pdf";
 			linkLabel2.Links.Add(link2);
 			var link3 = new LinkLabel.Link();
 			link3.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC03%20Types%20of%20MRCA%20service.pdf";

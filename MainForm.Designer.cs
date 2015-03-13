@@ -122,6 +122,7 @@
 			this.SaveAll = new System.Windows.Forms.PictureBox();
 			this.label29 = new System.Windows.Forms.Label();
 			this.label30 = new System.Windows.Forms.Label();
+			this.checkBoxEyesWar = new System.Windows.Forms.CheckBox();
 			this.label31 = new System.Windows.Forms.Label();
 			this.label32 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
@@ -140,6 +141,20 @@
 			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			this.buttonMainTitle = new System.Windows.Forms.Button();
 			this.panelMainPoints = new System.Windows.Forms.Panel();
+			this.labelRightShoulder = new System.Windows.Forms.Label();
+			this.buttonLifeStyle = new System.Windows.Forms.Button();
+			this.labelToes = new System.Windows.Forms.Label();
+			this.labelAnkles = new System.Windows.Forms.Label();
+			this.labelKnees = new System.Windows.Forms.Label();
+			this.labelRightFingers = new System.Windows.Forms.Label();
+			this.labelRightWrist = new System.Windows.Forms.Label();
+			this.labelRightElbow = new System.Windows.Forms.Label();
+			this.labelLeftFingers = new System.Windows.Forms.Label();
+			this.labelLeftWrist = new System.Windows.Forms.Label();
+			this.labelLeftElbow = new System.Windows.Forms.Label();
+			this.labelLeftShoulder = new System.Windows.Forms.Label();
+			this.labelEyes = new System.Windows.Forms.Label();
+			this.textBoxFinalEyes = new System.Windows.Forms.TextBox();
 			this.labelTinnitus = new System.Windows.Forms.Label();
 			this.labelHearingLoss = new System.Windows.Forms.Label();
 			this.labelNose = new System.Windows.Forms.Label();
@@ -148,22 +163,7 @@
 			this.buttonLeftEar = new System.Windows.Forms.Button();
 			this.buttonRightEye = new System.Windows.Forms.Button();
 			this.buttonLeftEye = new System.Windows.Forms.Button();
-			this.buttonLifeStyle = new System.Windows.Forms.Button();
 			this.buttonDVALinks = new System.Windows.Forms.Button();
-			this.labelEyes = new System.Windows.Forms.Label();
-			this.checkBoxEyesWar = new System.Windows.Forms.CheckBox();
-			this.textBoxFinalEyes = new System.Windows.Forms.TextBox();
-			this.labelLeftShoulder = new System.Windows.Forms.Label();
-			this.labelLeftElbow = new System.Windows.Forms.Label();
-			this.labelLeftWrist = new System.Windows.Forms.Label();
-			this.labelLeftFingers = new System.Windows.Forms.Label();
-			this.labelRightElbow = new System.Windows.Forms.Label();
-			this.labelRightWrist = new System.Windows.Forms.Label();
-			this.labelRightFingers = new System.Windows.Forms.Label();
-			this.labelKnees = new System.Windows.Forms.Label();
-			this.labelAnkles = new System.Windows.Forms.Label();
-			this.labelToes = new System.Windows.Forms.Label();
-			this.labelRightShoulder = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -521,7 +521,7 @@
 			this.checkBoxWholeRightArmWar.AutoSize = true;
 			this.checkBoxWholeRightArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeRightArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxWholeRightArmWar.Location = new System.Drawing.Point(125, 372);
+			this.checkBoxWholeRightArmWar.Location = new System.Drawing.Point(981, 372);
 			this.checkBoxWholeRightArmWar.Name = "checkBoxWholeRightArmWar";
 			this.checkBoxWholeRightArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeRightArmWar.TabIndex = 59;
@@ -546,7 +546,7 @@
 			this.checkBoxWholeLeftArmWar.AutoSize = true;
 			this.checkBoxWholeLeftArmWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxWholeLeftArmWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxWholeLeftArmWar.Location = new System.Drawing.Point(973, 376);
+			this.checkBoxWholeLeftArmWar.Location = new System.Drawing.Point(117, 376);
 			this.checkBoxWholeLeftArmWar.Name = "checkBoxWholeLeftArmWar";
 			this.checkBoxWholeLeftArmWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxWholeLeftArmWar.TabIndex = 59;
@@ -573,11 +573,11 @@
 			this.buttonWholeRightArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonWholeRightArm.FlatAppearance.BorderSize = 0;
 			this.buttonWholeRightArm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonWholeRightArm.Location = new System.Drawing.Point(17, 300);
+			this.buttonWholeRightArm.Location = new System.Drawing.Point(873, 300);
 			this.buttonWholeRightArm.Name = "buttonWholeRightArm";
 			this.buttonWholeRightArm.Size = new System.Drawing.Size(149, 54);
 			this.buttonWholeRightArm.TabIndex = 58;
-			this.buttonWholeRightArm.Text = "Click for Whole Right Arm";
+			this.buttonWholeRightArm.Text = "Click for Whole Left Arm";
 			this.toolTip1.SetToolTip(this.buttonWholeRightArm, resources.GetString("buttonWholeRightArm.ToolTip"));
 			this.buttonWholeRightArm.UseVisualStyleBackColor = true;
 			this.buttonWholeRightArm.Click += new System.EventHandler(this.buttonWholeRightArm_Click);
@@ -622,7 +622,7 @@
 			// textBoxWholeRightArm
 			// 
 			this.textBoxWholeRightArm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxWholeRightArm.Location = new System.Drawing.Point(38, 368);
+			this.textBoxWholeRightArm.Location = new System.Drawing.Point(894, 368);
 			this.textBoxWholeRightArm.Name = "textBoxWholeRightArm";
 			this.textBoxWholeRightArm.ReadOnly = true;
 			this.textBoxWholeRightArm.Size = new System.Drawing.Size(70, 26);
@@ -636,11 +636,11 @@
 			this.buttonWholeLeftArm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonWholeLeftArm.FlatAppearance.BorderSize = 0;
 			this.buttonWholeLeftArm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonWholeLeftArm.Location = new System.Drawing.Point(873, 303);
+			this.buttonWholeLeftArm.Location = new System.Drawing.Point(17, 303);
 			this.buttonWholeLeftArm.Name = "buttonWholeLeftArm";
 			this.buttonWholeLeftArm.Size = new System.Drawing.Size(149, 54);
 			this.buttonWholeLeftArm.TabIndex = 58;
-			this.buttonWholeLeftArm.Text = "Click for Whole Left Arm";
+			this.buttonWholeLeftArm.Text = "Click for Whole Right Arm";
 			this.toolTip1.SetToolTip(this.buttonWholeLeftArm, resources.GetString("buttonWholeLeftArm.ToolTip"));
 			this.buttonWholeLeftArm.UseVisualStyleBackColor = true;
 			this.buttonWholeLeftArm.Click += new System.EventHandler(this.buttonWholeLeftArm_Click);
@@ -674,7 +674,7 @@
 			// textBoxWholeLeftArm
 			// 
 			this.textBoxWholeLeftArm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxWholeLeftArm.Location = new System.Drawing.Point(886, 372);
+			this.textBoxWholeLeftArm.Location = new System.Drawing.Point(30, 372);
 			this.textBoxWholeLeftArm.Name = "textBoxWholeLeftArm";
 			this.textBoxWholeLeftArm.ReadOnly = true;
 			this.textBoxWholeLeftArm.Size = new System.Drawing.Size(70, 26);
@@ -1409,6 +1409,19 @@
 			this.toolTip1.SetToolTip(this.label30, "This is used to determine the Compensation payout and is multiplied by the Weekly" +
         " Rate to get your Compensation.");
 			// 
+			// checkBoxEyesWar
+			// 
+			this.checkBoxEyesWar.AutoSize = true;
+			this.checkBoxEyesWar.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxEyesWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxEyesWar.Location = new System.Drawing.Point(729, 44);
+			this.checkBoxEyesWar.Name = "checkBoxEyesWar";
+			this.checkBoxEyesWar.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxEyesWar.TabIndex = 92;
+			this.toolTip1.SetToolTip(this.checkBoxEyesWar, "Check when injury happened during War Service.");
+			this.checkBoxEyesWar.UseVisualStyleBackColor = false;
+			this.checkBoxEyesWar.CheckedChanged += new System.EventHandler(this.checkBoxEyesWar_CheckedChanged);
+			// 
 			// label31
 			// 
 			this.label31.AutoSize = true;
@@ -1578,7 +1591,7 @@
 			this.buttonImportantInfo.TabIndex = 84;
 			this.buttonImportantInfo.Text = "Important Information";
 			this.buttonImportantInfo.UseVisualStyleBackColor = true;
-			this.buttonImportantInfo.Click += new System.EventHandler(this.button1_Click);
+			this.buttonImportantInfo.Click += new System.EventHandler(this.buttonImportantInformation_Click);
 			// 
 			// pictureBoxClose
 			// 
@@ -1710,6 +1723,150 @@
 			this.panelMainPoints.Size = new System.Drawing.Size(1070, 674);
 			this.panelMainPoints.TabIndex = 83;
 			// 
+			// labelRightShoulder
+			// 
+			this.labelRightShoulder.AutoSize = true;
+			this.labelRightShoulder.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightShoulder.Location = new System.Drawing.Point(662, 128);
+			this.labelRightShoulder.Name = "labelRightShoulder";
+			this.labelRightShoulder.Size = new System.Drawing.Size(77, 20);
+			this.labelRightShoulder.TabIndex = 104;
+			this.labelRightShoulder.Text = "Shoulder:";
+			// 
+			// buttonLifeStyle
+			// 
+			this.buttonLifeStyle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonLifeStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonLifeStyle.Location = new System.Drawing.Point(17, 606);
+			this.buttonLifeStyle.Name = "buttonLifeStyle";
+			this.buttonLifeStyle.Size = new System.Drawing.Size(337, 44);
+			this.buttonLifeStyle.TabIndex = 89;
+			this.buttonLifeStyle.Text = "Click to complete Life Style Assessment";
+			this.buttonLifeStyle.UseVisualStyleBackColor = true;
+			this.buttonLifeStyle.Click += new System.EventHandler(this.buttonLifeStyle_Click);
+			// 
+			// labelToes
+			// 
+			this.labelToes.AutoSize = true;
+			this.labelToes.BackColor = System.Drawing.Color.Transparent;
+			this.labelToes.Location = new System.Drawing.Point(630, 616);
+			this.labelToes.Name = "labelToes";
+			this.labelToes.Size = new System.Drawing.Size(48, 20);
+			this.labelToes.TabIndex = 103;
+			this.labelToes.Text = "Toes:";
+			// 
+			// labelAnkles
+			// 
+			this.labelAnkles.AutoSize = true;
+			this.labelAnkles.BackColor = System.Drawing.Color.Transparent;
+			this.labelAnkles.Location = new System.Drawing.Point(615, 562);
+			this.labelAnkles.Name = "labelAnkles";
+			this.labelAnkles.Size = new System.Drawing.Size(61, 20);
+			this.labelAnkles.TabIndex = 102;
+			this.labelAnkles.Text = "Ankles:";
+			// 
+			// labelKnees
+			// 
+			this.labelKnees.AutoSize = true;
+			this.labelKnees.BackColor = System.Drawing.Color.Transparent;
+			this.labelKnees.Location = new System.Drawing.Point(630, 447);
+			this.labelKnees.Name = "labelKnees";
+			this.labelKnees.Size = new System.Drawing.Size(58, 20);
+			this.labelKnees.TabIndex = 101;
+			this.labelKnees.Text = "Knees:";
+			// 
+			// labelRightFingers
+			// 
+			this.labelRightFingers.AutoSize = true;
+			this.labelRightFingers.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightFingers.Location = new System.Drawing.Point(719, 339);
+			this.labelRightFingers.Name = "labelRightFingers";
+			this.labelRightFingers.Size = new System.Drawing.Size(66, 20);
+			this.labelRightFingers.TabIndex = 100;
+			this.labelRightFingers.Text = "Fingers:";
+			// 
+			// labelRightWrist
+			// 
+			this.labelRightWrist.AutoSize = true;
+			this.labelRightWrist.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightWrist.Location = new System.Drawing.Point(701, 280);
+			this.labelRightWrist.Name = "labelRightWrist";
+			this.labelRightWrist.Size = new System.Drawing.Size(49, 20);
+			this.labelRightWrist.TabIndex = 99;
+			this.labelRightWrist.Text = "Wrist:";
+			// 
+			// labelRightElbow
+			// 
+			this.labelRightElbow.AutoSize = true;
+			this.labelRightElbow.BackColor = System.Drawing.Color.Transparent;
+			this.labelRightElbow.Location = new System.Drawing.Point(671, 204);
+			this.labelRightElbow.Name = "labelRightElbow";
+			this.labelRightElbow.Size = new System.Drawing.Size(56, 20);
+			this.labelRightElbow.TabIndex = 98;
+			this.labelRightElbow.Text = "Elbow:";
+			// 
+			// labelLeftFingers
+			// 
+			this.labelLeftFingers.AutoSize = true;
+			this.labelLeftFingers.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftFingers.Location = new System.Drawing.Point(293, 339);
+			this.labelLeftFingers.Name = "labelLeftFingers";
+			this.labelLeftFingers.Size = new System.Drawing.Size(66, 20);
+			this.labelLeftFingers.TabIndex = 97;
+			this.labelLeftFingers.Text = "Fingers:";
+			// 
+			// labelLeftWrist
+			// 
+			this.labelLeftWrist.AutoSize = true;
+			this.labelLeftWrist.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftWrist.Location = new System.Drawing.Point(317, 280);
+			this.labelLeftWrist.Name = "labelLeftWrist";
+			this.labelLeftWrist.Size = new System.Drawing.Size(49, 20);
+			this.labelLeftWrist.TabIndex = 96;
+			this.labelLeftWrist.Text = "Wrist:";
+			// 
+			// labelLeftElbow
+			// 
+			this.labelLeftElbow.AutoSize = true;
+			this.labelLeftElbow.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftElbow.Location = new System.Drawing.Point(347, 204);
+			this.labelLeftElbow.Name = "labelLeftElbow";
+			this.labelLeftElbow.Size = new System.Drawing.Size(56, 20);
+			this.labelLeftElbow.TabIndex = 95;
+			this.labelLeftElbow.Text = "Elbow:";
+			// 
+			// labelLeftShoulder
+			// 
+			this.labelLeftShoulder.AutoSize = true;
+			this.labelLeftShoulder.BackColor = System.Drawing.Color.Transparent;
+			this.labelLeftShoulder.Location = new System.Drawing.Point(364, 134);
+			this.labelLeftShoulder.Name = "labelLeftShoulder";
+			this.labelLeftShoulder.Size = new System.Drawing.Size(77, 20);
+			this.labelLeftShoulder.TabIndex = 94;
+			this.labelLeftShoulder.Text = "Shoulder:";
+			// 
+			// labelEyes
+			// 
+			this.labelEyes.AutoSize = true;
+			this.labelEyes.BackColor = System.Drawing.Color.Transparent;
+			this.labelEyes.Location = new System.Drawing.Point(643, 14);
+			this.labelEyes.Name = "labelEyes";
+			this.labelEyes.Size = new System.Drawing.Size(48, 20);
+			this.labelEyes.TabIndex = 93;
+			this.labelEyes.Text = "Eyes:";
+			// 
+			// textBoxFinalEyes
+			// 
+			this.textBoxFinalEyes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.textBoxFinalEyes.Location = new System.Drawing.Point(647, 40);
+			this.textBoxFinalEyes.Name = "textBoxFinalEyes";
+			this.textBoxFinalEyes.ReadOnly = true;
+			this.textBoxFinalEyes.Size = new System.Drawing.Size(70, 26);
+			this.textBoxFinalEyes.TabIndex = 91;
+			this.textBoxFinalEyes.Text = "0";
+			this.textBoxFinalEyes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxFinalEyes.TextChanged += new System.EventHandler(this.textBoxFinalEyes_TextChanged);
+			// 
 			// labelTinnitus
 			// 
 			this.labelTinnitus.AutoSize = true;
@@ -1825,18 +1982,6 @@
 			this.buttonLeftEye.MouseEnter += new System.EventHandler(this.buttonLeftEye_MouseEnter);
 			this.buttonLeftEye.MouseLeave += new System.EventHandler(this.buttonLeftEye_MouseLeave);
 			// 
-			// buttonLifeStyle
-			// 
-			this.buttonLifeStyle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonLifeStyle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonLifeStyle.Location = new System.Drawing.Point(17, 606);
-			this.buttonLifeStyle.Name = "buttonLifeStyle";
-			this.buttonLifeStyle.Size = new System.Drawing.Size(337, 44);
-			this.buttonLifeStyle.TabIndex = 89;
-			this.buttonLifeStyle.Text = "Click to complete Life Style Assessment";
-			this.buttonLifeStyle.UseVisualStyleBackColor = true;
-			this.buttonLifeStyle.Click += new System.EventHandler(this.buttonLifeStyle_Click);
-			// 
 			// buttonDVALinks
 			// 
 			this.buttonDVALinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1848,151 +1993,6 @@
 			this.buttonDVALinks.Text = "DVA Links";
 			this.buttonDVALinks.UseVisualStyleBackColor = true;
 			this.buttonDVALinks.Click += new System.EventHandler(this.buttonDVALinks_Click);
-			// 
-			// labelEyes
-			// 
-			this.labelEyes.AutoSize = true;
-			this.labelEyes.BackColor = System.Drawing.Color.Transparent;
-			this.labelEyes.Location = new System.Drawing.Point(643, 14);
-			this.labelEyes.Name = "labelEyes";
-			this.labelEyes.Size = new System.Drawing.Size(48, 20);
-			this.labelEyes.TabIndex = 93;
-			this.labelEyes.Text = "Eyes:";
-			// 
-			// checkBoxEyesWar
-			// 
-			this.checkBoxEyesWar.AutoSize = true;
-			this.checkBoxEyesWar.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxEyesWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxEyesWar.Location = new System.Drawing.Point(729, 44);
-			this.checkBoxEyesWar.Name = "checkBoxEyesWar";
-			this.checkBoxEyesWar.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxEyesWar.TabIndex = 92;
-			this.toolTip1.SetToolTip(this.checkBoxEyesWar, "Check when injury happened during War Service.");
-			this.checkBoxEyesWar.UseVisualStyleBackColor = false;
-			this.checkBoxEyesWar.CheckedChanged += new System.EventHandler(this.checkBoxEyesWar_CheckedChanged);
-			// 
-			// textBoxFinalEyes
-			// 
-			this.textBoxFinalEyes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxFinalEyes.Location = new System.Drawing.Point(647, 40);
-			this.textBoxFinalEyes.Name = "textBoxFinalEyes";
-			this.textBoxFinalEyes.ReadOnly = true;
-			this.textBoxFinalEyes.Size = new System.Drawing.Size(70, 26);
-			this.textBoxFinalEyes.TabIndex = 91;
-			this.textBoxFinalEyes.Text = "0";
-			this.textBoxFinalEyes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxFinalEyes.TextChanged += new System.EventHandler(this.textBoxFinalEyes_TextChanged);
-			// 
-			// labelLeftShoulder
-			// 
-			this.labelLeftShoulder.AutoSize = true;
-			this.labelLeftShoulder.BackColor = System.Drawing.Color.Transparent;
-			this.labelLeftShoulder.Location = new System.Drawing.Point(364, 134);
-			this.labelLeftShoulder.Name = "labelLeftShoulder";
-			this.labelLeftShoulder.Size = new System.Drawing.Size(77, 20);
-			this.labelLeftShoulder.TabIndex = 94;
-			this.labelLeftShoulder.Text = "Shoulder:";
-			// 
-			// labelLeftElbow
-			// 
-			this.labelLeftElbow.AutoSize = true;
-			this.labelLeftElbow.BackColor = System.Drawing.Color.Transparent;
-			this.labelLeftElbow.Location = new System.Drawing.Point(347, 204);
-			this.labelLeftElbow.Name = "labelLeftElbow";
-			this.labelLeftElbow.Size = new System.Drawing.Size(56, 20);
-			this.labelLeftElbow.TabIndex = 95;
-			this.labelLeftElbow.Text = "Elbow:";
-			// 
-			// labelLeftWrist
-			// 
-			this.labelLeftWrist.AutoSize = true;
-			this.labelLeftWrist.BackColor = System.Drawing.Color.Transparent;
-			this.labelLeftWrist.Location = new System.Drawing.Point(317, 280);
-			this.labelLeftWrist.Name = "labelLeftWrist";
-			this.labelLeftWrist.Size = new System.Drawing.Size(49, 20);
-			this.labelLeftWrist.TabIndex = 96;
-			this.labelLeftWrist.Text = "Wrist:";
-			// 
-			// labelLeftFingers
-			// 
-			this.labelLeftFingers.AutoSize = true;
-			this.labelLeftFingers.BackColor = System.Drawing.Color.Transparent;
-			this.labelLeftFingers.Location = new System.Drawing.Point(293, 339);
-			this.labelLeftFingers.Name = "labelLeftFingers";
-			this.labelLeftFingers.Size = new System.Drawing.Size(66, 20);
-			this.labelLeftFingers.TabIndex = 97;
-			this.labelLeftFingers.Text = "Fingers:";
-			// 
-			// labelRightElbow
-			// 
-			this.labelRightElbow.AutoSize = true;
-			this.labelRightElbow.BackColor = System.Drawing.Color.Transparent;
-			this.labelRightElbow.Location = new System.Drawing.Point(671, 204);
-			this.labelRightElbow.Name = "labelRightElbow";
-			this.labelRightElbow.Size = new System.Drawing.Size(56, 20);
-			this.labelRightElbow.TabIndex = 98;
-			this.labelRightElbow.Text = "Elbow:";
-			// 
-			// labelRightWrist
-			// 
-			this.labelRightWrist.AutoSize = true;
-			this.labelRightWrist.BackColor = System.Drawing.Color.Transparent;
-			this.labelRightWrist.Location = new System.Drawing.Point(701, 280);
-			this.labelRightWrist.Name = "labelRightWrist";
-			this.labelRightWrist.Size = new System.Drawing.Size(49, 20);
-			this.labelRightWrist.TabIndex = 99;
-			this.labelRightWrist.Text = "Wrist:";
-			// 
-			// labelRightFingers
-			// 
-			this.labelRightFingers.AutoSize = true;
-			this.labelRightFingers.BackColor = System.Drawing.Color.Transparent;
-			this.labelRightFingers.Location = new System.Drawing.Point(719, 339);
-			this.labelRightFingers.Name = "labelRightFingers";
-			this.labelRightFingers.Size = new System.Drawing.Size(66, 20);
-			this.labelRightFingers.TabIndex = 100;
-			this.labelRightFingers.Text = "Fingers:";
-			// 
-			// labelKnees
-			// 
-			this.labelKnees.AutoSize = true;
-			this.labelKnees.BackColor = System.Drawing.Color.Transparent;
-			this.labelKnees.Location = new System.Drawing.Point(630, 447);
-			this.labelKnees.Name = "labelKnees";
-			this.labelKnees.Size = new System.Drawing.Size(58, 20);
-			this.labelKnees.TabIndex = 101;
-			this.labelKnees.Text = "Knees:";
-			// 
-			// labelAnkles
-			// 
-			this.labelAnkles.AutoSize = true;
-			this.labelAnkles.BackColor = System.Drawing.Color.Transparent;
-			this.labelAnkles.Location = new System.Drawing.Point(615, 562);
-			this.labelAnkles.Name = "labelAnkles";
-			this.labelAnkles.Size = new System.Drawing.Size(61, 20);
-			this.labelAnkles.TabIndex = 102;
-			this.labelAnkles.Text = "Ankles:";
-			// 
-			// labelToes
-			// 
-			this.labelToes.AutoSize = true;
-			this.labelToes.BackColor = System.Drawing.Color.Transparent;
-			this.labelToes.Location = new System.Drawing.Point(630, 616);
-			this.labelToes.Name = "labelToes";
-			this.labelToes.Size = new System.Drawing.Size(48, 20);
-			this.labelToes.TabIndex = 103;
-			this.labelToes.Text = "Toes:";
-			// 
-			// labelRightShoulder
-			// 
-			this.labelRightShoulder.AutoSize = true;
-			this.labelRightShoulder.BackColor = System.Drawing.Color.Transparent;
-			this.labelRightShoulder.Location = new System.Drawing.Point(662, 128);
-			this.labelRightShoulder.Name = "labelRightShoulder";
-			this.labelRightShoulder.Size = new System.Drawing.Size(77, 20);
-			this.labelRightShoulder.TabIndex = 104;
-			this.labelRightShoulder.Text = "Shoulder:";
 			// 
 			// MainForm
 			// 
@@ -2039,7 +2039,7 @@
 			this.Controls.Add(this.textBoxWeeklyPayment);
 			this.Controls.Add(this.label85);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Location = new System.Drawing.Point(100, 100);
+			this.Location = new System.Drawing.Point(300, 100);
 			this.MaximumSize = new System.Drawing.Size(1090, 1200);
 			this.MinimumSize = new System.Drawing.Size(1090, 1200);
 			this.Name = "MainForm";
@@ -2047,7 +2047,6 @@
 			this.Text = "Ver 1.2                             DVA Compensation Calulator - by Geoff Armstro" +
     "ng                 ";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.panelMainPoints.ResumeLayout(false);

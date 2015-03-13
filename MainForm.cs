@@ -47,6 +47,7 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
+		#region Used to allow graphgic refresh and draw before display to stop flickering
 		protected override CreateParams CreateParams
 		{
 			get
@@ -56,6 +57,7 @@ namespace DVA_Compensation_Calculator
 				return cp;
 			}
 		}
+		#endregion
 
 		#region Settings
 
@@ -133,7 +135,6 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		// Add to this when adding new injury types
-
 		#region Load Data
 
 		private void LoadData()
@@ -409,15 +410,9 @@ namespace DVA_Compensation_Calculator
 			}
 		}
 
-		private void comboBoxAge_SelectedValueChanged(object sender, EventArgs e)
-		{
-			comboBoxAge_Leave(null, null);
-		}
-
 		#endregion
 
 		// Add to this when adding new injury types
-
 		#region Total Points
 
 		private void totalPoint()
@@ -892,7 +887,6 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		// Add to this when adding new injury types
-
 		#region Total Combined Point
 
 		private void combinedPoints()
@@ -1306,6 +1300,16 @@ namespace DVA_Compensation_Calculator
 
 		#region Misc
 
+		private void comboBoxAge_SelectedValueChanged(object sender, EventArgs e)
+		{
+			comboBoxAge_Leave(null, null);
+		}
+
+		private void comboBoxAge_KeyUp(object sender, KeyEventArgs e)
+		{
+			comboBoxAge_Leave(null, null);
+		}
+
 		private void checkBoxMale_CheckedChanged(object sender, EventArgs e)
 		{
 			checkBoxFemale.Checked = !checkBoxMale.Checked;
@@ -1360,6 +1364,70 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
+		#region Life Style Assessment
+
+		private void buttonLifeStyle_Click(object sender, EventArgs e)
+		{
+			GlobalVar.MainFormLocxationX = Location.X;
+			GlobalVar.MainFormLocxationY = Location.Y;
+			var lifeStyle = new LifeStyle();
+			lifeStyle.ShowDialog();
+			textBoxFinalLifeStylePoint.Text = GlobalVar.FinalLifeStylePoint;
+			UpdateAll();
+			UpdateAll();
+		}
+		#endregion
+
+		#region Drag Main Form around
+
+		public static bool dragging;
+
+		public static int offsetX;
+
+		public static int offsetY;
+
+		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				dragging = true;
+				offsetX = e.X;
+				offsetY = e.Y;
+			}
+		}
+
+		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (dragging)
+			{
+				Left = e.X + Left - offsetX;
+				Top = e.Y + Top - offsetY;
+			}
+		}
+
+		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				dragging = false;
+			}
+		}
+
+		private void buttonDVALinks_Click(object sender, EventArgs e)
+		{
+			var dVALinks = new DVALinks();
+			dVALinks.ShowDialog();
+		}
+		#endregion
+
+		#region Important Information
+		private void buttonImportantInformation_Click(object sender, EventArgs e)
+		{
+			var importantInformation = new ImportantInformation();
+			importantInformation.ShowDialog();
+		}
+		#endregion
+
 		#region Close Application
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
@@ -1377,6 +1445,14 @@ namespace DVA_Compensation_Calculator
 						break;
 				}
 		}
+
+		private void pictureBoxClose_Click(object sender, EventArgs e)
+		{
+			var saveMessage = new SaveMessage();
+			saveMessage.ShowDialog();
+			Close();
+		}
+
 		#endregion
 
 		// Add to this when adding new injury types
@@ -1501,7 +1577,53 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		//Condition Types
+		#region Condition Type
 		#region Back
+
+		private void buttonThoracoROM_Click(object sender, EventArgs e)
+		{
+			var thoracoROM = new ThoracoROM();
+			thoracoROM.ShowDialog();
+			textBoxThoracoROM.Text = GlobalVar.ExcelData[4][ThoracoROM.thoracoROM][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonThoracoROM_MouseEnter(object sender, EventArgs e)
+		{
+			buttonThoracoROM.BackgroundImage = Resources.Thoraco;
+			toolTip1.Show("Thoraco - Lumbar Spine", buttonThoracoROM, 30, -10, 10000);
+		}
+
+		private void buttonThoracoROM_MouseLeave(object sender, EventArgs e)
+		{
+			buttonThoracoROM.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonThoracoROM);
+		}
+
+		private void buttonCervical_MouseEnter(object sender, EventArgs e)
+		{
+			buttonCervical.BackgroundImage = Resources.Cervical;
+			toolTip1.Show("Cervical Spine", buttonCervical, 30, -10, 10000);
+		}
+
+		private void buttonCervical_MouseLeave(object sender, EventArgs e)
+		{
+			buttonCervical.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonCervical);
+		}
+
+		private void buttonThroat_MouseEnter(object sender, EventArgs e)
+		{
+			buttonThroat.BackgroundImage = Resources.Throat;
+			toolTip1.Show("Throat", buttonThroat, 30, -10, 10000);
+		}
+
+		private void buttonThroat_MouseLeave(object sender, EventArgs e)
+		{
+			buttonThroat.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonThroat);
+		}
 
 		private void buttonThoraco_Click(object sender, EventArgs e)
 		{
@@ -1563,7 +1685,37 @@ namespace DVA_Compensation_Calculator
 
 		#region Lower Body
 
-		private void buttonKnee_Click(object sender, EventArgs e)
+		#region Knee
+
+		private void buttonLeftKnee_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftKnee.BackgroundImage = Resources.Blank;
+			buttonRightKnee.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightKnee);
+		}
+
+		private void buttonLeftKnee_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
+			buttonRightKnee.BackgroundImage = Resources.RightKnee;
+			toolTip1.Show("Knees", buttonRightKnee, 30, -10, 10000);
+		}
+
+		private void buttonRightKnee_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightKnee.BackgroundImage = Resources.RightKnee;
+			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
+			toolTip1.Show("Knees", buttonRightKnee, 30, -10, 10000);
+		}
+
+		private void buttonRightKnee_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightKnee.BackgroundImage = Resources.Blank;
+			buttonLeftKnee.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightKnee);
+		}
+
+		private void buttonLeftKnee_Click(object sender, EventArgs e)
 		{
 			var knee = new Knee();
 			knee.ShowDialog();
@@ -1572,30 +1724,17 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void buttonHip_Click(object sender, EventArgs e)
+		private void buttonRightKnee_Click(object sender, EventArgs e)
 		{
-			var hip = new Hip();
-			hip.ShowDialog();
-			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			var knee = new Knee();
+			knee.ShowDialog();
+			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
 			UpdateAll();
 			UpdateAll();
 		}
 
-		private void buttonAnkle_Click(object sender, EventArgs e)
+		private void checkBoxKneeWar_CheckedChanged(object sender, EventArgs e)
 		{
-			var ankle = new Ankle();
-			ankle.ShowDialog();
-			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonToes_Click(object sender, EventArgs e)
-		{
-			var toes = new Toes();
-			toes.ShowDialog();
-			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
 			UpdateAll();
 		}
 
@@ -1604,7 +1743,115 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
+		#endregion
+
+		#region Hip
+		private void buttonRightHip_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightHip.BackgroundImage = Resources.RightHip;
+			buttonLeftHip.BackgroundImage = Resources.LeftHip;
+			toolTip1.Show("Hips", buttonRightHip, -27, 35, 10000);
+		}
+
+		private void buttonRightHip_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightHip.BackgroundImage = Resources.Blank;
+			buttonLeftHip.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightHip);
+		}
+
+		private void buttonLeftHip_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftHip.BackgroundImage = Resources.LeftHip;
+			buttonRightHip.BackgroundImage = Resources.RightHip;
+			toolTip1.Show("Hips", buttonRightHip, -27, 35, 10000);
+		}
+
+		private void buttonLeftHip_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftHip.BackgroundImage = Resources.Blank;
+			buttonRightHip.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightHip);
+		}
+
+		private void buttonLeftHip_Click(object sender, EventArgs e)
+		{
+			var hip = new Hip();
+			hip.ShowDialog();
+			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightHip_Click(object sender, EventArgs e)
+		{
+			var hip = new Hip();
+			hip.ShowDialog();
+			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void checkBoxHipWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
 		private void textBoxHip_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+		#endregion
+
+		#region Ankle
+
+		private void buttonLeftAnkle_Click(object sender, EventArgs e)
+		{
+			var ankle = new Ankle();
+			ankle.ShowDialog();
+			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftAnkle_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
+			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
+			toolTip1.Show("Ankles", buttonRightAnkle, 30, -10, 10000);
+		}
+
+		private void buttonLeftAnkle_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftAnkle.BackgroundImage = Resources.Blank;
+			buttonRightAnkle.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightAnkle);
+		}
+
+		private void buttonRightAnkle_Click(object sender, EventArgs e)
+		{
+			var ankle = new Ankle();
+			ankle.ShowDialog();
+			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightAnkle_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
+			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
+			toolTip1.Show("Ankles", buttonRightAnkle, 30, -10, 10000);
+		}
+
+		private void buttonRightAnkle_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightAnkle.BackgroundImage = Resources.Blank;
+			buttonLeftAnkle.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightAnkle);
+		}
+
+		private void checkBoxAnkleWar_CheckedChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
 		}
@@ -1614,30 +1861,69 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void textBoxToes_TextChanged(object sender, EventArgs e)
+		#endregion
+
+		#region Toes
+
+		private void buttonLeftToes_Click(object sender, EventArgs e)
 		{
+			var toes = new Toes();
+			toes.ShowDialog();
+			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
 			UpdateAll();
 		}
 
-		private void checkBoxKneeWar_CheckedChanged(object sender, EventArgs e)
+		private void buttonLeftToes_MouseEnter(object sender, EventArgs e)
 		{
+			buttonLeftToes.BackgroundImage = Resources.LeftToes;
+			buttonRightToes.BackgroundImage = Resources.RightToes;
+			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
+		}
+
+		private void buttonLeftToes_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftToes.BackgroundImage = Resources.Blank;
+			buttonRightToes.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightToes);
+		}
+
+		private void buttonRightToes_Click(object sender, EventArgs e)
+		{
+			var toes = new Toes();
+			toes.ShowDialog();
+			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
 			UpdateAll();
 		}
 
-		private void checkBoxHipWar_CheckedChanged(object sender, EventArgs e)
+		private void buttonRightToes_MouseEnter(object sender, EventArgs e)
 		{
-			UpdateAll();
+			buttonRightToes.BackgroundImage = Resources.RightToes;
+			buttonLeftToes.BackgroundImage = Resources.LeftToes;
+			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
 		}
 
-		private void checkBoxAnkleWar_CheckedChanged(object sender, EventArgs e)
+		private void buttonRightToes_MouseLeave(object sender, EventArgs e)
 		{
-			UpdateAll();
+			buttonRightToes.BackgroundImage = Resources.Blank;
+			buttonLeftToes.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightToes);
 		}
 
 		private void checkBoxToesWar_CheckedChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
 		}
+
+		private void textBoxToes_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
+
+		#region Whole Lower Limb
 
 		private void buttonWholeLimb_Click(object sender, EventArgs e)
 		{
@@ -1657,6 +1943,7 @@ namespace DVA_Compensation_Calculator
 		{
 			UpdateAll();
 		}
+		#endregion
 
 		#endregion
 
@@ -1685,8 +1972,66 @@ namespace DVA_Compensation_Calculator
 
 		#region Upper Body
 
-		#region Left Arm
-		private void buttonElbow_Click(object sender, EventArgs e)
+		#region Fingers
+
+		private void buttonRightFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightFingers_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightFingers.BackgroundImage = Resources.RightFingers;
+			toolTip1.Show("Fingers", buttonRightFingers, 30, -10, 10000);
+		}
+
+		private void buttonRightFingers_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightFingers.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightFingers);
+		}
+
+		private void buttonLeftFingers_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftFingers";
+			var fingers = new Fingers();
+			fingers.ShowDialog();
+			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftFingers_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftFingers.BackgroundImage = Resources.LeftFingers;
+			toolTip1.Show("Fingers", buttonLeftFingers, -65, -10, 10000);
+		}
+
+		private void buttonLeftFingers_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftFingers.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftFingers);
+		}
+		private void textBoxFingers_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxFingersWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
+
+		#region Elbow
+
+		private void buttonLeftElbow_Click(object sender, EventArgs e)
 		{
 			GlobalVar.Selection = "LeftElbow";
 			var ebow = new Elbow();
@@ -1696,35 +2041,30 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void buttonShoulder_Click(object sender, EventArgs e)
+		private void buttonLeftElbow_MouseEnter(object sender, EventArgs e)
 		{
-			GlobalVar.Selection = "LeftShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			buttonLeftElbow.BackgroundImage = Resources.LeftElbow;
+			toolTip1.Show("Elbow", buttonLeftElbow, -60, -10, 10000);
+		}
+
+		private void buttonLeftElbow_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftElbow.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftElbow);
+		}
+
+		private void textBoxElbow_TextChanged(object sender, EventArgs e)
+		{
 			UpdateAll();
+		}
+		private void checkBoxElbowWar_CheckedChanged(object sender, EventArgs e)
+		{
 			UpdateAll();
 		}
 
-		private void buttonWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
+#endregion
 
-		private void buttonFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
+		#region Whole Arm
 
 		private void buttonWholeLeftArm_Click(object sender, EventArgs e)
 		{
@@ -1746,9 +2086,53 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void textBoxElbow_TextChanged(object sender, EventArgs e)
+#endregion
+
+		#region Shoulder
+
+		private void buttonLeftShoulder_Click(object sender, EventArgs e)
 		{
+			GlobalVar.Selection = "LeftShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
 			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftShoulder_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftShoulder.BackgroundImage = Resources.LeftShoulder;
+			toolTip1.Show("Shoulder", buttonLeftShoulder, -65, -10, 10000);
+
+		}
+
+		private void buttonLeftShoulder_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftShoulder.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftShoulder);
+		}
+
+		private void buttonRightShoulder_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightShoulder";
+			var shoulder = new Shoulder();
+			shoulder.ShowDialog();
+			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightShoulder_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightShoulder.BackgroundImage = Resources.RightShoulder;
+			toolTip1.Show("Shoulder", buttonRightShoulder, 30, -10, 10000);
+		}
+
+		private void buttonRightShoulder_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightShoulder.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightShoulder);
 		}
 
 		private void textBoxShoulder_TextChanged(object sender, EventArgs e)
@@ -1756,21 +2140,60 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 		}
 
-		private void textBoxWrist_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void textBoxFingers_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxElbowWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
 		private void checkBoxShoulderWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+#endregion
+
+		#region Wrist
+
+		private void buttonLeftWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "LeftWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonLeftWrist_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftWrist.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftWrist);
+		}
+
+		private void buttonRightWrist_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightWrist";
+			var wrist = new Wrist();
+			wrist.ShowDialog();
+			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightWrist_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightWrist.BackgroundImage = Resources.RightWrist;
+			toolTip1.Show("Wrist", buttonRightWrist, 30, -10, 10000);
+		}
+
+		private void buttonRightWrist_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightWrist.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightWrist);
+		}
+
+		private void buttonLeftWrist_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftWrist.BackgroundImage = Resources.LeftWrist;
+			toolTip1.Show("Wrist", buttonLeftWrist, -60, -10, 10000);
+		}
+
+		private void textBoxWrist_TextChanged(object sender, EventArgs e)
 		{
 			UpdateAll();
 		}
@@ -1779,16 +2202,33 @@ namespace DVA_Compensation_Calculator
 		{
 			UpdateAll();
 		}
-
-		private void checkBoxFingersWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
+#endregion
+		
 		#endregion
 
 		#region Right Arm
 
+		private void buttonRightElbow_Click(object sender, EventArgs e)
+		{
+			GlobalVar.Selection = "RightElbow";
+			var elbow = new Elbow();
+			elbow.ShowDialog();
+			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
+		private void buttonRightElbow_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightElbow.BackgroundImage = Resources.RightElbow;
+			toolTip1.Show("Elbow", buttonRightElbow, 30, -10, 10000);
+		}
+
+		private void buttonRightElbow_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightElbow.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightElbow);
+		}
 
 		private void buttonWholeRightArm_Click(object sender, EventArgs e)
 		{
@@ -1852,8 +2292,6 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-		#endregion
-
 		#region Ear, Nose and Throat
 
 		#region Tennitus
@@ -1874,561 +2312,6 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		#region Ears
-
-		private void buttonEars_Click(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void textBoxEars_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxEarsWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		#endregion
-
-		#region Nose
-		private void buttonNose_Click(object sender, EventArgs e)
-		{
-			var nose = new Nose();
-			nose.ShowDialog();
-			textBoxNose.Text = Nose.nose.ToString(); //No age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxNose_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxNoseWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-		#endregion
-
-		#region Throat
-
-		private void buttonThroat_Click(object sender, EventArgs e)
-		{
-			var throat = new Throat();
-			throat.ShowDialog();
-			textBoxThroat.Text = Throat.throat.ToString();  //No age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void textBoxThroat_TextChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-
-		private void checkBoxThroatWar_CheckedChanged(object sender, EventArgs e)
-		{
-			UpdateAll();
-		}
-		#endregion
-
-		private void comboBoxAge_KeyUp(object sender, KeyEventArgs e)
-		{
-			comboBoxAge_Leave(null, null);
-		}
-
-		#endregion
-
-		
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			var importantInformation = new ImportantInformation();
-			importantInformation.ShowDialog();
-		}
-		private void buttonLeftKnee_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftKnee.BackgroundImage = Resources.Blank;
-			buttonRightKnee.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightKnee);
-		}
-
-		private void buttonLeftKnee_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
-			buttonRightKnee.BackgroundImage = Resources.RightKnee;
-			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
-		}
-
-		private void buttonRightKnee_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightKnee.BackgroundImage = Resources.RightKnee;
-			buttonLeftKnee.BackgroundImage = Resources.LeftKnee;
-			toolTip1.Show("Knee", buttonRightKnee, 30, -10, 10000);
-		}
-
-		private void buttonRightKnee_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightKnee.BackgroundImage = Resources.Blank;
-			buttonLeftKnee.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightKnee);
-		}
-
-		private void buttonLeftKnee_Click(object sender, EventArgs e)
-		{
-			var knee = new Knee();
-			knee.ShowDialog();
-			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightKnee_Click(object sender, EventArgs e)
-		{
-			var knee = new Knee();
-			knee.ShowDialog();
-			textBoxKnee.Text = GlobalVar.ExcelData[4][Knee.knee][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightHip_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightHip.BackgroundImage = Resources.RightHip;
-			buttonLeftHip.BackgroundImage = Resources.LeftHip;
-			toolTip1.Show("Hip", buttonRightHip, -27, 35, 10000);
-		}
-
-		private void buttonRightHip_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightHip.BackgroundImage = Resources.Blank;
-			buttonLeftHip.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightHip);
-		}
-
-		private void buttonLeftHip_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftHip.BackgroundImage = Resources.LeftHip;
-			buttonRightHip.BackgroundImage = Resources.RightHip;
-			toolTip1.Show("Hip", buttonRightHip, -27, 35, 10000);
-		}
-
-		private void buttonLeftHip_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftHip.BackgroundImage = Resources.Blank;
-			buttonRightHip.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightHip);
-		}
-
-		private void buttonLeftHip_Click(object sender, EventArgs e)
-		{
-			var hip = new Hip();
-			hip.ShowDialog();
-			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightHip_Click(object sender, EventArgs e)
-		{
-			var hip = new Hip();
-			hip.ShowDialog();
-			textBoxHip.Text = GlobalVar.ExcelData[4][Hip.hip][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftAnkle_Click(object sender, EventArgs e)
-		{
-			var ankle = new Ankle();
-			ankle.ShowDialog();
-			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftAnkle_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
-			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
-			toolTip1.Show("Ankle", buttonRightAnkle, 30, -10, 10000);
-		}
-
-		private void buttonLeftAnkle_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftAnkle.BackgroundImage = Resources.Blank;
-			buttonRightAnkle.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightAnkle);
-		}
-
-		private void buttonRightAnkle_Click(object sender, EventArgs e)
-		{
-			var ankle = new Ankle();
-			ankle.ShowDialog();
-			textBoxAnkle.Text = GlobalVar.ExcelData[4][Ankle.ankle][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightAnkle_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightAnkle.BackgroundImage = Resources.RightAnkle;
-			buttonLeftAnkle.BackgroundImage = Resources.LeftAnkle;
-			toolTip1.Show("Ankle", buttonRightAnkle, 30, -10, 10000);
-		}
-
-		private void buttonRightAnkle_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightAnkle.BackgroundImage = Resources.Blank;
-			buttonLeftAnkle.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightAnkle);
-		}
-
-		private void buttonLeftToes_Click(object sender, EventArgs e)
-		{
-			var toes = new Toes();
-			toes.ShowDialog();
-			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftToes_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftToes.BackgroundImage = Resources.LeftToes;
-			buttonRightToes.BackgroundImage = Resources.RightToes;
-			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
-		}
-
-		private void buttonLeftToes_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftToes.BackgroundImage = Resources.Blank;
-			buttonRightToes.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightToes);
-		}
-
-		private void buttonRightToes_Click(object sender, EventArgs e)
-		{
-			var toes = new Toes();
-			toes.ShowDialog();
-			textBoxToes.Text = GlobalVar.ExcelData[4][Toes.toes][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightToes_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightToes.BackgroundImage = Resources.RightToes;
-			buttonLeftToes.BackgroundImage = Resources.LeftToes;
-			toolTip1.Show("Toes", buttonRightToes, 30, -10, 10000);
-		}
-
-		private void buttonRightToes_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightToes.BackgroundImage = Resources.Blank;
-			buttonLeftToes.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightToes);
-		}
-
-		private void buttonLeftElbow_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftElbow";
-			var ebow = new Elbow();
-			ebow.ShowDialog();
-			textBoxElbow.Text = GlobalVar.ExcelData[4][Elbow.LeftElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftElbow_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftElbow.BackgroundImage = Resources.LeftElbow;
-			toolTip1.Show("Elbow", buttonLeftElbow, -60, -10, 10000);
-		}
-
-		private void buttonLeftElbow_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftElbow.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonLeftElbow);
-		}
-
-		private void buttonRightElbow_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightElbow";
-			var elbow = new Elbow();
-			elbow.ShowDialog();
-			textBoxRightElbow.Text = GlobalVar.ExcelData[4][Elbow.RightElbow][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightElbow_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightElbow.BackgroundImage = Resources.RightElbow;
-			toolTip1.Show("Elbow", buttonRightElbow, 30, -10, 10000);
-		}
-
-		private void buttonRightElbow_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightElbow.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightElbow);
-		}
-
-		private void buttonLeftFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxFingers.Text = GlobalVar.ExcelData[4][Fingers.LeftFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftFingers_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftFingers.BackgroundImage = Resources.LeftFingers;
-			toolTip1.Show("Fingers", buttonLeftFingers, -65, -10, 10000);
-		}
-
-		private void buttonLeftFingers_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftFingers.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonLeftFingers);
-		}
-
-		private void buttonRightFingers_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightFingers";
-			var fingers = new Fingers();
-			fingers.ShowDialog();
-			textBoxRightFingers.Text = GlobalVar.ExcelData[4][Fingers.RightFingers][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightFingers_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightFingers.BackgroundImage = Resources.RightFingers;
-			toolTip1.Show("Fingers", buttonRightFingers, 30, -10, 10000);
-		}
-
-		private void buttonRightFingers_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightFingers.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightFingers);
-		}
-
-		private void buttonLeftShoulder_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxShoulder.Text = GlobalVar.ExcelData[4][Shoulder.LeftShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftShoulder_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftShoulder.BackgroundImage = Resources.LeftShoulder;
-			toolTip1.Show("Shoulder", buttonLeftShoulder, -65, -10, 10000);
-			
-		}
-
-		private void buttonLeftShoulder_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftShoulder.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonLeftShoulder);
-		}
-
-		private void buttonRightShoulder_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightShoulder";
-			var shoulder = new Shoulder();
-			shoulder.ShowDialog();
-			textBoxRightShoulder.Text = GlobalVar.ExcelData[4][Shoulder.RightShoulder][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightShoulder_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightShoulder.BackgroundImage = Resources.RightShoulder;
-			toolTip1.Show("Shoulder", buttonRightShoulder, 30, -10, 10000);
-		}
-
-		private void buttonRightShoulder_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightShoulder.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightShoulder);
-		}
-
-		private void buttonLeftWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "LeftWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxWrist.Text = GlobalVar.ExcelData[4][Wrist.LeftWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonLeftWrist_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftWrist.BackgroundImage = Resources.LeftWrist;
-			toolTip1.Show("Wrist", buttonLeftWrist, -60, -10, 10000);
-		}
-
-		private void buttonLeftWrist_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftWrist.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonLeftWrist);
-		}
-
-		private void buttonRightWrist_Click(object sender, EventArgs e)
-		{
-			GlobalVar.Selection = "RightWrist";
-			var wrist = new Wrist();
-			wrist.ShowDialog();
-			textBoxRightWrist.Text = GlobalVar.ExcelData[4][Wrist.RightWrist][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonRightWrist_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightWrist.BackgroundImage = Resources.RightWrist;
-			toolTip1.Show("Wrist", buttonRightWrist, 30, -10, 10000);
-		}
-
-		private void buttonRightWrist_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightWrist.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightWrist);
-		}
-
-		private void buttonThoracoROM_Click(object sender, EventArgs e)
-		{
-			var thoracoROM = new ThoracoROM();
-			thoracoROM.ShowDialog();
-			textBoxThoracoROM.Text = GlobalVar.ExcelData[4][ThoracoROM.thoracoROM][GlobalVar.AgeAdjustRange].ToString();  //Age adjustment
-			UpdateAll();
-			UpdateAll();
-		}
-
-		private void buttonThoracoROM_MouseEnter(object sender, EventArgs e)
-		{
-			buttonThoracoROM.BackgroundImage = Resources.Thoraco;
-			toolTip1.Show("Thoraco - Lumbar Spine", buttonThoracoROM, 30, -10, 10000);
-		}
-
-		private void buttonThoracoROM_MouseLeave(object sender, EventArgs e)
-		{
-			buttonThoracoROM.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonThoracoROM);
-		}
-
-		private void buttonCervical_MouseEnter(object sender, EventArgs e)
-		{
-			buttonCervical.BackgroundImage = Resources.Cervical;
-			toolTip1.Show("Cervical Spine", buttonCervical, 30, -10, 10000);
-		}
-
-		private void buttonCervical_MouseLeave(object sender, EventArgs e)
-		{
-			buttonCervical.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonCervical);
-		}
-
-		private void buttonThroat_MouseEnter(object sender, EventArgs e)
-		{
-			buttonThroat.BackgroundImage = Resources.Throat;
-			toolTip1.Show("Throat", buttonThroat, 30, -10, 10000);
-		}
-
-		private void buttonThroat_MouseLeave(object sender, EventArgs e)
-		{
-			buttonThroat.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonThroat);
-		}
-
-		private void MainForm_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		public static bool dragging;
-
-		public static int offsetX;
-
-		public static int offsetY;
-
-		private void pictureBoxClose_Click(object sender, EventArgs e)
-		{
-			var saveMessage = new SaveMessage();
-			saveMessage.ShowDialog();
-			Close();
-		}
-
-		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
-		{
-			if (e.Button == MouseButtons.Left)
-			{
-				dragging = true;
-				offsetX = e.X;
-				offsetY = e.Y;
-			}
-		}
-
-		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
-		{
-			if (dragging)
-			{
-				Left = e.X + Left - offsetX;
-				Top = e.Y + Top - offsetY;
-			}
-		}
-
-		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
-		{
-			if (e.Button == MouseButtons.Left)
-			{
-				dragging = false;
-			}
-		}
-
-		private void buttonDVALinks_Click(object sender, EventArgs e)
-		{
-			var dVALinks = new DVALinks();
-			dVALinks.ShowDialog();
-		}
-
-		private void buttonLeftEye_MouseEnter(object sender, EventArgs e)
-		{
-			buttonLeftEye.BackgroundImage = Resources.LeftEye;
-			toolTip1.Show("Eye", buttonLeftEye, -55, -10, 10000);
-		}
-
-		private void buttonLeftEye_MouseLeave(object sender, EventArgs e)
-		{
-			buttonLeftEye.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonLeftEye);
-		}
-
-		private void buttonRightEye_MouseEnter(object sender, EventArgs e)
-		{
-			buttonRightEye.BackgroundImage = Resources.RightEye;
-			toolTip1.Show("Eye", buttonRightEye, 30, -10, 10000);
-		}
-
-		private void buttonRightEye_MouseLeave(object sender, EventArgs e)
-		{
-			buttonRightEye.BackgroundImage = Resources.Blank;
-			toolTip1.Hide(buttonRightEye);
-		}
 
 		private void buttonLeftEar_Click(object sender, EventArgs e)
 		{
@@ -2478,6 +2361,28 @@ namespace DVA_Compensation_Calculator
 			toolTip1.Hide(buttonRightEar);
 		}
 
+		private void textBoxEars_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxEarsWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		#endregion
+
+		#region Nose
+		private void buttonNose_Click(object sender, EventArgs e)
+		{
+			var nose = new Nose();
+			nose.ShowDialog();
+			textBoxNose.Text = Nose.nose.ToString(); //No age adjustment
+			UpdateAll();
+			UpdateAll();
+		}
+
 		private void buttonNose_MouseEnter(object sender, EventArgs e)
 		{
 			buttonNose.BackgroundImage = Resources.Nose;
@@ -2490,23 +2395,50 @@ namespace DVA_Compensation_Calculator
 			toolTip1.Hide(buttonNose);
 		}
 
-		private void buttonLifeStyle_Click(object sender, EventArgs e)
+
+		private void textBoxNose_TextChanged(object sender, EventArgs e)
 		{
-			GlobalVar.MainFormLocxationX = Location.X;
-			GlobalVar.MainFormLocxationY = Location.Y;
-			var lifeStyle = new LifeStyle();
-			lifeStyle.ShowDialog();
-			textBoxFinalLifeStylePoint.Text = GlobalVar.FinalLifeStylePoint;
+			UpdateAll();
+		}
+
+		private void checkBoxNoseWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+		#endregion
+
+		#region Throat
+
+		private void buttonThroat_Click(object sender, EventArgs e)
+		{
+			var throat = new Throat();
+			throat.ShowDialog();
+			textBoxThroat.Text = Throat.throat.ToString();  //No age adjustment
 			UpdateAll();
 			UpdateAll();
 		}
+
+		private void textBoxThroat_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxThroatWar_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+		#endregion
+
+		#endregion
+		
+		#region Eye
 
 		private void buttonLeftEye_Click(object sender, EventArgs e)
 		{
 			GlobalVar.MainFormLocxationX = Location.X;
 			GlobalVar.MainFormLocxationY = Location.Y;
 			var rightEye = new RightEye();
-			rightEye.ShowDialog(); 
+			rightEye.ShowDialog();
 			UpdateAll();
 			UpdateAll();
 		}
@@ -2531,6 +2463,32 @@ namespace DVA_Compensation_Calculator
 
 			UpdateAll();
 		}
+
+		private void buttonLeftEye_MouseEnter(object sender, EventArgs e)
+		{
+			buttonLeftEye.BackgroundImage = Resources.LeftEye;
+			toolTip1.Show("Eye", buttonLeftEye, -55, -10, 10000);
+		}
+
+		private void buttonLeftEye_MouseLeave(object sender, EventArgs e)
+		{
+			buttonLeftEye.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonLeftEye);
+		}
+
+		private void buttonRightEye_MouseEnter(object sender, EventArgs e)
+		{
+			buttonRightEye.BackgroundImage = Resources.RightEye;
+			toolTip1.Show("Eye", buttonRightEye, 30, -10, 10000);
+		}
+
+		private void buttonRightEye_MouseLeave(object sender, EventArgs e)
+		{
+			buttonRightEye.BackgroundImage = Resources.Blank;
+			toolTip1.Hide(buttonRightEye);
+		}
+		#endregion
+		#endregion
 
 	}
 }

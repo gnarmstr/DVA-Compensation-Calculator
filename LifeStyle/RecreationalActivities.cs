@@ -10,7 +10,7 @@ namespace DVA_Compensation_Calculator
 	{
 		public RecreationalActivities()
 		{
-			Location = new Point(GlobalVar.MainFormLocxationX - 25, GlobalVar.MainFormLocxationY);
+			Location = new Point(GlobalVar.MainFormLocxationX - 30, GlobalVar.MainFormLocxationY);
 			InitializeComponent();
 			MinimumSize = new Size(800, 730);
 			MaximumSize = new Size(800, 730);

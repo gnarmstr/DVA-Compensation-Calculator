@@ -11,7 +11,7 @@ namespace DVA_Compensation_Calculator
 		public ROMInfo()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X, ActiveForm.Location.Y);
+				Location = new Point(ActiveForm.Location.X - 100, ActiveForm.Location.Y);
 			InitializeComponent();
 			MinimumSize = new Size(940, 650);
 			MaximumSize = new Size(940, 650);
