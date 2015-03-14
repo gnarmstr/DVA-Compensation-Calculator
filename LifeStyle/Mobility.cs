@@ -17,6 +17,23 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			switch (Convert.ToInt16(GlobalVar.Mobility))
+			{
+				case 0: checkBoxMobility1.Checked = true;
+					break;
+				case 1: checkBoxMobility2.Checked = true;
+					break;
+				case 2: checkBoxMobility3.Checked = true;
+					break;
+				case 3: checkBoxMobility4.Checked = true;
+					break;
+				case 4: checkBoxMobility5.Checked = true;
+					break;
+				case 5: checkBoxMobility6.Checked = true;
+					break;
+				case 6: checkBoxMobility7.Checked = true;
+					break;
+			}
 		}
 
 		protected override CreateParams CreateParams

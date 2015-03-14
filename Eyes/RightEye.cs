@@ -40,7 +40,8 @@ namespace DVA_Compensation_Calculator
 			textBoxRightVisualFOL.Text = GlobalVar.RightVisualFOL;
 			textBoxRightMiscVisual.Text = GlobalVar.RightMiscVisual;
 			textBoxRightOtherOcular.Text = GlobalVar.RightOtherOcular;
-
+			comboBoxRightMonocular.Text = GlobalVar.comboBoxRightMonocular;
+			comboBoxRightMiscVisual.Text = GlobalVar.comboBoxRightMiscVisual;
 		}
 
 		#region Rights Eye
@@ -136,6 +137,8 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxRightMonocular = comboBoxRightMonocular.Text;
+			GlobalVar.comboBoxRightMiscVisual = comboBoxRightMiscVisual.Text;
 			GlobalVar.combinedRightEyePoints = Math.Round(Convert.ToInt16(textBoxRightVisualFOL.Text) + Convert.ToDecimal(textBoxRightMonocular.Text) * (1 - Convert.ToDecimal(textBoxRightVisualFOL.Text) / 100));
 			GlobalVar.combinedRightEyePoints = Math.Round(GlobalVar.combinedRightEyePoints + Convert.ToInt16(textBoxRightMiscVisual.Text) * (1 - GlobalVar.combinedRightEyePoints / 100));
 			GlobalVar.combinedRightEyePoints = Math.Max(GlobalVar.combinedRightEyePoints, Convert.ToInt16(textBoxRightOtherOcular.Text));

@@ -16,6 +16,42 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			if (GlobalVar.Selection == "LeftWrist")
+			{
+				switch (LeftWrist)
+				{
+					case 0: checkBoxOption1.Checked = true;
+						break;
+					case 5: checkBoxOption2.Checked = true;
+						break;
+					case 10: checkBoxOption3.Checked = true;
+						break;
+					case 15: checkBoxOption4.Checked = true;
+						break;
+					case 20: checkBoxOption5.Checked = true;
+						break;
+					case 30: checkBoxOption6.Checked = true;
+						break;
+				}
+			}
+			else
+			{
+				switch (RightWrist)
+				{
+					case 0: checkBoxOption1.Checked = true;
+						break;
+					case 5: checkBoxOption2.Checked = true;
+						break;
+					case 10: checkBoxOption3.Checked = true;
+						break;
+					case 15: checkBoxOption4.Checked = true;
+						break;
+					case 20: checkBoxOption5.Checked = true;
+						break;
+					case 30: checkBoxOption6.Checked = true;
+						break;
+				}
+			}
 		}
 
 		protected override CreateParams CreateParams

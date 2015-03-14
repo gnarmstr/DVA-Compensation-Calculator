@@ -15,6 +15,14 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			if (GlobalVar.Selection == "LeftEye")
+			{
+				valueFOL.Value = LeftEye;
+			}
+			else
+			{
+				valueFOL.Value = RightEye;
+			}
 		}
 
 		protected override CreateParams CreateParams

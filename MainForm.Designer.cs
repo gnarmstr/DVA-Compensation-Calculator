@@ -328,7 +328,7 @@
 			this.buttonThroat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
 			this.buttonThroat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
 			this.buttonThroat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonThroat.Location = new System.Drawing.Point(516, 81);
+			this.buttonThroat.Location = new System.Drawing.Point(517, 81);
 			this.buttonThroat.Name = "buttonThroat";
 			this.buttonThroat.Size = new System.Drawing.Size(45, 31);
 			this.buttonThroat.TabIndex = 81;
@@ -1616,7 +1616,7 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.5               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+			this.buttonMainTitle.Text = "Ver 1.6               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
     "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
@@ -2032,9 +2032,9 @@
 			this.buttonEmotionalBehavioural.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonEmotionalBehavioural.FlatAppearance.BorderSize = 2;
 			this.buttonEmotionalBehavioural.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonEmotionalBehavioural.Location = new System.Drawing.Point(872, 554);
+			this.buttonEmotionalBehavioural.Location = new System.Drawing.Point(858, 554);
 			this.buttonEmotionalBehavioural.Name = "buttonEmotionalBehavioural";
-			this.buttonEmotionalBehavioural.Size = new System.Drawing.Size(149, 57);
+			this.buttonEmotionalBehavioural.Size = new System.Drawing.Size(176, 57);
 			this.buttonEmotionalBehavioural.TabIndex = 107;
 			this.buttonEmotionalBehavioural.Text = "Click for Emotional and Behavioural";
 			this.buttonEmotionalBehavioural.UseVisualStyleBackColor = true;

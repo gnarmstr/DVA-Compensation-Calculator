@@ -16,6 +16,15 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			switch (nose)
+			{
+				case 0: checkBoxOption1.Checked = true;
+					break;
+				case 2: checkBoxOption2.Checked = true;
+					break;
+				case 5: checkBoxOption3.Checked = true;
+					break;
+			}
 		}
 
 		protected override CreateParams CreateParams

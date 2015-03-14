@@ -16,6 +16,21 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			switch (thoracoROM)
+			{
+				case 0: checkBoxOption1.Checked = true;
+					break;
+				case 10: checkBoxOption2.Checked = true;
+					break;
+				case 20: checkBoxOption3.Checked = true;
+					break;
+				case 30: checkBoxOption4.Checked = true;
+					break;
+				case 40: checkBoxOption5.Checked = true;
+					break;
+				case 50: checkBoxOption6.Checked = true;
+					break;
+			}
 		}
 
 		protected override CreateParams CreateParams
@@ -112,7 +127,7 @@ namespace DVA_Compensation_Calculator
 				checkBoxOption3.Checked = false;
 				checkBoxOption4.Checked = false;
 				checkBoxOption5.Checked = false;
-				Points = 40;
+				Points = 50;
 			}
 		}
 

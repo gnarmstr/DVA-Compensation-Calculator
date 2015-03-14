@@ -40,6 +40,8 @@ namespace DVA_Compensation_Calculator
 			textBoxLeftVisualFOL.Text = GlobalVar.LeftVisualFOL;
 			textBoxLeftMiscVisual.Text = GlobalVar.LeftMiscVisual;
 			textBoxLeftOtherOcular.Text = GlobalVar.LeftOtherOcular;
+			comboBoxLeftMonocular.Text = GlobalVar.comboBoxLeftMonocular;
+			comboBoxLeftMiscVisual.Text = GlobalVar.comboBoxLeftMiscVisual;
 		}
 
 		#region Left Eyes
@@ -135,6 +137,8 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxLeftMonocular = comboBoxLeftMonocular.Text;
+			GlobalVar.comboBoxLeftMiscVisual = comboBoxLeftMiscVisual.Text;
 			GlobalVar.combinedLeftEyePoints = Math.Round(Convert.ToInt16(textBoxLeftVisualFOL.Text) + Convert.ToDecimal(textBoxLeftMonocular.Text) * (1 - Convert.ToDecimal(textBoxLeftVisualFOL.Text) / 100));
 			GlobalVar.combinedLeftEyePoints = Math.Round(GlobalVar.combinedLeftEyePoints + Convert.ToInt16(textBoxLeftMiscVisual.Text) * (1 - GlobalVar.combinedLeftEyePoints / 100));
 			GlobalVar.combinedLeftEyePoints = Math.Max(GlobalVar.combinedLeftEyePoints, Convert.ToInt16(textBoxLeftOtherOcular.Text));

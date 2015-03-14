@@ -16,6 +16,42 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			if (GlobalVar.Selection == "LeftElbow")
+			{
+				switch (LeftElbow)
+				{
+					case 0: checkBoxOption1.Checked = true;
+						break;
+					case 10: checkBoxOption2.Checked = true;
+						break;
+					case 20: checkBoxOption3.Checked = true;
+						break;
+					case 30: checkBoxOption4.Checked = true;
+						break;
+					case 40: checkBoxOption5.Checked = true;
+						break;
+					case 50: checkBoxOption6.Checked = true;
+						break;
+				}
+			}
+			else
+			{
+				switch (RightElbow)
+				{
+					case 0: checkBoxOption1.Checked = true;
+						break;
+					case 10: checkBoxOption2.Checked = true;
+						break;
+					case 20: checkBoxOption3.Checked = true;
+						break;
+					case 30: checkBoxOption4.Checked = true;
+						break;
+					case 40: checkBoxOption5.Checked = true;
+						break;
+					case 50: checkBoxOption6.Checked = true;
+						break;
+				}
+			}
 		}
 
 		protected override CreateParams CreateParams

@@ -110,6 +110,16 @@ namespace DVA_Compensation_Calculator
 
 		public static int EB;
 
+		public static string comboBoxRightMonocular;
+
+		public static string comboBoxLeftMonocular;
+
+		public static string comboBoxRightMiscVisual;
+
+		public static string comboBoxLeftMiscVisual;
+
+		public static bool FirstTimeStart;
+
 
 	}
 }

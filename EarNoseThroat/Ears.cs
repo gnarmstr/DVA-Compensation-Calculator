@@ -20,6 +20,30 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			panel2.BackgroundImage = Resources.Background_Blue;
 			panel3.BackgroundImage = Resources.Background_Blue;
+			switch (ears)
+			{
+				case 0: checkBoxOption1.Checked = true;
+					break;
+				case 2: checkBoxOption2.Checked = true;
+					break;
+				case 5: checkBoxOption3.Checked = true;
+					break;
+				case 10: checkBoxOption4.Checked = true;
+					break;
+			}
+			switch (tinnitus)
+			{
+				case 0: checkBoxTinnitusOption1.Checked = true;
+					break;
+				case 2: checkBoxTinnitusOption2.Checked = true;
+					break;
+				case 5: checkBoxTinnitusOption3.Checked = true;
+					break;
+				case 10: checkBoxTinnitusOption4.Checked = true;
+					break;
+				case 15: checkBoxTinnitusOption5.Checked = true;
+					break;
+			}
 		}
 
 		protected override CreateParams CreateParams

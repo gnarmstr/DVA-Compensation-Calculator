@@ -15,6 +15,25 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
+			switch (Convert.ToInt16(GlobalVar.personalRelationships))
+			{
+				case 0: checkBoxPersonalRelations1.Checked = true;
+					break;
+				case 1: checkBoxPersonalRelations2.Checked = true;
+					break;
+				case 2: checkBoxPersonalRelations3.Checked = true;
+					break;
+				case 3: checkBoxPersonalRelations4.Checked = true;
+					break;
+				case 4: checkBoxPersonalRelations5.Checked = true;
+					break;
+				case 5: checkBoxPersonalRelations6.Checked = true;
+					break;
+				case 6: checkBoxPersonalRelations7.Checked = true;
+					break;
+				case 7: checkBoxPersonalRelations8.Checked = true;
+					break;
+			}
 		}
 
 		protected override CreateParams CreateParams
