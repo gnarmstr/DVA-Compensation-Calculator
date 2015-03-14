@@ -108,6 +108,60 @@
     <Compile Include="Back\Cervical.Designer.cs">
       <DependentUpon>Cervical.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmotionalandBehavioural\CurrentTherapy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\CurrentTherapy.Designer.cs">
+      <DependentUpon>CurrentTherapy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\LeisureActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\LeisureActivities.Designer.cs">
+      <DependentUpon>LeisureActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\SocialInteration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\SocialInteration.Designer.cs">
+      <DependentUpon>SocialInteration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\EmotionalBehavioural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\EmotionalBehavioural.Designer.cs">
+      <DependentUpon>EmotionalBehavioural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\DomesticSituation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\DomesticSituation.Designer.cs">
+      <DependentUpon>DomesticSituation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\SubjectiveDistress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\SubjectiveDistress.Designer.cs">
+      <DependentUpon>SubjectiveDistress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\FunctionalEffects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\FunctionalEffects.Designer.cs">
+      <DependentUpon>FunctionalEffects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\ManifestDistress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\ManifestDistress.Designer.cs">
+      <DependentUpon>ManifestDistress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\Occupation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmotionalandBehavioural\Occupation.Designer.cs">
+      <DependentUpon>Occupation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instructions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +369,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Back\Cervical.resx">
       <DependentUpon>Cervical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\CurrentTherapy.resx">
+      <DependentUpon>CurrentTherapy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\LeisureActivities.resx">
+      <DependentUpon>LeisureActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\SocialInteration.resx">
+      <DependentUpon>SocialInteration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\EmotionalBehavioural.resx">
+      <DependentUpon>EmotionalBehavioural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\DomesticSituation.resx">
+      <DependentUpon>DomesticSituation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\SubjectiveDistress.resx">
+      <DependentUpon>SubjectiveDistress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\FunctionalEffects.resx">
+      <DependentUpon>FunctionalEffects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\ManifestDistress.resx">
+      <DependentUpon>ManifestDistress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmotionalandBehavioural\Occupation.resx">
+      <DependentUpon>Occupation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instructions.resx">
       <DependentUpon>Instructions.cs</DependentUpon>

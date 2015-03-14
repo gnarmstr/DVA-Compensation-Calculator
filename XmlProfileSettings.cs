@@ -131,6 +131,7 @@ namespace DVA_Compensation_Calculator
 			Nose,
 			Throat,
 			Eyes,
+			EmotionalBehaviour,
 			Other
 		};
 

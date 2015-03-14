@@ -165,6 +165,9 @@
 			this.buttonLeftEye = new System.Windows.Forms.Button();
 			this.buttonDVALinks = new System.Windows.Forms.Button();
 			this.buttonInstructions = new System.Windows.Forms.Button();
+			this.checkBoxEmotionalBehavioural = new System.Windows.Forms.CheckBox();
+			this.buttonEmotionalBehavioural = new System.Windows.Forms.Button();
+			this.textBoxEmotionalBehavioural = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -487,7 +490,7 @@
 			this.checkBoxJointPainWar.AutoSize = true;
 			this.checkBoxJointPainWar.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxJointPainWar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxJointPainWar.Location = new System.Drawing.Point(978, 551);
+			this.checkBoxJointPainWar.Location = new System.Drawing.Point(978, 506);
 			this.checkBoxJointPainWar.Name = "checkBoxJointPainWar";
 			this.checkBoxJointPainWar.Size = new System.Drawing.Size(22, 21);
 			this.checkBoxJointPainWar.TabIndex = 53;
@@ -500,7 +503,7 @@
 			this.buttonJointPain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonJointPain.FlatAppearance.BorderSize = 2;
 			this.buttonJointPain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonJointPain.Location = new System.Drawing.Point(873, 474);
+			this.buttonJointPain.Location = new System.Drawing.Point(873, 429);
 			this.buttonJointPain.Name = "buttonJointPain";
 			this.buttonJointPain.Size = new System.Drawing.Size(149, 57);
 			this.buttonJointPain.TabIndex = 54;
@@ -533,7 +536,7 @@
 			// textBoxJointPain
 			// 
 			this.textBoxJointPain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxJointPain.Location = new System.Drawing.Point(890, 547);
+			this.textBoxJointPain.Location = new System.Drawing.Point(890, 502);
 			this.textBoxJointPain.Name = "textBoxJointPain";
 			this.textBoxJointPain.ReadOnly = true;
 			this.textBoxJointPain.Size = new System.Drawing.Size(70, 26);
@@ -1597,7 +1600,7 @@
 			// pictureBoxClose
 			// 
 			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBoxClose.Location = new System.Drawing.Point(1033, 12);
+			this.pictureBoxClose.Location = new System.Drawing.Point(1035, 12);
 			this.pictureBoxClose.Name = "pictureBoxClose";
 			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
 			this.pictureBoxClose.TabIndex = 86;
@@ -1609,11 +1612,11 @@
 			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonMainTitle.Location = new System.Drawing.Point(6, 12);
+			this.buttonMainTitle.Location = new System.Drawing.Point(8, 12);
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.4               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+			this.buttonMainTitle.Text = "Ver 1.5               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
     "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
@@ -1624,6 +1627,9 @@
 			// 
 			this.panelMainPoints.BackColor = System.Drawing.Color.Transparent;
 			this.panelMainPoints.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panelMainPoints.Controls.Add(this.checkBoxEmotionalBehavioural);
+			this.panelMainPoints.Controls.Add(this.buttonEmotionalBehavioural);
+			this.panelMainPoints.Controls.Add(this.textBoxEmotionalBehavioural);
 			this.panelMainPoints.Controls.Add(this.labelRightShoulder);
 			this.panelMainPoints.Controls.Add(this.buttonLifeStyle);
 			this.panelMainPoints.Controls.Add(this.labelToes);
@@ -1719,7 +1725,7 @@
 			this.panelMainPoints.Controls.Add(this.checkBoxWristWar);
 			this.panelMainPoints.Controls.Add(this.checkBoxRightFingersWar);
 			this.panelMainPoints.Controls.Add(this.checkBoxFingersWar);
-			this.panelMainPoints.Location = new System.Drawing.Point(6, 101);
+			this.panelMainPoints.Location = new System.Drawing.Point(8, 101);
 			this.panelMainPoints.Name = "panelMainPoints";
 			this.panelMainPoints.Size = new System.Drawing.Size(1070, 674);
 			this.panelMainPoints.TabIndex = 83;
@@ -2008,6 +2014,44 @@
 			this.buttonInstructions.UseVisualStyleBackColor = false;
 			this.buttonInstructions.Click += new System.EventHandler(this.buttonInstructions_Click);
 			// 
+			// checkBoxEmotionalBehavioural
+			// 
+			this.checkBoxEmotionalBehavioural.AutoSize = true;
+			this.checkBoxEmotionalBehavioural.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxEmotionalBehavioural.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxEmotionalBehavioural.Location = new System.Drawing.Point(977, 631);
+			this.checkBoxEmotionalBehavioural.Name = "checkBoxEmotionalBehavioural";
+			this.checkBoxEmotionalBehavioural.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxEmotionalBehavioural.TabIndex = 106;
+			this.toolTip1.SetToolTip(this.checkBoxEmotionalBehavioural, "Check when injury happened during War Service.");
+			this.checkBoxEmotionalBehavioural.UseVisualStyleBackColor = false;
+			this.checkBoxEmotionalBehavioural.CheckedChanged += new System.EventHandler(this.checkBoxEmotionalBehavioural_CheckedChanged);
+			// 
+			// buttonEmotionalBehavioural
+			// 
+			this.buttonEmotionalBehavioural.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonEmotionalBehavioural.FlatAppearance.BorderSize = 2;
+			this.buttonEmotionalBehavioural.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonEmotionalBehavioural.Location = new System.Drawing.Point(872, 554);
+			this.buttonEmotionalBehavioural.Name = "buttonEmotionalBehavioural";
+			this.buttonEmotionalBehavioural.Size = new System.Drawing.Size(149, 57);
+			this.buttonEmotionalBehavioural.TabIndex = 107;
+			this.buttonEmotionalBehavioural.Text = "Click for Emotional and Behavioural";
+			this.buttonEmotionalBehavioural.UseVisualStyleBackColor = true;
+			this.buttonEmotionalBehavioural.Click += new System.EventHandler(this.buttonEmotionalBehavioural_Click);
+			// 
+			// textBoxEmotionalBehavioural
+			// 
+			this.textBoxEmotionalBehavioural.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.textBoxEmotionalBehavioural.Location = new System.Drawing.Point(889, 627);
+			this.textBoxEmotionalBehavioural.Name = "textBoxEmotionalBehavioural";
+			this.textBoxEmotionalBehavioural.ReadOnly = true;
+			this.textBoxEmotionalBehavioural.Size = new System.Drawing.Size(70, 26);
+			this.textBoxEmotionalBehavioural.TabIndex = 105;
+			this.textBoxEmotionalBehavioural.Text = "0";
+			this.textBoxEmotionalBehavioural.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxEmotionalBehavioural.TextChanged += new System.EventHandler(this.textBoxEmotionalBehavioural_TextChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2208,6 +2252,9 @@
 		private System.Windows.Forms.Label labelLeftElbow;
 		private System.Windows.Forms.Label labelLeftShoulder;
 		private System.Windows.Forms.Button buttonInstructions;
+		private System.Windows.Forms.CheckBox checkBoxEmotionalBehavioural;
+		private System.Windows.Forms.Button buttonEmotionalBehavioural;
+		private System.Windows.Forms.TextBox textBoxEmotionalBehavioural;
 	}
 }
 

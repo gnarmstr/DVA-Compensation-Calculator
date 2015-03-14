@@ -108,6 +108,8 @@ namespace DVA_Compensation_Calculator
 
 		public static string RightMiscVisual;
 
+		public static int EB;
+
 
 	}
 }

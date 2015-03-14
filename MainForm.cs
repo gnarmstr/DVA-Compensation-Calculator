@@ -98,6 +98,7 @@ namespace DVA_Compensation_Calculator
 			buttonJointPain.BackgroundImage = Resources.Button_Green;
 			buttonWholeLimb.BackgroundImage = Resources.Button_Green;
 			buttonWholeRightArm.BackgroundImage = Resources.Button_Green;
+			buttonEmotionalBehavioural.BackgroundImage = Resources.Button_Green;
 			pictureBoxClose.BackgroundImage = Resources.Close;
 			buttonMainTitle.BackgroundImage = Resources.button_Blue_Small;
 			buttonLeftEye.BackgroundImage = Resources.LeftEye;
@@ -260,6 +261,18 @@ namespace DVA_Compensation_Calculator
 
 			textBoxJointPain.Text = profile.GetSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", "0");
 			JointPain.jointPain = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Other, "JointPain", "0"));
+			
+			textBoxEmotionalBehavioural.Text = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "textBoxEmotionalBehavioural", "0");
+			checkBoxEmotionalBehavioural.Checked = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "checkBoxEmotionalBehavioural", false);
+			SubjectiveDistress.subjectiveDistress = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "subjectiveDistress", 0);
+			ManifestDistress.manifestDistress = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "manifestDistress", 0);
+			Occupation.occupation = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "occupation", 0);
+			DomesticSituation.domesticSituation = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "domesticSituation", 0);
+			SocialInteration.socialInteration = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "socialInteration", 0);
+			LeisureActivities.leisureActivities = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "leisureActivities", 0);
+			CurrentTherapy.currentTherapy = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "currentTherapy", 0);
+			FunctionalEffects.functionalEffects = profile.GetSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "functionalEffects", 0);
+
 		}
 
 		#endregion
@@ -674,6 +687,7 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxNose.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxThroat.Text);
 			GlobalVar.WarlikePoints += Convert.ToInt16(GlobalVar.combinedEyePoints);
+			GlobalVar.WarlikePoints += Convert.ToInt16(textBoxEmotionalBehavioural.Text);
 
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestLeftArmPoints);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.HighestRightArmPoints);
@@ -686,6 +700,7 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxNose.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxThroat.Text);
 			GlobalVar.PeacelikePoints += Convert.ToInt16(GlobalVar.combinedEyePoints);
+			GlobalVar.PeacelikePoints += Convert.ToInt16(textBoxEmotionalBehavioural.Text);
 
 			#endregion
 
@@ -799,8 +814,15 @@ namespace DVA_Compensation_Calculator
 			}
 			else
 			{
-				textBoxTotalPeacePoints.Text =
-					(Convert.ToInt16(textBoxTotalPeacePoints.Text) + GlobalVar.combinedEyePoints).ToString();
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + GlobalVar.combinedEyePoints).ToString();
+			}
+			if (checkBoxEmotionalBehavioural.Checked)
+			{
+				textBoxTotalWarPoints.Text = (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxEmotionalBehavioural.Text)).ToString();
+			}
+			else
+			{
+				textBoxTotalPeacePoints.Text = (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxEmotionalBehavioural.Text)).ToString();
 			}
 
 			#endregion
@@ -894,9 +916,7 @@ namespace DVA_Compensation_Calculator
 		{
 			//Add a line per claim.
 			decimal combinedPoints;
-			combinedPoints =
-				Math.Round(GlobalVar.HighestLeftArmPoints +
-				           Convert.ToDecimal(textBoxJointPain.Text)*(1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar)/100));
+			combinedPoints = Math.Round(GlobalVar.HighestLeftArmPoints + Convert.ToDecimal(textBoxJointPain.Text)*(1 - Convert.ToDecimal(GlobalVar.leftArmHighestPointsWar)/100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestRightArmPoints*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.TheracoHighestPoints*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxCervicalSpine.Text)*(1 - combinedPoints/100));
@@ -905,7 +925,8 @@ namespace DVA_Compensation_Calculator
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEars.Text)*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxNose.Text)*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThroat.Text)*(1 - combinedPoints/100));
-			combinedPoints = Math.Round(combinedPoints + GlobalVar.combinedEyePoints*(1 - combinedPoints/100));
+			combinedPoints = Math.Round(combinedPoints + GlobalVar.combinedEyePoints * (1 - combinedPoints / 100));
+			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEmotionalBehavioural.Text) * (1 - combinedPoints / 100));
 
 			textBoxComibinedPoints.Text = combinedPoints.ToString();
 		}
@@ -1575,6 +1596,17 @@ namespace DVA_Compensation_Calculator
 
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "textBoxJointPain", textBoxJointPain.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Other, "JointPain", JointPain.jointPain);
+
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "textBoxEmotionalBehavioural", textBoxEmotionalBehavioural.Text);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "checkBoxEmotionalBehavioural", checkBoxEmotionalBehavioural.Checked);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "subjectiveDistress", SubjectiveDistress.subjectiveDistress);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "manifestDistress", ManifestDistress.manifestDistress);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "occupation", Occupation.occupation);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "domesticSituation", DomesticSituation.domesticSituation);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "socialInteration", SocialInteration.socialInteration);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "leisureActivities", LeisureActivities.leisureActivities);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "currentTherapy", CurrentTherapy.currentTherapy);
+			profile.PutSetting(XmlProfileSettings.SettingType.EmotionalBehaviour, "functionalEffects", FunctionalEffects.functionalEffects);
 
 			var okMessage = new OkMessage();
 			okMessage.ShowDialog();
@@ -2499,7 +2531,51 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
+		#region Emotional Behaviuor
+		private void buttonEmotionalBehavioural_Click(object sender, EventArgs e)
+		{
+			GlobalVar.MainFormLocxationX = Location.X;
+			GlobalVar.MainFormLocxationY = Location.Y;
+			var emotionalBehavioural = new EmotionalBehavioural();
+			emotionalBehavioural.ShowDialog();
+			if (EmotionalBehavioural.Continue == 1)
+			{
+				var subjectiveDistress = new SubjectiveDistress();
+				subjectiveDistress.ShowDialog();
+				var manifestDistress = new ManifestDistress();
+				manifestDistress.ShowDialog();
+				var functionalEffects = new FunctionalEffects();
+				functionalEffects.ShowDialog();
+				var occupation = new Occupation();
+				occupation.ShowDialog();
+				var domesticSituation = new DomesticSituation();
+				domesticSituation.ShowDialog();
+				var socialInteration = new SocialInteration();
+				socialInteration.ShowDialog();
+				var leisureActivities = new LeisureActivities();
+				leisureActivities.ShowDialog();
+				var currentTherapy = new CurrentTherapy();
+				currentTherapy.ShowDialog();
+
+				GlobalVar.EB = SubjectiveDistress.subjectiveDistress + ManifestDistress.manifestDistress;
+				var eBHighest = new[] { FunctionalEffects.functionalEffects, Occupation.occupation, DomesticSituation.domesticSituation, SocialInteration.socialInteration, LeisureActivities.leisureActivities, CurrentTherapy.currentTherapy };
+				Array.Sort(eBHighest);
+				GlobalVar.EB = GlobalVar.EB + eBHighest[5] + eBHighest[4] + eBHighest[3];
+				textBoxEmotionalBehavioural.Text = GlobalVar.EB.ToString();
+			}
+		}
+		private void textBoxEmotionalBehavioural_TextChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
+		private void checkBoxEmotionalBehavioural_CheckedChanged(object sender, EventArgs e)
+		{
+			UpdateAll();
+		}
+
 		#endregion
 
+		#endregion
 	}
 }
