@@ -89,6 +89,7 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Small1;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			buttonImportantInfo.BackgroundImage = Resources.button_Blue_Small;
+			buttonInstructions.BackgroundImage = Resources.button_Blue_Small;
 			buttonDVALinks.BackgroundImage = Resources.button_Blue_Small;
 			buttonLifeStyle.BackgroundImage = Resources.Button_Green;
 			buttonROMInfo.BackgroundImage = Resources.button_Blue_Small;
@@ -1420,6 +1421,15 @@ namespace DVA_Compensation_Calculator
 		}
 		#endregion
 
+		#region Instructions
+		private void buttonInstructions_Click(object sender, EventArgs e)
+		{
+
+			var instructions = new Instructions();
+			instructions.ShowDialog();
+		}
+		#endregion
+
 		#region Important Information
 		private void buttonImportantInformation_Click(object sender, EventArgs e)
 		{
@@ -2488,6 +2498,7 @@ namespace DVA_Compensation_Calculator
 			toolTip1.Hide(buttonRightEye);
 		}
 		#endregion
+
 		#endregion
 
 	}

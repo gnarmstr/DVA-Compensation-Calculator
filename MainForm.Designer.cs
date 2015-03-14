@@ -164,6 +164,7 @@
 			this.buttonRightEye = new System.Windows.Forms.Button();
 			this.buttonLeftEye = new System.Windows.Forms.Button();
 			this.buttonDVALinks = new System.Windows.Forms.Button();
+			this.buttonInstructions = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -1533,7 +1534,7 @@
 			// 
 			this.buttonROMInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonROMInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonROMInfo.Location = new System.Drawing.Point(400, 61);
+			this.buttonROMInfo.Location = new System.Drawing.Point(286, 61);
 			this.buttonROMInfo.Name = "buttonROMInfo";
 			this.buttonROMInfo.Size = new System.Drawing.Size(274, 33);
 			this.buttonROMInfo.TabIndex = 72;
@@ -1585,7 +1586,7 @@
 			// 
 			this.buttonImportantInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonImportantInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonImportantInfo.Location = new System.Drawing.Point(747, 61);
+			this.buttonImportantInfo.Location = new System.Drawing.Point(801, 60);
 			this.buttonImportantInfo.Name = "buttonImportantInfo";
 			this.buttonImportantInfo.Size = new System.Drawing.Size(253, 34);
 			this.buttonImportantInfo.TabIndex = 84;
@@ -1986,13 +1987,26 @@
 			// 
 			this.buttonDVALinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonDVALinks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonDVALinks.Location = new System.Drawing.Point(69, 61);
+			this.buttonDVALinks.Location = new System.Drawing.Point(23, 61);
 			this.buttonDVALinks.Name = "buttonDVALinks";
 			this.buttonDVALinks.Size = new System.Drawing.Size(228, 33);
 			this.buttonDVALinks.TabIndex = 90;
 			this.buttonDVALinks.Text = "DVA Links";
 			this.buttonDVALinks.UseVisualStyleBackColor = true;
 			this.buttonDVALinks.Click += new System.EventHandler(this.buttonDVALinks_Click);
+			// 
+			// buttonInstructions
+			// 
+			this.buttonInstructions.BackColor = System.Drawing.Color.Transparent;
+			this.buttonInstructions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonInstructions.Location = new System.Drawing.Point(606, 60);
+			this.buttonInstructions.Name = "buttonInstructions";
+			this.buttonInstructions.Size = new System.Drawing.Size(149, 34);
+			this.buttonInstructions.TabIndex = 91;
+			this.buttonInstructions.Text = "Instructions";
+			this.buttonInstructions.UseVisualStyleBackColor = false;
+			this.buttonInstructions.Click += new System.EventHandler(this.buttonInstructions_Click);
 			// 
 			// MainForm
 			// 
@@ -2001,6 +2015,7 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.ClientSize = new System.Drawing.Size(1090, 1200);
+			this.Controls.Add(this.buttonInstructions);
 			this.Controls.Add(this.buttonDVALinks);
 			this.Controls.Add(this.label28);
 			this.Controls.Add(this.panelMainPoints);
@@ -2192,6 +2207,7 @@
 		private System.Windows.Forms.Label labelLeftWrist;
 		private System.Windows.Forms.Label labelLeftElbow;
 		private System.Windows.Forms.Label labelLeftShoulder;
+		private System.Windows.Forms.Button buttonInstructions;
 	}
 }
 

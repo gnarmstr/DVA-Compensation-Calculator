@@ -117,35 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label114.Text" xml:space="preserve">
-    <value>NOTE: Select the body part you wish to be assessed on, also click on whole body type as DVA will take the highest of the two for each area.
+  <data name="label85.Text" xml:space="preserve">
+    <value>1. All calculations are based on tables and formulas from the GARP M policy and will automatically adjust any allocated points based on age, combining rating and sex.
 
-Select checkbox next to each point if condition was accepted as War Service.</value>
+2. Enter your age at your next Birthday
+
+3. Enter the "Maximum Weekly payment" as per DVA website as this figure is updated annually. See MRC04 link on the DVA Links tab.
+
+4. Click the "Life Style Assessment" button and go through each area within the Life Style Form. This is used for your final compensation payout.
+
+5. Select an area on the Skeleton that you have an accepted condition in and answer any questions. Points will be allocated based on your selection and adjusted for age or combining if required.
+
+6. Select the "Whole" buttons and "Joint pain" as required. Generally DVA will take the higher of the two for example Whole Left Arm is compared to the Rating given by the arm. Also as each arm is treated as a Whole then each rating for Wrist, Elbow, Shoulder and Fingers only the highest will be used. This program automatically does this and just displays the final rating for you.
+
+7. Also select the check boxes if the accepted condition was contributed from War/Non War like service (example: MEAO) and uncheck the box for peace service (Example: Humanitarian, Exercises or in Australia)
+
+8. That’s it, as you go through and make changes the Final Payout and Compensation Factor will change.</value>
   </data>
-  <data name="buttonWholeLimb.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for the lower limbs as a whole will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating for the lower limb.</value>
-  </data>
-  <data name="buttonWholeRightArm.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
-</value>
-  </data>
-  <data name="buttonWholeLeftArm.ToolTip" xml:space="preserve">
-    <value>The functional impairment rating for each Upper limb will be compared with the functional impairment rating due to any restricted range of movement.
-The higher of these two ratings will be used as the final functional impairment rating. Each upper limb will have it's own impairment rating.
-</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>146, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>69</value>
-  </metadata>
 </root>
