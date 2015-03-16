@@ -19,6 +19,7 @@ using GemBox.Spreadsheet.WinFormsUtilities;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using System.IO;
+using Application = System.Windows.Forms.Application;
 
 #endregion
 
@@ -43,12 +44,6 @@ namespace DVA_Compensation_Calculator
 			UpdateAll();
 			GlobalVar.startup = false;
 			UpdateAll();
-			if (GlobalVar.FirstTimeStart)
-			{
-				var firstTime = new FirstTime();
-				firstTime.ShowDialog();
-				GlobalVar.FirstTimeStart = false;
-			}
 			LifeStyleRatingHigh();
 		}
 
@@ -138,6 +133,7 @@ namespace DVA_Compensation_Calculator
 			buttonLeftEye.BackgroundImage = Resources.Blank;
 
 			textBoxKnee.Visible = false;
+			GlobalVar.DisclaimerCheck = false;
 
 		}
 
@@ -1035,7 +1031,7 @@ namespace DVA_Compensation_Calculator
 
 		#region Determine if Lifestyle rating is too high
 
-		private void LifeStyleRatingHigh()
+		public void LifeStyleRatingHigh()
 		{
 			if (Convert.ToInt16(textBoxFinalLifeStylePoint.Text) > 1 & Convert.ToInt16(textBoxComibinedPoints.Text) < 16)
 			{
@@ -1530,8 +1526,7 @@ namespace DVA_Compensation_Calculator
 		#region Close Application
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			e.Cancel = false;
-			//var save = MessageBox.Show(@"Would you like to save all Settings on exit?", @"Save", MessageBoxButtons.YesNoCancel);
+				e.Cancel = false;
 				switch (SaveMessage.SaveClose)
 				{
 					case 0:
@@ -2678,5 +2673,22 @@ namespace DVA_Compensation_Calculator
 		#endregion
 
 		#endregion
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			var disclaimer = new Disclaimer();
+			disclaimer.ShowDialog();
+			if (GlobalVar.DisclaimerCheck == false)
+			{
+				SaveMessage.SaveClose = 2;
+				Application.Exit();
+			}
+			if (GlobalVar.FirstTimeStart)
+			{
+				var firstTime = new FirstTime();
+				firstTime.ShowDialog();
+				GlobalVar.FirstTimeStart = false;
+			}
+		}
 	}
 }

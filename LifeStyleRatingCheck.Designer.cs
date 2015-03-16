@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LifeStyleRatingCheck));
 			this.pictureBoxYes = new System.Windows.Forms.PictureBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -51,13 +52,11 @@
 			// 
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(6, 89);
+			this.label2.Location = new System.Drawing.Point(6, 63);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(537, 144);
+			this.label2.Size = new System.Drawing.Size(537, 187);
 			this.label2.TabIndex = 22;
-			this.label2.Text = "The Final LifeStyle rating is above what DVA deems the normal range for the numbe" +
-    "r of Impairment Points you have. As such DVA may reduce this rating so your fina" +
-    "l compensation could be inaccurate.";
+			this.label2.Text = resources.GetString("label2.Text");
 			// 
 			// panel1
 			// 
@@ -75,7 +74,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(171, 34);
+			this.label1.Location = new System.Drawing.Point(169, 23);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(234, 25);
 			this.label1.TabIndex = 23;

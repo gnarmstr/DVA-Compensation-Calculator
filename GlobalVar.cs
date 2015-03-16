@@ -120,6 +120,7 @@ namespace DVA_Compensation_Calculator
 
 		public static bool FirstTimeStart;
 
+		public static bool DisclaimerCheck;
 
 	}
 }

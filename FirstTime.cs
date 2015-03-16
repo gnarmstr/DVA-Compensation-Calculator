@@ -10,8 +10,7 @@ namespace DVA_Compensation_Calculator
 	{
 		public FirstTime()
 		{
-			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 180, ActiveForm.Location.Y + 300);
+			Location = new Point(300,100);
 			InitializeComponent();
 			BackgroundImage = Resources.Button_Green;
 			BackgroundImageLayout = ImageLayout.Stretch;

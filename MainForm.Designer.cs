@@ -1456,7 +1456,7 @@
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.Location = new System.Drawing.Point(24, 1135);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(578, 65);
+			this.label8.Size = new System.Drawing.Size(656, 60);
 			this.label8.TabIndex = 5;
 			this.label8.Text = "NOTE: The information within this software is for your personal use and may not b" +
     "e accurate. DVA have no affiliation with this calculator.";
@@ -1576,7 +1576,7 @@
 			// 
 			// buttonPrint
 			// 
-			this.buttonPrint.Location = new System.Drawing.Point(630, 1135);
+			this.buttonPrint.Location = new System.Drawing.Point(713, 1135);
 			this.buttonPrint.Name = "buttonPrint";
 			this.buttonPrint.Size = new System.Drawing.Size(84, 60);
 			this.buttonPrint.TabIndex = 83;
@@ -1616,7 +1616,7 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.6               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+			this.buttonMainTitle.Text = "Ver 1.7               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
     "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
@@ -2106,6 +2106,7 @@
 			this.Text = "Ver 1.2                             DVA Compensation Calulator - by Geoff Armstro" +
     "ng                 ";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.panelMainPoints.ResumeLayout(false);

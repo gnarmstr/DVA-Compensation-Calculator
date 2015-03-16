@@ -11,7 +11,13 @@ namespace DVA_Compensation_Calculator
 		public LifeStyleRatingCheck()
 		{
 			if (ActiveForm != null)
+			{
 				Location = new Point(ActiveForm.Location.X + 180, ActiveForm.Location.Y + 300);
+			}
+			else
+			{
+				Location = new Point(300, 50);
+			}
 			InitializeComponent();
 			BackgroundImage = Resources.Button_Green;
 			BackgroundImageLayout = ImageLayout.Stretch;

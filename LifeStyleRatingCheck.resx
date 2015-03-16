@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>The Final LifeStyle rating is above what DVA deems the normal range for the number of Impairment Points you have. As such DVA may reduce this rating and in turn effect your final compensation payout on this calculator. Recommend you review your Lifestyle assessment.</value>
+  </data>
 </root>

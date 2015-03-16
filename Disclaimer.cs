@@ -10,8 +10,7 @@ namespace DVA_Compensation_Calculator
 	{
 		public Disclaimer()
 		{
-			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 180, ActiveForm.Location.Y + 300);
+			Location = new Point(300, 100);
 			InitializeComponent();
 			BackgroundImage = Resources.Button_Green;
 			BackgroundImageLayout = ImageLayout.Stretch;
@@ -36,6 +35,11 @@ namespace DVA_Compensation_Calculator
 		private void pictureBoxYes_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+		private void checkBoxDisclaimer_CheckedChanged(object sender, EventArgs e)
+		{
+			GlobalVar.DisclaimerCheck = !GlobalVar.DisclaimerCheck;
 		}
 	}
 }
