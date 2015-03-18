@@ -49,7 +49,7 @@
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption2.Location = new System.Drawing.Point(16, 353);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(728, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(728, 65);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Medical therapy or some supportive treatment from LMO may be required, and if not" +
     " commenced, may be recognised as being of use.";

@@ -48,9 +48,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(16, 271);
+			this.checkBoxOption2.Location = new System.Drawing.Point(16, 282);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(728, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(728, 48);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Disturbances of behaviour, emotion or thinking are occasionally noticeable.\r\n";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -59,9 +59,9 @@
 			// checkBoxOption7
 			// 
 			this.checkBoxOption7.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption7.Location = new System.Drawing.Point(16, 638);
+			this.checkBoxOption7.Location = new System.Drawing.Point(16, 643);
 			this.checkBoxOption7.Name = "checkBoxOption7";
-			this.checkBoxOption7.Size = new System.Drawing.Size(470, 66);
+			this.checkBoxOption7.Size = new System.Drawing.Size(470, 46);
 			this.checkBoxOption7.TabIndex = 10;
 			this.checkBoxOption7.Text = "Distress that draws attention to the veteran.";
 			this.checkBoxOption7.UseVisualStyleBackColor = false;
@@ -94,9 +94,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 342);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 348);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 56);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Distress is sometimes apparent, and/or the veteran’s pre-occupation with the symp" +
     "toms is sometimes noticeable to astute observers or persons familiar with the ve" +
@@ -129,7 +129,7 @@
 			// checkBoxOption8
 			// 
 			this.checkBoxOption8.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption8.Location = new System.Drawing.Point(16, 728);
+			this.checkBoxOption8.Location = new System.Drawing.Point(16, 712);
 			this.checkBoxOption8.Name = "checkBoxOption8";
 			this.checkBoxOption8.Size = new System.Drawing.Size(413, 50);
 			this.checkBoxOption8.TabIndex = 12;

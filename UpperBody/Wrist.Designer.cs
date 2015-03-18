@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption5 = new System.Windows.Forms.CheckBox();
@@ -38,7 +39,10 @@
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.comboBoxWristPartially = new System.Windows.Forms.ComboBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -47,7 +51,7 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(26, 215);
+			this.checkBoxOption2.Location = new System.Drawing.Point(25, 183);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(591, 36);
 			this.checkBoxOption2.TabIndex = 11;
@@ -58,7 +62,7 @@
 			// checkBoxOption4
 			// 
 			this.checkBoxOption4.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption4.Location = new System.Drawing.Point(26, 351);
+			this.checkBoxOption4.Location = new System.Drawing.Point(25, 319);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(591, 47);
 			this.checkBoxOption4.TabIndex = 9;
@@ -69,7 +73,7 @@
 			// checkBoxOption5
 			// 
 			this.checkBoxOption5.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption5.Location = new System.Drawing.Point(26, 426);
+			this.checkBoxOption5.Location = new System.Drawing.Point(25, 394);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(591, 50);
 			this.checkBoxOption5.TabIndex = 8;
@@ -80,7 +84,7 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(26, 281);
+			this.checkBoxOption3.Location = new System.Drawing.Point(25, 249);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(591, 37);
 			this.checkBoxOption3.TabIndex = 7;
@@ -91,7 +95,7 @@
 			// checkBoxOption1
 			// 
 			this.checkBoxOption1.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption1.Location = new System.Drawing.Point(26, 155);
+			this.checkBoxOption1.Location = new System.Drawing.Point(25, 123);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(591, 38);
 			this.checkBoxOption1.TabIndex = 6;
@@ -102,7 +106,7 @@
 			// checkBoxOption6
 			// 
 			this.checkBoxOption6.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption6.Location = new System.Drawing.Point(26, 504);
+			this.checkBoxOption6.Location = new System.Drawing.Point(25, 472);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(419, 42);
 			this.checkBoxOption6.TabIndex = 13;
@@ -113,7 +117,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(596, 493);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(614, 511);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -124,7 +128,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(472, 493);
+			this.pictureBoxOK.Location = new System.Drawing.Point(510, 511);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -134,18 +138,21 @@
 			// 
 			// label1
 			// 
+			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(125, 85);
+			this.label1.Location = new System.Drawing.Point(124, 69);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(445, 25);
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
 			// panel1
 			// 
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label2);
+			this.panel1.Controls.Add(this.comboBoxWristPartially);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
 			this.panel1.Controls.Add(this.pictureBoxOK);
@@ -160,16 +167,52 @@
 			this.panel1.Size = new System.Drawing.Size(712, 604);
 			this.panel1.TabIndex = 22;
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(20, 548);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 61;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(295, 28);
+			this.label2.Location = new System.Drawing.Point(295, 20);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(95, 29);
 			this.label2.TabIndex = 22;
 			this.label2.Text = "WRIST";
+			// 
+			// comboBoxWristPartially
+			// 
+			this.comboBoxWristPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxWristPartially.FormattingEnabled = true;
+			this.comboBoxWristPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxWristPartially.Location = new System.Drawing.Point(324, 545);
+			this.comboBoxWristPartially.Name = "comboBoxWristPartially";
+			this.comboBoxWristPartially.Size = new System.Drawing.Size(142, 28);
+			this.comboBoxWristPartially.TabIndex = 31;
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
 			// 
 			// Wrist
 			// 
@@ -207,5 +250,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.ComboBox comboBoxWristPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Label label3;
 	}
 }

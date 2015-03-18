@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WholeArm));
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
@@ -43,7 +44,10 @@
 			this.checkBoxOption8 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption10 = new System.Windows.Forms.CheckBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxWholeArmPartially = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -52,7 +56,7 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(27, 161);
+			this.checkBoxOption2.Location = new System.Drawing.Point(27, 149);
 			this.checkBoxOption2.Name = "checkBoxOption2";
 			this.checkBoxOption2.Size = new System.Drawing.Size(845, 49);
 			this.checkBoxOption2.TabIndex = 11;
@@ -64,7 +68,7 @@
 			// checkBoxOption4
 			// 
 			this.checkBoxOption4.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption4.Location = new System.Drawing.Point(27, 280);
+			this.checkBoxOption4.Location = new System.Drawing.Point(27, 268);
 			this.checkBoxOption4.Name = "checkBoxOption4";
 			this.checkBoxOption4.Size = new System.Drawing.Size(845, 91);
 			this.checkBoxOption4.TabIndex = 9;
@@ -75,7 +79,7 @@
 			// checkBoxOption5
 			// 
 			this.checkBoxOption5.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption5.Location = new System.Drawing.Point(27, 377);
+			this.checkBoxOption5.Location = new System.Drawing.Point(27, 365);
 			this.checkBoxOption5.Name = "checkBoxOption5";
 			this.checkBoxOption5.Size = new System.Drawing.Size(845, 118);
 			this.checkBoxOption5.TabIndex = 8;
@@ -86,7 +90,7 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(27, 229);
+			this.checkBoxOption3.Location = new System.Drawing.Point(27, 217);
 			this.checkBoxOption3.Name = "checkBoxOption3";
 			this.checkBoxOption3.Size = new System.Drawing.Size(845, 45);
 			this.checkBoxOption3.TabIndex = 7;
@@ -98,7 +102,7 @@
 			// checkBoxOption1
 			// 
 			this.checkBoxOption1.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption1.Location = new System.Drawing.Point(27, 107);
+			this.checkBoxOption1.Location = new System.Drawing.Point(27, 95);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(845, 36);
 			this.checkBoxOption1.TabIndex = 6;
@@ -109,7 +113,7 @@
 			// checkBoxOption6
 			// 
 			this.checkBoxOption6.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption6.Location = new System.Drawing.Point(27, 501);
+			this.checkBoxOption6.Location = new System.Drawing.Point(27, 489);
 			this.checkBoxOption6.Name = "checkBoxOption6";
 			this.checkBoxOption6.Size = new System.Drawing.Size(845, 110);
 			this.checkBoxOption6.TabIndex = 13;
@@ -141,18 +145,19 @@
 			// 
 			// label1
 			// 
+			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(213, 57);
+			this.label1.Location = new System.Drawing.Point(212, 50);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(445, 25);
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
 			// checkBoxOption9
 			// 
 			this.checkBoxOption9.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption9.Location = new System.Drawing.Point(27, 829);
+			this.checkBoxOption9.Location = new System.Drawing.Point(27, 805);
 			this.checkBoxOption9.Name = "checkBoxOption9";
 			this.checkBoxOption9.Size = new System.Drawing.Size(569, 38);
 			this.checkBoxOption9.TabIndex = 24;
@@ -163,7 +168,7 @@
 			// checkBoxOption7
 			// 
 			this.checkBoxOption7.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption7.Location = new System.Drawing.Point(27, 629);
+			this.checkBoxOption7.Location = new System.Drawing.Point(27, 617);
 			this.checkBoxOption7.Name = "checkBoxOption7";
 			this.checkBoxOption7.Size = new System.Drawing.Size(845, 86);
 			this.checkBoxOption7.TabIndex = 23;
@@ -174,7 +179,7 @@
 			// checkBoxOption8
 			// 
 			this.checkBoxOption8.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption8.Location = new System.Drawing.Point(27, 744);
+			this.checkBoxOption8.Location = new System.Drawing.Point(27, 732);
 			this.checkBoxOption8.Name = "checkBoxOption8";
 			this.checkBoxOption8.Size = new System.Drawing.Size(621, 47);
 			this.checkBoxOption8.TabIndex = 22;
@@ -187,7 +192,7 @@
 			// checkBoxOption10
 			// 
 			this.checkBoxOption10.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption10.Location = new System.Drawing.Point(27, 905);
+			this.checkBoxOption10.Location = new System.Drawing.Point(27, 871);
 			this.checkBoxOption10.Name = "checkBoxOption10";
 			this.checkBoxOption10.Size = new System.Drawing.Size(334, 38);
 			this.checkBoxOption10.TabIndex = 25;
@@ -198,6 +203,8 @@
 			// panel1
 			// 
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.comboBoxWholeArmPartially);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.checkBoxOption10);
 			this.panel1.Controls.Add(this.label1);
@@ -217,16 +224,52 @@
 			this.panel1.Size = new System.Drawing.Size(919, 1001);
 			this.panel1.TabIndex = 26;
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(123, 949);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 61;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxWholeArmPartially
+			// 
+			this.comboBoxWholeArmPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxWholeArmPartially.FormattingEnabled = true;
+			this.comboBoxWholeArmPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxWholeArmPartially.Location = new System.Drawing.Point(463, 946);
+			this.comboBoxWholeArmPartially.Name = "comboBoxWholeArmPartially";
+			this.comboBoxWholeArmPartially.Size = new System.Drawing.Size(142, 28);
+			this.comboBoxWholeArmPartially.TabIndex = 31;
+			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(361, 19);
+			this.label2.Location = new System.Drawing.Point(359, 12);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(167, 29);
 			this.label2.TabIndex = 26;
 			this.label2.Text = "WHOLE ARM";
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
 			// 
 			// WholeArm
 			// 
@@ -268,5 +311,8 @@
 		private System.Windows.Forms.CheckBox checkBoxOption10;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.ComboBox comboBoxWholeArmPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Label label3;
 	}
 }

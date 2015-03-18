@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (knee)
+			switch (GlobalVar.KneesPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxKneesPartially = 0;
 					break;
 				case 10: checkBoxOption2.Checked = true;
 					break;
@@ -47,6 +48,7 @@ namespace DVA_Compensation_Calculator
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
+			comboBoxKneesPartially.SelectedIndex = GlobalVar.comboBoxKneesPartially;
 		}
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
@@ -138,7 +140,11 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			knee = Points;
+			GlobalVar.comboBoxKneesPartially = comboBoxKneesPartially.SelectedIndex;
+			GlobalVar.KneesPoints = Points;
+			knee = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+			GlobalVar.combinedKneesPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][knee][comboBoxKneesPartially.SelectedIndex + 2]);
+
 			Close();
 		}
 

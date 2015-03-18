@@ -49,7 +49,7 @@
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxOption2.Location = new System.Drawing.Point(16, 262);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(1001, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(1001, 54);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Exacerbation of symptoms may cause occasional days off work.";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 333);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 345);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 37);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Short periods (more than one day at a time) of absence from work.";
 			this.checkBoxOption3.UseVisualStyleBackColor = false;

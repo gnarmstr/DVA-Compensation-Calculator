@@ -48,9 +48,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(16, 242);
+			this.checkBoxOption2.Location = new System.Drawing.Point(16, 244);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(937, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(937, 54);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Occasional symptoms causing minor distress. The veteran can easily distract himse" +
     "lf or herself from the distress on most occasions.";
@@ -97,9 +97,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 313);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 316);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(937, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(937, 53);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Recurring symptoms causing mild distress. The veteran can distract himself or her" +
     "self from the distress on most occasions.";

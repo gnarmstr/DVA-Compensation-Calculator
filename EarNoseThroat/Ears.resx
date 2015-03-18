@@ -123,4 +123,7 @@
   <data name="label1.Text" xml:space="preserve">
     <value>If impairment ratings are obtained for hearing loss and Tinnitus then both will be included in the final combined points. If accepted conditions affect both ears, they are to be rated together and only a single rating is to be given for them.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

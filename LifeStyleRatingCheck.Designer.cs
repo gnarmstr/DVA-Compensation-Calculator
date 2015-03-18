@@ -33,6 +33,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
+			this.checkBoxDisableWarning = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxYes)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -40,7 +41,7 @@
 			// pictureBoxYes
 			// 
 			this.pictureBoxYes.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxYes.Location = new System.Drawing.Point(431, 253);
+			this.pictureBoxYes.Location = new System.Drawing.Point(496, 253);
 			this.pictureBoxYes.Name = "pictureBoxYes";
 			this.pictureBoxYes.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxYes.TabIndex = 14;
@@ -61,12 +62,13 @@
 			// panel1
 			// 
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.checkBoxDisableWarning);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.pictureBoxYes);
 			this.panel1.Location = new System.Drawing.Point(22, 24);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(552, 347);
+			this.panel1.Size = new System.Drawing.Size(595, 347);
 			this.panel1.TabIndex = 24;
 			// 
 			// label1
@@ -80,17 +82,29 @@
 			this.label1.TabIndex = 23;
 			this.label1.Text = "LIFESTYLE WARNING";
 			// 
+			// checkBoxDisableWarning
+			// 
+			this.checkBoxDisableWarning.AutoSize = true;
+			this.checkBoxDisableWarning.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxDisableWarning.Location = new System.Drawing.Point(32, 280);
+			this.checkBoxDisableWarning.Name = "checkBoxDisableWarning";
+			this.checkBoxDisableWarning.Size = new System.Drawing.Size(431, 24);
+			this.checkBoxDisableWarning.TabIndex = 24;
+			this.checkBoxDisableWarning.Text = "Select to disable Life Style Warnings during this session.";
+			this.checkBoxDisableWarning.UseVisualStyleBackColor = false;
+			this.checkBoxDisableWarning.Visible = false;
+			// 
 			// LifeStyleRatingCheck
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(600, 400);
+			this.ClientSize = new System.Drawing.Size(650, 400);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(600, 400);
-			this.MinimumSize = new System.Drawing.Size(600, 400);
+			this.MaximumSize = new System.Drawing.Size(650, 400);
+			this.MinimumSize = new System.Drawing.Size(650, 400);
 			this.Name = "LifeStyleRatingCheck";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Domestic Activities";
@@ -108,5 +122,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.CheckBox checkBoxDisableWarning;
 	}
 }

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hip));
 			this.pictureBoxCancel = new System.Windows.Forms.PictureBox();
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,10 @@
 			this.checkBoxOption3 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption1 = new System.Windows.Forms.CheckBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxHipsPartially = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -48,7 +52,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(601, 578);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(631, 624);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -59,7 +63,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(477, 578);
+			this.pictureBoxOK.Location = new System.Drawing.Point(521, 624);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -146,6 +150,8 @@
 			// panel1
 			// 
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.comboBoxHipsPartially);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.checkBoxOption6);
 			this.panel1.Controls.Add(this.checkBoxOption2);
@@ -158,8 +164,38 @@
 			this.panel1.Controls.Add(this.pictureBoxOK);
 			this.panel1.Location = new System.Drawing.Point(22, 26);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(724, 683);
+			this.panel1.Size = new System.Drawing.Size(724, 719);
 			this.panel1.TabIndex = 28;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(13, 670);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 61;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxHipsPartially
+			// 
+			this.comboBoxHipsPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxHipsPartially.FormattingEnabled = true;
+			this.comboBoxHipsPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxHipsPartially.Location = new System.Drawing.Point(338, 667);
+			this.comboBoxHipsPartially.Name = "comboBoxHipsPartially";
+			this.comboBoxHipsPartially.Size = new System.Drawing.Size(151, 28);
+			this.comboBoxHipsPartially.TabIndex = 29;
 			// 
 			// label2
 			// 
@@ -172,17 +208,23 @@
 			this.label2.TabIndex = 28;
 			this.label2.Text = "HIP";
 			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
+			// 
 			// Hip
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(770, 740);
+			this.ClientSize = new System.Drawing.Size(770, 780);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(770, 740);
-			this.MinimumSize = new System.Drawing.Size(770, 740);
+			this.MaximumSize = new System.Drawing.Size(770, 780);
+			this.MinimumSize = new System.Drawing.Size(770, 780);
 			this.Name = "Hip";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Hip";
@@ -208,5 +250,8 @@
 		private System.Windows.Forms.CheckBox checkBoxOption1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.ComboBox comboBoxHipsPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Label label3;
 	}
 }

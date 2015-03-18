@@ -41,16 +41,16 @@
 			// 
 			this.label85.BackColor = System.Drawing.Color.Transparent;
 			this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label85.Location = new System.Drawing.Point(22, 84);
+			this.label85.Location = new System.Drawing.Point(22, 60);
 			this.label85.Name = "label85";
-			this.label85.Size = new System.Drawing.Size(707, 519);
+			this.label85.Size = new System.Drawing.Size(707, 543);
 			this.label85.TabIndex = 20;
 			this.label85.Text = resources.GetString("label85.Text");
 			// 
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(735, 493);
+			this.pictureBoxOK.Location = new System.Drawing.Point(749, 506);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 21;
@@ -74,7 +74,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(240, 35);
+			this.label1.Location = new System.Drawing.Point(241, 14);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(352, 29);
 			this.label1.TabIndex = 22;

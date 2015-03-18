@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (ankle)
+			switch (GlobalVar.AnklesPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxAnklesPartially = 0;
 					break;
 				case 5: checkBoxOption2.Checked = true;
 					break;
@@ -31,6 +32,7 @@ namespace DVA_Compensation_Calculator
 				case 30: checkBoxOption6.Checked = true;
 					break;
 			}
+			comboBoxAnklesPartially.SelectedIndex = GlobalVar.comboBoxAnklesPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -138,7 +140,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			ankle = Points;
+			GlobalVar.comboBoxAnklesPartially = comboBoxAnklesPartially.SelectedIndex;
+			GlobalVar.AnklesPoints = Points;
+			ankle = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+			GlobalVar.combinedAnklesPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][ankle][comboBoxAnklesPartially.SelectedIndex + 2]);
 			Close();
 		}
 

@@ -10,6 +10,8 @@ namespace DVA_Compensation_Calculator
 	{
 		public LifeStyleRatingCheck()
 		{
+			
+			
 			if (ActiveForm != null)
 			{
 				Location = new Point(ActiveForm.Location.X + 180, ActiveForm.Location.Y + 300);
@@ -37,10 +39,23 @@ namespace DVA_Compensation_Calculator
 		private void DomesticActivities_Load(object sender, EventArgs e)
 		{
 			pictureBoxYes.Image = Tools.GetIcon(Resources.Ok, 40);
+			if (GlobalVar.WarningVisible)
+			{
+				checkBoxDisableWarning.Visible = true;
+			}
+			if (GlobalVar.DisableWarning)
+			{
+				Close();
+			}
 		}
 
 		private void pictureBoxYes_Click(object sender, EventArgs e)
 		{
+			GlobalVar.WarningVisible = true;
+			if (checkBoxDisableWarning.Checked)
+			{
+				GlobalVar.DisableWarning = true;
+			}
 			Close();
 		}
 	}

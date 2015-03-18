@@ -122,5 +122,149 @@ namespace DVA_Compensation_Calculator
 
 		public static bool DisclaimerCheck;
 
+		public static int ToePoints;
+
+		public static decimal combinedToePoints;
+
+		public static int comboBoxToesPartially;
+
+		public static int KneesPoints;
+
+		public static decimal combinedKneesPoints;
+
+		public static int comboBoxKneesPartially;
+
+		public static int HipsPoints;
+
+		public static decimal combinedHipsPoints;
+
+		public static int comboBoxHipsPartially;
+
+		public static int AnklesPoints;
+
+		public static decimal combinedAnklesPoints;
+
+		public static int comboBoxAnklesPartially;
+
+		public static int WholeLimbPoints;
+
+		public static decimal combinedWholeLimbPoints;
+
+		public static int comboBoxWholeLimbPartially;
+
+		public static int LeftElbowPoints;
+
+		public static decimal combinedLeftElbowPoints;
+
+		public static int comboBoxLeftElbowPartially;
+
+		public static int RightElbowPoints;
+
+		public static int comboBoxRightElbowPartially;
+
+		public static decimal combinedRightElbowPoints;
+
+		public static int LeftFingerPoints;
+
+		public static decimal combinedLeftFingerPoints;
+
+		public static int comboBoxLeftFingerPartially;
+
+		public static int RightFingerPoints;
+
+		public static int comboBoxRightFingerPartially;
+
+		public static decimal combinedRightFingerPoints;
+
+		public static int LeftShoulderPoints;
+
+		public static decimal combinedLeftShoulderPoints;
+
+		public static int comboBoxLeftShoulderPartially;
+
+		public static int RightShoulderPoints;
+
+		public static int comboBoxRightShoulderPartially;
+
+		public static decimal combinedRightShoulderPoints;
+
+		public static int LeftWristPoints;
+
+		public static decimal combinedLeftWristPoints;
+
+		public static int comboBoxLeftWristPartially;
+
+		public static int RightWristPoints;
+
+		public static int comboBoxRightWristPartially;
+
+		public static decimal combinedRightWristPoints;
+
+		public static int WholeLeftArmPoints;
+
+		public static decimal combinedWholeLeftArmPoints;
+
+		public static int comboBoxWholeLeftArmPartially;
+
+		public static int WholeRightArmPoints;
+
+		public static decimal combinedWholeRightArmPoints;
+
+		public static int comboBoxWholeRightArmPartially;
+
+		public static int JointPainPoints;
+
+		public static decimal combinedJointPainPoints;
+
+		public static int comboBoxJointPainPartially;
+
+		public static int ThroatPoints;
+
+		public static decimal combinedThroatPoints;
+
+		public static int comboBoxThroatPartially;
+
+		public static int NosePoints;
+
+		public static decimal combinedNosePoints;
+
+		public static int comboBoxNosePartially;
+
+		public static int HearingLossPoints;
+
+		public static decimal combinedHearingLossPoints;
+
+		public static int comboBoxHearingLossPartially;
+
+		public static int TinnitusPoints;
+
+		public static decimal combinedTinnitusPoints;
+
+		public static int comboBoxTinnitusPartially;
+
+		public static int CervicalPoints;
+
+		public static decimal combinedCervicalPoints;
+
+		public static int comboBoxCervicalPartially;
+
+		public static int ThoracoROMPoints;
+
+		public static decimal combinedThoracoROMPoints;
+
+		public static int comboBoxThoracoROMPartially;
+
+		public static int ThoracoLumbarPoints;
+
+		public static decimal combinedThoracoLumbarPoints;
+
+		public static int comboBoxThoracoLumbarPartially;
+
+		public static bool DisableWarning;
+
+		public static bool WarningVisible;
+
+		public static decimal LumpSumFactor;
+
 	}
 }

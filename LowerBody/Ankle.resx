@@ -120,4 +120,7 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Note: Because the two lower limbs constitute a functional unit, a single functional impairment rating is calculated for both lower limbs together. Establish which joints in the lower limbs, if any, have some restriction of movement as a result of accepted conditions affecting the lower limbs. Select the one that best meets your situation.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

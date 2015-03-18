@@ -136,4 +136,10 @@
   <data name="checkBoxOption7.Text" xml:space="preserve">
     <value>Can use limb reasonably well in a few circumstances only. Use of limb is otherwise inefficient, with increasing difficulty for self-care activities. Poor digital co-ordination and markedly reduced grip strength in, eg, lifting light objects. Problems with dressing, feeding or writing.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

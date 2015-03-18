@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (hip)
+			switch (GlobalVar.HipsPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxHipsPartially = 0;
 					break;
 				case 10: checkBoxOption2.Checked = true;
 					break;
@@ -31,6 +32,7 @@ namespace DVA_Compensation_Calculator
 				case 50: checkBoxOption6.Checked = true;
 					break;
 			}
+			comboBoxHipsPartially.SelectedIndex = GlobalVar.comboBoxHipsPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -138,7 +140,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			hip = Points;
+			GlobalVar.comboBoxHipsPartially = comboBoxHipsPartially.SelectedIndex;
+			GlobalVar.HipsPoints = Points;
+			hip = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+			GlobalVar.combinedHipsPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][hip][comboBoxHipsPartially.SelectedIndex + 2]);
 			Close();
 		}
 

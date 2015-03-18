@@ -47,9 +47,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(16, 353);
+			this.checkBoxOption2.Location = new System.Drawing.Point(16, 372);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(728, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(728, 39);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Occasional friction with colleagues and friends.";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -58,9 +58,9 @@
 			// checkBoxOption7
 			// 
 			this.checkBoxOption7.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption7.Location = new System.Drawing.Point(16, 720);
+			this.checkBoxOption7.Location = new System.Drawing.Point(16, 730);
 			this.checkBoxOption7.Name = "checkBoxOption7";
-			this.checkBoxOption7.Size = new System.Drawing.Size(470, 66);
+			this.checkBoxOption7.Size = new System.Drawing.Size(470, 41);
 			this.checkBoxOption7.TabIndex = 10;
 			this.checkBoxOption7.Text = "Negligible social contact.";
 			this.checkBoxOption7.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 424);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 438);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 37);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Minor reduction in social interaction.";
 			this.checkBoxOption3.UseVisualStyleBackColor = false;

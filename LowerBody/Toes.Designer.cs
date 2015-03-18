@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Toes));
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
@@ -37,7 +38,10 @@
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxToesPartially = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -92,7 +96,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(596, 439);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(617, 526);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -103,7 +107,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(472, 439);
+			this.pictureBoxOK.Location = new System.Drawing.Point(513, 526);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -124,6 +128,8 @@
 			// panel1
 			// 
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.comboBoxToesPartially);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
@@ -134,8 +140,38 @@
 			this.panel1.Controls.Add(this.checkBoxOption1);
 			this.panel1.Location = new System.Drawing.Point(22, 24);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(717, 563);
+			this.panel1.Size = new System.Drawing.Size(717, 621);
 			this.panel1.TabIndex = 22;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(17, 565);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 24;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxToesPartially
+			// 
+			this.comboBoxToesPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxToesPartially.FormattingEnabled = true;
+			this.comboBoxToesPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxToesPartially.Location = new System.Drawing.Point(325, 562);
+			this.comboBoxToesPartially.Name = "comboBoxToesPartially";
+			this.comboBoxToesPartially.Size = new System.Drawing.Size(150, 28);
+			this.comboBoxToesPartially.TabIndex = 23;
 			// 
 			// label2
 			// 
@@ -148,17 +184,23 @@
 			this.label2.TabIndex = 22;
 			this.label2.Text = "TOES";
 			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
+			// 
 			// Toes
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(770, 630);
+			this.ClientSize = new System.Drawing.Size(770, 680);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(770, 630);
-			this.MinimumSize = new System.Drawing.Size(770, 630);
+			this.MaximumSize = new System.Drawing.Size(770, 680);
+			this.MinimumSize = new System.Drawing.Size(770, 680);
 			this.Name = "Toes";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Toes";
@@ -182,5 +224,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.ComboBox comboBoxToesPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }

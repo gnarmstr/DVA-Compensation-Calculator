@@ -47,9 +47,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(16, 339);
+			this.checkBoxOption2.Location = new System.Drawing.Point(16, 340);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(808, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(808, 52);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Minor interference with function in some everyday situations.";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -92,9 +92,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 410);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 408);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(808, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(808, 51);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Moderate interference with function in some everyday situations.";
 			this.checkBoxOption3.UseVisualStyleBackColor = false;

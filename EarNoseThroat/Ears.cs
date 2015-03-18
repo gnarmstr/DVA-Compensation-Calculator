@@ -11,18 +11,19 @@ namespace DVA_Compensation_Calculator
 		public Ears()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 10, ActiveForm.Location.Y + 15);
+				Location = new Point(ActiveForm.Location.X + 10, ActiveForm.Location.Y - 50);
 			InitializeComponent();
-			MinimumSize = new Size(705, 758);
-			MaximumSize = new Size(705, 758);
+			MinimumSize = new Size(705, 840);
+			MaximumSize = new Size(705, 840);
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
 			panel2.BackgroundImage = Resources.Background_Blue;
 			panel3.BackgroundImage = Resources.Background_Blue;
-			switch (ears)
+			switch (GlobalVar.HearingLossPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxHearingLossPartially = 0;
 					break;
 				case 2: checkBoxOption2.Checked = true;
 					break;
@@ -31,9 +32,12 @@ namespace DVA_Compensation_Calculator
 				case 10: checkBoxOption4.Checked = true;
 					break;
 			}
-			switch (tinnitus)
+			comboBoxHearingLossPartially.SelectedIndex = GlobalVar.comboBoxHearingLossPartially;
+
+			switch (GlobalVar.TinnitusPoints)
 			{
 				case 0: checkBoxTinnitusOption1.Checked = true;
+					GlobalVar.comboBoxTinnitusPartially = 0;
 					break;
 				case 2: checkBoxTinnitusOption2.Checked = true;
 					break;
@@ -44,6 +48,7 @@ namespace DVA_Compensation_Calculator
 				case 15: checkBoxTinnitusOption5.Checked = true;
 					break;
 			}
+			comboBoxTinnitusPartially.SelectedIndex = GlobalVar.comboBoxTinnitusPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -187,8 +192,15 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxHearingLossPartially = comboBoxHearingLossPartially.SelectedIndex;
+			GlobalVar.HearingLossPoints = Points;
 			ears = Points;
+			GlobalVar.combinedHearingLossPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][ears][comboBoxHearingLossPartially.SelectedIndex + 2]);
+			
+			GlobalVar.comboBoxTinnitusPartially = comboBoxTinnitusPartially.SelectedIndex;
+			GlobalVar.TinnitusPoints = PointsTinnitus;
 			tinnitus = PointsTinnitus;
+			GlobalVar.combinedTinnitusPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][tinnitus][comboBoxTinnitusPartially.SelectedIndex + 2]);
 			Close();
 		}
 

@@ -47,9 +47,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(16, 271);
+			this.checkBoxOption2.Location = new System.Drawing.Point(16, 287);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(728, 77);
+			this.checkBoxOption2.Size = new System.Drawing.Size(728, 49);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "Occasional friction with family members.";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(16, 342);
+			this.checkBoxOption3.Location = new System.Drawing.Point(16, 353);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 69);
+			this.checkBoxOption3.Size = new System.Drawing.Size(1001, 49);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Frequent discord with family members.";
 			this.checkBoxOption3.UseVisualStyleBackColor = false;

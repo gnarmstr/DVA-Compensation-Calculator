@@ -18,9 +18,10 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			if (GlobalVar.Selection == "LeftWrist")
 			{
-				switch (LeftWrist)
+				switch (GlobalVar.LeftWristPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxLeftWristPartially = 0;
 						break;
 					case 5: checkBoxOption2.Checked = true;
 						break;
@@ -33,12 +34,14 @@ namespace DVA_Compensation_Calculator
 					case 30: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxWristPartially.SelectedIndex = GlobalVar.comboBoxLeftWristPartially;
 			}
 			else
 			{
-				switch (RightWrist)
+				switch (GlobalVar.RightWristPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxRightWristPartially = 0;
 						break;
 					case 5: checkBoxOption2.Checked = true;
 						break;
@@ -51,6 +54,7 @@ namespace DVA_Compensation_Calculator
 					case 30: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxWristPartially.SelectedIndex = GlobalVar.comboBoxRightWristPartially;
 			}
 		}
 
@@ -163,11 +167,17 @@ namespace DVA_Compensation_Calculator
 		{
 			if (GlobalVar.Selection == "LeftWrist")
 			{
-				LeftWrist = Points;
+				GlobalVar.comboBoxLeftWristPartially = comboBoxWristPartially.SelectedIndex;
+				GlobalVar.LeftWristPoints = Points;
+				LeftWrist = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedLeftWristPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][LeftWrist][comboBoxWristPartially.SelectedIndex + 2]);
 			}
 			else
 			{
-				RightWrist = Points;
+				GlobalVar.comboBoxRightWristPartially = comboBoxWristPartially.SelectedIndex;
+				GlobalVar.RightWristPoints = Points;
+				RightWrist = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedRightWristPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][RightWrist][comboBoxWristPartially.SelectedIndex + 2]);
 			}
 			Close();
 		}

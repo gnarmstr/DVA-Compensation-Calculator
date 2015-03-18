@@ -18,9 +18,10 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			if (GlobalVar.Selection == "LeftShoulder")
 			{
-				switch (LeftShoulder)
+				switch (GlobalVar.LeftShoulderPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxLeftShoulderPartially = 0;
 						break;
 					case 10: checkBoxOption2.Checked = true;
 						break;
@@ -33,12 +34,14 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxShoulderPartially.SelectedIndex = GlobalVar.comboBoxLeftShoulderPartially;
 			}
 			else
 			{
-				switch (RightShoulder)
+				switch (GlobalVar.RightShoulderPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxRightShoulderPartially = 0;
 						break;
 					case 10: checkBoxOption2.Checked = true;
 						break;
@@ -51,6 +54,7 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxShoulderPartially.SelectedIndex = GlobalVar.comboBoxRightShoulderPartially;
 			}
 		}
 
@@ -163,11 +167,17 @@ namespace DVA_Compensation_Calculator
 		{
 			if (GlobalVar.Selection == "LeftShoulder")
 			{
-				LeftShoulder = Points;
+				GlobalVar.comboBoxLeftShoulderPartially = comboBoxShoulderPartially.SelectedIndex;
+				GlobalVar.LeftShoulderPoints = Points;
+				LeftShoulder = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedLeftShoulderPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][LeftShoulder][comboBoxShoulderPartially.SelectedIndex + 2]);
 			}
 			else
 			{
-				RightShoulder = Points;
+				GlobalVar.comboBoxRightShoulderPartially = comboBoxShoulderPartially.SelectedIndex;
+				GlobalVar.RightShoulderPoints = Points;
+				RightShoulder = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedRightShoulderPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][RightShoulder][comboBoxShoulderPartially.SelectedIndex + 2]);
 			}
 			Close();
 		}

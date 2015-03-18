@@ -20,9 +20,10 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			if (GlobalVar.Selection == "LeftArm")
 			{
-				switch (wholeLeftArm)
+				switch (GlobalVar.WholeLeftArmPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxWholeLeftArmPartially = 0;
 						break;
 					case 2: checkBoxOption2.Checked = true;
 						break;
@@ -41,12 +42,14 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption9.Checked = true;
 						break;
 				}
+				comboBoxWholeArmPartially.SelectedIndex = GlobalVar.comboBoxWholeLeftArmPartially;
 			}
 			else
 			{
-				switch (wholeRightArm)
+				switch (GlobalVar.WholeRightArmPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxWholeRightArmPartially = 0;
 						break;
 					case 2: checkBoxOption2.Checked = true;
 						break;
@@ -65,6 +68,7 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption9.Checked = true;
 						break;
 				}
+				comboBoxWholeArmPartially.SelectedIndex = GlobalVar.comboBoxWholeRightArmPartially;
 			}
 		}
 
@@ -260,11 +264,17 @@ namespace DVA_Compensation_Calculator
 		{
 			if (GlobalVar.Selection == "LeftArm")
 			{
-				wholeLeftArm = Points;
+				GlobalVar.comboBoxWholeLeftArmPartially = comboBoxWholeArmPartially.SelectedIndex;
+				GlobalVar.WholeLeftArmPoints = Points;
+				wholeLeftArm = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedWholeLeftArmPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][wholeLeftArm][comboBoxWholeArmPartially.SelectedIndex + 2]);
 			}
 			else
 			{
-				wholeRightArm = Points;
+				GlobalVar.comboBoxWholeRightArmPartially = comboBoxWholeArmPartially.SelectedIndex;
+				GlobalVar.WholeRightArmPoints = Points;
+				wholeRightArm = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedWholeRightArmPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][wholeRightArm][comboBoxWholeArmPartially.SelectedIndex + 2]);
 			}
 			Close();
 		}

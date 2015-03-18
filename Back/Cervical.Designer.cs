@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption5 = new System.Windows.Forms.CheckBox();
@@ -39,6 +40,9 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label79 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxCervicalPartially = new System.Windows.Forms.ComboBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -113,7 +117,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(613, 542);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(629, 542);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -124,7 +128,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(489, 542);
+			this.pictureBoxOK.Location = new System.Drawing.Point(519, 542);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -134,11 +138,12 @@
 			// 
 			// label1
 			// 
+			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(143, 56);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(445, 25);
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
@@ -155,6 +160,8 @@
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.comboBoxCervicalPartially);
 			this.panel1.Controls.Add(this.label79);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
@@ -169,6 +176,42 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(741, 649);
 			this.panel1.TabIndex = 59;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(19, 581);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 60;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxCervicalPartially
+			// 
+			this.comboBoxCervicalPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxCervicalPartially.FormattingEnabled = true;
+			this.comboBoxCervicalPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxCervicalPartially.Location = new System.Drawing.Point(341, 578);
+			this.comboBoxCervicalPartially.Name = "comboBoxCervicalPartially";
+			this.comboBoxCervicalPartially.Size = new System.Drawing.Size(142, 28);
+			this.comboBoxCervicalPartially.TabIndex = 59;
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
 			// 
 			// Cervical
 			// 
@@ -205,5 +248,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label79;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.ComboBox comboBoxCervicalPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }

@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (cervical)
+			switch (GlobalVar.CervicalPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxCervicalPartially = 0;
 					break;
 				case 5: checkBoxOption2.Checked = true;
 					break;
@@ -31,6 +32,7 @@ namespace DVA_Compensation_Calculator
 				case 30: checkBoxOption6.Checked = true;
 					break;
 			}
+			comboBoxCervicalPartially.SelectedIndex = GlobalVar.comboBoxCervicalPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -138,7 +140,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			cervical = Points;
+			GlobalVar.comboBoxCervicalPartially = comboBoxCervicalPartially.SelectedIndex;
+			GlobalVar.CervicalPoints = Points;
+			cervical = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]); ;
+			GlobalVar.combinedCervicalPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][cervical][comboBoxCervicalPartially.SelectedIndex + 2]);
 			Close();
 		}
 

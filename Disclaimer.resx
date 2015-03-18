@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>The information in this Compensation calculator may not be accurate and should be not relied on. It is made available on the understanding that the user understands that the way DVA calculate compensation and that factors like Actuary Tables, Maximum weekly compensation rate and questions to determine points may change without notice and therefore making this application outdated. It is recommended you seek advice from a qualified Advocate and/or DVA member when determining your conditions and compensation.
+    <value>The information in this Compensation calculator may not be accurate and should not be relied on. It is made available on the understanding that the way DVA calculate compensation and factors like Actuary Tables, Maximum weekly compensation rate and questions to determine points may change without notice and therefore making this application outdated. It is recommended you seek advice from a qualified Advocate and/or DVA member when determining your conditions and compensation.
 
 If the final compensation rate on this application is found to be different from your receive determination then it is likely you may have overstated your level of condition and/or Lifestyle ratings.
 </value>

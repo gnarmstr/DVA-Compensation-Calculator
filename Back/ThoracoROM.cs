@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (thoracoROM)
+			switch (GlobalVar.ThoracoROMPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxThoracoROMPartially = 0;
 					break;
 				case 10: checkBoxOption2.Checked = true;
 					break;
@@ -31,6 +32,7 @@ namespace DVA_Compensation_Calculator
 				case 50: checkBoxOption6.Checked = true;
 					break;
 			}
+			comboBoxThoracoROMPartially.SelectedIndex = GlobalVar.comboBoxThoracoROMPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -138,7 +140,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			thoracoROM = Points;
+			GlobalVar.comboBoxThoracoROMPartially = comboBoxThoracoROMPartially.SelectedIndex;
+			GlobalVar.ThoracoROMPoints = Points;
+			thoracoROM = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]); ;
+			GlobalVar.combinedThoracoROMPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][thoracoROM][comboBoxThoracoROMPartially.SelectedIndex + 2]);
 			Close();
 		}
 

@@ -129,4 +129,7 @@
 
 Pain that limits range of movement or distance that can be walked is already assessed elsewhere. may be applied for pain in both the upper limbs and lower limbs and intervertebral joints. Only one selection may be made for pain in any joint or combination of joints. However, this is not to be applied to rate sciatic pain.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

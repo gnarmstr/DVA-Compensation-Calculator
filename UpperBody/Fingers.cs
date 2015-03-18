@@ -18,9 +18,10 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			if (GlobalVar.Selection == "LeftFingers")
 			{
-				switch (LeftFingers)
+				switch (GlobalVar.LeftFingerPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxLeftFingerPartially = 0;
 						break;
 					case 5: checkBoxOption2.Checked = true;
 						break;
@@ -29,12 +30,14 @@ namespace DVA_Compensation_Calculator
 					case 15: checkBoxOption4.Checked = true;
 						break;
 				}
+				comboBoxFingersPartially.SelectedIndex = GlobalVar.comboBoxLeftFingerPartially;
 			}
 			else
 			{
-				switch (RightFingers)
+				switch (GlobalVar.RightFingerPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxRightFingerPartially = 0;
 						break;
 					case 5: checkBoxOption2.Checked = true;
 						break;
@@ -43,6 +46,7 @@ namespace DVA_Compensation_Calculator
 					case 15: checkBoxOption4.Checked = true;
 						break;
 				}
+				comboBoxFingersPartially.SelectedIndex = GlobalVar.comboBoxRightFingerPartially;
 			}
 		}
 
@@ -121,11 +125,17 @@ namespace DVA_Compensation_Calculator
 		{
 			if (GlobalVar.Selection == "LeftFingers")
 			{
-				LeftFingers = Points;
+				GlobalVar.comboBoxLeftFingerPartially = comboBoxFingersPartially.SelectedIndex;
+				GlobalVar.LeftFingerPoints = Points;
+				LeftFingers = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedLeftFingerPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][LeftFingers][comboBoxFingersPartially.SelectedIndex + 2]);
 			}
 			else
 			{
-				RightFingers = Points;
+				GlobalVar.comboBoxRightFingerPartially = comboBoxFingersPartially.SelectedIndex;
+				GlobalVar.RightFingerPoints = Points;
+				RightFingers = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedRightFingerPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][RightFingers][comboBoxFingersPartially.SelectedIndex + 2]);
 			}
 			Close();
 		}

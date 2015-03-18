@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption4 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption5 = new System.Windows.Forms.CheckBox();
@@ -37,6 +38,9 @@
 			this.pictureBoxOK = new System.Windows.Forms.PictureBox();
 			this.label49 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.comboBoxThoracoLumbarPartially = new System.Windows.Forms.ComboBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -105,7 +109,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(597, 546);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(641, 565);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -116,7 +120,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(473, 546);
+			this.pictureBoxOK.Location = new System.Drawing.Point(540, 565);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -128,15 +132,17 @@
 			// 
 			this.label49.BackColor = System.Drawing.Color.Transparent;
 			this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label49.Location = new System.Drawing.Point(14, 29);
+			this.label49.Location = new System.Drawing.Point(3, 29);
 			this.label49.Name = "label49";
-			this.label49.Size = new System.Drawing.Size(682, 75);
+			this.label49.Size = new System.Drawing.Size(731, 75);
 			this.label49.TabIndex = 22;
 			this.label49.Text = "LOSS OF MUSCULOSKELETAL FUNCTION: THORACO-LUMBAR SPINE (BASED ON USE OF SPINE)";
 			this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.comboBoxThoracoLumbarPartially);
 			this.panel1.Controls.Add(this.label49);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
 			this.panel1.Controls.Add(this.pictureBoxOK);
@@ -149,6 +155,42 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(737, 665);
 			this.panel1.TabIndex = 23;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(42, 588);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(275, 20);
+			this.label1.TabIndex = 61;
+			this.label1.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label1, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxThoracoLumbarPartially
+			// 
+			this.comboBoxThoracoLumbarPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxThoracoLumbarPartially.FormattingEnabled = true;
+			this.comboBoxThoracoLumbarPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxThoracoLumbarPartially.Location = new System.Drawing.Point(347, 585);
+			this.comboBoxThoracoLumbarPartially.Name = "comboBoxThoracoLumbarPartially";
+			this.comboBoxThoracoLumbarPartially.Size = new System.Drawing.Size(142, 28);
+			this.comboBoxThoracoLumbarPartially.TabIndex = 31;
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
 			// 
 			// ThoracoLumbar
 			// 
@@ -167,6 +209,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -182,5 +225,8 @@
 		private System.Windows.Forms.PictureBox pictureBoxOK;
 		private System.Windows.Forms.Label label49;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.ComboBox comboBoxThoracoLumbarPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Label label1;
 	}
 }

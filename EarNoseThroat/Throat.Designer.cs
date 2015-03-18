@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.checkBoxOption2 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption3 = new System.Windows.Forms.CheckBox();
 			this.checkBoxOption1 = new System.Windows.Forms.CheckBox();
@@ -36,6 +37,9 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxThroatPartially = new System.Windows.Forms.ComboBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -44,9 +48,9 @@
 			// checkBoxOption2
 			// 
 			this.checkBoxOption2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption2.Location = new System.Drawing.Point(17, 196);
+			this.checkBoxOption2.Location = new System.Drawing.Point(17, 173);
 			this.checkBoxOption2.Name = "checkBoxOption2";
-			this.checkBoxOption2.Size = new System.Drawing.Size(430, 60);
+			this.checkBoxOption2.Size = new System.Drawing.Size(430, 46);
 			this.checkBoxOption2.TabIndex = 11;
 			this.checkBoxOption2.Text = "A tracheostomy that has been closed.";
 			this.checkBoxOption2.UseVisualStyleBackColor = false;
@@ -55,9 +59,9 @@
 			// checkBoxOption3
 			// 
 			this.checkBoxOption3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption3.Location = new System.Drawing.Point(17, 262);
+			this.checkBoxOption3.Location = new System.Drawing.Point(17, 225);
 			this.checkBoxOption3.Name = "checkBoxOption3";
-			this.checkBoxOption3.Size = new System.Drawing.Size(430, 75);
+			this.checkBoxOption3.Size = new System.Drawing.Size(430, 51);
 			this.checkBoxOption3.TabIndex = 7;
 			this.checkBoxOption3.Text = "Permanent tracheostomy.";
 			this.checkBoxOption3.UseVisualStyleBackColor = false;
@@ -66,7 +70,7 @@
 			// checkBoxOption1
 			// 
 			this.checkBoxOption1.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxOption1.Location = new System.Drawing.Point(17, 132);
+			this.checkBoxOption1.Location = new System.Drawing.Point(17, 115);
 			this.checkBoxOption1.Name = "checkBoxOption1";
 			this.checkBoxOption1.Size = new System.Drawing.Size(430, 38);
 			this.checkBoxOption1.TabIndex = 6;
@@ -77,7 +81,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(428, 343);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(480, 355);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -88,7 +92,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(304, 343);
+			this.pictureBoxOK.Location = new System.Drawing.Point(367, 355);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -98,11 +102,12 @@
 			// 
 			// label1
 			// 
+			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(58, 59);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(466, 42);
+			this.label1.Size = new System.Drawing.Size(445, 25);
 			this.label1.TabIndex = 21;
 			this.label1.Text = "Select the one that best meets your situation.";
 			// 
@@ -119,6 +124,8 @@
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.comboBoxThroatPartially);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
@@ -130,6 +137,42 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(580, 452);
 			this.panel1.TabIndex = 23;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(40, 332);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(275, 20);
+			this.label3.TabIndex = 61;
+			this.label3.Text = "Partially Contributing Impairment:";
+			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
+        "pted condition is fully covered.");
+			// 
+			// comboBoxThroatPartially
+			// 
+			this.comboBoxThroatPartially.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxThroatPartially.FormattingEnabled = true;
+			this.comboBoxThroatPartially.Items.AddRange(new object[] {
+            "Complete",
+            "About 3/4",
+            "About 2/3",
+            "About 1/2",
+            "About 1/3",
+            "About 1/4"});
+			this.comboBoxThroatPartially.Location = new System.Drawing.Point(100, 376);
+			this.comboBoxThroatPartially.Name = "comboBoxThroatPartially";
+			this.comboBoxThroatPartially.Size = new System.Drawing.Size(142, 28);
+			this.comboBoxThroatPartially.TabIndex = 31;
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.AutoPopDelay = 10000;
+			this.toolTip1.InitialDelay = 500;
+			this.toolTip1.ReshowDelay = 100;
 			// 
 			// Throat
 			// 
@@ -164,5 +207,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.ComboBox comboBoxThroatPartially;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Label label3;
 	}
 }

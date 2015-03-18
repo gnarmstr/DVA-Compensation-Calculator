@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (toes)
+			switch (GlobalVar.ToePoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxToesPartially = 0;
 					break;
 				case 2: checkBoxOption2.Checked = true;
 					break;
@@ -43,6 +44,7 @@ namespace DVA_Compensation_Calculator
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
+			comboBoxToesPartially.SelectedIndex = GlobalVar.comboBoxToesPartially;
 		}
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
@@ -100,7 +102,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
-			toes = Points;
+			GlobalVar.comboBoxToesPartially = comboBoxToesPartially.SelectedIndex;
+			GlobalVar.ToePoints = Points;
+			toes = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+			GlobalVar.combinedToePoints = Convert.ToDecimal(GlobalVar.ExcelData[2][toes][comboBoxToesPartially.SelectedIndex + 2]);
 			Close();
 		}
 

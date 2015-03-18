@@ -16,15 +16,17 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (nose)
+			switch (GlobalVar.NosePoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxNosePartially = 0;
 					break;
 				case 2: checkBoxOption2.Checked = true;
 					break;
 				case 5: checkBoxOption3.Checked = true;
 					break;
 			}
+			comboBoxNosePartially.SelectedIndex = GlobalVar.comboBoxNosePartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -84,7 +86,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxNosePartially = comboBoxNosePartially.SelectedIndex;
+			GlobalVar.NosePoints = Points;
 			nose = Points;
+			GlobalVar.combinedNosePoints = Convert.ToDecimal(GlobalVar.ExcelData[2][nose][comboBoxNosePartially.SelectedIndex + 2]);
 			Close();
 		}
 

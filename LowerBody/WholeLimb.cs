@@ -13,14 +13,15 @@ namespace DVA_Compensation_Calculator
 			if (ActiveForm != null)
 				Location = new Point(ActiveForm.Location.X + 25, ActiveForm.Location.Y + 30);
 			InitializeComponent();
-			MinimumSize = new Size(665, 730);
-			MaximumSize = new Size(665, 730);
+			MinimumSize = new Size(665, 760);
+			MaximumSize = new Size(665, 760);
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (wholeLimb)
+			switch (GlobalVar.WholeLimbPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxWholeLimbPartially = 0;
 					break;
 				case 5: checkBoxOption2.Checked = true;
 					break;
@@ -55,6 +56,7 @@ namespace DVA_Compensation_Calculator
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
 			pictureBoxCancel.Image = Tools.GetIcon(Resources.Cancel, 40);
+			comboBoxWholeLimbPartially.SelectedIndex = GlobalVar.comboBoxWholeLimbPartially;
 		}
 
 		private void checkBoxOption1_CheckedChanged(object sender, EventArgs e)
@@ -212,7 +214,10 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxWholeLimbPartially = comboBoxWholeLimbPartially.SelectedIndex;
+			GlobalVar.WholeLimbPoints = Points;
 			wholeLimb = Points;
+			GlobalVar.combinedWholeLimbPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][wholeLimb][comboBoxWholeLimbPartially.SelectedIndex + 2]);
 			Close();
 		}
 

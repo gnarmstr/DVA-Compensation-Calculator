@@ -168,6 +168,8 @@
 			this.checkBoxEmotionalBehavioural = new System.Windows.Forms.CheckBox();
 			this.buttonEmotionalBehavioural = new System.Windows.Forms.Button();
 			this.textBoxEmotionalBehavioural = new System.Windows.Forms.TextBox();
+			this.comboBoxLumpSumConversion = new System.Windows.Forms.ComboBox();
+			this.label3 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -1213,7 +1215,7 @@
 			this.label28.BackColor = System.Drawing.Color.Transparent;
 			this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label28.ForeColor = System.Drawing.Color.DarkRed;
-			this.label28.Location = new System.Drawing.Point(590, 872);
+			this.label28.Location = new System.Drawing.Point(590, 843);
 			this.label28.Name = "label28";
 			this.label28.Size = new System.Drawing.Size(292, 25);
 			this.label28.TabIndex = 46;
@@ -1223,7 +1225,7 @@
 			// 
 			this.textBoxCompensationFactorPeace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxCompensationFactorPeace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(984, 874);
+			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(984, 840);
 			this.textBoxCompensationFactorPeace.Name = "textBoxCompensationFactorPeace";
 			this.textBoxCompensationFactorPeace.ReadOnly = true;
 			this.textBoxCompensationFactorPeace.Size = new System.Drawing.Size(70, 30);
@@ -1237,7 +1239,7 @@
 			this.label19.BackColor = System.Drawing.Color.Transparent;
 			this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label19.ForeColor = System.Drawing.Color.DarkRed;
-			this.label19.Location = new System.Drawing.Point(590, 829);
+			this.label19.Location = new System.Drawing.Point(590, 800);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(350, 25);
 			this.label19.TabIndex = 23;
@@ -1247,7 +1249,7 @@
 			// 
 			this.textBoxCompensationFactorWar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxCompensationFactorWar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(984, 831);
+			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(984, 797);
 			this.textBoxCompensationFactorWar.Name = "textBoxCompensationFactorWar";
 			this.textBoxCompensationFactorWar.ReadOnly = true;
 			this.textBoxCompensationFactorWar.Size = new System.Drawing.Size(70, 30);
@@ -1405,7 +1407,7 @@
 			this.label30.BackColor = System.Drawing.Color.Transparent;
 			this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label30.ForeColor = System.Drawing.Color.DarkRed;
-			this.label30.Location = new System.Drawing.Point(590, 1031);
+			this.label30.Location = new System.Drawing.Point(590, 984);
 			this.label30.Name = "label30";
 			this.label30.Size = new System.Drawing.Size(278, 25);
 			this.label30.TabIndex = 74;
@@ -1444,7 +1446,7 @@
 			this.label32.BackColor = System.Drawing.Color.Transparent;
 			this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label32.ForeColor = System.Drawing.Color.DarkRed;
-			this.label32.Location = new System.Drawing.Point(590, 978);
+			this.label32.Location = new System.Drawing.Point(590, 940);
 			this.label32.Name = "label32";
 			this.label32.Size = new System.Drawing.Size(280, 25);
 			this.label32.TabIndex = 78;
@@ -1477,7 +1479,7 @@
 			// 
 			this.textBoxFinalCompensationFactor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxFinalCompensationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(937, 1028);
+			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(937, 981);
 			this.textBoxFinalCompensationFactor.Name = "textBoxFinalCompensationFactor";
 			this.textBoxFinalCompensationFactor.ReadOnly = true;
 			this.textBoxFinalCompensationFactor.Size = new System.Drawing.Size(121, 30);
@@ -1501,7 +1503,7 @@
 			// 
 			this.textBoxTotalPeacePoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxTotalPeacePoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(936, 975);
+			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(936, 937);
 			this.textBoxTotalPeacePoints.Name = "textBoxTotalPeacePoints";
 			this.textBoxTotalPeacePoints.ReadOnly = true;
 			this.textBoxTotalPeacePoints.Size = new System.Drawing.Size(122, 30);
@@ -1551,7 +1553,7 @@
 			this.label18.BackColor = System.Drawing.Color.Transparent;
 			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label18.ForeColor = System.Drawing.Color.DarkRed;
-			this.label18.Location = new System.Drawing.Point(590, 928);
+			this.label18.Location = new System.Drawing.Point(590, 890);
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(228, 25);
 			this.label18.TabIndex = 82;
@@ -1561,7 +1563,7 @@
 			// 
 			this.textBoxFinalLifeStylePoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxFinalLifeStylePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(984, 928);
+			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(984, 887);
 			this.textBoxFinalLifeStylePoint.Name = "textBoxFinalLifeStylePoint";
 			this.textBoxFinalLifeStylePoint.ReadOnly = true;
 			this.textBoxFinalLifeStylePoint.Size = new System.Drawing.Size(71, 30);
@@ -1616,7 +1618,7 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.7               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+			this.buttonMainTitle.Text = "Ver 1.8               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
     "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
@@ -2052,6 +2054,36 @@
 			this.textBoxEmotionalBehavioural.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBoxEmotionalBehavioural.TextChanged += new System.EventHandler(this.textBoxEmotionalBehavioural_TextChanged);
 			// 
+			// comboBoxLumpSumConversion
+			// 
+			this.comboBoxLumpSumConversion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxLumpSumConversion.FormattingEnabled = true;
+			this.comboBoxLumpSumConversion.Items.AddRange(new object[] {
+            "100",
+            "75",
+            "50",
+            "25",
+            "0"});
+			this.comboBoxLumpSumConversion.Location = new System.Drawing.Point(980, 1032);
+			this.comboBoxLumpSumConversion.Name = "comboBoxLumpSumConversion";
+			this.comboBoxLumpSumConversion.Size = new System.Drawing.Size(76, 28);
+			this.comboBoxLumpSumConversion.TabIndex = 92;
+			this.comboBoxLumpSumConversion.TextChanged += new System.EventHandler(this.comboBoxLumpSumConversion_TextChanged);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.Transparent;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.DarkRed;
+			this.label3.Location = new System.Drawing.Point(590, 1035);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(329, 25);
+			this.label3.TabIndex = 93;
+			this.label3.Text = "Conversion to Lump Sum Factor:";
+			this.toolTip1.SetToolTip(this.label3, "This is used to determine the Compensation payout and is multiplied by the Weekly" +
+        " Rate to get your Compensation.");
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2059,6 +2091,8 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.ClientSize = new System.Drawing.Size(1090, 1200);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.comboBoxLumpSumConversion);
 			this.Controls.Add(this.buttonInstructions);
 			this.Controls.Add(this.buttonDVALinks);
 			this.Controls.Add(this.label28);
@@ -2256,6 +2290,8 @@
 		private System.Windows.Forms.CheckBox checkBoxEmotionalBehavioural;
 		private System.Windows.Forms.Button buttonEmotionalBehavioural;
 		private System.Windows.Forms.TextBox textBoxEmotionalBehavioural;
+		private System.Windows.Forms.ComboBox comboBoxLumpSumConversion;
+		private System.Windows.Forms.Label label3;
 	}
 }
 

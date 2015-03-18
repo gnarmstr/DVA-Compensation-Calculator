@@ -83,7 +83,7 @@
 			this.linkLabel6.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel6.Location = new System.Drawing.Point(532, 162);
 			this.linkLabel6.Name = "linkLabel6";
-			this.linkLabel6.Size = new System.Drawing.Size(169, 28);
+			this.linkLabel6.Size = new System.Drawing.Size(229, 28);
 			this.linkLabel6.TabIndex = 43;
 			this.linkLabel6.TabStop = true;
 			this.linkLabel6.Text = "ALL DVA FORMS";
@@ -116,7 +116,7 @@
 			this.linkLabel33.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel33.Location = new System.Drawing.Point(529, 596);
 			this.linkLabel33.Name = "linkLabel33";
-			this.linkLabel33.Size = new System.Drawing.Size(440, 44);
+			this.linkLabel33.Size = new System.Drawing.Size(459, 44);
 			this.linkLabel33.TabIndex = 40;
 			this.linkLabel33.TabStop = true;
 			this.linkLabel33.Text = "MRC33 - COMMON LAW ACTION FOR COMPENSATION FOR SERVICE RELATED INJURIES AND DISEA" +
@@ -128,7 +128,7 @@
 			this.linkLabel29.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel29.Location = new System.Drawing.Point(529, 545);
 			this.linkLabel29.Name = "linkLabel29";
-			this.linkLabel29.Size = new System.Drawing.Size(270, 25);
+			this.linkLabel29.Size = new System.Drawing.Size(342, 25);
 			this.linkLabel29.TabIndex = 39;
 			this.linkLabel29.TabStop = true;
 			this.linkLabel29.Text = "MRC29 - ACTUARY TABLES";
@@ -161,7 +161,7 @@
 			this.linkLabelAllSheets.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabelAllSheets.Location = new System.Drawing.Point(532, 124);
 			this.linkLabelAllSheets.Name = "linkLabelAllSheets";
-			this.linkLabelAllSheets.Size = new System.Drawing.Size(207, 29);
+			this.linkLabelAllSheets.Size = new System.Drawing.Size(267, 29);
 			this.linkLabelAllSheets.TabIndex = 36;
 			this.linkLabelAllSheets.TabStop = true;
 			this.linkLabelAllSheets.Text = "ALL DVA FACTSHEETS";
@@ -172,7 +172,7 @@
 			this.linkLabel15.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel15.Location = new System.Drawing.Point(529, 338);
 			this.linkLabel15.Name = "linkLabel15";
-			this.linkLabel15.Size = new System.Drawing.Size(324, 20);
+			this.linkLabel15.Size = new System.Drawing.Size(404, 20);
 			this.linkLabel15.TabIndex = 35;
 			this.linkLabel15.TabStop = true;
 			this.linkLabel15.Text = "MRC15 - ELIGIBLE YOUNG PERSONS";
@@ -183,7 +183,7 @@
 			this.linkLabel14.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel14.Location = new System.Drawing.Point(529, 294);
 			this.linkLabel14.Name = "linkLabel14";
-			this.linkLabel14.Size = new System.Drawing.Size(186, 20);
+			this.linkLabel14.Size = new System.Drawing.Size(232, 20);
 			this.linkLabel14.TabIndex = 34;
 			this.linkLabel14.TabStop = true;
 			this.linkLabel14.Text = "MRC14 - PARTNERS";
@@ -205,7 +205,7 @@
 			this.linkLabel9.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel9.Location = new System.Drawing.Point(36, 658);
 			this.linkLabel9.Name = "linkLabel9";
-			this.linkLabel9.Size = new System.Drawing.Size(440, 26);
+			this.linkLabel9.Size = new System.Drawing.Size(451, 26);
 			this.linkLabel9.TabIndex = 32;
 			this.linkLabel9.TabStop = true;
 			this.linkLabel9.Text = "MRC09 - SPECIAL RATE DP SAFETY NET PAYMENT";
@@ -249,7 +249,7 @@
 			this.linkLabel5.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel5.Location = new System.Drawing.Point(36, 488);
 			this.linkLabel5.Name = "linkLabel5";
-			this.linkLabel5.Size = new System.Drawing.Size(234, 20);
+			this.linkLabel5.Size = new System.Drawing.Size(306, 20);
 			this.linkLabel5.TabIndex = 28;
 			this.linkLabel5.TabStop = true;
 			this.linkLabel5.Text = "MRC05 - REHABILITATION";
@@ -260,7 +260,7 @@
 			this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel4.Location = new System.Drawing.Point(36, 447);
 			this.linkLabel4.Name = "linkLabel4";
-			this.linkLabel4.Size = new System.Drawing.Size(392, 27);
+			this.linkLabel4.Size = new System.Drawing.Size(418, 27);
 			this.linkLabel4.TabIndex = 27;
 			this.linkLabel4.TabStop = true;
 			this.linkLabel4.Text = "MRC04 - COMPENSATION PAYMENTS RATES";
@@ -271,7 +271,7 @@
 			this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel3.Location = new System.Drawing.Point(36, 402);
 			this.linkLabel3.Name = "linkLabel3";
-			this.linkLabel3.Size = new System.Drawing.Size(332, 27);
+			this.linkLabel3.Size = new System.Drawing.Size(392, 27);
 			this.linkLabel3.TabIndex = 26;
 			this.linkLabel3.TabStop = true;
 			this.linkLabel3.Text = "MRC03 - TYPES OF MRCA SERVICE";
@@ -304,7 +304,7 @@
 			this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
 			this.linkLabel1.Location = new System.Drawing.Point(36, 294);
 			this.linkLabel1.Name = "linkLabel1";
-			this.linkLabel1.Size = new System.Drawing.Size(199, 29);
+			this.linkLabel1.Size = new System.Drawing.Size(234, 29);
 			this.linkLabel1.TabIndex = 23;
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.Text = "MRC01 - OVERVIEW";

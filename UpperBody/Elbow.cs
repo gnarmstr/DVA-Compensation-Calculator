@@ -18,9 +18,10 @@ namespace DVA_Compensation_Calculator
 			panel1.BackgroundImage = Resources.Background_Blue;
 			if (GlobalVar.Selection == "LeftElbow")
 			{
-				switch (LeftElbow)
+				switch (GlobalVar.LeftElbowPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxLeftElbowPartially = 0;
 						break;
 					case 10: checkBoxOption2.Checked = true;
 						break;
@@ -33,12 +34,14 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxElbowPartially.SelectedIndex = GlobalVar.comboBoxLeftElbowPartially;
 			}
 			else
 			{
-				switch (RightElbow)
+				switch (GlobalVar.RightElbowPoints)
 				{
 					case 0: checkBoxOption1.Checked = true;
+						GlobalVar.comboBoxRightElbowPartially = 0;
 						break;
 					case 10: checkBoxOption2.Checked = true;
 						break;
@@ -51,6 +54,7 @@ namespace DVA_Compensation_Calculator
 					case 50: checkBoxOption6.Checked = true;
 						break;
 				}
+				comboBoxElbowPartially.SelectedIndex = GlobalVar.comboBoxRightElbowPartially;
 			}
 		}
 
@@ -163,11 +167,17 @@ namespace DVA_Compensation_Calculator
 		{
 			if (GlobalVar.Selection == "LeftElbow")
 			{
-				LeftElbow = Points;
+				GlobalVar.comboBoxLeftElbowPartially = comboBoxElbowPartially.SelectedIndex;
+				GlobalVar.LeftElbowPoints = Points;
+				LeftElbow = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedLeftElbowPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][LeftElbow][comboBoxElbowPartially.SelectedIndex + 2]);
 			}
 			else
 			{
-				RightElbow = Points;
+				GlobalVar.comboBoxRightElbowPartially = comboBoxElbowPartially.SelectedIndex;
+				GlobalVar.RightElbowPoints = Points;
+				RightElbow = Convert.ToInt16(GlobalVar.ExcelData[4][Points][GlobalVar.AgeAdjustRange]);
+				GlobalVar.combinedRightElbowPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][RightElbow][comboBoxElbowPartially.SelectedIndex + 2]);
 			}
 			Close();
 		}

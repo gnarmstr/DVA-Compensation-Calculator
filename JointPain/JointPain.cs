@@ -16,9 +16,10 @@ namespace DVA_Compensation_Calculator
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
-			switch (jointPain)
+			switch (GlobalVar.JointPainPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
+					GlobalVar.comboBoxJointPainPartially = 0;
 					break;
 				case 2: checkBoxOption2.Checked = true;
 					break;
@@ -29,6 +30,7 @@ namespace DVA_Compensation_Calculator
 				case 15: checkBoxOption5.Checked = true;
 					break;
 			}
+			comboBoxJointPainPartially.SelectedIndex = GlobalVar.comboBoxJointPainPartially;
 		}
 
 		protected override CreateParams CreateParams
@@ -116,6 +118,9 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
+			GlobalVar.comboBoxJointPainPartially = comboBoxJointPainPartially.SelectedIndex;
+			GlobalVar.JointPainPoints = jointPain;
+			GlobalVar.combinedJointPainPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][jointPain][comboBoxJointPainPartially.SelectedIndex + 2]);
 			Close();
 		}
 
