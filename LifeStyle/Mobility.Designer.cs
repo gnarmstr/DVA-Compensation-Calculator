@@ -42,15 +42,18 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxMobility2
 			// 
 			this.checkBoxMobility2.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility2.Location = new System.Drawing.Point(35, 334);
+			this.checkBoxMobility2.Location = new System.Drawing.Point(25, 315);
 			this.checkBoxMobility2.Name = "checkBoxMobility2";
 			this.checkBoxMobility2.Size = new System.Drawing.Size(1043, 77);
 			this.checkBoxMobility2.TabIndex = 11;
@@ -61,7 +64,7 @@
 			// checkBoxMobility7
 			// 
 			this.checkBoxMobility7.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility7.Location = new System.Drawing.Point(35, 795);
+			this.checkBoxMobility7.Location = new System.Drawing.Point(25, 776);
 			this.checkBoxMobility7.Name = "checkBoxMobility7";
 			this.checkBoxMobility7.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility7.TabIndex = 10;
@@ -72,7 +75,7 @@
 			// checkBoxMobility4
 			// 
 			this.checkBoxMobility4.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility4.Location = new System.Drawing.Point(35, 476);
+			this.checkBoxMobility4.Location = new System.Drawing.Point(25, 457);
 			this.checkBoxMobility4.Name = "checkBoxMobility4";
 			this.checkBoxMobility4.Size = new System.Drawing.Size(1043, 121);
 			this.checkBoxMobility4.TabIndex = 9;
@@ -83,7 +86,7 @@
 			// checkBoxMobility5
 			// 
 			this.checkBoxMobility5.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility5.Location = new System.Drawing.Point(35, 603);
+			this.checkBoxMobility5.Location = new System.Drawing.Point(25, 584);
 			this.checkBoxMobility5.Name = "checkBoxMobility5";
 			this.checkBoxMobility5.Size = new System.Drawing.Size(1043, 93);
 			this.checkBoxMobility5.TabIndex = 8;
@@ -94,7 +97,7 @@
 			// checkBoxMobility3
 			// 
 			this.checkBoxMobility3.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility3.Location = new System.Drawing.Point(35, 412);
+			this.checkBoxMobility3.Location = new System.Drawing.Point(25, 393);
 			this.checkBoxMobility3.Name = "checkBoxMobility3";
 			this.checkBoxMobility3.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility3.TabIndex = 7;
@@ -106,7 +109,7 @@
 			// checkBoxMobility1
 			// 
 			this.checkBoxMobility1.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility1.Location = new System.Drawing.Point(35, 277);
+			this.checkBoxMobility1.Location = new System.Drawing.Point(25, 258);
 			this.checkBoxMobility1.Name = "checkBoxMobility1";
 			this.checkBoxMobility1.Size = new System.Drawing.Size(1043, 46);
 			this.checkBoxMobility1.TabIndex = 6;
@@ -117,7 +120,7 @@
 			// checkBoxMobility6
 			// 
 			this.checkBoxMobility6.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility6.Location = new System.Drawing.Point(35, 713);
+			this.checkBoxMobility6.Location = new System.Drawing.Point(25, 694);
 			this.checkBoxMobility6.Name = "checkBoxMobility6";
 			this.checkBoxMobility6.Size = new System.Drawing.Size(1043, 69);
 			this.checkBoxMobility6.TabIndex = 13;
@@ -128,7 +131,7 @@
 			// checkBoxMobility8
 			// 
 			this.checkBoxMobility8.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxMobility8.Location = new System.Drawing.Point(35, 885);
+			this.checkBoxMobility8.Location = new System.Drawing.Point(25, 866);
 			this.checkBoxMobility8.Name = "checkBoxMobility8";
 			this.checkBoxMobility8.Size = new System.Drawing.Size(679, 69);
 			this.checkBoxMobility8.TabIndex = 12;
@@ -141,7 +144,7 @@
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(964, 904);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(966, 851);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -152,7 +155,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(840, 904);
+			this.pictureBoxOK.Location = new System.Drawing.Point(842, 851);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -164,7 +167,7 @@
 			// 
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(7, 78);
+			this.label1.Location = new System.Drawing.Point(10, 59);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(1064, 196);
 			this.label1.TabIndex = 21;
@@ -185,9 +188,9 @@
 			this.panel1.Controls.Add(this.checkBoxMobility5);
 			this.panel1.Controls.Add(this.checkBoxMobility3);
 			this.panel1.Controls.Add(this.checkBoxMobility1);
-			this.panel1.Location = new System.Drawing.Point(44, 43);
+			this.panel1.Location = new System.Drawing.Point(44, 101);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1080, 1003);
+			this.panel1.Size = new System.Drawing.Size(1080, 945);
 			this.panel1.TabIndex = 22;
 			// 
 			// label2
@@ -195,11 +198,37 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(430, 20);
+			this.label2.Location = new System.Drawing.Point(442, 20);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(133, 29);
 			this.label2.TabIndex = 22;
 			this.label2.Text = "MOBILITY";
+			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(44, 52);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(1031, 43);
+			this.buttonMainTitle.TabIndex = 96;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(1081, 52);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 95;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
 			// 
 			// Mobility
 			// 
@@ -208,6 +237,8 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1200, 1120);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.MaximumSize = new System.Drawing.Size(1200, 1120);
@@ -220,6 +251,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -239,5 +271,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

@@ -171,6 +171,7 @@
     <Compile Include="Disclaimer.Designer.cs">
       <DependentUpon>Disclaimer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDrag.cs" />
     <Compile Include="LifeStyleRatingCheck.cs">
       <SubType>Form</SubType>
     </Compile>

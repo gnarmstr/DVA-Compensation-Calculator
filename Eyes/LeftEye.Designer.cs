@@ -53,6 +53,8 @@
 			this.label98 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.groupBox16.SuspendLayout();
@@ -60,12 +62,13 @@
 			this.groupBox13.SuspendLayout();
 			this.groupBox14.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(473, 912);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(473, 886);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -76,7 +79,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(363, 912);
+			this.pictureBoxOK.Location = new System.Drawing.Point(363, 886);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -359,10 +362,36 @@
 			this.panel1.Controls.Add(this.groupBox15);
 			this.panel1.Controls.Add(this.groupBox13);
 			this.panel1.Controls.Add(this.groupBox14);
-			this.panel1.Location = new System.Drawing.Point(30, 24);
+			this.panel1.Location = new System.Drawing.Point(30, 75);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(597, 1015);
+			this.panel1.Size = new System.Drawing.Size(597, 969);
 			this.panel1.TabIndex = 81;
+			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(30, 26);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(548, 43);
+			this.buttonMainTitle.TabIndex = 94;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(584, 26);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 93;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
 			// 
 			// LeftEye
 			// 
@@ -371,6 +400,8 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(650, 1070);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.MaximumSize = new System.Drawing.Size(650, 1070);
@@ -391,6 +422,7 @@
 			this.groupBox14.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -421,5 +453,7 @@
 		private System.Windows.Forms.Label label98;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

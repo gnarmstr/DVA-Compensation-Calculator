@@ -42,9 +42,12 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
@@ -183,7 +186,7 @@
 			this.panel1.Controls.Add(this.checkBoxOption5);
 			this.panel1.Controls.Add(this.checkBoxOption2);
 			this.panel1.Controls.Add(this.checkBoxOption4);
-			this.panel1.Location = new System.Drawing.Point(32, 48);
+			this.panel1.Location = new System.Drawing.Point(35, 81);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(1032, 958);
 			this.panel1.TabIndex = 22;
@@ -198,6 +201,32 @@
 			this.label2.TabIndex = 22;
 			this.label2.Text = "DOMESTIC ACTIVITIES";
 			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(35, 32);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(983, 43);
+			this.buttonMainTitle.TabIndex = 96;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(1024, 32);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 95;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
+			// 
 			// DomesticActivities
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -205,6 +234,8 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1116, 1100);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.MaximumSize = new System.Drawing.Size(1116, 1100);
@@ -216,6 +247,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.panel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -235,5 +267,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

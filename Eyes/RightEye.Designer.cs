@@ -53,6 +53,8 @@
 			this.label93 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.groupBox16.SuspendLayout();
@@ -60,12 +62,13 @@
 			this.groupBox13.SuspendLayout();
 			this.groupBox14.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBoxCancel
 			// 
 			this.pictureBoxCancel.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxCancel.Location = new System.Drawing.Point(456, 901);
+			this.pictureBoxCancel.Location = new System.Drawing.Point(483, 864);
 			this.pictureBoxCancel.Name = "pictureBoxCancel";
 			this.pictureBoxCancel.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxCancel.TabIndex = 15;
@@ -76,7 +79,7 @@
 			// pictureBoxOK
 			// 
 			this.pictureBoxOK.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBoxOK.Location = new System.Drawing.Point(346, 901);
+			this.pictureBoxOK.Location = new System.Drawing.Point(373, 864);
 			this.pictureBoxOK.Name = "pictureBoxOK";
 			this.pictureBoxOK.Size = new System.Drawing.Size(80, 80);
 			this.pictureBoxOK.TabIndex = 14;
@@ -91,7 +94,7 @@
 			this.groupBox16.Controls.Add(this.textBoxRightVisualFOL);
 			this.groupBox16.Controls.Add(this.label109);
 			this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox16.Location = new System.Drawing.Point(24, 426);
+			this.groupBox16.Location = new System.Drawing.Point(25, 407);
 			this.groupBox16.Name = "groupBox16";
 			this.groupBox16.Size = new System.Drawing.Size(538, 131);
 			this.groupBox16.TabIndex = 79;
@@ -139,7 +142,7 @@
 			this.groupBox15.Controls.Add(this.label105);
 			this.groupBox15.Controls.Add(this.textBoxRightMonocular);
 			this.groupBox15.Controls.Add(this.label106);
-			this.groupBox15.Location = new System.Drawing.Point(24, 89);
+			this.groupBox15.Location = new System.Drawing.Point(25, 70);
 			this.groupBox15.Name = "groupBox15";
 			this.groupBox15.Size = new System.Drawing.Size(538, 318);
 			this.groupBox15.TabIndex = 80;
@@ -220,7 +223,7 @@
 			this.groupBox13.Controls.Add(this.buttonRightOtherOcular);
 			this.groupBox13.Controls.Add(this.textBoxRightOtherOcular);
 			this.groupBox13.Controls.Add(this.label96);
-			this.groupBox13.Location = new System.Drawing.Point(24, 731);
+			this.groupBox13.Location = new System.Drawing.Point(25, 712);
 			this.groupBox13.Name = "groupBox13";
 			this.groupBox13.Size = new System.Drawing.Size(538, 127);
 			this.groupBox13.TabIndex = 78;
@@ -267,7 +270,7 @@
 			this.groupBox14.Controls.Add(this.textBoxRightMiscVisual);
 			this.groupBox14.Controls.Add(this.label93);
 			this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox14.Location = new System.Drawing.Point(24, 584);
+			this.groupBox14.Location = new System.Drawing.Point(25, 565);
 			this.groupBox14.Name = "groupBox14";
 			this.groupBox14.Size = new System.Drawing.Size(538, 126);
 			this.groupBox14.TabIndex = 77;
@@ -344,7 +347,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(240, 33);
+			this.label1.Location = new System.Drawing.Point(241, 14);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(101, 29);
 			this.label1.TabIndex = 81;
@@ -360,10 +363,36 @@
 			this.panel1.Controls.Add(this.groupBox15);
 			this.panel1.Controls.Add(this.groupBox13);
 			this.panel1.Controls.Add(this.groupBox14);
-			this.panel1.Location = new System.Drawing.Point(28, 30);
+			this.panel1.Location = new System.Drawing.Point(28, 72);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(587, 1003);
+			this.panel1.Size = new System.Drawing.Size(587, 961);
 			this.panel1.TabIndex = 82;
+			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(28, 23);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(538, 43);
+			this.buttonMainTitle.TabIndex = 96;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(572, 23);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 95;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
 			// 
 			// RightEye
 			// 
@@ -372,6 +401,8 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(650, 1070);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.MaximumSize = new System.Drawing.Size(650, 1070);
@@ -392,6 +423,7 @@
 			this.groupBox14.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -422,5 +454,7 @@
 		private System.Windows.Forms.Label label100;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

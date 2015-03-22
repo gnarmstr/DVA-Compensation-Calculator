@@ -13,6 +13,8 @@ namespace DVA_Compensation_Calculator
 			if (ActiveForm != null)
 				Location = new Point(ActiveForm.Location.X + 55, ActiveForm.Location.Y + 50);
 			InitializeComponent();
+			pictureBoxClose.BackgroundImage = Resources.Close;
+			buttonMainTitle.BackgroundImage = Resources.button_Blue_Small;
 			MinimumSize = new Size(613, 655);
 			MaximumSize = new Size(613, 655);
 			BackgroundImage = Resources.MainBackground_Green_Form;
@@ -30,6 +32,25 @@ namespace DVA_Compensation_Calculator
 			}
 		}
 
+		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
+		{
+			FormDrag.formDrag_MouseDown(e);
+		}
+
+		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (GlobalVar.dragging)
+			{
+				Left = e.X + Left - GlobalVar.offsetX;
+				Top = e.Y + Top - GlobalVar.offsetY;
+			}
+		}
+
+		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
+		{
+			FormDrag.formDrag_MouseUp(e);
+		}
+
 		private void pictureBoxOK_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -38,6 +59,11 @@ namespace DVA_Compensation_Calculator
 		private void ImportantInformation_Load(object sender, EventArgs e)
 		{
 			pictureBoxOK.Image = Tools.GetIcon(Resources.Ok, 40);
+		}
+
+		private void pictureBoxClose_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 
 		

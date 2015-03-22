@@ -264,7 +264,11 @@ namespace DVA_Compensation_Calculator
 
 		public static bool WarningVisible;
 
-		public static decimal LumpSumFactor;
+		public static bool dragging;
+
+		public static int offsetX;
+
+		public static int offsetY;
 
 	}
 }

@@ -2,21 +2,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Tracing;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using Common.Resources;
 using Common.Resources.Properties;
 using GemBox.Spreadsheet;
-using GemBox.Spreadsheet.WinFormsUtilities;
-using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using System.IO;
 using Application = System.Windows.Forms.Application;
@@ -65,7 +57,6 @@ namespace DVA_Compensation_Calculator
 
 		private void Settings()
 		{
-			GlobalVar.LumpSumFactor = -1;
 			MinimumSize = new Size(725, 790);
 			MaximumSize = new Size(725, 790);
 			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -1167,35 +1158,6 @@ namespace DVA_Compensation_Calculator
 							Convert.ToDecimal(textBoxWeeklyPayout.Text), 2)).ToString();
 				}
 			}
-			comboBoxLumpSumConversion.Items.Clear();
-			if (Convert.ToDecimal(textBoxFinalCompensationFactor.Text) * 100 < 10)
-			{
-				comboBoxLumpSumConversion.Items.Add("100");
-				comboBoxLumpSumConversion.Items.Add("0");
-			}
-			else
-			{
-				if (Convert.ToDecimal(textBoxFinalCompensationFactor.Text) * 100 > 9 &
-					Convert.ToDecimal(textBoxFinalCompensationFactor.Text) * 100 < 21)
-				{
-					comboBoxLumpSumConversion.Items.Add("100");
-					comboBoxLumpSumConversion.Items.Add("50");
-					comboBoxLumpSumConversion.Items.Add("0");
-				}
-				else
-				{
-					comboBoxLumpSumConversion.Items.Add("100");
-					comboBoxLumpSumConversion.Items.Add("50");
-					comboBoxLumpSumConversion.Items.Add("25");
-					comboBoxLumpSumConversion.Items.Add("0");
-				}
-			}
-
-			if (GlobalVar.LumpSumFactor > -1)
-			{
-				textBoxLumpSumPayout.Text = (Math.Round(Convert.ToDecimal(textBoxLumpSumPayout.Text) * (GlobalVar.LumpSumFactor / 100), 2)).ToString();
-			}
-
 			Visability();
 		}
 		#endregion
@@ -1632,37 +1594,23 @@ namespace DVA_Compensation_Calculator
 
 		#region Drag Main Form around
 
-		public static bool dragging;
-
-		public static int offsetX;
-
-		public static int offsetY;
-
 		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left)
-			{
-				dragging = true;
-				offsetX = e.X;
-				offsetY = e.Y;
-			}
+			FormDrag.formDrag_MouseDown(e);
 		}
 
 		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
 		{
-			if (dragging)
+			if (GlobalVar.dragging)
 			{
-				Left = e.X + Left - offsetX;
-				Top = e.Y + Top - offsetY;
+				Left = e.X + Left - GlobalVar.offsetX;
+				Top = e.Y + Top - GlobalVar.offsetY;
 			}
 		}
 
 		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
 		{
-			if (e.Button == MouseButtons.Left)
-			{
-				dragging = false;
-			}
+			FormDrag.formDrag_MouseUp(e);
 		}
 
 		private void buttonDVALinks_Click(object sender, EventArgs e)
@@ -2920,22 +2868,7 @@ namespace DVA_Compensation_Calculator
 
 		#endregion
 
-		private void comboBoxLumpSumConversion_TextChanged(object sender, EventArgs e)
-		{
-			GlobalVar.LumpSumFactor = Convert.ToDecimal(comboBoxLumpSumConversion.Text);
-			UpdateAll();
-		}
-
-
-
-
-
 		#endregion
-
-
-
-
-
 
 	}
 }

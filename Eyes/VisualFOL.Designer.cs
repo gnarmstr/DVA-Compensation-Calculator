@@ -37,10 +37,13 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.valueFOL)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBoxCancel
@@ -124,10 +127,36 @@
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.pictureBoxCancel);
 			this.panel1.Controls.Add(this.pictureBoxOK);
-			this.panel1.Location = new System.Drawing.Point(32, 38);
+			this.panel1.Location = new System.Drawing.Point(32, 82);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(706, 662);
+			this.panel1.Size = new System.Drawing.Size(706, 644);
 			this.panel1.TabIndex = 26;
+			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(32, 33);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(657, 43);
+			this.buttonMainTitle.TabIndex = 96;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(695, 33);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 95;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
 			// 
 			// VisualFOL
 			// 
@@ -135,11 +164,13 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(770, 740);
+			this.ClientSize = new System.Drawing.Size(770, 760);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(770, 740);
-			this.MinimumSize = new System.Drawing.Size(770, 740);
+			this.MaximumSize = new System.Drawing.Size(770, 760);
+			this.MinimumSize = new System.Drawing.Size(770, 760);
 			this.Name = "VisualFOL";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Visual Field Loss";
@@ -149,6 +180,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.valueFOL)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -163,5 +195,7 @@
 		public System.Windows.Forms.NumericUpDown valueFOL;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

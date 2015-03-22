@@ -47,9 +47,12 @@
 			this.comboBoxWholeLimbPartially = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
@@ -205,7 +208,7 @@
 			this.panel1.Controls.Add(this.checkBoxOption5);
 			this.panel1.Controls.Add(this.checkBoxOption3);
 			this.panel1.Controls.Add(this.checkBoxOption1);
-			this.panel1.Location = new System.Drawing.Point(36, 36);
+			this.panel1.Location = new System.Drawing.Point(36, 77);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(915, 1088);
 			this.panel1.TabIndex = 25;
@@ -221,8 +224,8 @@
 			this.label3.TabIndex = 61;
 			this.label3.Text = "Partially Contributing Impairment:";
 			this.toolTip1.SetToolTip(this.label3, "Partially contributing impairment is to be applied whenever an impairment is not " +
-        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
-        "pted condition is fully covered.");
+        "due solely to the effects of the accepted condition.\r\n\"Complete\" indicates the a" +
+        "ccepted condition is fully covered.");
 			// 
 			// comboBoxWholeLimbPartially
 			// 
@@ -239,6 +242,9 @@
 			this.comboBoxWholeLimbPartially.Name = "comboBoxWholeLimbPartially";
 			this.comboBoxWholeLimbPartially.Size = new System.Drawing.Size(142, 28);
 			this.comboBoxWholeLimbPartially.TabIndex = 27;
+			this.toolTip1.SetToolTip(this.comboBoxWholeLimbPartially, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of the accepted condition.\r\n\"Complete\" indicates the a" +
+        "ccepted condition is fully covered.");
 			// 
 			// label2
 			// 
@@ -257,17 +263,45 @@
 			this.toolTip1.InitialDelay = 500;
 			this.toolTip1.ReshowDelay = 100;
 			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(36, 28);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(866, 43);
+			this.buttonMainTitle.TabIndex = 96;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(908, 28);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 95;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
+			// 
 			// WholeLimb
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(1000, 1160);
+			this.ClientSize = new System.Drawing.Size(1000, 1200);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.MaximumSize = new System.Drawing.Size(1000, 1160);
-			this.MinimumSize = new System.Drawing.Size(1000, 1160);
+			this.MaximumSize = new System.Drawing.Size(1000, 1200);
+			this.MinimumSize = new System.Drawing.Size(1000, 1200);
 			this.Name = "WholeLimb";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Whole Lower Limb";
@@ -276,6 +310,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -299,5 +334,7 @@
 		private System.Windows.Forms.ComboBox comboBoxWholeLimbPartially;
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }

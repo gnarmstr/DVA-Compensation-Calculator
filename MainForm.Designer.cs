@@ -123,6 +123,7 @@
 			this.label29 = new System.Windows.Forms.Label();
 			this.label30 = new System.Windows.Forms.Label();
 			this.checkBoxEyesWar = new System.Windows.Forms.CheckBox();
+			this.checkBoxEmotionalBehavioural = new System.Windows.Forms.CheckBox();
 			this.label31 = new System.Windows.Forms.Label();
 			this.label32 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
@@ -141,6 +142,8 @@
 			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			this.buttonMainTitle = new System.Windows.Forms.Button();
 			this.panelMainPoints = new System.Windows.Forms.Panel();
+			this.buttonEmotionalBehavioural = new System.Windows.Forms.Button();
+			this.textBoxEmotionalBehavioural = new System.Windows.Forms.TextBox();
 			this.labelRightShoulder = new System.Windows.Forms.Label();
 			this.buttonLifeStyle = new System.Windows.Forms.Button();
 			this.labelToes = new System.Windows.Forms.Label();
@@ -165,11 +168,6 @@
 			this.buttonLeftEye = new System.Windows.Forms.Button();
 			this.buttonDVALinks = new System.Windows.Forms.Button();
 			this.buttonInstructions = new System.Windows.Forms.Button();
-			this.checkBoxEmotionalBehavioural = new System.Windows.Forms.CheckBox();
-			this.buttonEmotionalBehavioural = new System.Windows.Forms.Button();
-			this.textBoxEmotionalBehavioural = new System.Windows.Forms.TextBox();
-			this.comboBoxLumpSumConversion = new System.Windows.Forms.ComboBox();
-			this.label3 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.SaveAll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.panelMainPoints.SuspendLayout();
@@ -179,7 +177,7 @@
 			// 
 			this.textBoxWeeklyPayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxWeeklyPayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxWeeklyPayout.Location = new System.Drawing.Point(416, 1077);
+			this.textBoxWeeklyPayout.Location = new System.Drawing.Point(406, 1077);
 			this.textBoxWeeklyPayout.Name = "textBoxWeeklyPayout";
 			this.textBoxWeeklyPayout.ReadOnly = true;
 			this.textBoxWeeklyPayout.Size = new System.Drawing.Size(88, 30);
@@ -192,7 +190,7 @@
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.DarkRed;
-			this.label1.Location = new System.Drawing.Point(22, 1077);
+			this.label1.Location = new System.Drawing.Point(12, 1077);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(324, 25);
 			this.label1.TabIndex = 1;
@@ -206,11 +204,11 @@
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.DarkRed;
-			this.label2.Location = new System.Drawing.Point(590, 1080);
+			this.label2.Location = new System.Drawing.Point(536, 1080);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(195, 25);
+			this.label2.Size = new System.Drawing.Size(344, 25);
 			this.label2.TabIndex = 3;
-			this.label2.Text = "Lump Sum Payout:";
+			this.label2.Text = "Payout taken as 100% Lump Sum:";
 			this.toolTip1.SetToolTip(this.label2, "This is the amount of money if you took the Compensation as a 100% lump sum.");
 			// 
 			// textBoxLumpSumPayout
@@ -1215,7 +1213,7 @@
 			this.label28.BackColor = System.Drawing.Color.Transparent;
 			this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label28.ForeColor = System.Drawing.Color.DarkRed;
-			this.label28.Location = new System.Drawing.Point(590, 843);
+			this.label28.Location = new System.Drawing.Point(536, 842);
 			this.label28.Name = "label28";
 			this.label28.Size = new System.Drawing.Size(292, 25);
 			this.label28.TabIndex = 46;
@@ -1225,7 +1223,7 @@
 			// 
 			this.textBoxCompensationFactorPeace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxCompensationFactorPeace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(984, 840);
+			this.textBoxCompensationFactorPeace.Location = new System.Drawing.Point(984, 839);
 			this.textBoxCompensationFactorPeace.Name = "textBoxCompensationFactorPeace";
 			this.textBoxCompensationFactorPeace.ReadOnly = true;
 			this.textBoxCompensationFactorPeace.Size = new System.Drawing.Size(70, 30);
@@ -1239,7 +1237,7 @@
 			this.label19.BackColor = System.Drawing.Color.Transparent;
 			this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label19.ForeColor = System.Drawing.Color.DarkRed;
-			this.label19.Location = new System.Drawing.Point(590, 800);
+			this.label19.Location = new System.Drawing.Point(536, 799);
 			this.label19.Name = "label19";
 			this.label19.Size = new System.Drawing.Size(350, 25);
 			this.label19.TabIndex = 23;
@@ -1249,7 +1247,7 @@
 			// 
 			this.textBoxCompensationFactorWar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxCompensationFactorWar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(984, 797);
+			this.textBoxCompensationFactorWar.Location = new System.Drawing.Point(984, 796);
 			this.textBoxCompensationFactorWar.Name = "textBoxCompensationFactorWar";
 			this.textBoxCompensationFactorWar.ReadOnly = true;
 			this.textBoxCompensationFactorWar.Size = new System.Drawing.Size(70, 30);
@@ -1393,7 +1391,7 @@
 			this.label29.BackColor = System.Drawing.Color.Transparent;
 			this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label29.ForeColor = System.Drawing.Color.DarkRed;
-			this.label29.Location = new System.Drawing.Point(23, 1028);
+			this.label29.Location = new System.Drawing.Point(13, 1028);
 			this.label29.Name = "label29";
 			this.label29.Size = new System.Drawing.Size(238, 25);
 			this.label29.TabIndex = 72;
@@ -1407,7 +1405,7 @@
 			this.label30.BackColor = System.Drawing.Color.Transparent;
 			this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label30.ForeColor = System.Drawing.Color.DarkRed;
-			this.label30.Location = new System.Drawing.Point(590, 984);
+			this.label30.Location = new System.Drawing.Point(536, 1028);
 			this.label30.Name = "label30";
 			this.label30.Size = new System.Drawing.Size(278, 25);
 			this.label30.TabIndex = 74;
@@ -1428,13 +1426,26 @@
 			this.checkBoxEyesWar.UseVisualStyleBackColor = false;
 			this.checkBoxEyesWar.CheckedChanged += new System.EventHandler(this.checkBoxEyesWar_CheckedChanged);
 			// 
+			// checkBoxEmotionalBehavioural
+			// 
+			this.checkBoxEmotionalBehavioural.AutoSize = true;
+			this.checkBoxEmotionalBehavioural.BackColor = System.Drawing.Color.Transparent;
+			this.checkBoxEmotionalBehavioural.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBoxEmotionalBehavioural.Location = new System.Drawing.Point(977, 631);
+			this.checkBoxEmotionalBehavioural.Name = "checkBoxEmotionalBehavioural";
+			this.checkBoxEmotionalBehavioural.Size = new System.Drawing.Size(22, 21);
+			this.checkBoxEmotionalBehavioural.TabIndex = 106;
+			this.toolTip1.SetToolTip(this.checkBoxEmotionalBehavioural, "Check when injury happened during War Service.");
+			this.checkBoxEmotionalBehavioural.UseVisualStyleBackColor = false;
+			this.checkBoxEmotionalBehavioural.CheckedChanged += new System.EventHandler(this.checkBoxEmotionalBehavioural_CheckedChanged);
+			// 
 			// label31
 			// 
 			this.label31.AutoSize = true;
 			this.label31.BackColor = System.Drawing.Color.Transparent;
 			this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label31.ForeColor = System.Drawing.Color.DarkRed;
-			this.label31.Location = new System.Drawing.Point(23, 975);
+			this.label31.Location = new System.Drawing.Point(13, 975);
 			this.label31.Name = "label31";
 			this.label31.Size = new System.Drawing.Size(259, 25);
 			this.label31.TabIndex = 76;
@@ -1446,7 +1457,7 @@
 			this.label32.BackColor = System.Drawing.Color.Transparent;
 			this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label32.ForeColor = System.Drawing.Color.DarkRed;
-			this.label32.Location = new System.Drawing.Point(590, 940);
+			this.label32.Location = new System.Drawing.Point(536, 978);
 			this.label32.Name = "label32";
 			this.label32.Size = new System.Drawing.Size(280, 25);
 			this.label32.TabIndex = 78;
@@ -1467,7 +1478,7 @@
 			// 
 			this.textBoxComibinedPoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxComibinedPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxComibinedPoints.Location = new System.Drawing.Point(418, 1028);
+			this.textBoxComibinedPoints.Location = new System.Drawing.Point(408, 1028);
 			this.textBoxComibinedPoints.Name = "textBoxComibinedPoints";
 			this.textBoxComibinedPoints.ReadOnly = true;
 			this.textBoxComibinedPoints.Size = new System.Drawing.Size(86, 30);
@@ -1479,7 +1490,7 @@
 			// 
 			this.textBoxFinalCompensationFactor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxFinalCompensationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(937, 981);
+			this.textBoxFinalCompensationFactor.Location = new System.Drawing.Point(937, 1025);
 			this.textBoxFinalCompensationFactor.Name = "textBoxFinalCompensationFactor";
 			this.textBoxFinalCompensationFactor.ReadOnly = true;
 			this.textBoxFinalCompensationFactor.Size = new System.Drawing.Size(121, 30);
@@ -1491,7 +1502,7 @@
 			// 
 			this.textBoxTotalWarPoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxTotalWarPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTotalWarPoints.Location = new System.Drawing.Point(418, 975);
+			this.textBoxTotalWarPoints.Location = new System.Drawing.Point(408, 975);
 			this.textBoxTotalWarPoints.Name = "textBoxTotalWarPoints";
 			this.textBoxTotalWarPoints.ReadOnly = true;
 			this.textBoxTotalWarPoints.Size = new System.Drawing.Size(86, 30);
@@ -1503,7 +1514,7 @@
 			// 
 			this.textBoxTotalPeacePoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxTotalPeacePoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(936, 937);
+			this.textBoxTotalPeacePoints.Location = new System.Drawing.Point(936, 975);
 			this.textBoxTotalPeacePoints.Name = "textBoxTotalPeacePoints";
 			this.textBoxTotalPeacePoints.ReadOnly = true;
 			this.textBoxTotalPeacePoints.Size = new System.Drawing.Size(122, 30);
@@ -1517,7 +1528,7 @@
 			this.label33.BackColor = System.Drawing.Color.Transparent;
 			this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label33.ForeColor = System.Drawing.Color.DarkRed;
-			this.label33.Location = new System.Drawing.Point(388, 1078);
+			this.label33.Location = new System.Drawing.Point(377, 1078);
 			this.label33.Name = "label33";
 			this.label33.Size = new System.Drawing.Size(26, 29);
 			this.label33.TabIndex = 79;
@@ -1529,7 +1540,7 @@
 			this.label34.BackColor = System.Drawing.Color.Transparent;
 			this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label34.ForeColor = System.Drawing.Color.DarkRed;
-			this.label34.Location = new System.Drawing.Point(909, 1078);
+			this.label34.Location = new System.Drawing.Point(908, 1078);
 			this.label34.Name = "label34";
 			this.label34.Size = new System.Drawing.Size(26, 29);
 			this.label34.TabIndex = 80;
@@ -1553,7 +1564,7 @@
 			this.label18.BackColor = System.Drawing.Color.Transparent;
 			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label18.ForeColor = System.Drawing.Color.DarkRed;
-			this.label18.Location = new System.Drawing.Point(590, 890);
+			this.label18.Location = new System.Drawing.Point(536, 889);
 			this.label18.Name = "label18";
 			this.label18.Size = new System.Drawing.Size(228, 25);
 			this.label18.TabIndex = 82;
@@ -1563,7 +1574,7 @@
 			// 
 			this.textBoxFinalLifeStylePoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
 			this.textBoxFinalLifeStylePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(984, 887);
+			this.textBoxFinalLifeStylePoint.Location = new System.Drawing.Point(984, 886);
 			this.textBoxFinalLifeStylePoint.Name = "textBoxFinalLifeStylePoint";
 			this.textBoxFinalLifeStylePoint.ReadOnly = true;
 			this.textBoxFinalLifeStylePoint.Size = new System.Drawing.Size(71, 30);
@@ -1618,7 +1629,7 @@
 			this.buttonMainTitle.Name = "buttonMainTitle";
 			this.buttonMainTitle.Size = new System.Drawing.Size(1021, 43);
 			this.buttonMainTitle.TabIndex = 88;
-			this.buttonMainTitle.Text = "Ver 1.8               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
+			this.buttonMainTitle.Text = "Ver 1.9               DVA COMPENSATION (MRCA) CALCULATOR - by Geoff Armstrong    " +
     "                     ";
 			this.buttonMainTitle.UseVisualStyleBackColor = true;
 			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
@@ -1731,6 +1742,31 @@
 			this.panelMainPoints.Name = "panelMainPoints";
 			this.panelMainPoints.Size = new System.Drawing.Size(1070, 674);
 			this.panelMainPoints.TabIndex = 83;
+			// 
+			// buttonEmotionalBehavioural
+			// 
+			this.buttonEmotionalBehavioural.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonEmotionalBehavioural.FlatAppearance.BorderSize = 2;
+			this.buttonEmotionalBehavioural.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonEmotionalBehavioural.Location = new System.Drawing.Point(858, 554);
+			this.buttonEmotionalBehavioural.Name = "buttonEmotionalBehavioural";
+			this.buttonEmotionalBehavioural.Size = new System.Drawing.Size(176, 57);
+			this.buttonEmotionalBehavioural.TabIndex = 107;
+			this.buttonEmotionalBehavioural.Text = "Click for Emotional and Behavioural";
+			this.buttonEmotionalBehavioural.UseVisualStyleBackColor = true;
+			this.buttonEmotionalBehavioural.Click += new System.EventHandler(this.buttonEmotionalBehavioural_Click);
+			// 
+			// textBoxEmotionalBehavioural
+			// 
+			this.textBoxEmotionalBehavioural.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.textBoxEmotionalBehavioural.Location = new System.Drawing.Point(889, 627);
+			this.textBoxEmotionalBehavioural.Name = "textBoxEmotionalBehavioural";
+			this.textBoxEmotionalBehavioural.ReadOnly = true;
+			this.textBoxEmotionalBehavioural.Size = new System.Drawing.Size(70, 26);
+			this.textBoxEmotionalBehavioural.TabIndex = 105;
+			this.textBoxEmotionalBehavioural.Text = "0";
+			this.textBoxEmotionalBehavioural.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxEmotionalBehavioural.TextChanged += new System.EventHandler(this.textBoxEmotionalBehavioural_TextChanged);
 			// 
 			// labelRightShoulder
 			// 
@@ -2016,74 +2052,6 @@
 			this.buttonInstructions.UseVisualStyleBackColor = false;
 			this.buttonInstructions.Click += new System.EventHandler(this.buttonInstructions_Click);
 			// 
-			// checkBoxEmotionalBehavioural
-			// 
-			this.checkBoxEmotionalBehavioural.AutoSize = true;
-			this.checkBoxEmotionalBehavioural.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxEmotionalBehavioural.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxEmotionalBehavioural.Location = new System.Drawing.Point(977, 631);
-			this.checkBoxEmotionalBehavioural.Name = "checkBoxEmotionalBehavioural";
-			this.checkBoxEmotionalBehavioural.Size = new System.Drawing.Size(22, 21);
-			this.checkBoxEmotionalBehavioural.TabIndex = 106;
-			this.toolTip1.SetToolTip(this.checkBoxEmotionalBehavioural, "Check when injury happened during War Service.");
-			this.checkBoxEmotionalBehavioural.UseVisualStyleBackColor = false;
-			this.checkBoxEmotionalBehavioural.CheckedChanged += new System.EventHandler(this.checkBoxEmotionalBehavioural_CheckedChanged);
-			// 
-			// buttonEmotionalBehavioural
-			// 
-			this.buttonEmotionalBehavioural.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonEmotionalBehavioural.FlatAppearance.BorderSize = 2;
-			this.buttonEmotionalBehavioural.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.buttonEmotionalBehavioural.Location = new System.Drawing.Point(858, 554);
-			this.buttonEmotionalBehavioural.Name = "buttonEmotionalBehavioural";
-			this.buttonEmotionalBehavioural.Size = new System.Drawing.Size(176, 57);
-			this.buttonEmotionalBehavioural.TabIndex = 107;
-			this.buttonEmotionalBehavioural.Text = "Click for Emotional and Behavioural";
-			this.buttonEmotionalBehavioural.UseVisualStyleBackColor = true;
-			this.buttonEmotionalBehavioural.Click += new System.EventHandler(this.buttonEmotionalBehavioural_Click);
-			// 
-			// textBoxEmotionalBehavioural
-			// 
-			this.textBoxEmotionalBehavioural.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.textBoxEmotionalBehavioural.Location = new System.Drawing.Point(889, 627);
-			this.textBoxEmotionalBehavioural.Name = "textBoxEmotionalBehavioural";
-			this.textBoxEmotionalBehavioural.ReadOnly = true;
-			this.textBoxEmotionalBehavioural.Size = new System.Drawing.Size(70, 26);
-			this.textBoxEmotionalBehavioural.TabIndex = 105;
-			this.textBoxEmotionalBehavioural.Text = "0";
-			this.textBoxEmotionalBehavioural.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.textBoxEmotionalBehavioural.TextChanged += new System.EventHandler(this.textBoxEmotionalBehavioural_TextChanged);
-			// 
-			// comboBoxLumpSumConversion
-			// 
-			this.comboBoxLumpSumConversion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxLumpSumConversion.FormattingEnabled = true;
-			this.comboBoxLumpSumConversion.Items.AddRange(new object[] {
-            "100",
-            "75",
-            "50",
-            "25",
-            "0"});
-			this.comboBoxLumpSumConversion.Location = new System.Drawing.Point(980, 1032);
-			this.comboBoxLumpSumConversion.Name = "comboBoxLumpSumConversion";
-			this.comboBoxLumpSumConversion.Size = new System.Drawing.Size(76, 28);
-			this.comboBoxLumpSumConversion.TabIndex = 92;
-			this.comboBoxLumpSumConversion.TextChanged += new System.EventHandler(this.comboBoxLumpSumConversion_TextChanged);
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.BackColor = System.Drawing.Color.Transparent;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.DarkRed;
-			this.label3.Location = new System.Drawing.Point(590, 1035);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(329, 25);
-			this.label3.TabIndex = 93;
-			this.label3.Text = "Conversion to Lump Sum Factor:";
-			this.toolTip1.SetToolTip(this.label3, "This is used to determine the Compensation payout and is multiplied by the Weekly" +
-        " Rate to get your Compensation.");
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2091,8 +2059,6 @@
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.ClientSize = new System.Drawing.Size(1090, 1200);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.comboBoxLumpSumConversion);
 			this.Controls.Add(this.buttonInstructions);
 			this.Controls.Add(this.buttonDVALinks);
 			this.Controls.Add(this.label28);
@@ -2132,7 +2098,7 @@
 			this.Controls.Add(this.textBoxWeeklyPayment);
 			this.Controls.Add(this.label85);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Location = new System.Drawing.Point(300, 100);
+			this.Location = new System.Drawing.Point(300, 50);
 			this.MaximumSize = new System.Drawing.Size(1090, 1200);
 			this.MinimumSize = new System.Drawing.Size(1090, 1200);
 			this.Name = "MainForm";
@@ -2290,8 +2256,6 @@
 		private System.Windows.Forms.CheckBox checkBoxEmotionalBehavioural;
 		private System.Windows.Forms.Button buttonEmotionalBehavioural;
 		private System.Windows.Forms.TextBox textBoxEmotionalBehavioural;
-		private System.Windows.Forms.ComboBox comboBoxLumpSumConversion;
-		private System.Windows.Forms.Label label3;
 	}
 }
 

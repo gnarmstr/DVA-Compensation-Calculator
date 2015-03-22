@@ -11,10 +11,12 @@ namespace DVA_Compensation_Calculator
 		public Ears()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 10, ActiveForm.Location.Y - 50);
+				Location = new Point(ActiveForm.Location.X + 10, ActiveForm.Location.Y - 25);
 			InitializeComponent();
 			MinimumSize = new Size(705, 840);
 			MaximumSize = new Size(705, 840);
+			pictureBoxClose.BackgroundImage = Resources.Close;
+			buttonMainTitle.BackgroundImage = Resources.button_Blue_Small;
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
@@ -59,6 +61,25 @@ namespace DVA_Compensation_Calculator
 				cp.ExStyle = cp.ExStyle | 0x2000000;
 				return cp;
 			}
+		}
+
+		private void buttonMainTitle_MouseDown(object sender, MouseEventArgs e)
+		{
+			FormDrag.formDrag_MouseDown(e);
+		}
+
+		private void buttonMainTitle_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (GlobalVar.dragging)
+			{
+				Left = e.X + Left - GlobalVar.offsetX;
+				Top = e.Y + Top - GlobalVar.offsetY;
+			}
+		}
+
+		private void buttonMainTitle_MouseUp(object sender, MouseEventArgs e)
+		{
+			FormDrag.formDrag_MouseUp(e);
 		}
 
 		private void DomesticActivities_Load(object sender, EventArgs e)
@@ -201,6 +222,11 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.TinnitusPoints = PointsTinnitus;
 			tinnitus = PointsTinnitus;
 			GlobalVar.combinedTinnitusPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][tinnitus][comboBoxTinnitusPartially.SelectedIndex + 2]);
+			Close();
+		}
+
+		private void pictureBoxClose_Click(object sender, EventArgs e)
+		{
 			Close();
 		}
 

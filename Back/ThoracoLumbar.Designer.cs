@@ -41,9 +41,12 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.comboBoxThoracoLumbarPartially = new System.Windows.Forms.ComboBox();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.buttonMainTitle = new System.Windows.Forms.Button();
+			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxCancel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).BeginInit();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// checkBoxOption2
@@ -151,7 +154,7 @@
 			this.panel1.Controls.Add(this.checkBoxOption5);
 			this.panel1.Controls.Add(this.checkBoxOption3);
 			this.panel1.Controls.Add(this.checkBoxOption1);
-			this.panel1.Location = new System.Drawing.Point(37, 41);
+			this.panel1.Location = new System.Drawing.Point(37, 67);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(737, 665);
 			this.panel1.TabIndex = 23;
@@ -167,8 +170,8 @@
 			this.label1.TabIndex = 61;
 			this.label1.Text = "Partially Contributing Impairment:";
 			this.toolTip1.SetToolTip(this.label1, "Partially contributing impairment is to be applied whenever an impairment is not " +
-        "due solely to the effects of accepted conditions.\r\n\"Complete\" indicates the acce" +
-        "pted condition is fully covered.");
+        "due solely to the effects of the accepted condition.\r\n\"Complete\" indicates the a" +
+        "ccepted condition is fully covered.");
 			// 
 			// comboBoxThoracoLumbarPartially
 			// 
@@ -185,6 +188,9 @@
 			this.comboBoxThoracoLumbarPartially.Name = "comboBoxThoracoLumbarPartially";
 			this.comboBoxThoracoLumbarPartially.Size = new System.Drawing.Size(142, 28);
 			this.comboBoxThoracoLumbarPartially.TabIndex = 31;
+			this.toolTip1.SetToolTip(this.comboBoxThoracoLumbarPartially, "Partially contributing impairment is to be applied whenever an impairment is not " +
+        "due solely to the effects of the accepted condition.\r\n\"Complete\" indicates the a" +
+        "ccepted condition is fully covered.");
 			// 
 			// toolTip1
 			// 
@@ -192,12 +198,40 @@
 			this.toolTip1.InitialDelay = 500;
 			this.toolTip1.ReshowDelay = 100;
 			// 
+			// buttonMainTitle
+			// 
+			this.buttonMainTitle.BackColor = System.Drawing.Color.Transparent;
+			this.buttonMainTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonMainTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.buttonMainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonMainTitle.Location = new System.Drawing.Point(37, 17);
+			this.buttonMainTitle.Name = "buttonMainTitle";
+			this.buttonMainTitle.Size = new System.Drawing.Size(688, 43);
+			this.buttonMainTitle.TabIndex = 92;
+			this.buttonMainTitle.Text = "DVA COMPENSATION (MRCA) CALCULATOR";
+			this.buttonMainTitle.UseVisualStyleBackColor = false;
+			this.buttonMainTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseDown);
+			this.buttonMainTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseMove);
+			this.buttonMainTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMainTitle_MouseUp);
+			// 
+			// pictureBoxClose
+			// 
+			this.pictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.pictureBoxClose.Location = new System.Drawing.Point(731, 17);
+			this.pictureBoxClose.Name = "pictureBoxClose";
+			this.pictureBoxClose.Size = new System.Drawing.Size(43, 43);
+			this.pictureBoxClose.TabIndex = 91;
+			this.pictureBoxClose.TabStop = false;
+			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
+			// 
 			// ThoracoLumbar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
 			this.ClientSize = new System.Drawing.Size(820, 760);
+			this.Controls.Add(this.buttonMainTitle);
+			this.Controls.Add(this.pictureBoxClose);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.MaximumSize = new System.Drawing.Size(820, 760);
@@ -210,6 +244,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxOK)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -228,5 +263,7 @@
 		private System.Windows.Forms.ComboBox comboBoxThoracoLumbarPartially;
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button buttonMainTitle;
+		private System.Windows.Forms.PictureBox pictureBoxClose;
 	}
 }
