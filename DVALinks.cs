@@ -59,13 +59,16 @@ namespace DVA_Compensation_Calculator
 		private void DvaLinks()
 		{
 			var linkAll = new LinkLabel.Link();
-			linkAll.LinkData = @"http://factsheets.dva.gov.au/plain-facts-htm.htm";
+            linkAll.LinkData = @"https://www.dva.gov.au/financial-support";
 			linkLabelAllSheets.Links.Add(linkAll);
 			var link = new LinkLabel.Link();
-			link.LinkData = @"http://www.comlaw.gov.au/Details/F2013C00479/Download";
-			linkLabel.Links.Add(link);
+            link.LinkData = @"https://www.legislation.gov.au/Details/F2016L01290";
+            linkLabel.Links.Add(link);
+            var link11 = new LinkLabel.Link();
+            link11.LinkData = @"https://clik.dva.gov.au/ccps-medical-research-library/sops-and-supporting-information-alphabetic-listing";
+			linkLabel11.Links.Add(link11);
 			var link1 = new LinkLabel.Link();
-			link1.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC01%20Overview.pdf";
+            link1.LinkData = @"https://www.dva.gov.au/financial-support/compensation-claims/claims-if-you-were-injured-after-30-june-2004/overview-mrca";
 			linkLabel1.Links.Add(link1);
 			var link2 = new LinkLabel.Link();
 			link2.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC02%20Comp%20coverage%20for%20ADF%20under%20MRCA.pdf";
@@ -74,22 +77,22 @@ namespace DVA_Compensation_Calculator
 			link3.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC03%20Types%20of%20MRCA%20service.pdf";
 			linkLabel3.Links.Add(link3);
 			var link4 = new LinkLabel.Link();
-			link4.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC04%20Compensation%20Payment%20Rates.pdf";
+            link4.LinkData = @"https://www.dva.gov.au/financial-support/payment-rates/compensation-payment-rates-mrca";
 			linkLabel4.Links.Add(link4);
 			var link5 = new LinkLabel.Link();
-			link5.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC05%20Rehabilitation.pdf";
+            link5.LinkData = @"https://www.dva.gov.au/health-and-treatment/injury-or-health-treatments/rehabilitation-0";
 			linkLabel5.Links.Add(link5);
 			var link7 = new LinkLabel.Link();
-			link7.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC07%20Permanent%20Impairment%20Compensation%20Payments.htm";
+            link7.LinkData = @"https://www.dva.gov.au/financial-support/compensation-claims/claims-if-you-were-injured-after-30-june-2004/benefits-if-you";
 			linkLabel7.Links.Add(link7);
 			var link8 = new LinkLabel.Link();
-			link8.LinkData = @"http://factsheets.dva.gov.au/documents/MRC08%20Incapacity%20Payments.pdf";
+            link8.LinkData = @"https://www.dva.gov.au/financial-support/income-support/support-when-you-cannot-work/how-we-calculate-incapacity-payments";
 			linkLabel8.Links.Add(link8);
 			var link9 = new LinkLabel.Link();
-			link9.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC09%20Special%20Rate%20DP%20Safety%20Net%20Payment.htm";
+            link9.LinkData = @"https://www.dva.gov.au/financial-support/income-support/support-when-you-cannot-work/pensions/disability-pensions-and-3";
 			linkLabel9.Links.Add(link9);
 			var link10 = new LinkLabel.Link();
-			link10.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC10%20MVCS.pdf";
+            link10.LinkData = @"https://www.dva.gov.au/financial-support/help-your-vehicle-costs/motor-vehicle-compensation-scheme";
 			linkLabel10.Links.Add(link10);
 			var link14 = new LinkLabel.Link();
 			link14.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC14%20Partners.htm";
@@ -101,7 +104,7 @@ namespace DVA_Compensation_Calculator
 			link20.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC20%20Permanent%20Impairment%20Payment%20Choices.htm";
 			linkLabel20.Links.Add(link20);
 			var link25 = new LinkLabel.Link();
-			link25.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC25%20How%20to%20lodge%20a%20claim.htm";
+            link25.LinkData = @"https://www.dva.gov.au/financial-support/compensation-claims/claims-if-you-were-injured-after-30-june-2004/how-make-claim";
 			linkLabel25.Links.Add(link25);
 			var link27 = new LinkLabel.Link();
 			link27.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC27%20Recon%20and%20Review.htm";
@@ -110,13 +113,13 @@ namespace DVA_Compensation_Calculator
 			link29.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC29%20Actuary%20Tables.htm";
 			linkLabel29.Links.Add(link29);
 			var link33 = new LinkLabel.Link();
-			link33.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC33%20%20Common%20Law%20injuries%20and%20diseases.htm";
+            link33.LinkData = @"hhttps://www.dva.gov.au/financial-support/compensation-claims/seek-damages/when-and-how-take-legal-action-compensation";
 			linkLabel33.Links.Add(link33);
 			var link34 = new LinkLabel.Link();
-			link34.LinkData = @"http://factsheets.dva.gov.au/factsheets/documents/MRC34%20Needs%20Assessment.htm";
+            link34.LinkData = @"https://www.dva.gov.au/financial-support/compensation-claims/needs-assessment";
 			linkLabel34.Links.Add(link34);
 			var link6 = new LinkLabel.Link();
-			link6.LinkData = @"http://dva.gov.au/dvaforms";
+            link6.LinkData = @"https://www.dva.gov.au/about-us/forms";
 			linkLabel6.Links.Add(link6);
 		}
 
@@ -175,6 +178,12 @@ namespace DVA_Compensation_Calculator
 		{
 			Process.Start(e.Link.LinkData as string);
 		}
+
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(e.Link.LinkData as string);
+
+        }
 
 		private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{

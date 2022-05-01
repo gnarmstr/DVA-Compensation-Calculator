@@ -8,20 +8,23 @@ namespace DVA_Compensation_Calculator
 {
 	public partial class Ears : Form
 	{
+        Boolean codeRunning;
+
 		public Ears()
 		{
 			if (ActiveForm != null)
-				Location = new Point(ActiveForm.Location.X + 10, ActiveForm.Location.Y - 25);
+				Location = new Point(ActiveForm.Location.X - 50, ActiveForm.Location.Y - 25);
 			InitializeComponent();
-			MinimumSize = new Size(705, 840);
-			MaximumSize = new Size(705, 840);
+			MinimumSize = new Size(830, 760);
+            MaximumSize = new Size(830, 760);
 			pictureBoxClose.BackgroundImage = Resources.Close;
 			buttonMainTitle.BackgroundImage = Resources.button_Blue_Small;
 			BackgroundImage = Resources.MainBackground_Green_Form;
 			BackgroundImageLayout = ImageLayout.Stretch;
 			panel1.BackgroundImage = Resources.Background_Blue;
 			panel2.BackgroundImage = Resources.Background_Blue;
-			panel3.BackgroundImage = Resources.Background_Blue;
+            panel3.BackgroundImage = Resources.Background_Blue;
+            panel4.BackgroundImage = Resources.Background_Blue;
 			switch (GlobalVar.HearingLossPoints)
 			{
 				case 0: checkBoxOption1.Checked = true;
@@ -51,6 +54,33 @@ namespace DVA_Compensation_Calculator
 					break;
 			}
 			comboBoxTinnitusPartially.SelectedIndex = GlobalVar.comboBoxTinnitusPartially;
+
+            codeRunning = true;
+            comboBoxLeftHearing500.SelectedIndex = GlobalVar.comboBoxLeftHearing500;
+            comboBoxLeftHearing1000.SelectedIndex = GlobalVar.comboBoxLeftHearing1000;
+            comboBoxLeftHearing1500.SelectedIndex = GlobalVar.comboBoxLeftHearing1500;
+            comboBoxLeftHearing2000.SelectedIndex = GlobalVar.comboBoxLeftHearing2000;
+            comboBoxLeftHearing3000.SelectedIndex = GlobalVar.comboBoxLeftHearing3000;
+            comboBoxLeftHearing4000.SelectedIndex = GlobalVar.comboBoxLeftHearing4000;
+            comboBoxRightHearing500.SelectedIndex = GlobalVar.comboBoxRightHearing500;
+            comboBoxRightHearing1000.SelectedIndex = GlobalVar.comboBoxRightHearing1000;
+            comboBoxRightHearing1500.SelectedIndex = GlobalVar.comboBoxRightHearing1500;
+            comboBoxRightHearing2000.SelectedIndex = GlobalVar.comboBoxRightHearing2000;
+            comboBoxRightHearing3000.SelectedIndex = GlobalVar.comboBoxRightHearing3000;
+            comboBoxRightHearing4000.SelectedIndex = GlobalVar.comboBoxRightHearing4000;
+            labelHearingTotalPoints.Text = GlobalVar.SensorineuralHearingLossPoints.ToString();
+
+            codeRunning = false;
+
+            comboBoxHearing500_SelectedIndexChanged(null, null);
+            comboBoxHearing1000_SelectedIndexChanged(null, null);
+            comboBoxHearing1500_SelectedIndexChanged(null, null);
+            comboBoxHearing2000_SelectedIndexChanged(null, null);
+            comboBoxHearing3000_SelectedIndexChanged(null, null);
+            comboBoxHearing4000_SelectedIndexChanged(null, null);
+
+            comboBoxSensorineuralHearingLossPartially.SelectedIndex = GlobalVar.comboBoxSensorineuralHearingLossPartially;
+
 		}
 
 		protected override CreateParams CreateParams
@@ -206,6 +236,100 @@ namespace DVA_Compensation_Calculator
 
 #endregion
 
+#region Accepted Hearing Loss
+
+        int ahl;
+
+        private void comboBoxHearing500_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing500.SelectedIndex, comboBoxRightHearing500.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing500.SelectedIndex, comboBoxRightHearing500.SelectedIndex);
+                labelHearingPoints500.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+        }
+
+        private void comboBoxHearing1000_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing1000.SelectedIndex, comboBoxRightHearing1000.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing1000.SelectedIndex, comboBoxRightHearing1000.SelectedIndex);
+                labelHearingPoints1000.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide + 19][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+
+        }
+
+        private void comboBoxHearing1500_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing1500.SelectedIndex, comboBoxRightHearing1500.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing1500.SelectedIndex, comboBoxRightHearing1500.SelectedIndex);
+                labelHearingPoints1500.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide + 39][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+
+        }
+
+        private void comboBoxHearing2000_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing2000.SelectedIndex, comboBoxRightHearing2000.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing2000.SelectedIndex, comboBoxRightHearing2000.SelectedIndex);
+                labelHearingPoints2000.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide + 59][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+
+        }
+
+        private void comboBoxHearing3000_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing3000.SelectedIndex, comboBoxRightHearing3000.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing3000.SelectedIndex, comboBoxRightHearing3000.SelectedIndex);
+                labelHearingPoints3000.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide + 79][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+
+        }
+
+        private void comboBoxHearing4000_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maxSide;
+            int minSide;
+
+            if (codeRunning == false)
+            {
+                maxSide = Math.Max(comboBoxLeftHearing4000.SelectedIndex, comboBoxRightHearing4000.SelectedIndex);
+                minSide = Math.Min(comboBoxLeftHearing4000.SelectedIndex, comboBoxRightHearing4000.SelectedIndex);
+                labelHearingPoints4000.Text = (Convert.ToDecimal(GlobalVar.ExcelData[4][maxSide + 99][minSide + 9]) / 10).ToString();
+                labelHearingTotalPoints.Text = Math.Round(Convert.ToDecimal(labelHearingPoints500.Text) + Convert.ToDecimal(labelHearingPoints1000.Text) + Convert.ToDecimal(labelHearingPoints1500.Text) + Convert.ToDecimal(labelHearingPoints2000.Text) + Convert.ToDecimal(labelHearingPoints3000.Text) + Convert.ToDecimal(labelHearingPoints4000.Text)).ToString();
+            }
+
+        }
+#endregion
+
 		private void pictureBoxCancel_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -222,6 +346,23 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.TinnitusPoints = PointsTinnitus;
 			tinnitus = PointsTinnitus;
 			GlobalVar.combinedTinnitusPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][tinnitus][comboBoxTinnitusPartially.SelectedIndex + 2]);
+            GlobalVar.comboBoxLeftHearing500 = comboBoxLeftHearing500.SelectedIndex;
+            GlobalVar.comboBoxLeftHearing1000 = comboBoxLeftHearing1000.SelectedIndex;
+            GlobalVar.comboBoxLeftHearing1500 = comboBoxLeftHearing1500.SelectedIndex;
+            GlobalVar.comboBoxLeftHearing2000 = comboBoxLeftHearing2000.SelectedIndex;
+            GlobalVar.comboBoxLeftHearing3000 = comboBoxLeftHearing3000.SelectedIndex;
+            GlobalVar.comboBoxLeftHearing4000 = comboBoxLeftHearing4000.SelectedIndex;
+            GlobalVar.comboBoxRightHearing500 = comboBoxRightHearing500.SelectedIndex;
+            GlobalVar.comboBoxRightHearing1000 = comboBoxRightHearing1000.SelectedIndex;
+            GlobalVar.comboBoxRightHearing1500 = comboBoxRightHearing1500.SelectedIndex;
+            GlobalVar.comboBoxRightHearing2000 = comboBoxRightHearing2000.SelectedIndex;
+            GlobalVar.comboBoxRightHearing3000 = comboBoxRightHearing3000.SelectedIndex;
+            GlobalVar.comboBoxRightHearing4000 = comboBoxRightHearing4000.SelectedIndex;
+            GlobalVar.SensorineuralHearingLossPoints = Convert.ToInt16(labelHearingTotalPoints.Text);
+            GlobalVar.comboBoxSensorineuralHearingLossPartially = comboBoxSensorineuralHearingLossPartially.SelectedIndex;
+            ahl = Convert.ToInt16(labelHearingTotalPoints.Text);
+            GlobalVar.combinedAHLPoints = Convert.ToDecimal(GlobalVar.ExcelData[2][ahl][comboBoxSensorineuralHearingLossPartially.SelectedIndex + 2]);
+            
 			Close();
 		}
 
@@ -230,5 +371,5 @@ namespace DVA_Compensation_Calculator
 			Close();
 		}
 
-	}
+    }
 }

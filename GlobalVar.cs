@@ -10,6 +10,10 @@ namespace DVA_Compensation_Calculator
 	{
 		public static string SettingsPath;
 
+        public static string documentPath;
+            
+        public static string FileFormResult;
+
 		public static int MainFormLocxationX;
 
 		public static int MainFormLocxationY;
@@ -241,6 +245,36 @@ namespace DVA_Compensation_Calculator
 		public static decimal combinedTinnitusPoints;
 
 		public static int comboBoxTinnitusPartially;
+
+        public static int SensorineuralHearingLossPoints;
+
+        public static decimal combinedAHLPoints;
+
+        public static int comboBoxSensorineuralHearingLossPartially;
+
+        public static int comboBoxLeftHearing500;
+
+        public static int comboBoxLeftHearing1000;
+
+        public static int comboBoxLeftHearing1500;
+
+        public static int comboBoxLeftHearing2000;
+
+        public static int comboBoxLeftHearing3000;
+
+        public static int comboBoxLeftHearing4000;
+
+        public static int comboBoxRightHearing500;
+
+        public static int comboBoxRightHearing1000;
+
+        public static int comboBoxRightHearing1500;
+
+        public static int comboBoxRightHearing2000;
+
+        public static int comboBoxRightHearing3000;
+
+        public static int comboBoxRightHearing4000;
 
 		public static int CervicalPoints;
 

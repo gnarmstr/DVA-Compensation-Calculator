@@ -10,19 +10,19 @@ namespace DVA_Compensation_Calculator
 	class XmlProfileSettings
 	{
 		private readonly XmlDocument _xmlDocument = new XmlDocument();
-		private readonly string _documentPath;
+		//private readonly string _documentPath;
 		private const string Root = "settings";
 
 		public XmlProfileSettings()
 		{
 			try
 			{
-				_documentPath =
-					System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVA Compensation Calculator",
-										   "Settings.xml");
-				if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(_documentPath)))
-					System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(_documentPath));
-				_xmlDocument.Load(_documentPath);
+                //_documentPath =
+                //    System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "DVA Compensation Calculator", //ApplicationData
+                //                           "Settings.xml");
+                //if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(_documentPath)))
+                //    System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(_documentPath));
+                _xmlDocument.Load(GlobalVar.documentPath);
 			}
 			catch
 			{
@@ -30,18 +30,18 @@ namespace DVA_Compensation_Calculator
 			}
 		}
 
-		public XmlProfileSettings(string path)
-		{
-			try
-			{
-				_documentPath = path;
-				_xmlDocument.Load(_documentPath);
-			}
-			catch
-			{
-				_xmlDocument.LoadXml("<settings></settings>");
-			}
-		}
+        //public XmlProfileSettings(string path)
+        //{
+        //    try
+        //    {
+        //        _documentPath = path;
+        //        _xmlDocument.Load(_documentPath);
+        //    }
+        //    catch
+        //    {
+        //        _xmlDocument.LoadXml("<settings></settings>");
+        //    }
+        //}
 
 		public void RemoveNode(string xPath)
 		{
@@ -50,7 +50,7 @@ namespace DVA_Compensation_Calculator
 			{
 				xmlNode.RemoveAll();
 				if (xmlNode.ParentNode != null) xmlNode.ParentNode.RemoveChild(xmlNode);
-				_xmlDocument.Save(_documentPath);
+                _xmlDocument.Save(GlobalVar.documentPath);
 			}
 		}
 
@@ -74,7 +74,7 @@ namespace DVA_Compensation_Calculator
 			var path = String.Format("{0}/{1}/{2}", Root, type, xPath);
 			XmlNode xmlNode = _xmlDocument.SelectSingleNode(path) ?? CreateMissingNode(path);
 			xmlNode.InnerText = value;
-			_xmlDocument.Save(_documentPath);
+            _xmlDocument.Save(GlobalVar.documentPath);
 		}
 
 		public int GetSetting(SettingType type, string xPath, int defaultValue)

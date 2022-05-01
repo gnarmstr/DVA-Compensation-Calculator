@@ -90,7 +90,6 @@
     <None Include="ClicktoOpen.png" />
     <None Include="Resources\accept.png" />
     <None Include="Resources\control_play_blue.png" />
-    <None Include="Save.png" />
     <None Include="Range of Motion Table3.5.11.jpg" />
     <None Include="Resources\human-bones.bmp" />
     <None Include="Resources\human-bones.jpg" />
@@ -138,6 +137,12 @@
     <None Include="Resources\MainBackground_Green_Form.png" />
     <None Include="Resources\No.png" />
     <None Include="Resources\Range_of_ Motion.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\New.png" />
+    <Content Include="Resources\Save.png" />
+    <None Include="Save.png" />
+    <None Include="SaveAs.png" />
+    <None Include="Resources\SaveAs.png" />
     <Content Include="Vixen Messaging.png" />
   </ItemGroup>
   <ItemGroup />

@@ -22,22 +22,51 @@ namespace DVA_Compensation_Calculator
 		#region Initialization
 
 		public MainForm()
-		{
-			InitializeComponent();
-			Settings();
-			getLifeStyleWar();
-			getLifeStylePeace();
-			getActuaryTable();
-			getCombinedValue();
-			getLimbsAgeAdjust();
-			LoadData();
-			FinalPayout();
-			combinedPoints();
-			UpdateAll();
-			GlobalVar.startup = false;
-			UpdateAll();
-			LifeStyleRatingHigh();
-		}
+        {
+            InitializeComponent();
+            OpenFileDialog openFileDialog2 = new OpenFileDialog();
+            GlobalVar.documentPath =
+                    System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "DVA Compensation Calculator");
+            try
+            {
+                if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName(GlobalVar.documentPath)))
+                    System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(GlobalVar.documentPath));
+            }
+            catch
+            {
+            }
+
+            int numberOfFiles;
+         //   DirectoryInfo di = new DirectoryInfo(GlobalVar.documentPath);
+
+            numberOfFiles = Directory.GetFiles(GlobalVar.documentPath, "*.xml", SearchOption.AllDirectories).Length;
+
+            if (numberOfFiles == 0)
+            {
+                GlobalVar.documentPath = GlobalVar.documentPath + "\\Settings.xml";
+            }
+            else
+            {
+                GlobalVar.FileFormResult = "Load";
+                var fileForm = new FileForm();
+                fileForm.ShowDialog();
+                buttonMainTitle.Text = "Ver 2.0   DVA COMPENSATION (MRCA) CALCULATOR - " + Path.GetFileNameWithoutExtension(GlobalVar.documentPath);
+            }
+
+            Settings();
+            getLifeStyleWar();
+            getLifeStylePeace();
+            getActuaryTable();
+            getCombinedValue();
+            getLimbsAgeAdjust();
+            LoadData();
+            FinalPayout();
+            combinedPoints();
+            UpdateAll();
+            GlobalVar.startup = false;
+            UpdateAll();
+            LifeStyleRatingHigh();
+        }
 
 		#endregion
 
@@ -59,9 +88,13 @@ namespace DVA_Compensation_Calculator
 		{
 			MinimumSize = new Size(725, 790);
 			MaximumSize = new Size(725, 790);
+
 			GlobalVar.SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
 				"DVA Compensation Calculator");
-			SaveAll.Image = Tools.ResizeImage(Resources.Save, 130, 30);
+
+            SaveAll.Image = Tools.ResizeImage(Resources.Save, 35, 33);
+            SaveAs.Image = Tools.ResizeImage(Resources.SaveAs, 35, 33);
+            pictureBoxOpen.Image = Tools.ResizeImage(Resources.Open, 35, 33);
 			GlobalVar.ExcelData = new[]
 			{
 				GlobalVar.LifeStyleWar, GlobalVar.LifeStylePeace, GlobalVar.ActuaryTable, GlobalVar.CombineValue,
@@ -146,7 +179,7 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.FirstTimeStart = profile.GetSetting(XmlProfileSettings.SettingType.Profiles, "FirstTimeStart", true);
 			#endregion
 
-			#region Upper Limb
+            #region Upper Limb
 			GlobalVar.LeftElbowPoints = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftElbowPoints", 0);
 			GlobalVar.combinedLeftElbowPoints = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "combinedLeftElbowPoints", 0);
 			GlobalVar.comboBoxLeftElbowPartially = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "comboBoxLeftElbowPartially", 0);
@@ -193,18 +226,18 @@ namespace DVA_Compensation_Calculator
 			textBoxRightFingers.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "textBoxRightFingers", "0");
 			Fingers.LeftFingers = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "LeftFingers", "0"));
 			Fingers.RightFingers = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "RightFingers", "0"));
-			checkBoxElbowWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", false);
-			checkBoxShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShoulderWar", false);
-			checkBoxWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", false);
-			checkBoxFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingersWar", false);
-			checkBoxRightElbowWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightElbowWar", false);
-			checkBoxRightShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", false);
-			checkBoxRightWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", false);
-			checkBoxRightFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingersWar", false);
-			checkBoxWholeRightArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeRightArmWar", false);
-			textBoxWholeRightArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeRightArm", "0");
-			checkBoxWholeLeftArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeLeftArmWar", false);
-			textBoxWholeLeftArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeLeftArm", "0");
+            textBoxWholeRightArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeRightArm", "0");
+            textBoxWholeLeftArm.Text = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "WholeLeftArm", "0");
+            checkBoxElbowWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxElbowWar", false);
+            checkBoxShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxShoulderWar", false);
+            checkBoxWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWristWar", false);
+            checkBoxFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxFingersWar", false);
+            checkBoxRightElbowWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightElbowWar", false);
+            checkBoxRightShoulderWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightShoulderWar", false);
+            checkBoxRightWristWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightWristWar", false);
+            checkBoxRightFingersWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxRightFingersWar", false);
+            checkBoxWholeRightArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeRightArmWar", false);
+            checkBoxWholeLeftArmWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.UpperLimb, "checkBoxWholeLeftArmWar", false);
 #endregion
 
 			#region Lower Limb
@@ -231,13 +264,13 @@ namespace DVA_Compensation_Calculator
 			textBoxToes.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxToes", "0");
 			Toes.toes = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Toes", "0"));
 			textBoxAnkle.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxAnkle", "0");
-			Ankle.ankle = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Ankle", "0"));
+            Ankle.ankle = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "Ankle", "0"));
+            textBoxWholeLimb.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxWholeLimb", "0");
+            WholeLimb.wholeLimb = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "WholeLimb", "0"));
 			checkBoxKneeWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxKneeWar", false);
 			checkBoxHipWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxHipWar", false);
 			checkBoxToesWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxToesWar", false);
 			checkBoxAnkleWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxAnkleWar", false);
-			textBoxWholeLimb.Text = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "textBoxWholeLimb", "0");
-			WholeLimb.wholeLimb = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "WholeLimb", "0"));
 			checkBoxWholeLimbWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.LowerLimb, "checkBoxWholeLimbWar", false);
 #endregion
 
@@ -254,12 +287,12 @@ namespace DVA_Compensation_Calculator
 
 			textBoxThoraco.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoraco", "0");
 			ThoracoLumbar.thoracoLumbar = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "thoracoLumbar", "0"));
-			checkBoxThoracoWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", false);
 			textBoxThoracoROM.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxThoracoROM", "0");
 			ThoracoROM.thoracoROM = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "ThoracoROM", "0"));
-			checkBoxThoracoROMWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoROMWar", false);
 			textBoxCervicalSpine.Text = profile.GetSetting(XmlProfileSettings.SettingType.Back, "textBoxCervicalSpine", "0");
-			Cervical.cervical = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "Cervical", "0"));
+            Cervical.cervical = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Back, "Cervical", "0"));
+            checkBoxThoracoWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoWar", false);
+            checkBoxThoracoROMWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxThoracoROMWar", false);
 			checkBoxCervicalSpineWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Back, "checkBoxCervicalSpineWar", false);
 #endregion
 
@@ -272,10 +305,27 @@ namespace DVA_Compensation_Calculator
 			GlobalVar.comboBoxTinnitusPartially = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxTinnitusPartially", 0);
 			textBoxTinnitus.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxTinnitus", "0");
 			Ears.tinnitus = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Tinnitus", "0"));
-			checkBoxTinnitusWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxTinnitusWar", false);
 			textBoxEars.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxEars", "0");
 			Ears.ears = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "Ears", "0"));
-			checkBoxEarsWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", false);
+            GlobalVar.comboBoxLeftHearing500 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing500", 0);
+            GlobalVar.comboBoxLeftHearing1000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing1000", 0);
+            GlobalVar.comboBoxLeftHearing1500 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing1500", 0);
+            GlobalVar.comboBoxLeftHearing2000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing2000", 0);
+            GlobalVar.comboBoxLeftHearing3000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing3000", 0);
+            GlobalVar.comboBoxLeftHearing4000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing4000", 0);
+            GlobalVar.comboBoxRightHearing500 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing500", 0);
+            GlobalVar.comboBoxRightHearing1000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing1000", 0);
+            GlobalVar.comboBoxRightHearing1500 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing1500", 0);
+            GlobalVar.comboBoxRightHearing2000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing2000", 0);
+            GlobalVar.comboBoxRightHearing3000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing3000", 0);
+            GlobalVar.comboBoxRightHearing4000 = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing4000", 0);
+            GlobalVar.SensorineuralHearingLossPoints = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "SensorineuralHearingLossPoints", 0);
+            GlobalVar.comboBoxSensorineuralHearingLossPartially = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxSensorineuralHearingLossPartially", 0);
+            textBoxAHL.Text = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "textBoxAHL", "0");
+            GlobalVar.combinedAHLPoints = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "combinedAHLPoints", 0);
+            checkBoxTinnitusWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxTinnitusWar", false);
+            checkBoxEarsWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", false);
+            checkBoxAHLWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxAHLWar", false);
 
 			GlobalVar.NosePoints = profile.GetSetting(XmlProfileSettings.SettingType.Nose, "NosePoints", 0);
 			GlobalVar.combinedNosePoints = profile.GetSetting(XmlProfileSettings.SettingType.Nose, "combinedNosePoints", 0);
@@ -311,11 +361,11 @@ namespace DVA_Compensation_Calculator
 			OcularImpairment.LeftOcular = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "LeftOcular", "0"));
 			OcularImpairment.RightOcular = Convert.ToInt16(profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "RightOcular", "0"));
 			textBoxFinalEyes.Text = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "textBoxFinalEyes", "0");
-			checkBoxEyesWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxEyesWar", false);
 			GlobalVar.comboBoxRightMonocular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMonocular", "6/6");
 			GlobalVar.comboBoxLeftMonocular = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMonocular", "6/6");
 			GlobalVar.comboBoxRightMiscVisual = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxRightMiscVisual", "N/A 0");
-			GlobalVar.comboBoxLeftMiscVisual = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMiscVisual", "N/A 0");
+            GlobalVar.comboBoxLeftMiscVisual = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "comboBoxLeftMiscVisual", "N/A 0");
+            checkBoxEyesWar.Checked = profile.GetSetting(XmlProfileSettings.SettingType.Eyes, "checkBoxEyesWar", false);
 #endregion  
 
 			#region Life Style
@@ -407,12 +457,12 @@ namespace DVA_Compensation_Calculator
 
 		private void getLimbsAgeAdjust()
 		{
-			var columns = 7;
+			var columns = 26;
 			var sheet = 4;
 			var excelData = 4;
 			importExcel(columns, sheet, excelData);
 		}
-
+        
 		private void importExcel(int columns, int sheet, int excelData)
 		{
 			SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
@@ -428,7 +478,7 @@ namespace DVA_Compensation_Calculator
 			// Select the first worksheet from the file.
 
 			ExcelWorksheet ws = ef.Worksheets[sheet];
-			ExtractToDataTableOptions options = new ExtractToDataTableOptions(0, 0, 100);
+			ExtractToDataTableOptions options = new ExtractToDataTableOptions(0, 0, 149);
 			options.ExtractDataOptions = ExtractDataOptions.StopAtFirstEmptyRow;
 			options.ExcelCellToDataTableCellConverting += (sender, e) =>
 			{
@@ -768,7 +818,14 @@ namespace DVA_Compensation_Calculator
 			if (checkBoxTinnitusWar.Checked)
 			{
 				tinnitusWar = 1;
-			}
+            }
+
+            //Hearing Accepted Hearing Loss
+            var ahlWar = 0;
+            if (checkBoxAHLWar.Checked)
+            {
+                ahlWar = 1;
+            }
 
 			//Hearing Ears
 			var earsWar = 0;
@@ -894,7 +951,17 @@ namespace DVA_Compensation_Calculator
 			{
 				textBoxTotalPeacePoints.Text =
 					(Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxTinnitus.Text)).ToString();
-			}
+            }
+            if (ahlWar == 1)
+            {
+                textBoxTotalWarPoints.Text =
+                    (Convert.ToInt16(textBoxTotalWarPoints.Text) + Convert.ToDecimal(textBoxAHL.Text)).ToString();
+            }
+            else
+            {
+                textBoxTotalPeacePoints.Text =
+                    (Convert.ToInt16(textBoxTotalPeacePoints.Text) + Convert.ToDecimal(textBoxAHL.Text)).ToString();
+            }
 			if (earsWar == 1)
 			{
 				textBoxTotalWarPoints.Text =
@@ -1048,7 +1115,8 @@ namespace DVA_Compensation_Calculator
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.TheracoHighestPoints*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxCervicalSpine.Text)*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + GlobalVar.HighestLegPoints*(1 - combinedPoints/100));
-			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxTinnitus.Text)*(1 - combinedPoints/100));
+            combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxTinnitus.Text) * (1 - combinedPoints / 100));
+            combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxAHL.Text) * (1 - combinedPoints / 100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxEars.Text)*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxNose.Text)*(1 - combinedPoints/100));
 			combinedPoints = Math.Round(combinedPoints + Convert.ToDecimal(textBoxThroat.Text)*(1 - combinedPoints/100));
@@ -1066,13 +1134,13 @@ namespace DVA_Compensation_Calculator
 		{
 			try
 			{
-				decimal combinedCompensation;
-				combinedCompensation = ((Convert.ToDecimal(textBoxTotalWarPoints.Text)*
-				                         Convert.ToDecimal(textBoxCompensationFactorWar.Text)) +
-				                        (Convert.ToDecimal(textBoxTotalPeacePoints.Text)*
-				                         Convert.ToDecimal(textBoxCompensationFactorPeace.Text)))/
-				                       (Convert.ToDecimal(textBoxTotalWarPoints.Text) +
-				                        Convert.ToDecimal(textBoxTotalPeacePoints.Text));
+                decimal combinedCompensation;
+                combinedCompensation = ((Convert.ToDecimal(textBoxTotalWarPoints.Text) *
+                                         Convert.ToDecimal(textBoxCompensationFactorWar.Text)) +
+                                        (Convert.ToDecimal(textBoxTotalPeacePoints.Text) *
+                                         Convert.ToDecimal(textBoxCompensationFactorPeace.Text))) /
+                                       (Convert.ToDecimal(textBoxTotalWarPoints.Text) +
+                                        Convert.ToDecimal(textBoxTotalPeacePoints.Text));
 				textBoxFinalCompensationFactor.Text = Math.Round(combinedCompensation, 3).ToString();
 
 			}
@@ -1487,7 +1555,20 @@ namespace DVA_Compensation_Calculator
 				checkBoxTinnitusWar.Visible = false;
 				labelTinnitus.Visible = false;
 				checkBoxTinnitusWar.Checked = false;
-			}
+            }
+            if (textBoxAHL.Text != "0")
+            {
+                textBoxAHL.Visible = true;
+                checkBoxAHLWar.Visible = true;
+                labelAHL.Visible = true;
+            }
+            else
+            {
+                textBoxAHL.Visible = false;
+                checkBoxAHLWar.Visible = false;
+                labelAHL.Visible = false;
+                checkBoxAHLWar.Checked = false;
+            }
 			if (textBoxFinalEyes.Text != "0")
 			{
 				textBoxFinalEyes.Visible = true;
@@ -1656,8 +1737,17 @@ namespace DVA_Compensation_Calculator
 
 		private void pictureBoxClose_Click(object sender, EventArgs e)
 		{
-			var saveMessage = new SaveMessage();
-			saveMessage.ShowDialog();
+
+            if (GlobalVar.documentPath.Contains("Settings"))
+            {
+                SaveAs_Click(null, null);
+                SaveMessage.SaveClose = 2;
+            }
+            else
+            {
+			    var saveMessage = new SaveMessage();
+			    saveMessage.ShowDialog();
+            }
 			Close();
 		}
 
@@ -1667,6 +1757,7 @@ namespace DVA_Compensation_Calculator
 		#region Save Data
 		private void Save()
 		{
+
 			var profile = new XmlProfileSettings();
 
 			#region Profiles
@@ -1805,7 +1896,24 @@ namespace DVA_Compensation_Calculator
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxTinnitusWar", checkBoxTinnitusWar.Checked.ToString());
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "textBoxEars", textBoxEars.Text);
 			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "Ears", Ears.ears);
-			profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", checkBoxEarsWar.Checked.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxEarsWar", checkBoxEarsWar.Checked.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing500", GlobalVar.comboBoxLeftHearing500.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing1000", GlobalVar.comboBoxLeftHearing1000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing1500", GlobalVar.comboBoxLeftHearing1500.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing2000", GlobalVar.comboBoxLeftHearing2000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing3000", GlobalVar.comboBoxLeftHearing3000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxLeftHearing4000", GlobalVar.comboBoxLeftHearing4000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing500", GlobalVar.comboBoxRightHearing500.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing1000", GlobalVar.comboBoxRightHearing1000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing1500", GlobalVar.comboBoxRightHearing1500.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing2000", GlobalVar.comboBoxRightHearing2000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing3000", GlobalVar.comboBoxRightHearing3000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxRightHearing4000", GlobalVar.comboBoxRightHearing4000.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "SensorineuralHearingLossPoints", GlobalVar.SensorineuralHearingLossPoints.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "comboBoxSensorineuralHearingLossPartially", GlobalVar.comboBoxSensorineuralHearingLossPartially.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "checkBoxAHLWar", checkBoxAHLWar.Checked.ToString());
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "textBoxAHL", textBoxAHL.Text);
+            profile.PutSetting(XmlProfileSettings.SettingType.Hearing, "combinedAHLPoints", GlobalVar.combinedAHLPoints.ToString());
 
 			profile.PutSetting(XmlProfileSettings.SettingType.Nose, "NosePoints", GlobalVar.NosePoints.ToString());
 			profile.PutSetting(XmlProfileSettings.SettingType.Nose, "combinedNosePoints", GlobalVar.combinedNosePoints.ToString());
@@ -1883,9 +1991,28 @@ namespace DVA_Compensation_Calculator
 		}
 
 		private void SaveAll_Click(object sender, EventArgs e)
-		{
+        {
+            if (GlobalVar.documentPath.Contains("Settings"))
+            {
+                GlobalVar.FileFormResult = "Save";
+                var fileForm = new FileForm();
+                fileForm.ShowDialog();
+            }
+
+            if (GlobalVar.FileFormResult == "Cancel") return;
 			Save();
 		}
+
+        private void SaveAs_Click(object sender, EventArgs e)
+        {
+            GlobalVar.FileFormResult = "Save";
+            var fileForm = new FileForm();
+            fileForm.ShowDialog();
+
+            if (GlobalVar.FileFormResult == "Cancel") return;
+            Save();
+        }
+
 		#endregion
 
 		//Condition Types
@@ -2633,7 +2760,8 @@ namespace DVA_Compensation_Calculator
 			var ears = new Ears();
 			ears.ShowDialog();
 			textBoxEars.Text = GlobalVar.combinedHearingLossPoints.ToString();
-			textBoxTinnitus.Text = GlobalVar.combinedTinnitusPoints.ToString();
+            textBoxTinnitus.Text = GlobalVar.combinedTinnitusPoints.ToString();
+            textBoxAHL.Text = GlobalVar.combinedAHLPoints.ToString();
 			UpdateAll();
 			UpdateAll();
 			LifeStyleRatingHigh();
@@ -2658,7 +2786,8 @@ namespace DVA_Compensation_Calculator
 			var ears = new Ears();
 			ears.ShowDialog();
 			textBoxEars.Text = GlobalVar.combinedHearingLossPoints.ToString();
-			textBoxTinnitus.Text = GlobalVar.combinedTinnitusPoints.ToString();
+            textBoxTinnitus.Text = GlobalVar.combinedTinnitusPoints.ToString();
+            textBoxAHL.Text = GlobalVar.combinedAHLPoints.ToString();
 			UpdateAll();
 			UpdateAll();
 			LifeStyleRatingHigh();
@@ -2687,6 +2816,16 @@ namespace DVA_Compensation_Calculator
 		{
 			UpdateAll();
 		}
+
+        private void textBoxAHL_TextChanged(object sender, EventArgs e)
+        {
+            UpdateAll();
+        }
+
+        private void checkBoxAHLWar_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateAll();
+        }
 
 		private void textBoxEars_TextChanged(object sender, EventArgs e)
 		{
@@ -2867,6 +3006,23 @@ namespace DVA_Compensation_Calculator
 		}
 
 		#endregion
+
+        private void pictureBoxOpen_Click(object sender, EventArgs e)
+        {
+
+            GlobalVar.FileFormResult = "Load";
+            var fileForm = new FileForm();
+            fileForm.ShowDialog();
+            buttonMainTitle.Text = "Ver 2.0   DVA COMPENSATION (MRCA) CALCULATOR - " + Path.GetFileNameWithoutExtension(GlobalVar.documentPath);
+
+            GlobalVar.startup = true;
+            LoadData();
+            FinalPayout();
+            combinedPoints();
+            UpdateAll();
+            GlobalVar.startup = false;
+            UpdateAll();
+        }
 
 		#endregion
 
